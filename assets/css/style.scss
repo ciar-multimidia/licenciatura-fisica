@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+@import 'bourbon/bourbon';
+@import 'normalize';
+@import 'box-sizing-fix';
+
+@import 'padroes';
+
+
+// 1. Sumário
+$largura-sumario: 360px;
+$padding-sumario-h: 15px;
+
+#sumario{
+	font-size: 0.95em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: $largura-sumario;
+	height: 100vh;
+	background-color: hsl(0,0,95%);
+	overflow: scroll;
+	// opacity: 0.2;
+	// @include transition(opacity 0.1s linear);
+	// &:hover{
+	// 	opacity: 1;
+	// }
+
+}
+
+#header{
+	display: block;
+	width: 100%;
+	div.cont-titulo{
+		background-color: map-get($cores, azulmarinho);
+		@include display(flex);
+		@include flex-wrap(wrap);
+		@include justify-content(flex-start);
+		width: 100%;
+		border-bottom: 1px solid map-get($cores, verdeclaro);
+		padding: $padding-sumario-h;
+		padding-top: 0;
+		.numero-capitulo{
+			@include display(flex);
+			text-align: center;
+			@include align-items(center);
+			background-color: map-get($cores, verdeclaro);
+			color: map-get($cores, azulmarinho);
+			padding: 0.6em 0.6em 0.2em;
+			margin-bottom: 0.4em;
+			font-family: $fonte-heading;
+			font-weight: 700;
+			font-size: 2em;
+			line-height: 1;
+
+
+		}
+
+		.titulo_capitulo{
+			width: 100%;
+			display: block;
+			text-align: left;
+			color: map-get($cores, verdeclaro);
+			font-weight: 400;
+			font-size: 1.2em;
+		}
+
+	}
+
+	div.navegacao-cap{
+		height: 30px;
+		width: 100%;
+		@include  display(flex);
+		a{
+			&, &:link, &:visited, &:hover, &:focus, &:active{
+				text-decoration: none;
+			}
+			color: map-get($cores, ciano);
+			width: 34%;
+			height: 100%;
+			display: inline-block;
+			text-align: center;
+			font-size: 1em;
+			font-weight: bold;
+			svg{
+				display: inline;
+				height: 0.8em;
+				width: auto;
+				&{
+					fill: map-get($cores, ciano);
+				}
+			}
+
+			&.cap{
+				@include display(flex);
+				@include align-items(center);
+				@include justify-content(center);
+				&.prev{
+					svg{
+						@include transform(rotate(180deg));
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+#subcapitulos{
+	padding: $padding-sumario-h*2 0;
+	line-height: 1.4;
+
+	a{
+		&, &:link, &:visited, &:hover, &:focus, &:active{
+			text-decoration: none;
+			color: black;
+		}
+	}
+
+	& > a{
+		font-weight: bold;
+		display: block;
+		padding: 0.6em $padding-sumario-h;
+		counter-increment: subcaps;
+		// color: map-get($cores, azulmarinho) !important;
+		&:before{
+			content: counter(subcaps)'. ';
+			font-weight: bold;
+			display: inline;
+		}
+		& + a{
+			margin-top: 1em;
+		}
+	}
+
+	ol{
+		font-size: 0.85em;
+		padding: 0;
+		margin: 0;
+		& + a{
+			margin-top: 1em;
+		}
+	}
+
+	li{
+		list-style-type: none;
+		padding: 0.4em 0;
+		padding-left: calc( 1.5em + #{$padding-sumario-h} );
+		padding-right: $padding-sumario-h;
+		counter-increment: subsubcaps;
+		&:before{
+			content: counter(subcaps) '.' counter(subsubcaps) '. ';
+			font-weight: bold;
+			display: inline;
+		}
+	}
+
+	& > a, li{
+		@include transition(all 0.1s linear);
+		@include transition-property(background-color);
+		background-color: transparent;
+		&:hover{
+			cursor: pointer;
+			background-color: transparentize( map-get($cores, verdeclaro), 0.4 );
+		}
+	}
+}
+
+
+// 2. Texto
+$largura-artigo: 600px;
+main{
+	width: calc(100% - #{$largura-sumario});
+	margin-left: $largura-sumario;
+}
+
+article{
+	width: 100%;
+	margin-top: 3em;
+	@include display(flex);
+	@include flex-direction(column);
+	@include align-items(center);
+	@include flex-wrap(wrap);
+
+	& > *{
+		width: $largura-artigo;
+		& + *{
+			margin-top: 1em;
+		}
+	}
+
+	h2{
+		color: map-get($cores, ciano);
+	}
+
+	h3, h4, h5{
+		color: map-get($cores, azulmarinho);
+	}
+}
+
+
+
+
+

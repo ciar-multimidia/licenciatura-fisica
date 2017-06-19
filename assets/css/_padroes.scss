@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700');
+
+$fonte-corpo: 'Lato', sans-serif;
+$fonte-heading: 'Roboto Slab', serif;
+
+$cores: (
+	azulmarinho: #001F3C,
+	verdeclaro: #A6D8BE,
+	ciano: #0090A7
+);
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: $fonte-corpo;
+	font-size: 16px;
+	line-height: 1.618;
+	color: hsl(0,0,20%);
+	min-height: 100vh;
+}
+
+h1, h2, h3, h4{
+	font-family: $fonte-heading;
+	font-weight: 700;
+	margin: 0;
+	line-height: 1.2;
+}
