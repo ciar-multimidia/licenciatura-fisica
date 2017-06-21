@@ -21,7 +21,7 @@
 	$uri_colecao = array_splice($uri_separado, -1);
 	$caminho_colecao = implode("/", $uri_colecao);
 
-	$http_colecao = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $caminho_final . '/';
+	$http_colecao = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $caminho_final . '/licenciatura-fisica/';
 	$http_livro = $http_colecao . $pasta_livro . '/';
 	$root_colecao = dirname(__DIR__)."/";
 	$root_livro = __DIR__ ."/";
