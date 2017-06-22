@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600|Roboto+Slab:300,400");
 html {
   line-height: 1.15;
   /* 1 */
@@ -403,7 +403,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   line-height: 1.618;
   color: #333333;
@@ -411,12 +411,11 @@ body {
 
 h1, h2, h3, h4 {
   font-family: "Roboto Slab", serif;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0;
   line-height: 1.2; }
 
 #sumario {
-  font-size: 0.95em;
   position: fixed;
   top: 0;
   left: 0;
@@ -429,7 +428,8 @@ h1, h2, h3, h4 {
   display: block;
   width: 100%; }
   #header div.cont-titulo {
-    background-color: #001F3C;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 144, 167, 0)), color-stop(30%, rgba(0, 144, 167, 0)), to(rgba(0, 144, 167, 0.6))), #001F3C;
+    background: linear-gradient(to bottom, rgba(0, 144, 167, 0) 0%, rgba(0, 144, 167, 0) 30%, rgba(0, 144, 167, 0.6) 100%), #001F3C;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -454,7 +454,6 @@ h1, h2, h3, h4 {
     justify-content: flex-start;
     -ms-flex-pack: start;
     width: 100%;
-    border-bottom: 1px solid #A6D8BE;
     padding: 15px;
     padding-top: 0; }
     #header div.cont-titulo .numero-capitulo {
@@ -488,8 +487,9 @@ h1, h2, h3, h4 {
       display: block;
       text-align: left;
       color: #A6D8BE;
-      font-weight: 400;
-      font-size: 1.2em; }
+      font-weight: 300;
+      font-size: 1.3em;
+      text-shadow: 0px 1px 3px #001F3C; }
   #header div.navegacao-cap {
     height: 30px;
     width: 100%;
@@ -567,15 +567,15 @@ h1, h2, h3, h4 {
     #subcapitulos > a + a {
       margin-top: 1em; }
   #subcapitulos ol {
-    font-size: 0.85em;
+    font-size: 0.9em;
     padding: 0;
     margin: 0; }
     #subcapitulos ol + a {
       margin-top: 1em; }
   #subcapitulos li {
     list-style-type: none;
-    padding: 0.4em 0;
-    padding-left: calc( 1.5em + 15px );
+    padding: 0.3em 0;
+    padding-left: calc( 1em + 15px );
     padding-right: 15px;
     counter-increment: subsubcaps; }
     #subcapitulos li:before {
@@ -638,9 +638,29 @@ article {
     width: 600px; }
     article > * + * {
       margin-top: 1em; }
-  article h2 {
+  article > h1, article > h2, article > h3, article > h4, article > h5 {
     color: #0090A7; }
-  article h3, article h4, article h5 {
-    color: #001F3C; }
+  article > h2:before, article > h3:before, article > h4:before, article > h5:before {
+    display: inline;
+    color: #595959; }
+  article > h1 {
+    font-size: 3em; }
+  article > h2 {
+    font-size: 2em;
+    counter-increment: heading_dois;
+    counter-reset: heading_tres; }
+    article > h2:before {
+      content: counter(heading_dois) ". "; }
+  article > h3 {
+    font-size: 1.4em;
+    counter-increment: heading_tres;
+    counter-reset: heading_quatro; }
+    article > h3:before {
+      content: counter(heading_dois) "." counter(heading_tres) " "; }
+  article > h4 {
+    font-size: 1em;
+    counter-increment: heading_quatro; }
+    article > h4:before {
+      content: counter(heading_dois) "." counter(heading_tres) "." counter(heading_quatro) " "; }
 
 /*# sourceMappingURL=style.css.map */

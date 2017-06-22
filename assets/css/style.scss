@@ -12,7 +12,6 @@ $largura-sumario: 360px;
 $padding-sumario-h: 15px;
 
 #sumario{
-	font-size: 0.95em;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -32,12 +31,30 @@ $padding-sumario-h: 15px;
 	display: block;
 	width: 100%;
 	div.cont-titulo{
-		background-color: map-get($cores, azulmarinho);
+		background: 
+		-webkit-gradient(
+			linear, 
+			left top, left bottom, 
+			from(transparentize(map-get($cores, ciano), 1)),
+			color-stop(30%, transparentize(map-get($cores, ciano), 1)),
+			to(transparentize(map-get($cores, ciano), 0.4))
+		),
+		map-get($cores, azulmarinho);
+
+		background: 
+		linear-gradient(
+			to bottom, 
+			transparentize(map-get($cores, ciano), 1) 0%,
+			transparentize(map-get($cores, ciano), 1) 30%,
+			transparentize(map-get($cores, ciano), 0.4) 100%
+		),
+		map-get($cores, azulmarinho);
+		
+		// background-color: map-get($cores, azulmarinho);
 		@include display(flex);
 		@include flex-wrap(wrap);
 		@include justify-content(flex-start);
 		width: 100%;
-		border-bottom: 1px solid map-get($cores, verdeclaro);
 		padding: $padding-sumario-h;
 		padding-top: 0;
 		.numero-capitulo{
@@ -61,8 +78,9 @@ $padding-sumario-h: 15px;
 			display: block;
 			text-align: left;
 			color: map-get($cores, verdeclaro);
-			font-weight: 400;
-			font-size: 1.2em;
+			font-weight: 300;
+			font-size: 1.3em;
+			text-shadow: 0px 1px 3px map-get($cores, azulmarinho);
 		}
 
 	}
@@ -112,6 +130,8 @@ $padding-sumario-h: 15px;
 	padding: $padding-sumario-h*2 0;
 	line-height: 1.4;
 
+
+
 	a{
 		&, &:link, &:visited, &:hover, &:focus, &:active{
 			text-decoration: none;
@@ -136,7 +156,7 @@ $padding-sumario-h: 15px;
 	}
 
 	ol{
-		font-size: 0.85em;
+		font-size: 0.9em;
 		padding: 0;
 		margin: 0;
 		& + a{
@@ -146,8 +166,8 @@ $padding-sumario-h: 15px;
 
 	li{
 		list-style-type: none;
-		padding: 0.4em 0;
-		padding-left: calc( 1.5em + #{$padding-sumario-h} );
+		padding: 0.3em 0;
+		padding-left: calc( 1em + #{$padding-sumario-h} );
 		padding-right: $padding-sumario-h;
 		counter-increment: subsubcaps;
 		&:before{
@@ -184,20 +204,61 @@ article{
 	@include align-items(center);
 	@include flex-wrap(wrap);
 
-	& > *{
+	& > {
+
+		*{
 		width: $largura-artigo;
 		& + *{
-			margin-top: 1em;
+				margin-top: 1em;
+			}
 		}
+
+		h1, h2, h3, h4, h5{
+			color: map-get($cores, ciano);
+		}
+
+		h2, h3, h4, h5{
+			&:before{
+				display: inline;
+				color: hsl(0,0,35%);
+				// font-size: 0.9em;
+			}
+		}
+
+		h1{
+			font-size: 3em;
+		}
+
+		h2{
+			font-size: 2em;
+			counter-increment: heading_dois;
+			&:before{
+				content: counter(heading_dois)'. ';
+			}
+			counter-reset: heading_tres;
+		}
+
+		h3{
+			font-size: 1.4em;
+			counter-increment: heading_tres;
+			&:before{
+				content: counter(heading_dois) '.' counter(heading_tres) ' ';
+			}
+			counter-reset: heading_quatro;
+		}
+
+		h4{
+			font-size: 1em;
+			counter-increment: heading_quatro;
+			&:before{
+				content: counter(heading_dois) '.' counter(heading_tres) '.' counter(heading_quatro) ' ';
+			}
+		}
+
+
 	}
 
-	h2{
-		color: map-get($cores, ciano);
-	}
-
-	h3, h4, h5{
-		color: map-get($cores, azulmarinho);
-	}
+	
 }
 
 
