@@ -407,7 +407,8 @@ body {
   font-size: 16px;
   line-height: 1.618;
   color: #333333;
-  min-height: 100vh; }
+  min-height: 100vh;
+  overflow-x: hidden; }
 
 h1, h2, h3, h4 {
   font-family: "Roboto Slab", serif;
@@ -423,6 +424,9 @@ h1, h2, h3, h4 {
   height: 100vh;
   background-color: #f2f2f2;
   overflow: scroll; }
+  @media print {
+    #sumario {
+      display: none; } }
 
 #header {
   display: block;
@@ -597,6 +601,10 @@ h1, h2, h3, h4 {
 main {
   width: calc(100% - 360px);
   margin-left: 360px; }
+  @media print {
+    main {
+      width: 100%;
+      margin-left: 0; } }
 
 article {
   width: 100%;
@@ -635,7 +643,7 @@ article {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   article > * {
-    width: 600px; }
+    width: 630px; }
     article > * + * {
       margin-top: 1em; }
   article > h1, article > h2, article > h3, article > h4, article > h5 {

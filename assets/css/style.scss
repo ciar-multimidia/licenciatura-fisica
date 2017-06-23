@@ -25,6 +25,10 @@ $padding-sumario-h: 15px;
 	// 	opacity: 1;
 	// }
 
+	@media print {
+		display: none;
+	}
+
 }
 
 #header{
@@ -190,10 +194,14 @@ $padding-sumario-h: 15px;
 
 
 // 2. Texto
-$largura-artigo: 600px;
+$largura-artigo: 630px;
 main{
 	width: calc(100% - #{$largura-sumario});
 	margin-left: $largura-sumario;
+	@media print {
+		width: 100%;
+		margin-left: 0;
+	}
 }
 
 article{

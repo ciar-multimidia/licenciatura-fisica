@@ -11,22 +11,23 @@
 			
 
 			<h1>Física Matemática</h1>
+			<p>Φιλoσoφια</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt optio delectus molestias voluptatem quisquam quam sequi cumque eos, facilis officia tenetur, libero ad praesentium iste soluta! Quidem a consequatur blanditiis enim neque magnam incidunt eligendi, repudiandae, et accusamus id totam officia nemo illo dolor accusantium veniam, quas dolorem possimus. Ab at saepe nemo, laborum iste illum officiis veniam, dolore officia.</p>
 			<p>
 				
 				Apresentamos as quatro etapas que um g&aacute;s &eacute; submetido no ciclo de Carnot para gerar trabalho. Carnot estruturou esta m&aacute;quina, considerando que um processo c&iacute;clico ideal deveria ser totalmente revers&iacute;vel onde o calor flui da fonte ou fria para o g&aacute;s de forma isot&eacute;rmica. O calor $Q_{Q}$ e $Q_{F}$ n&atilde;o altera a energia interna do sistema, $\Delta U=0$, em nenhuma etapa, pois isso acarreta perdas uma vez que calor convertido em energia interna n&atilde;o retorna ao reservat&oacute;rio t&eacute;rmico. Assim, nas etapas $a,b$ e $c,d$ o calor &eacute; convertido completamente em trabalho. As etapas $b,c$ e $d,a$ n&atilde;o envolvem trocas de calor e, por isso, n&atilde;o temos calor convertido em outras formas de energia.
-				 1&ordm; Etapa - $(p_{a}, V_{a}, T_{Q})\xrightarrow{Q_{Q}&gt;0, W_{a,d}&gt;0}(p_{b}, V_{b}, T_{Q})$:} como no ciclo Stirling, neste processo $\Delta U=0$ e o calor, em m&oacute;dulo, vale:
+				 1&ordm; Etapa - $(p_{a}, V_{a}, T_{Q})\xrightarrow{Q_{Q}&gt;0, W_{a,d}&gt;0}(p_{b}, V_{b}, T_{Q})$ como no ciclo Stirling, neste processo $\Delta U=0$ e o calor, em m&oacute;dulo, vale:
 				\begin{equation}
 				Q_{Q}=nRT_{Q}\ln\left(\frac{V_{b}}{V_{a}}\right).
 				\label{calor_quente_carnot}
-				\end{equation}\\
-				{\it\large\bfseries 2&ordm; Etapa - $(p_{b}, V_{b}, T_{Q})\xrightarrow{Q_{b,c}=0, W_{b,c}&gt;0}(p_{c}, V_{c}, T_{F})$:} nesta etapa, retiramos mais peso do g&aacute;s de tal forma que ele possa realizar uma expans&atilde;o adiab&aacute;tica.\\ \\
-				{\it\large\bfseries 3&ordm; Etapa - $(p_{c}, V_{c}, T_{F})\xrightarrow{Q_{F}&lt;0, W_{c,d}&lt;0}(p_{d}, V_{d}, T_{F})$:} agora retiramos uma quantidade de calor $Q_{F}$ isotermicamente por meio da retirada gradativa de peso que est&aacute; sobre o &ecirc;mbolo que confina o g&aacute;s. O m&oacute;dulo do calor $Q_{F}$ &eacute; escrito como:
+				\end{equation}
+				series 2&ordm; Etapa - $(p_{b}, V_{b}, T_{Q})\xrightarrow{Q_{b,c}=0, W_{b,c}&gt;0}(p_{c}, V_{c}, T_{F})$ nesta etapa, retiramos mais peso do g&aacute;s de tal forma que ele possa realizar uma expans&atilde;o adiab&aacute;tica.
+				series 3&ordm; Etapa - $(p_{c}, V_{c}, T_{F})\xrightarrow{Q_{F}&lt;0, W_{c,d}&lt;0}(p_{d}, V_{d}, T_{F})$ agora retiramos uma quantidade de calor $Q_{F}$ isotermicamente por meio da retirada gradativa de peso que est&aacute; sobre o &ecirc;mbolo que confina o g&aacute;s. O m&oacute;dulo do calor $Q_{F}$ &eacute; escrito como:
 				\begin{equation}
 				Q_{F}=nRT_{F}\ln\left(\frac{V_{c}}{V_{d}}\right).
 				\label{calor_frio_carnot}
 				\end{equation}\\
-				{\it\large\bfseries 4&ordm; Etapa - $(p_{d}, V_{d}, T_{F})\xrightarrow{Q_{d,a}=0, W_{d,a}&lt;0}(p_{a}, V_{a}, T_{Q})$:} fechando o ciclo introduzimos mais peso sobre o g&aacute;s de tal forma que sua temperatura retorna a $T_{Q}$ de forma adiab&aacute;tica.
+				series 4&ordm; Etapa - $(p_{d}, V_{d}, T_{F})\xrightarrow{Q_{d,a}=0, W_{d,a}&lt;0}(p_{a}, V_{a}, T_{Q})$ fechando o ciclo introduzimos mais peso sobre o g&aacute;s de tal forma que sua temperatura retorna a $T_{Q}$ de forma adiab&aacute;tica.
 
 				Com estes valores a efici&ecirc;ncia do ciclo de Carnot pode ser calculada da seguinte forma:
 				\begin{equation}
