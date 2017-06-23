@@ -29,10 +29,19 @@
         Om: "{\\Omega}",
         eps: "{\\varepsilon}"
       }
+    },
+
+    showMathMenu: true,
+	showMathMenuMSIE: true,
+
+	menuSettings: {
+		zoom: 'Click',
+		zscale: "200%",
+	    locale: 'pt-br'
     }
   });
 </script>
-<script src='<?php print("../assets/js/MathJax/MathJax.js?config=TeX-AMS_CHTML"); ?>'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 <script src='<?php print("../assets/js/app.js"); ?>'></script>
 </body>
 </html>
