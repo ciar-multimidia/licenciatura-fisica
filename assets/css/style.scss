@@ -195,6 +195,9 @@ $padding-sumario-h: 15px;
 
 // 2. Texto
 $largura-artigo: 630px;
+$largura-maxima: 720px;
+$largura-minima: 450px;
+
 main{
 	width: calc(100% - #{$largura-sumario});
 	margin-left: $largura-sumario;
@@ -212,20 +215,59 @@ article{
 	@include align-items(center);
 	@include flex-wrap(wrap);
 
+	*{
+		margin: 0;
+		margin-top: 1em;
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+
+	ol, ul{
+		padding-left: 2em;
+	}
+
+	figure{
+		width: auto;
+		height: auto;
+		min-width: $largura-minima;
+		max-width: $largura-maxima;
+		margin: 3em 0;
+		@include display(flex);
+		@include flex-direction(column);
+		@include align-items(center);
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	blockquote{
+		padding-left: 3em;
+		font-size: 0.9em;
+		line-height: 1.4;
+		position: relative;
+		&:before{
+			content:'\275D';
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 3em;
+		}
+	}
+
 	& > {
 
 		*{
-		width: $largura-artigo;
-		& + *{
-				margin-top: 1em;
-			}
+			width: $largura-artigo;
 		}
 
-		h1, h2, h3, h4, h5{
+		h1, h2, h3, h4{
 			color: map-get($cores, ciano);
 		}
 
-		h2, h3, h4, h5{
+		h2, h3, h4{
 			&:before{
 				display: inline;
 				color: hsl(0,0,35%);
@@ -263,10 +305,20 @@ article{
 			}
 		}
 
+		h5{
+			font-family: $fonte-corpo;
+			font-size: 1em;
+			color: inherit;
+			font-weight: bold;
+		}
 
+		h6{
+			font-family: $fonte-corpo;
+			font-size: 1em;
+			color: inherit;
+			font-style: italic;
+		}
 	}
-
-	
 }
 
 
