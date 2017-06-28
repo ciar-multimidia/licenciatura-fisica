@@ -4,7 +4,11 @@ $fonte-corpo: 'Source Sans Pro', sans-serif;
 $fonte-heading: 'Roboto Slab', serif;
 
 $cores: (
+	texto_primario: hsl(0,0,20%),
+	texto_secundario: hsl(0,0,40%),
+	texto_terciario: hsl(0,0,60%),
 	azulmarinho: #001F3C,
+	azul: #005CB2,
 	verdeclaro: #A6D8BE,
 	ciano: #0090A7
 );
@@ -15,9 +19,10 @@ body{
 	font-family: $fonte-corpo;
 	font-size: 16px;
 	line-height: 1.618;
-	color: hsl(0,0,20%);
+	color: map-get($cores, texto_primario);
 	min-height: 100vh;
 	overflow-x: hidden;
+	@include hyphens(auto);
 }
 
 h1, h2, h3, h4, h5, h6{

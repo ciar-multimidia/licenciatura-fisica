@@ -1,6 +1,7 @@
 <script src='<?php print("../assets/js/jquery-3.2.1.min.js"); ?>'></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+	  jax: ["input/TeX","output/HTML-CSS"],
     tex2jax: {
       inlineMath: [ ['$','$'] ],
       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
@@ -36,8 +37,8 @@
 
 	menuSettings: {
 		zoom: 'Click',
-		zscale: "200%",
-	    locale: 'pt-br'
+		zscale: "200%"
+	    
     }
   });
 </script>
