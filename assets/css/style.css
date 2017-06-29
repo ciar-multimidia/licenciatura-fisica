@@ -602,6 +602,126 @@ h1, h2, h3, h4, h5, h6 {
       cursor: pointer;
       background-color: rgba(166, 216, 190, 0.6); }
 
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: calc(50% + 360px/2 );
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: loaderSpin 5s linear 0s infinite;
+  width: 60px;
+  height: 60px; }
+  #loader.visivel {
+    display: block; }
+  #loader div.posrel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+    #loader div.posrel div {
+      opacity: 0;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #0090A7;
+      background-color: rgba(0, 144, 167, 0.2);
+      border-radius: 6px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      animation: divCresce 1s ease-out 0s infinite;
+      width: 30px;
+      height: 30px; }
+      #loader div.posrel div:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.8); }
+      #loader div.posrel div:nth-child(1) {
+        -webkit-animation-delay: 0s;
+        -moz-animation-delay: 0s;
+        animation-delay: 0s; }
+      #loader div.posrel div:nth-child(2) {
+        -webkit-animation-delay: 0.2s;
+        -moz-animation-delay: 0.2s;
+        animation-delay: 0.2s; }
+      #loader div.posrel div:nth-child(3) {
+        -webkit-animation-delay: 0.4s;
+        -moz-animation-delay: 0.4s;
+        animation-delay: 0.4s; }
+      #loader div.posrel div:nth-child(4) {
+        -webkit-animation-delay: 0.6s;
+        -moz-animation-delay: 0.6s;
+        animation-delay: 0.6s; }
+      #loader div.posrel div:nth-child(5) {
+        -webkit-animation-delay: 0.8s;
+        -moz-animation-delay: 0.8s;
+        animation-delay: 0.8s; }
+@-webkit-keyframes loaderSpin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg); } }
+@-moz-keyframes loaderSpin {
+  from {
+    -moz-transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    -moz-transform: translate(-50%, -50%) rotate(-360deg); } }
+@keyframes loaderSpin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+    -moz-transform: translate(-50%, -50%) rotate(-360deg);
+    -ms-transform: translate(-50%, -50%) rotate(-360deg);
+    -o-transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(-360deg); } }
+@-webkit-keyframes divCresce {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0) rotate(0deg); }
+  20% {
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(2) rotate(90deg); } }
+@-moz-keyframes divCresce {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(-50%, -50%) scale(0) rotate(0deg); }
+  20% {
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -moz-transform: translate(-50%, -50%) scale(2) rotate(90deg); } }
+@keyframes divCresce {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    -o-transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    transform: translate(-50%, -50%) scale(0) rotate(0deg); }
+  20% {
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(2) rotate(90deg);
+    -moz-transform: translate(-50%, -50%) scale(2) rotate(90deg);
+    -ms-transform: translate(-50%, -50%) scale(2) rotate(90deg);
+    -o-transform: translate(-50%, -50%) scale(2) rotate(90deg);
+    transform: translate(-50%, -50%) scale(2) rotate(90deg); } }
 main {
   width: calc(100% - 360px);
   margin-left: 360px; }
@@ -648,9 +768,9 @@ article {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   opacity: 1;
-  -webkit-transition: opacity 0.1s linear;
-  -moz-transition: opacity 0.1s linear;
-  transition: opacity 0.1s linear; }
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear; }
   article.carregando {
     opacity: 0.1; }
   article * {
@@ -660,45 +780,45 @@ article {
       margin-top: 0; }
   article > * {
     width: 630px; }
+  article > h1, article > h2, article > h3, article > h4 {
+    color: #0090A7; }
+  article > h2:before, article > h3:before, article > h4:before {
+    display: inline;
+    color: #666666; }
+  article > h1 {
+    font-size: 3em; }
+  article > h2 {
+    font-size: 2em;
+    counter-increment: heading_dois;
+    counter-reset: heading_tres; }
+    article > h2:before {
+      content: counter(heading_dois) ". "; }
+  article > h3 {
+    font-size: 1.4em;
+    counter-increment: heading_tres;
+    counter-reset: heading_quatro; }
+    article > h3:before {
+      content: counter(heading_dois) "." counter(heading_tres) " "; }
+  article > h4 {
+    font-size: 1em;
+    counter-increment: heading_quatro; }
+    article > h4:before {
+      content: counter(heading_dois) "." counter(heading_tres) "." counter(heading_quatro) " "; }
+  article > h5 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    color: inherit;
+    font-weight: bold; }
+  article > h6 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    color: inherit;
+    font-style: italic; }
   article a {
     color: #005CB2; }
     article a:link {
       overflow-wrap: break-word;
       word-break: break-all; }
-  article h1, article h2, article h3, article h4 {
-    color: #0090A7; }
-  article h2:before, article h3:before, article h4:before {
-    display: inline;
-    color: #666666; }
-  article h1 {
-    font-size: 3em; }
-  article h2 {
-    font-size: 2em;
-    counter-increment: heading_dois;
-    counter-reset: heading_tres; }
-    article h2:before {
-      content: counter(heading_dois) ". "; }
-  article h3 {
-    font-size: 1.4em;
-    counter-increment: heading_tres;
-    counter-reset: heading_quatro; }
-    article h3:before {
-      content: counter(heading_dois) "." counter(heading_tres) " "; }
-  article h4 {
-    font-size: 1em;
-    counter-increment: heading_quatro; }
-    article h4:before {
-      content: counter(heading_dois) "." counter(heading_tres) "." counter(heading_quatro) " "; }
-  article h5 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1em;
-    color: inherit;
-    font-weight: bold; }
-  article h6 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1em;
-    color: inherit;
-    font-style: italic; }
   article ol, article ul {
     padding-left: 2em; }
     article ol li, article ul li {
@@ -806,6 +926,13 @@ article {
       z-index: -1; }
     article span.pagina + * {
       margin-top: 0em; }
+  article div h5 {
+    font-size: 1.3em;
+    font-family: "Roboto Slab", serif; }
+  article div h6 {
+    font-size: 1.1em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold; }
   article button.botao-rodape {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -825,5 +952,28 @@ article {
     article button.botao-rodape:before {
       display: inline;
       content: attr(data-numero); }
+    article button.botao-rodape:hover {
+      cursor: pointer; }
+  article .nota-rodape {
+    padding: 1em 1em 2em;
+    font-size: 0.9em;
+    line-height: 1.4;
+    border: 1px solid #0090A7;
+    background-color: white;
+    border-bottom-width: 4px;
+    width: auto;
+    max-width: 480px;
+    z-index: 2; }
+    article .nota-rodape:before {
+      content: attr(data-numero);
+      font-weight: bold;
+      display: inline; }
+  article .destaque {
+    padding: 1em 2em;
+    margin-top: 2em;
+    border-left: 5px double #0090A7; }
+  article .caixa {
+    padding: 1em 1em 2em;
+    background-color: #f2f2f2; }
 
 /*# sourceMappingURL=style.css.map */

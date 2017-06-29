@@ -49,8 +49,11 @@
 			<p>Acima de tudo, é fundamental ressaltar que a determinação clara de objetivos ainda não demonstrou convincentemente que vai participar na mudança das posturas dos órgãos dirigentes com relação às suas atribuições. A nível organizacional, a execução dos pontos do programa talvez venha a ressaltar a relatividade do retorno esperado a longo prazo. Ainda assim, existem dúvidas a respeito de como a mobilidade dos <button class="botao-rodape" data-numero='1'></button> capitais internacionais agrega valor ao estabelecimento dos modos de operação convencionais. No mundo atual, a crescente influência da mídia causa impacto indireto na reavaliação do levantamento das variáveis envolvidas.</p>
 
 			<div class="nota-rodape" data-numero='1'>
-				<p>No mundo atual, o comprometimento entre as equipes ainda não demonstrou convincentemente que vai participar na mudança do sistema de participação geral. Neste sentido, a complexidade dos estudos efetuados pode nos levar a considerar a reestruturação do orçamento setorial. A certificação de metodologias que nos auxiliam a lidar com a mobilidade dos capitais internacionais agrega valor ao estabelecimento dos relacionamentos verticais entre as hierarquias. O cuidado em identificar pontos críticos no fenômeno da Internet deve passar por modificações independentemente das posturas dos órgãos dirigentes com relação às suas atribuições.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tenetur blanditiis fuga necessitatibus, ut quidem harum quae ad inventore error!</p>	
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tenetur blanditiis fuga necessitatibus, ut quidem harum quae ad inventore error!</p>	
 			</div>
+
+			<p>Acima de tudo, é fundamental ressaltar que a determinação clara de objetivos ainda não demonstrou convincentemente que vai participar na mudança das posturas dos órgãos dirigentes com relação às suas atribuições. A nível organizacional, a execução dos pontos do programa talvez venha a ressaltar a relatividade do retorno esperado a longo prazo. Ainda assim, existem dúvidas a respeito de como a mobilidade dos capitais internacionais agrega valor ao estabelecimento dos modos de operação convencionais. No mundo atual, a crescente influência da mídia causa impacto indireto na reavaliação do levantamento das variáveis envolvidas.</p>
 
 
 			
@@ -79,7 +82,7 @@
 				<li>Lorem ipsum dolor sit.</li>
 			</ol>
 			<figure>
-				<img src="http://daylescommunitycafe.com/wp-content/uploads/2016/10/cir_animacion_1.jpg">
+				<img src="media/1/teste.jpg">
 				<figcaption>Legenda da imagem</figcaption>
 				
 			</figure>
@@ -94,6 +97,15 @@
 			</blockquote>
 
 			<p>É importante questionar o quanto a adoção de políticas descentralizadoras cumpre um papel essencial na formulação do fluxo de informações. O incentivo ao avanço tecnológico, assim como o aumento do diálogo entre os diferentes setores produtivos exige a precisão e a definição do impacto na agilidade decisória. Evidentemente, a valorização de fatores subjetivos facilita a criação das diversas correntes de pensamento.</p>
+
+			<div class="destaque">
+				<h5>Teste de título interno</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium aliquid dolore beatae reprehenderit dicta voluptate tenetur deleniti rerum maxime repellendus! Neque, nemo sint error, itaque impedit nisi culpa, et sapiente expedita, repudiandae ipsa officia obcaecati ipsum sequi velit sed placeat!</p>
+				<p>Iure vel quas consectetur, ab quis itaque molestias maiores temporibus veritatis omnis placeat deleniti impedit quibusdam assumenda a ipsum sequi voluptas voluptatum. Harum sit nemo autem odio ipsa, nam quae deserunt a voluptatem tenetur. Quo incidunt iusto nulla temporibus quasi.</p>
+
+				<h6>Solução</h6>
+				<p>Mollitia quibusdam porro doloribus doloremque est at deserunt delectus laudantium. Dolores odio rerum, et voluptatem quia. Illum odio facilis fuga corrupti quia non provident voluptatibus, enim impedit earum ullam. Obcaecati vel vitae excepturi porro nam voluptatibus officia pariatur doloribus eius.</p>
+			</div>
 			
 
 			<table>	
@@ -181,8 +193,13 @@
 					</tr>
 				</tbody>
 
-			</table>				
-			
+			</table>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sequi quaerat, necessitatibus at placeat ipsam neque aliquid, numquam similique vero, quod culpa enim minima. Non aliquam eius assumenda deleniti quasi velit debitis odio, nisi soluta distinctio amet facere blanditiis porro, recusandae impedit eos laboriosam magni obcaecati dolores tempora pariatur provident!</p>
+			<div class="caixa">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore iste, neque esse autem nostrum voluptatem saepe, velit magni delectus reiciendis soluta, placeat quidem. Culpa beatae doloremque fugiat fugit iusto enim.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, repellendus quisquam facere rem non eum accusamus enim deserunt maiores pariatur ab itaque ex, officiis fugiat cupiditate corporis dolor debitis natus.</p>
+			</div>
 			
 			
 		</article>

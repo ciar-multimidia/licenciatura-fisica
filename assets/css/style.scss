@@ -192,8 +192,91 @@ $padding-sumario-h: 15px;
 	}
 }
 
+// 2. Loader
+#loader{
+	$tamanho-loader: 60px;
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: calc(50% + #{$largura-sumario}/2 );
+	@include transform(translate(-50%, -50%));
+	animation: loaderSpin 5s linear 0s infinite;	
+	width: $tamanho-loader;
+	height: $tamanho-loader;
+	&.visivel{
+		display: block;
+	}
+	
 
-// 2. Texto
+
+	div.posrel{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		
+
+		div{
+			$numero-divs: 5;
+			$tempo-anim: 1s;
+			$delay: $tempo-anim/$numero-divs;
+			opacity: 0;
+			border-style: solid;
+			border-width: 2px;
+			border-color: map-get($cores, ciano);
+			background-color: transparentize( map-get($cores, ciano) , 0.8);
+			&:nth-child(even){
+				background-color: rgba(255, 255,255, 0.8);
+			}
+			border-radius: $tamanho-loader/10;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			animation: divCresce $tempo-anim ease-out 0s infinite;
+			
+			width: $tamanho-loader/2;
+			height: $tamanho-loader/2;
+			@for $i from 1 through $numero-divs {
+				&:nth-child(#{$i}) {
+					@include animation-delay(#{$delay * ($i - 1)});
+				}
+			}
+
+		}
+	}
+	@include keyframes(loaderSpin){
+		from{
+			@include transform(translate(-50%, -50%) rotate(0deg));
+		}
+		to{
+			@include transform(translate(-50%, -50%) rotate(-360deg));
+		}
+	}
+
+	@include keyframes(divCresce){
+		0%{
+			opacity: 0;
+			@include transform(translate(-50%, -50%) scale(0) rotate(0deg));
+		}
+
+		20%{
+			opacity: 1;
+		}
+
+		70%{
+			opacity: 1;
+		}
+
+		100%{
+			opacity: 0;
+			@include transform(translate(-50%, -50%) scale(2) rotate(90deg));
+		}
+	}
+}
+
+
+// 3. Texto
 $largura-artigo: 630px;
 $largura-artigo-maxima: 720px;
 $largura-artigo-minima: 450px;
@@ -216,7 +299,7 @@ article{
 	@include align-items(center);
 	@include flex-wrap(wrap);
 	opacity: 1;
-	@include transition(opacity 0.1s linear);
+	@include transition(opacity 0.2s linear);
 	&.carregando{
 		opacity: 0.1;
 	}
@@ -229,9 +312,68 @@ article{
 		}
 	}
 
-	& > *{
-		width: $largura-artigo;
-	}
+	& > {
+		*{
+			width: $largura-artigo;
+		}
+
+		h1, h2, h3, h4{
+			color: map-get($cores, ciano);
+		}
+
+		h2, h3, h4{
+			&:before{
+				display: inline;
+				color: map-get($cores, texto_secundario);
+				// font-size: 0.9em;
+			}
+		}
+
+		h1{
+			font-size: 3em;
+		}
+
+		h2{
+			font-size: 2em;
+			counter-increment: heading_dois;
+			&:before{
+				content: counter(heading_dois)'. ';
+			}
+			counter-reset: heading_tres;
+		}
+
+		h3{
+			font-size: 1.4em;
+			counter-increment: heading_tres;
+			&:before{
+				content: counter(heading_dois) '.' counter(heading_tres) ' ';
+			}
+			counter-reset: heading_quatro;
+		}
+
+		h4{
+			font-size: 1em;
+			counter-increment: heading_quatro;
+			&:before{
+				content: counter(heading_dois) '.' counter(heading_tres) '.' counter(heading_quatro) ' ';
+			}
+		}
+
+		h5{
+			font-family: $fonte-corpo;
+			font-size: 1em;
+			color: inherit;
+			font-weight: bold;
+		}
+
+		h6{
+			font-family: $fonte-corpo;
+			font-size: 1em;
+			color: inherit;
+			font-style: italic;
+		}
+
+	} 
 
 	a{
 		color: map-get($cores, azul);
@@ -241,62 +383,7 @@ article{
 		}
 	}
 
-	h1, h2, h3, h4{
-		color: map-get($cores, ciano);
-	}
-
-	h2, h3, h4{
-		&:before{
-			display: inline;
-			color: map-get($cores, texto_secundario);
-			// font-size: 0.9em;
-		}
-	}
-
-	h1{
-		font-size: 3em;
-	}
-
-	h2{
-		font-size: 2em;
-		counter-increment: heading_dois;
-		&:before{
-			content: counter(heading_dois)'. ';
-		}
-		counter-reset: heading_tres;
-	}
-
-	h3{
-		font-size: 1.4em;
-		counter-increment: heading_tres;
-		&:before{
-			content: counter(heading_dois) '.' counter(heading_tres) ' ';
-		}
-		counter-reset: heading_quatro;
-	}
-
-	h4{
-		font-size: 1em;
-		counter-increment: heading_quatro;
-		&:before{
-			content: counter(heading_dois) '.' counter(heading_tres) '.' counter(heading_quatro) ' ';
-		}
-	}
-
-	h5{
-		font-family: $fonte-corpo;
-		font-size: 1em;
-		color: inherit;
-		font-weight: bold;
-	}
-
-	h6{
-		font-family: $fonte-corpo;
-		font-size: 1em;
-		color: inherit;
-		font-style: italic;
-	}
-
+	
 	ol, ul{
 		padding-left: 2em;
 		li{
@@ -424,6 +511,19 @@ article{
 
 	}
 
+	div{
+		h5{
+			font-size: 1.3em;
+			font-family: $fonte-heading;
+		}
+
+		h6{
+			font-size: 1.1em;
+			font-family: $fonte-corpo;
+			font-weight: bold;
+		}
+	}
+
 	button.botao-rodape{
 		@include appearance(none);
 		display: inline;
@@ -440,7 +540,39 @@ article{
 			display: inline;
 			content: attr(data-numero);
 		}
+		&:hover{
+			cursor: pointer;
+		}
 
+	}
+
+	.nota-rodape{
+		// position: absolute;
+		padding: 1em 1em 2em;
+		font-size: 0.9em;
+		line-height: 1.4;
+		border: 1px solid map-get($cores, ciano);
+		background-color: white;
+		border-bottom-width: 4px;
+		width: auto;
+		max-width: $largura-artigo - 150px;
+		z-index: 2;
+		&:before{
+			content: attr(data-numero);
+			font-weight: bold;
+			display: inline;
+		}
+	}
+
+	.destaque{
+		padding: 1em 2em;
+		margin-top: 2em;
+		border-left: 5px double map-get($cores, ciano);
+	}
+
+	.caixa{
+		padding: 1em 1em 2em;
+		background-color: hsl(0,0,95%);
 	}
 
 	

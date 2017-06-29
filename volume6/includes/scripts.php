@@ -1,3 +1,15 @@
+<div id="loader">
+	<div class="posrel">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+	</div>
+</div>
+
+
 <script src='<?php print("../assets/js/jquery-3.2.1.min.js"); ?>'></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
