@@ -1,0 +1,280 @@
+<h2>Parágrafos</h2>
+
+<!-- Tag de parágrafo: <p></p> -->
+<p>Esse é um exemplo de parágrafo. Todo esse texto está envolvido em uma tag <code>&lt;p&gt;&lt;/p&gt;</code>. Para começar um novo parágrafo, você deve abrir uma nova tag, logo abaixo dessa. Não adianta quebrar linha usando a tecla ENTER no editor de código, 
+o 
+navegador 
+vai
+ignorar
+tudo
+e colocar todo o texto quebrado em uma linha só. 
+
+Ele    também    ignora    excesso    de    espaços.
+
+Quando você está escrevendo um documento HTML, quebrar linhas é interessante apenas para você organizar seu próprio código. Para diagramação, é usado o a linguagem CSS.</p>
+
+<p>Esse texto começou em um novo parágrafo. Perceba o espaço entre esse texto e o de cima. Esse espaço existe por causa do código CSS que eu escrevi, não porque eu quebrei a linha entre esse parágrafo e o anterior.</p> <!-- Dois paragrafos na na mesma linha --> <p>Tanto que esse parágrafo foi escrito na mesma linha que o parágrafo anterior, e mesmo assim, existe espaço entre eles.</p>
+<p>Se deseja quebrar o texto dentro de um parágrafo, use a tag <code>&lt;br&gt;</code>. Onde houver ocorrências dessa tag, a linha será quebrada logo após ela. Essa tag não pode possuir conteúdo textual, portanto, ela não "abre e fecha" como as outras tags, não é necessário colocar um <code>&lt;/br&gt;</code> depois do <code>&lt;br&gt;</code>.<br>
+Esse<br>
+é<br>
+um<br>
+exemplo<br>
+de<br>
+linhas<br>
+quebradas<br>
+com a tag.</p>
+
+<h3>Negritos, itálicos e sublinhados</h3>
+
+
+<p>Para tornar <b>um trecho de texto negrito</b>, é só envolver as palavras desejadas na tag <code>&lt;b&gt;&lt;/b&gt;</code>. </p>
+
+<p>Para tornar <i>um trecho itálico</i>, use a tag <code>&lt;i&gt;&lt;/i&gt;</code>. </p>
+<p>Para <u>sublinhar um trecho</u>, use a tag <code>&lt;u&gt;&lt;/u&gt;</code>. </p>
+
+<h2>Tags de título (headings)</h2>
+
+<p>As tags de título são as tags <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code> e <code>&lt;h6&gt;</code>. Essa numeração de cada uma indica o peso desse cabeçalho. Isto é, o <code>&lt;h1&gt;</code> é a tag de título de maior hierarquia, enquanto o <code>&lt;h2&gt;</code> indicam uma seção referente ao <code>&lt;h1&gt;</code>, enquanto o <code>&lt;h3&gt;</code> é uma subseção do <code>&lt;h2&gt;</code>, e assim por diante. </p>
+
+<p>O <code>&lt;h1&gt;</code> geralmente é usado para o título do material todo, portanto, ele aparece uma única vez, no topo do material. Todas as seções e subseções desse material usam o <code>&lt;h2&gt;</code> em diante.</p>
+
+<p>Para deixar mais evidente essa hierarquia, as tags de título de 2 à 4 são enumeradas automaticamente. Veja como é no exemplo abaixo:</p>
+
+<h2>Essa tag é um h2.</h2>
+<h3>Essa tag é um h3.</h3>
+<h3>Essa também é um h3.</h3>
+<h3>Essa também. Perceba o formato da numeração.</h3>
+<h4>Todas essas tags são h4. </h4>
+<h4>Perceba o novo formato de numeração.</h4>
+
+<p>As tags <code>&lt;h5&gt;</code> e <code>&lt;h6&gt;</code> não possuem essa numeração, e podem ser usadas para subseções que não sigam uma hierarquia bem definida. </p>
+
+<h5>Essa é uma tag h5. Ela é apenas um texto em negrito.</h5>
+<h6>Essa é uma tag h6. Ela é apenas um texto em itálico.</h6>
+
+
+
+<h2>Links externos</h2>
+
+<p>Assim como qualquer site, um trecho de texto pode ser também <a target="blank" href="https://www.google.com/">um link para um site externo</a>. Para isso, usa-se a tag <code>&lt;a&gt;</code>. Porém, para definir para qual link essa tag leva, você precisa definir esse link no "atributo" <code>href</code>. Esse atributo fica dentro da tag de abertura, e não entre as tags de abertura e fechamento. Para evitar erros, é só copiar essa tag <code>&lt;a&gt;</code> que usei nesse parágrafo como exemplo. </p>
+
+<p>Apesar do texto entre a abertura e o fechamento poder ser qualquer texto, como <a href="https://www.facebook.com" target="blank">nesse exemplo de link que leva para o Facebook</a>, nesse e-book, tanto o atributo <code>href</code> quando o texto da tag devem o próprio link. Por exemplo, um link que leve para o site do CIAR deve ser assim: </p>
+
+<p><a href="http://www.ciar.ufg.br" target='blank'>http://www.ciar.ufg.br</a> (O texto da tag é também o próprio link)</p>
+
+<p>E não assim:</p>
+
+<p><a href="http://www.ciar.ufg.br" target='blank'>Site do CIAR</a> (O texto da tag é outra coisa)</p>
+
+<p>As tags <code>&lt;a&gt;</code> devem ter 2 atributos:</p>
+
+<p>
+	<ul>
+		<li><code>href</code>: O link do site externo.</li>
+		<li><code>target</code>: Deve sempre ser <code>target='blank'</code>, para o link abrir uma nova aba do navegador.</li>
+	</ul>
+</p>
+
+<h2>Listas</h2>
+
+<p>Existem tags específicas para criar listas, tanto enumeradas quanto não-enumeradas. Exemplos:</p>
+
+<p>Lista enumerada de frutas:</p>
+
+<ol>
+	<li>Laranja</li>
+	<li>Maçã</li>
+	<li>Abacaxi</li>
+	<li>Abacate</li>
+</ol>
+	
+<p>Alguns funcionários do CIAR:</p>
+
+<ul>
+	<li>Leandro</li>
+	<li>Ana Flávia</li>
+	<li>Mateus</li>
+	<li>Laryssa</li>	
+</ul>
+
+<p>Listas enumeradas usam a tag <code>&lt;ol&gt;</code>. Não-enumeradas, <code>&lt;ul&gt;</code>. Cada item da lista deve ser uma tag <code>&lt;li&gt;</code>. Não deve haver nada dentro das tags de lista, apenas os itens <code>&lt;li&gt;</code>.</p>
+
+
+
+<h2>Imagens e fotos</h2>
+
+<p>Para imagens e fotos, usa-se a tag <code>&lt;figure&gt;</code>. Dentro dela, devem haver 2 tags:</p>
+
+<ul>
+ 	<li><code>&lt;img&gt;</code> é a tag que possui a imagem de fato. Todas as imagens usadas no material ficarão na pasta <code>media</code>. O caminho da imagem é definido pelo atributo <code>src</code>. Essa tag possui uma peculiaridade: Ela não "abre e fecha" como as tags comuns, porque essa tag não pode conter nenhum conteúdo textual. Portanto, não existe um <code>&lt;/img&gt;</code> fechando a tag. A tag deve ficar assim: 
+ 	<code>&lt;img src=&quot;media/1/teste.jpg&quot;&gt;</code>, e nada a mais do que isso.</li>
+ 	<li><code>&lt;figcaption&gt;</code> é a tag com a descrição da foto. Essa é uma tag normal de texto. Cada imagem deve ter apenas uma tag <code>&lt;figcaption&gt;</code>, portanto, se a descrição da imagem precisar quebrar a linha, use a tag <code>&lt;br&gt;</code>.</li>
+</ul>
+
+<p>Nada mais deve constar dentro da tag <code>&lt;figure&gt;</code>, apenas essas 2 tags e seus devidos conteúdos.</p>
+
+<p>Eis um exemplo de imagem:</p>
+
+
+<figure>
+	<img src="{{caminho}}/media/teste.jpg">
+	<figcaption>Legenda da imagem<br>
+	Essa linha de texto está dentro da mesma tag da linha de cima</figcaption>
+</figure>
+
+
+
+<h2>Citação</h2>
+
+<p>Para fazer uma citação, use a tag <code>&lt;blockquote&gt;</code>. Dentro dela, você pode por uma ou mais tags de parágrafo, negritos, itálicos, links etc. A tag serve somente para definir o que faz parte da citação e estilizar esse trecho do texto devidamente com o recuo e o corpo menor de texto.</p>
+
+<blockquote>
+	<p>Esse é um exemplo de citação. Ele recua automaticamente através do CSS.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque totam natus, perspiciatis excepturi ullam quos, laboriosam. Quidem molestiae dolore, eligendi. Non iste aspernatur modi temporibus, quas ipsum nisi minima enim.</p>
+</blockquote>
+
+
+
+<h2>Tabelas</h2>
+<p>Tabelas em HTML são mais complexas que as outras, pois cada célula da tabela é uma tag. As tags usadas para tabelas são as seguintes:</p>
+<ul>
+	<li><code>&lt;table&gt;</code>: é a tag que engloba toda a tabela. Serve apenas para delimitar o começo e o fim de uma tabela.</li>
+	<li><code>&lt;thead&gt;</code>: Engloba as células que serão o "cabeçalho" da tabela.</li>
+	<li><code>&lt;tbody&gt;</code>: Engloba as células que serão o conteúdo da tabela.</li>
+	<li><code>&lt;tr&gt;</code>: As tabelas são divididas em linhas, depois em colunas. Essa tag é quem engloba as células que representam as colunas.</li>
+	<li><code>&lt;th&gt;</code> e <code>&lt;td&gt;</code>: Essas são as tags que representam as células individuais. o <code>&lt;th&gt;</code> representa células de cabeçalho, recebendo mais destaque que o <code>&lt;td&gt;</code>, que são as células comuns.</li>
+	<li><code>&lt;caption&gt;</code>: É a legenda da tabela. Funciona exatamente como a tag de legenda das imagens, isto é, só pode haver uma tag dessa por tabela, e se quiser multiplas linhas nesse legenda, use a tag <code>&lt;br&gt;</code>.</li>
+</ul>
+<p>Segue um exemplo de tabela:</p>
+
+<table>
+	<caption>Exemplo de tabela. <br> Essa legenda possui 2 linhas, mas as duas dentro de uma tag só.</caption>
+	<thead>
+		<tr>
+			<th>Estado</th>
+			<th>Capital</th>
+			<th>Região</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Goiás</td>
+			<td>Goiânia</td>
+			<td>Centro-Oeste</td>
+		</tr>
+
+		<tr>
+			<td>Maranhão</td>
+			<td>São Luís</td>
+			<td>Nordeste</td>
+		</tr>
+
+		<tr>
+			<td>Amazonas</td>
+			<td>Manaus</td>
+			<td>Norte</td>
+		</tr>
+
+		<tr>
+			<td>Minas Gerais</td>
+			<td>Belo Horizonte</td>
+			<td>Sudeste</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<h2>Textos em destaque</h2>
+
+<p>Esse ebook possui uma série de elementos para dar destaque à partes do texto. Portanto, eu criei alguns estilos para isso.</p>
+<p>Como os cabeçalhos de 2 à 4 são usados para definir seções numeradas do capítulo, use apenas <code>&lt;h5&gt;</code> e <code>&lt;h6&gt;</code> dentro de destaques. Eles estão estilizados de forma diferente dentro dessas caixas.</p>
+
+<h3>Bloco destacado</h3>
+
+<div class="destaque">
+	<h5>Esse é um texto destacado.</h5>
+	<p>A idéia é usar esse destaque para momentos do livro em que o texto "foge" do fluxo de leitura. DEVE ser usado nos momentos em que o livro dá "exemplos". (Você saberá quando haver um exemplo no livro).</p>
+	<p>Para usar esse destaque, é só envolver o texto na tag <code>&lt;div class=&quot;destaque&quot;&gt;&lt;/div&gt;</code>.</p>
+</div>
+
+<h3>Bloco destacado em "caixa"</h3>
+
+<div class="caixa">
+	<h5>Esse é um texto em caixa.</h5>
+	<p>O livro impresso original usa, muitas vezes, uma caixa cinza para dar destaques à certos trechos do texto. Essa é a caixa que será usada no ebook. Para usar essa caixa, é só envolver o texto na tag <code>&lt;div class=&quot;caixa&quot;&gt;&lt;/div&gt;</code>.</p>
+</div>
+
+<h3>Bloco de exercícios</h3>
+
+<p>Esse ebook eventualmente sugere exercícios e atividades para o usuário fazer. Para isso, criei um estilo para englobar essas atividades. Esses exercícios possuem, geralmente, 3 partes: O título, indicando o número da atividade; O enunciado; e, opcionalmente, os subtópicos da atividade, em lista. Tudo isso está previsto no estilo.</p>
+<p>A atividade deve ser assim:</p>
+
+<div class="exercicio">
+	<h5>Exercício 1 (Usando tag h5)</h5>
+	<p>Esse é o enunciado da pergunta usando uma tag de parágrafo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quam.</p>
+	<ol>
+		<li>Essa é a lista de sub-perguntas.</li>
+		<li>Para criar essa lista, uso a tag de lista numerada <code>&lt;ol&gt;</code>. </li>
+		<li>É uma lista como qualquer outra, portanto, cada item da lista é uma tag <code>&lt;li&gt;</code>.</li>
+	</ol>
+</div>
+
+<div class="exercicio">
+	<h5>Exercício 2</h5>
+	<p>Agora, um exemplo de dois exercícios em seguida.</p>
+	<ol>
+		<li>Lista de subperguntas.</li>
+		<li>Lista de subperguntas.</li>
+		<li>Lista de subperguntas.</li>
+	</ol>
+</div>
+
+
+
+
+<h2>Paginação</h2>
+
+<p>Apesar do ebook não ser dividido em páginas e ser uma rolagem única, é necessário que ele seja dividido em páginas. Para inserir um indicador de página, deve-se usar a tag <code>&lt;span class=&quot;pagina&quot;&gt;&lt;/span&gt;</code>, e dentro da tag, colocar o número da página. Por exemplo, a página 73 ficaria assim:</p>
+
+<span class="pagina">73</span>
+
+<p>É essa linha cinza dividindo o material. A numeração está no canto direito.</p>
+<p>Esse elemento deve ser colocado à cada 500 palavras, arredondado para baixo até fechar uma tag. Isto é, se a contagem de 500 palavras terminar no meio de um parágrafo por exemplo, a paginação deve ser colocada <b>depois</b> que a tag acabar. </p>
+
+
+<h2>Notas de "rodapé"</h2>
+
+<p>As notas de "rodapé" são pequenos textos que funcionam como notas de rodapé de livros impressos, com a diferença que essa não é de rodapé de fato, porque não há um rodapé num ebook. Elas funcionam assim <button class="botao-rodape" data-numero='1'></button>, um pequeno número do lado da palavra, exatamente como em livros impressos. Esse número é botão clicável, e ao clicar, revelará a nota. Pode ser que, durante a diagramação desse ebook, o botão não faça nada. É porque eu não implementei essa função ainda. Mas a nota estará logo abaixo. </p>
+
+<div class="nota-rodape" data-numero='1'>
+	Essa é a caixa de nota de "rodapé". É  essa caixa que será revelada quando clicar no botão equivalente. Pode ser que essa caixa suma enquanto você diagrame o ebook. Isso pode se dar porque eu consegui implementar o efeito do botão revelar a nota. Aí, é só clicar na nota para revelar essa caixa.
+</div>
+
+
+
+<h2>Fórmulas matemáticas</h2>
+
+<p>O grande diferencial desse ebook é que ele possui MUITAS fórmulas matemáticas. Para nosso facilidade, o próprio navegador consegue gerar essas fórmulas, através de um código que a gente consegue digitar como um texto comum. Essas fórmulas estão todas nos arquivos LaTeX do livro impresso.</p>
+<p>Existem, basicamente, 2 tipos de fórmula: As fórmulas em linha e em bloco.</p>
+<p>Fórmulas em linha se encontram no meio do texto, assim: </p>
+<div class="destaque">
+	 Sejam os vetores: $\vec{A}=(2,\beta ,1)$, $\vec{B}=(5,4,\gamma )$ e $\vec{C}=(\alpha ,4,2)$. Se $\vec{C}=\vec{A}+\vec{B}$, quais os valores de $\alpha $, $\beta $ e $\gamma $?
+</div>
+<p>E as fórmulas em bloco ficam assim: </p>
+<p class="formula">
+	\begin{equation} 
+	\vec{S}=\vec{A}+\vec{B}=(\underbrace{A_{x} +B_{x} }_{S_{x} },\underbrace{A_{y} +B_{y} }_{S_{y} },\underbrace{A_{z} +B_{z} }_{S_{z} }),                                
+	\end{equation} 
+	<span class="numero_formula">1</span>
+</p>
+
+<p>As instruções de como aplicar essas fórmulas estão no Docs.</p>
+<p>Enquanto às fórmulas em linha são colocadas como um texto comum no parágrafo, as fórmulas em bloco devem ficar em uma nova tag de parágrafo, separada do texto. E esse parágrafo vai ser um pouco diferente dos outros:</p>
+<ul>
+	<li>Esse parágrafo deve receber a classe <code>formula</code>, ficando, então, <code>&lt;p class=&quot;formula&quot;&gt;&lt;/p&gt;</code></li>
+	<li>Dentro dessa tag, vai a fórmula em bloco.</li>
+	<li>Algumas fórmulas são numeradas, para fins de referência. Essa numeração é uma tag <code>&lt;span class=&quot;numero_formula&quot;&gt;1&lt;/span&gt;</code>, e deve vir depois do texto da fórmula.</li>
+</ul>
+<h3>Referências às fórmulas</h3>
+<p>Você encontrará, eventualmente, no meio dos textos, referências às fórmulas através do número, por exemplo <i>Veja a fórmula 1.3</i>. Essas referências, no material em Latex, usam um código para fazer a referência automaticamente através das tags em Latex <code>ref</code> e <code>eqref</code>. Essas tag devem ser <b>apagadas</b> e substituídas pela referência digitada, mesmo, sem automatização. </p>

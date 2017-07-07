@@ -1,3 +1,5 @@
+
+
 <div id="sumario">
 	<header id="header">
 		<div class="cont-titulo">
@@ -7,7 +9,7 @@
 		<div class="navegacao-cap">
 
 			<a class="cap prev" <?php 
-				if ($numero_capitulo > 1) {
+				if ($numero_capitulo > 0) {
 					print 'href=\'' . $nomes_capitulos[($numero_capitulo-1)]['filename'] . '\'';
 				} else{
 					print 'disabled';
@@ -25,7 +27,7 @@
 			<a href="<?php print 'index.php' ?>" class="home">Home</a>
 
 			<a class="cap next" <?php 
-				if ($numero_capitulo < count($nomes_capitulos)) {
+				if ($numero_capitulo+1 < count($nomes_capitulos)) {
 					print 'href=\'' . $nomes_capitulos[($numero_capitulo+1)]['filename'] . '\'';
 				} else{
 					print 'disabled';
@@ -33,7 +35,7 @@
 			?>
 			>
 				<?php 
-					if ($numero_capitulo < count($nomes_capitulos)) {
+					if ($numero_capitulo+1 < count($nomes_capitulos)) {
 						print $numero_capitulo+1;
 					}
 					print(file_get_contents('../assets/img/ico_arrow.svg') );
