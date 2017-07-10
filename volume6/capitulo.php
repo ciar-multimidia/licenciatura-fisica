@@ -14,25 +14,16 @@
 	if ($eh_um_capitulo_real === false) {
 		header('Location:index.php');
 	}
-
-	
-
-
 	$path_capitulo = 'capitulos/' . $capitulo_selecionado;
+	$nome_capitulo = $nomes_capitulos[$n_cap]['nome'];
  ?>
 
 <?php 
 	require_once 'includes/head.php';
-	// require_once 'includes/cont_nav.php';
+	require_once 'includes/cont_nav.php';
  ?>
 
- <?php 
- 	print $eh_um_capitulo_real . '<br>'; 
- 	print $n_cap . '<br>'; 
 
- 	
- 	print $capitulo_selecionado;
-?>
 
  <main>
  	<article>

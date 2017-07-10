@@ -3,14 +3,14 @@
 <div id="sumario">
 	<header id="header">
 		<div class="cont-titulo">
-			<span class='numero-capitulo'><?php print $numero_capitulo ?></span>
-			<h1 class="titulo_capitulo"><?php print $capitulo_atual ?></h1>
+			<span class='numero-capitulo'><?php print $n_cap ?></span>
+			<h1 class="titulo_capitulo"><?php print $nome_capitulo ?></h1>
 		</div>
 		<div class="navegacao-cap">
 
 			<a class="cap prev" <?php 
-				if ($numero_capitulo > 0) {
-					print 'href=\'' . $nomes_capitulos[($numero_capitulo-1)]['filename'] . '\'';
+				if ($n_cap > 0) {
+					print 'href=\'capitulo.php?'. $nomes_capitulos[$n_cap-1]['uri'] . '\'';
 				} else{
 					print 'disabled';
 				}
@@ -18,8 +18,8 @@
 			>
 				<?php 
 					print(file_get_contents('../assets/img/ico_arrow.svg') );
-					if ($numero_capitulo > 1) {
-						print $numero_capitulo - 1;
+					if ($n_cap > 0) {
+						print $n_cap-1;
 					}
 				?>
 			</a>
@@ -27,16 +27,16 @@
 			<a href="<?php print 'index.php' ?>" class="home">Home</a>
 
 			<a class="cap next" <?php 
-				if ($numero_capitulo+1 < count($nomes_capitulos)) {
-					print 'href=\'' . $nomes_capitulos[($numero_capitulo+1)]['filename'] . '\'';
+				if ($n_cap+1 < count($nomes_capitulos)) {
+					print 'href=\'capitulo.php?'. $nomes_capitulos[$n_cap+1]['uri'] . '\'';
 				} else{
 					print 'disabled';
 				}
 			?>
 			>
 				<?php 
-					if ($numero_capitulo+1 < count($nomes_capitulos)) {
-						print $numero_capitulo+1;
+					if ($n_cap+1 < count($nomes_capitulos)) {
+						print $n_cap+1;
 					}
 					print(file_get_contents('../assets/img/ico_arrow.svg') );
 				?>
@@ -46,7 +46,7 @@
 
 	<nav id="subcapitulos">
 		<?php 
-			print $nav_capitulo;
+			print (file_get_contents($path_capitulo . '/nav.html'));
 		 ?>
 	</nav>
 </div>

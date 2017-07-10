@@ -7,7 +7,7 @@
 <ol>
 	<?php 
 		for ($i=0; $i < count($nomes_capitulos); $i++) { 
-			echo '<li><a href="'. $nomes_capitulos[$i]['filename'] . '">' . $nomes_capitulos[$i]['nome'] . '</a></li>';
+			echo '<li><a href="capitulo.php?'. $nomes_capitulos[$i]['uri'] . '">' . $nomes_capitulos[$i]['nome'] . '</a></li>';
 		}
 	 ?>
 </ol>
