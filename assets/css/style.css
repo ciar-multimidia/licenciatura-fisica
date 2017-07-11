@@ -424,6 +424,38 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   line-height: 1.2; }
 
+#introvolumes {
+  height: 100vh;
+  background: radial-gradient(110% 110% ellipse at bottom left, #0090A7 0%, rgba(0, 144, 167, 0) 100%), #001F3C;
+  background-position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+  #introvolumes .container {
+    width: 1000px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    #introvolumes .container .logos, #introvolumes .container .btvolumes {
+      width: 50%; }
+
 #sumario {
   position: fixed;
   top: 0;
