@@ -1,0 +1,127 @@
+#introportal{
+	height: 100vh;
+	background: radial-gradient(
+		110% 110% ellipse at bottom left,
+		map-get($cores, ciano) 0%,
+		transparentize(map-get($cores, ciano), 1) 100%
+	), map-get($cores, azulmarinho);
+	background-position: fixed;
+	@include display(flex);
+	@include justify-content(center);
+	@include align-items(flex-start);
+	.container{
+		margin-top: 20vh;
+		width: 1080px;
+		min-height: 300px;
+		@include display(flex);
+		
+		.logos, .btvolumes{
+			width: 50%;
+		}
+
+		.logos{
+			@include display(flex);
+			@include flex-direction(column);
+			@include justify-content(space-between);
+			.logo_curso{
+				width: 36%;
+				height: auto;
+			}
+
+			.outraslogos{
+				width: 100%;
+				& > a{
+					display: inline-block;
+					height: 40px;
+					margin-right: 1em;
+					width: auto;
+
+					&.logo_funape{
+						height: 30px;
+					}
+
+					&.logo_ciar{
+						height: 30px;
+					}
+					&.logo_uab{
+						height: 40px;
+					}
+					&.logo_brasil{
+						height: 35px;
+					}
+
+
+
+					svg{
+						display: block;
+						width: auto;
+						height: 100%;
+						path, polygon, rect, circle, ellipse{
+							fill: map-get($cores, verdeclaro);
+						}
+					}
+				}
+			}
+		}
+
+
+		.btvolumes{
+			a{
+				width: 100%;
+				@include transition(color 0.2s linear);
+				text-decoration: none;
+				color: map-get($cores, ciano);
+				@include display(flex);
+				min-height: 150px;
+
+				& + a{
+					margin-top: 0.5em;
+				}
+
+				&:hover{
+					color: map-get($cores, verdeclaro);
+					cursor: pointer;
+					.titulo, .sumario{
+						background-color: rgba(0,0,0,0.6);
+					}
+				}
+
+				.titulo, .sumario{
+					background-color: rgba(0,0,0,0.4);
+					@include transition(background-color 0.2s linear);
+				}
+
+				.titulo{
+					padding: 1em;
+					@include display(flex);
+					@include justify-content(center);
+					@include align-items(center);
+					h2{
+						font-family: $fonte-corpo;
+						font-weight: bold;
+						text-align: center;
+						font-size: 1.3em;
+						line-height: 1;
+						span{
+							display: block;
+							font-size: 2em;				
+						}
+					}
+				}
+
+				.sumario{
+					width: 100%;
+					margin-left: 0.5em;
+					@include display(flex);
+					@include align-items(center);
+					ol{
+						font-size: 0.9em;
+						line-height: 1.4;
+					}
+				}
+
+			}
+		}
+	}
+
+}

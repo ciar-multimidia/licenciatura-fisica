@@ -424,7 +424,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   line-height: 1.2; }
 
-#introvolumes {
+#introportal {
   height: 100vh;
   background: radial-gradient(110% 110% ellipse at bottom left, #0090A7 0%, rgba(0, 144, 167, 0) 100%), #001F3C;
   background-position: fixed;
@@ -443,9 +443,20 @@ h1, h2, h3, h4, h5, h6 {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center; }
-  #introvolumes .container {
-    width: 1000px;
+  -ms-flex-pack: center;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start; }
+  #introportal .container {
+    margin-top: 20vh;
+    width: 1080px;
+    min-height: 300px;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -453,8 +464,144 @@ h1, h2, h3, h4, h5, h6 {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-    #introvolumes .container .logos, #introvolumes .container .btvolumes {
+    #introportal .container .logos, #introportal .container .btvolumes {
       width: 50%; }
+    #introportal .container .logos {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      box-orient: vertical;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: justify; }
+      #introportal .container .logos .logo_curso {
+        width: 36%;
+        height: auto; }
+      #introportal .container .logos .outraslogos {
+        width: 100%; }
+        #introportal .container .logos .outraslogos > a {
+          display: inline-block;
+          height: 40px;
+          margin-right: 1em;
+          width: auto; }
+          #introportal .container .logos .outraslogos > a.logo_funape {
+            height: 30px; }
+          #introportal .container .logos .outraslogos > a.logo_ciar {
+            height: 30px; }
+          #introportal .container .logos .outraslogos > a.logo_uab {
+            height: 40px; }
+          #introportal .container .logos .outraslogos > a.logo_brasil {
+            height: 35px; }
+          #introportal .container .logos .outraslogos > a svg {
+            display: block;
+            width: auto;
+            height: 100%; }
+            #introportal .container .logos .outraslogos > a svg path, #introportal .container .logos .outraslogos > a svg polygon, #introportal .container .logos .outraslogos > a svg rect, #introportal .container .logos .outraslogos > a svg circle, #introportal .container .logos .outraslogos > a svg ellipse {
+              fill: #A6D8BE; }
+    #introportal .container .btvolumes a {
+      width: 100%;
+      -webkit-transition: color 0.2s linear;
+      -moz-transition: color 0.2s linear;
+      transition: color 0.2s linear;
+      text-decoration: none;
+      color: #0090A7;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      min-height: 150px; }
+      #introportal .container .btvolumes a + a {
+        margin-top: 0.5em; }
+      #introportal .container .btvolumes a:hover {
+        color: #A6D8BE;
+        cursor: pointer; }
+        #introportal .container .btvolumes a:hover .titulo, #introportal .container .btvolumes a:hover .sumario {
+          background-color: rgba(0, 0, 0, 0.6); }
+      #introportal .container .btvolumes a .titulo, #introportal .container .btvolumes a .sumario {
+        background-color: rgba(0, 0, 0, 0.4);
+        -webkit-transition: background-color 0.2s linear;
+        -moz-transition: background-color 0.2s linear;
+        transition: background-color 0.2s linear; }
+      #introportal .container .btvolumes a .titulo {
+        padding: 1em;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -ms-flex-align: center; }
+        #introportal .container .btvolumes a .titulo h2 {
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: bold;
+          text-align: center;
+          font-size: 1.3em;
+          line-height: 1; }
+          #introportal .container .btvolumes a .titulo h2 span {
+            display: block;
+            font-size: 2em; }
+      #introportal .container .btvolumes a .sumario {
+        width: 100%;
+        margin-left: 0.5em;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -ms-flex-align: center; }
+        #introportal .container .btvolumes a .sumario ol {
+          font-size: 0.9em;
+          line-height: 1.4; }
 
 #sumario {
   position: fixed;
@@ -935,7 +1082,6 @@ article {
     article table + * {
       margin-top: 3em; }
     article table caption {
-      width: 100%;
       text-align: center;
       caption-side: bottom;
       color: #666666; }

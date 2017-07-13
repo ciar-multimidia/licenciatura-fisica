@@ -6,7 +6,7 @@
 	<title>Licenciatura em Física</title>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body id='introvolumes'>
+<body id='introportal'>
 	<div class="container">
 
 		<div class="logos">
@@ -14,32 +14,36 @@
 				print (file_get_contents('assets/img/logo_curso.svg'));
 			 ?>
 
-			 <div id="outraslogos">
+			 <div class="outraslogos">
 			 	<?php
 				 	$outraslogos = array(
 				 		array(
 				 			'filename' => "logo_funape.svg",
 				 			'href' => 'http://www.funape.org.br/site/',
 				 			'title' => 'Link para o site da Funape',
-				 			'alt' => 'Logo da Funape'
+				 			'alt' => 'Logo da Funape',
+				 			'classe' => 'logo_funape'
 				 		),
 				 		array(
-				 			'filename' => "logo_ciar2.svg",
+				 			'filename' => "logo_ciar.svg",
 				 			'href' => 'http://www.ciar.ufg.br/',
 				 			'title' => 'Link para o site do CIAR - Centro Integrado de Aprendizagem em Rede',
-				 			'alt' => 'Logo do CIAR - Centro Integrado de Aprendizagem em Rede'
+				 			'alt' => 'Logo do CIAR - Centro Integrado de Aprendizagem em Rede',
+				 			'classe' => 'logo_ciar'
 				 		),
 				 		array(
 				 			'filename' => "logo_uab.svg",
 				 			'href' => 'http://www.capes.gov.br/uab',
 				 			'title' => 'Link para o site da UAB - Universidade Aberta do Brasil',
-				 			'alt' => 'Logo da UAB - Universidade Aberta do Brasil'
+				 			'alt' => 'Logo da UAB - Universidade Aberta do Brasil',
+				 			'classe' => 'logo_uab'
 				 		),
 				 		array(
 				 			'filename' => "logo_brasil.svg",
 				 			'href' => 'http://www.brasil.gov.br/',
 				 			'title' => 'Link para o site do Brasil',
-				 			'alt' => 'Logo do Brasil'
+				 			'alt' => 'Logo do Brasil',
+				 			'classe' => 'logo_brasil'
 				 		)
 				 		
 			 		);
@@ -48,7 +52,12 @@
 
 			 	?>
 
-				<a href="<?php print($outraslogos[$i]['href']) ?>" target='blank'>
+				<a 
+				href="<?php print($outraslogos[$i]['href']) ?>" 
+				target='blank' 
+				title='<?php print($outraslogos[$i]['title']) ?>'
+				class='<?php print($outraslogos[$i]['classe']) ?>'>
+
 					<?php print(file_get_contents('assets/img/' . $outraslogos[$i]['filename'])) ?>
 
 				</a>
@@ -60,50 +69,33 @@
 
 
 		<div class='btvolumes'>
-			<a href="volume6/index.php" class="volume">
-				<div class="titulo">
-					<h2>Vol<span>1</span></h2>
-				</div>
-				<div class="sumario">
-					<ol>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ol>
-				</div>
-			</a>
+			<?php 
 
-			<a href="volume7/index.php" class="volume">
-				<div class="titulo">
-					<h2>Vol<span>1</span></h2>
-				</div>
-				<div class="sumario">
-					<ol>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ol>
-				</div>
-			</a>
 
-			<a href="volume8/index.php" class="volume">
-				<div class="titulo">
-					<h2>Vol<span>1</span></h2>
-				</div>
-				<div class="sumario">
-					<ol>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ol>
-				</div>
-			</a>
+				$numero_volumes = array(6, 7, 8);
+				// $numero_volumes = array(7);
+
+				for ($i=0; $i < count($numero_volumes); $i++) :
+			 ?>
+				<a href="<?php print 'volume'. $numero_volumes[$i] .'/index.php' ?>" class="volume">
+					<div class="titulo">
+						<h2>Vol<span><?php print $numero_volumes[$i] ?></span></h2>
+					</div>
+					<div class="sumario">
+						<ol>
+							<?php 
+								require_once('volume'. $numero_volumes[$i] .'/includes/config.php');
+								for ($ii=0; $ii < count($nomes_capitulos); $ii++) :
+							 ?>
+								<li><?php print $nomes_capitulos[$ii]['nome']; ?></li>
+							<?php endfor; ?>
+						</ol>
+					</div>
+				</a>
+
+			<?php endfor; ?>
+
+			
 		</div>
 
 

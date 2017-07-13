@@ -6,7 +6,8 @@
 
 @import 'padroes';
 
-@import 'intro_volumes';
+@import 'intro_portal';
+@import 'intro_volume';
 
 // 1. Sumário
 $largura-sumario: 360px;
@@ -464,13 +465,14 @@ article{
 		max-width: 100%;
 		border-collapse: collapse;
 		@extend %textomenor;
+		// margin: 0 auto;
 		margin-top: 3em;
 		& + *{
 			margin-top: 3em;
 		}
 
 		caption{
-			width: 100%;
+			// width: 100%;
 			text-align: center;
 			caption-side: bottom;
 			color: map-get($cores, texto_secundario);
