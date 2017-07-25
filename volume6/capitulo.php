@@ -29,7 +29,7 @@
  	<article>
  		<?php 
 	 		 $content = file_get_contents($path_capitulo . '/content.html');
-	 		 $content = str_replace('{{caminho}}', $path_capitulo, $content);
+	 		 $content = str_replace('[[caminho]]', $path_capitulo, $content);
 	 		 echo $content;
  		 ?>
  	</article>

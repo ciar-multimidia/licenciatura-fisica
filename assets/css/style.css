@@ -414,7 +414,7 @@ body {
   -ms-hyphens: auto;
   hyphens: auto; }
 
-article p.formula span.numero_formula, article figure figcaption, article blockquote, article table, article span.pagina, article .nota-rodape, article .caixa, article .exercicio {
+article p.formula span.numero_formula, article figure figcaption, article blockquote, article table, article span#pag-fixa, article span.pagina, article .nota-rodape, article .caixa, article .exercicio {
   font-size: 0.9em;
   line-height: 1.4; }
 
@@ -916,8 +916,8 @@ main {
 
 article {
   width: 100%;
-  margin-top: 3em;
   padding-bottom: 5em;
+  position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -966,9 +966,13 @@ article {
     width: 630px; }
   article > h1, article > h2, article > h3, article > h4 {
     color: #0090A7; }
-  article > h2:before, article > h3:before, article > h4:before {
-    display: inline;
-    color: #666666; }
+  article > h2, article > h3, article > h4 {
+    margin-top: 1.5em; }
+    article > h2:before, article > h3:before, article > h4:before {
+      display: inline;
+      color: #666666; }
+    article > h2 + *, article > h3 + *, article > h4 + * {
+      margin-top: 0.5em !important; }
   article > h1 {
     font-size: 3em; }
   article > h2 {
@@ -988,31 +992,34 @@ article {
     counter-increment: heading_quatro; }
     article > h4:before {
       content: counter(heading_dois) "." counter(heading_tres) "." counter(heading_quatro) " "; }
-  article > h5 {
+  article > h5, article > h6 {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1em;
     color: inherit;
+    margin-top: 1.5em; }
+    article > h5 + *, article > h6 + * {
+      margin-top: 1em !important; }
+  article > h5 {
     font-weight: bold; }
   article > h6 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1em;
-    color: inherit;
     font-style: italic; }
-  article p.formula {
-    position: relative;
-    width: auto;
-    min-width: 630px;
-    max-width: 100%; }
-    article p.formula span.numero_formula {
-      line-height: 1;
-      margin: 0;
-      padding: 0.1em;
-      position: absolute;
-      top: 0;
-      right: 0;
-      color: #999999;
-      border: 1px solid #cccccc;
-      background-color: white; }
+  article p {
+    margin-top: 1.25em; }
+    article p.formula {
+      position: relative;
+      width: auto;
+      min-width: 630px;
+      max-width: 100%; }
+      article p.formula span.numero_formula {
+        line-height: 1;
+        margin: 0;
+        padding: 0.1em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #999999;
+        border: 1px solid #cccccc;
+        background-color: white; }
   article a {
     color: #005CB2; }
     article a:link {
@@ -1022,9 +1029,12 @@ article {
     padding: 0.1em 0.4em;
     background-color: #e6e6e6; }
   article ol, article ul {
-    padding-left: 2em; }
+    padding-left: 2em;
+    margin-top: 1.5em; }
     article ol li, article ul li {
       margin-top: 0; }
+    article ol + *, article ul + * {
+      margin-bottom: 1.5em; }
   article figure {
     width: auto;
     height: auto;
@@ -1069,7 +1079,6 @@ article {
       color: #666666; }
   article blockquote {
     padding-left: 4em;
-    position: relative;
     margin-top: 2em; }
     article blockquote + * {
       margin-top: 2em; }
@@ -1098,17 +1107,19 @@ article {
       padding-right: 0.6em; }
     article table th {
       text-align: left; }
-  article span.pagina {
-    width: 100%;
+  article span#pag-fixa, article span.pagina {
     color: #999999;
     text-align: right;
     padding-right: 1em;
-    display: block;
-    position: relative;
-    margin-top: 3em; }
-    article span.pagina:before {
+    display: block; }
+    article span#pag-fixa:before, article span.pagina:before {
       content: 'p. ';
       display: inline; }
+  article span.pagina {
+    width: 100%;
+    position: relative;
+    margin-top: 3em;
+    display: none; }
     article span.pagina:after {
       content: "";
       width: 100%;
@@ -1119,8 +1130,15 @@ article {
       background: -webkit-gradient(linear, right top, left top, from(#cccccc), to(#f2f2f2));
       background: linear-gradient(to left, #cccccc 0%, #f2f2f2 100%);
       z-index: -1; }
-    article span.pagina + * {
-      margin-top: 0em; }
+    article span.pagina ~ span.pagina {
+      display: block; }
+      article span.pagina ~ span.pagina + * {
+        margin-top: 0em; }
+  article span#pag-fixa {
+    width: calc(100% - 360px);
+    position: fixed;
+    top: 0;
+    right: 0; }
   article div {
     margin-top: 2em; }
     article div + * {
@@ -1138,34 +1156,77 @@ article {
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
+    outline: none;
     display: inline;
     height: auto;
     width: auto;
+    margin: 0;
     padding: 0.1em 0.2em;
     font-size: 0.8em;
     line-height: 1;
     background-color: #e6e6e6;
     border-radius: 2px;
     border: none;
-    vertical-align: top; }
+    vertical-align: top;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    -webkit-transition-property: color, background-color;
+    -moz-transition-property: color, background-color;
+    transition-property: color, background-color; }
     article button.botao-rodape:before {
       display: inline;
       content: attr(data-numero); }
     article button.botao-rodape:hover {
       cursor: pointer; }
+    article button.botao-rodape.focus {
+      outline: none; }
+    article button.botao-rodape.ativado {
+      background-color: #0090A7;
+      color: white; }
   article .nota-rodape {
+    position: absolute;
     padding: 1em 1em 2em;
+    margin: 0 10px;
     border: 1px solid #0090A7;
     background-color: white;
     border-bottom-width: 4px;
     width: auto;
     max-width: 480px;
-    z-index: 2; }
-    article .nota-rodape:before {
-      content: attr(data-numero);
-      font-family: inherit;
-      font-weight: bold;
+    z-index: 2;
+    display: none;
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    -moz-transition-property: opacity, -moz-transform;
+    transition-property: opacity, transform;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%; }
+    article .nota-rodape.origem-top {
+      -webkit-transform-origin: 50% 0%;
+      -moz-transform-origin: 50% 0%;
+      -ms-transform-origin: 50% 0%;
+      -o-transform-origin: 50% 0%;
+      transform-origin: 50% 0%; }
+    article .nota-rodape.db {
       display: block; }
+    article .nota-rodape.visivel {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
   article .destaque {
     padding: 1em 1em;
     border-left: 5px double #0090A7; }
