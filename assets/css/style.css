@@ -766,14 +766,16 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 1em; }
   #subcapitulos li {
     list-style-type: none;
-    padding: 0.3em 0;
-    padding-left: calc( 1em + 15px );
-    padding-right: 15px;
     counter-increment: subsubcaps; }
-    #subcapitulos li:before {
-      content: counter(subcaps) "." counter(subsubcaps) ". ";
-      font-weight: bold;
-      display: inline; }
+    #subcapitulos li > a {
+      padding: 0.3em 0;
+      display: block;
+      padding-left: calc( 1em + 15px );
+      padding-right: 15px; }
+      #subcapitulos li > a:before {
+        content: counter(subcaps) "." counter(subsubcaps) ". ";
+        font-weight: bold;
+        display: inline; }
   #subcapitulos > a, #subcapitulos li {
     -webkit-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
@@ -1071,7 +1073,8 @@ article {
       margin-top: 3em; }
     article figure img {
       width: 100%;
-      height: auto; }
+      height: auto;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15); }
     article figure figcaption {
       margin-top: 0;
       width: 100%;
@@ -1119,6 +1122,8 @@ article {
     width: 100%;
     position: relative;
     margin-top: 3em;
+    background-color: white;
+    z-index: 2;
     display: none; }
     article span.pagina:after {
       content: "";
@@ -1134,6 +1139,8 @@ article {
       display: block; }
       article span.pagina ~ span.pagina + * {
         margin-top: 0em; }
+    article span.pagina.esconder {
+      opacity: 0; }
   article span#pag-fixa {
     width: calc(100% - 360px);
     position: fixed;
@@ -1161,7 +1168,7 @@ article {
     height: auto;
     width: auto;
     margin: 0;
-    padding: 0.1em 0.2em;
+    padding: 0.2em 0.3em;
     font-size: 0.8em;
     line-height: 1;
     background-color: #e6e6e6;
@@ -1193,7 +1200,7 @@ article {
     border-bottom-width: 4px;
     width: auto;
     max-width: 480px;
-    z-index: 2;
+    z-index: 3;
     display: none;
     opacity: 0;
     -webkit-transform: scale(0.5);
@@ -1201,9 +1208,9 @@ article {
     -ms-transform: scale(0.5);
     -o-transform: scale(0.5);
     transform: scale(0.5);
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
     -webkit-transition-property: opacity, -webkit-transform;
     -moz-transition-property: opacity, -moz-transform;
     transition-property: opacity, transform;
@@ -1227,6 +1234,27 @@ article {
       -ms-transform: scale(1);
       -o-transform: scale(1);
       transform: scale(1); }
+    article .nota-rodape button.fechar {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      width: 12px;
+      height: 12px;
+      border: none;
+      display: block; }
+      article .nota-rodape button.fechar img {
+        width: 100%;
+        height: auto; }
+      article .nota-rodape button.fechar:hover {
+        cursor: pointer; }
+      article .nota-rodape button.fechar + * {
+        margin-top: 0.4em; }
   article .destaque {
     padding: 1em 1em;
     border-left: 5px double #0090A7; }

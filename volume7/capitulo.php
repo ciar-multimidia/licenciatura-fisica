@@ -27,7 +27,7 @@
 
  <main>
  	<article>
- 		<span id="pag-fixa">2</span>
+ 		<span id="pag-fixa"></span>
  		<?php 
 	 		 $content = file_get_contents($path_capitulo . '/content.html');
 	 		 $content = str_replace('[[caminho]]', $path_capitulo, $content);

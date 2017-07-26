@@ -21,9 +21,19 @@ jQuery(document).ready(function($) {
 	var btRodape = $('button.botao-rodape');
 	var notasRodape = $('.nota-rodape');
 
-	if (btRodape.length !== notasRodape.length) {
-		console.warn('Existe um número diferente de notas de rodapé e de botões que ativam essas notas. Verifique.');
-	}
+
+	notasRodape.each(function(index, el) {
+		$(el).prepend('\
+			<button class=\'fechar\' title=\'Fechar nota de rodapé\'>\
+				<img src=\'../assets/img/icone-fechar.svg\' aria-hidden=\'true\'>\
+			</button>\
+		');
+
+		$(el).find('.fechar').on('click', function(event) {
+			notasRodape.removeClass('visivel db');
+			btRodape.removeClass('ativado');
+		});
+	});
 
 
 
@@ -75,6 +85,57 @@ jQuery(document).ready(function($) {
 		}
 
 	});
+
+	var paginas = $('span.pagina');
+	var pagFixa = $('#pag-fixa');
+
+	if (paginas.length > 0) {
+		pagFixa.text(paginas.eq(0).text());
+
+		var pagAtual = 0;
+		$(window).on('scroll', function(event) {
+			var thisCorpo = $(this);
+			paginas.each(function(index, el) {
+				if (thisCorpo.scrollTop() >= $(el).offset().top) {
+					$(el).addClass('esconder');
+					pagAtual = index;
+				}
+
+				else{
+					$(el).removeClass('esconder');
+				}
+			});
+
+			pagFixa.text(paginas.eq(pagAtual).text());
+		});
+	} else{
+		pagFixa.remove();
+	}
+
+
+	var btSubcaps = $('#subcapitulos a');
+	var headings = $('article h2, article h3');
+
+	btSubcaps.each(function(index, el) {
+		$(el).on('click', function(event) {
+			event.preventDefault();
+			$('html, body').scrollTop(headings.eq(index).offset().top);
+		});	
+	});
+
+	
+
+
+	// Códigos para "debug"
+
+	if (btRodape.length !== notasRodape.length) {
+		console.warn('Existe um número diferente de notas de rodapé e de botões que ativam essas notas. Verifique.');
+	}
+
+	if (btSubcaps.length !== headings.length) {
+		console.warn('Existe um número diferente de botões do sumário e de cabeçalhos no material.');
+
+	}
 
 
 });
