@@ -129,13 +129,20 @@ jQuery(document).ready(function($) {
 	// Códigos para "debug"
 
 	if (btRodape.length !== notasRodape.length) {
-		console.warn('Existe um número diferente de notas de rodapé e de botões que ativam essas notas. Verifique.');
+		console.warn('O número de notas de rodapé não coincide com o número de botões que ativam notas.');
 	}
 
 	if (btSubcaps.length !== headings.length) {
-		console.warn('Existe um número diferente de botões do sumário e de cabeçalhos no material.');
-
+		console.warn('O número de links no sumário não coincide com o número de cabeçalhos.');
 	}
+
+	var nPrimeiraPagina = parseInt(paginas.eq(0).text());
+	var nUltimaPagina = parseInt(paginas.eq(paginas.length-1).text());
+
+	if (nPrimeiraPagina + paginas.length -1 !== nUltimaPagina) {
+		console.warn('A numeração das páginas não coincide com o número de tags de paginação.');
+	}
+	
 
 
 });
