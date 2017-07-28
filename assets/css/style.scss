@@ -572,6 +572,7 @@ article{
 	}
 
 	span#pag-fixa{
+		margin-top: 0;
 		width: calc(100% - #{$largura-sumario});
 		position: fixed;
 		top: 0;

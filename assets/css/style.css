@@ -1143,6 +1143,7 @@ article {
     article span.pagina.esconder {
       opacity: 0; }
   article span#pag-fixa {
+    margin-top: 0;
     width: calc(100% - 360px);
     position: fixed;
     top: 0;
