@@ -22,6 +22,7 @@ jQuery(document).ready(function($) {
 	var notasRodape = $('.nota-rodape');
 
 	var transitionendPrefixed = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
+
 	notasRodape.each(function(index, el) {
 		$(el).prepend('\
 			<button class=\'fechar\' title=\'Fechar nota de rodapé\'>\
@@ -30,6 +31,7 @@ jQuery(document).ready(function($) {
 		');
 
 		$(el).find('.fechar').on('click', function(event) {
+			$(el).addClass('easing-saida');
 			notasRodape.removeClass('visivel');
 			btRodape.removeClass('ativado');
 			rodapeAtual = 0;
@@ -37,7 +39,7 @@ jQuery(document).ready(function($) {
 
 		$(el).on(transitionendPrefixed, function(event) {
 			if (!$(this).hasClass('visivel')) {
-				$(this).removeClass('db');
+				$(this).removeClass('db easing-saida');
 			}
 		});
 	});
@@ -51,6 +53,7 @@ jQuery(document).ready(function($) {
 			var thisTop = $(this).offset().top;
 			var thisLeft = $(this).position().left;
 			var thisHeight = $(this).outerHeight();
+			notasRodape.filter('[data-numero=\''+rodapeAtual+'\']').addClass('easing-saida');
 			notasRodape.removeClass('visivel');
 			var notaRevelar = notasRodape.filter('[data-numero=\'' + thisNumero + '\']');
 			notaRevelar.addClass('db');

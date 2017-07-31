@@ -19,7 +19,7 @@ $padding-sumario-h: 15px;
 	left: 0;
 	width: $largura-sumario;
 	height: 100vh;
-	background-color: hsl(0,0,95%);
+	background-color: hsla(190, 20%, 96%, 1);
 	overflow: scroll;
 	// opacity: 0.2;
 	// @include transition(opacity 0.1s linear);
@@ -42,7 +42,7 @@ $padding-sumario-h: 15px;
 			linear, 
 			left top, left bottom, 
 			from(transparentize(map-get($cores, ciano), 1)),
-			color-stop(30%, transparentize(map-get($cores, ciano), 1)),
+			color-stop(20%, transparentize(map-get($cores, ciano), 1)),
 			to(transparentize(map-get($cores, ciano), 0.4))
 		),
 		map-get($cores, azulmarinho);
@@ -51,7 +51,7 @@ $padding-sumario-h: 15px;
 		linear-gradient(
 			to bottom, 
 			transparentize(map-get($cores, ciano), 1) 0%,
-			transparentize(map-get($cores, ciano), 1) 30%,
+			transparentize(map-get($cores, ciano), 1) 20%,
 			transparentize(map-get($cores, ciano), 0.4) 100%
 		),
 		map-get($cores, azulmarinho);
@@ -63,16 +63,17 @@ $padding-sumario-h: 15px;
 		width: 100%;
 		padding: $padding-sumario-h;
 		padding-top: 0;
+		position: relative;
 		.numero-capitulo{
 			@include display(flex);
 			text-align: center;
 			@include align-items(center);
-			background-color: map-get($cores, verdeclaro);
-			color: map-get($cores, azulmarinho);
+			background-color: rgba(0,0,0,0.5);
+			color: map-get($cores, verdeclaro);
 			padding: 0.6em 0.6em 0.2em;
 			margin-bottom: 0.4em;
 			font-family: $fonte-heading;
-			font-weight: 700;
+			font-weight: normal;
 			font-size: 2em;
 			line-height: 1;
 
@@ -86,7 +87,25 @@ $padding-sumario-h: 15px;
 			color: map-get($cores, verdeclaro);
 			font-weight: 300;
 			font-size: 1.3em;
+			line-height: 1.5;
 			text-shadow: 0px 1px 3px map-get($cores, azulmarinho);
+		}
+
+		.volume{
+			font-size: 1em;
+			line-height: 1.1;
+			text-align: center;
+			color: map-get($cores, ciano);
+			margin: 0;
+			padding: $padding-sumario-h/2 $padding-sumario-h/2 0 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			span{
+				display: block;
+				font-weight: bold;
+				font-size: 1.2em;
+			}
 		}
 
 	}
@@ -573,10 +592,12 @@ article{
 
 	span#pag-fixa{
 		margin-top: 0;
-		width: calc(100% - #{$largura-sumario});
+		padding: 0 1em 0.5em 0.5em;
+		width: auto;
 		position: fixed;
 		top: 0;
 		right: 0;
+		background-color: hsla(0,0,100%,0.9);
 	}
 
 	
@@ -648,7 +669,7 @@ article{
 		display: none;
 		opacity: 0;
 		@include transform(scale(0.5));
-		@include transition(all 0.1s ease-out);
+		@include transition(all 0.2s ease-out);
 		@include transition-property(opacity, transform);
 		@include transform-origin(50% 100%);
 		&.origem-top{
@@ -662,6 +683,11 @@ article{
 		&.visivel{
 			opacity: 1;
 			@include transform(scale(1));
+			z-index: 4;
+		}
+
+		&.easing-saida{
+			@include transition-timing-function(ease-in);
 		}
 
 		button.fechar{

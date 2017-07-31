@@ -97,14 +97,15 @@
 					@include justify-content(center);
 					@include align-items(center);
 					h2{
-						font-family: $fonte-corpo;
-						font-weight: bold;
+						font-family: $fonte-heading;
+						font-weight: lighter;
 						text-align: center;
 						font-size: 1.3em;
 						line-height: 1;
 						span{
 							display: block;
-							font-size: 2em;				
+							font-size: 2em;
+							font-weight: bold;				
 						}
 					}
 				}

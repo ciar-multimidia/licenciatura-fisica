@@ -3,8 +3,9 @@
 <div id="sumario">
 	<header id="header">
 		<div class="cont-titulo">
-			<span class='numero-capitulo'><?php print $n_cap ?></span>
+			<span class='numero-capitulo'><?php print $n_cap+1 ?></span>
 			<h1 class="titulo_capitulo"><?php print $nome_capitulo ?></h1>
+			<p class="volume">Vol <span><?php print $volume ?></span></p>
 		</div>
 		<div class="navegacao-cap">
 
@@ -19,7 +20,7 @@
 				<?php 
 					print(file_get_contents('../assets/img/ico_arrow.svg') );
 					if ($n_cap > 0) {
-						print $n_cap-1;
+						print $n_cap;
 					}
 				?>
 			</a>
@@ -36,7 +37,7 @@
 			>
 				<?php 
 					if ($n_cap+1 < count($nomes_capitulos)) {
-						print $n_cap+1;
+						print $n_cap+2;
 					}
 					print(file_get_contents('../assets/img/ico_arrow.svg') );
 				?>

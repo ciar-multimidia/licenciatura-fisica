@@ -1,4 +1,5 @@
 <?php
+	$volume = 7;
 	$nomes_capitulos  = array(
 		array(
 				'nome' => 'Aprendendo HTML',
