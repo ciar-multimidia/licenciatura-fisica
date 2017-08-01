@@ -670,11 +670,11 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
       background-color: rgba(0, 0, 0, 0.5);
       color: #A6D8BE;
-      padding: 0.6em 0.6em 0.2em;
-      margin-bottom: 0.4em;
+      padding: 0.5em 0.4em 0.15em;
+      margin-bottom: 0.2em;
       font-family: "Roboto Slab", serif;
       font-weight: normal;
-      font-size: 2em;
+      font-size: 2.4em;
       line-height: 1; }
     #header div.cont-titulo .titulo_capitulo {
       width: 100%;
@@ -686,12 +686,12 @@ h1, h2, h3, h4, h5, h6 {
       line-height: 1.5;
       text-shadow: 0px 1px 3px #001F3C; }
     #header div.cont-titulo .volume {
-      font-size: 1em;
+      font-size: 0.8em;
       line-height: 1.1;
       text-align: center;
-      color: #0090A7;
+      color: #A6D8BE;
       margin: 0;
-      padding: 7.5px 7.5px 0 0;
+      padding: 0.3em;
       position: absolute;
       right: 0;
       top: 0; }
@@ -700,7 +700,6 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
         font-size: 1.2em; }
   #header div.navegacao-cap {
-    height: 30px;
     width: 100%;
     display: -webkit-box;
     display: -moz-box;
@@ -708,55 +707,111 @@ h1, h2, h3, h4, h5, h6 {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
     #header div.navegacao-cap a {
       color: #0090A7;
-      width: 34%;
       height: 100%;
       display: inline-block;
-      text-align: center;
-      font-size: 1em;
-      font-weight: bold; }
+      font-size: 0.9em;
+      border-bottom: 1px solid grey; }
       #header div.navegacao-cap a, #header div.navegacao-cap a:link, #header div.navegacao-cap a:visited, #header div.navegacao-cap a:hover, #header div.navegacao-cap a:focus, #header div.navegacao-cap a:active {
         text-decoration: none; }
+      #header div.navegacao-cap a:hover {
+        background-color: white; }
+      #header div.navegacao-cap a[disabled] {
+        visibility: hidden;
+        pointer-events: none; }
       #header div.navegacao-cap a svg {
         display: inline;
-        height: 0.8em;
+        height: 0.7em;
         width: auto; }
         #header div.navegacao-cap a svg {
           fill: #0090A7; }
+      #header div.navegacao-cap a.home {
+        width: 100%;
+        text-align: center; }
       #header div.navegacao-cap a.cap {
+        width: 50%;
+        padding: 0.5em;
         display: -webkit-box;
         display: -moz-box;
         display: box;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -moz-box-align: center;
-        box-align: center;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        -o-align-items: center;
-        align-items: center;
-        -ms-flex-align: center;
-        -webkit-box-pack: center;
-        -moz-box-pack: center;
-        box-pack: center;
-        -webkit-justify-content: center;
-        -moz-justify-content: center;
-        -ms-justify-content: center;
-        -o-justify-content: center;
-        justify-content: center;
-        -ms-flex-pack: center; }
-        #header div.navegacao-cap a.cap.prev svg {
-          -webkit-transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          transform: rotate(180deg); }
+        display: flex; }
+        #header div.navegacao-cap a.cap div.seta {
+          padding: 0 1em;
+          display: -webkit-box;
+          display: -moz-box;
+          display: box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -moz-box-align: center;
+          box-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          -o-align-items: center;
+          align-items: center;
+          -ms-flex-align: center; }
+          #header div.navegacao-cap a.cap div.seta svg {
+            height: 35%;
+            width: auto; }
+        #header div.navegacao-cap a.cap div.txt {
+          width: 100%;
+          display: -webkit-box;
+          display: -moz-box;
+          display: box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-lines: multiple;
+          -moz-box-lines: multiple;
+          box-lines: multiple;
+          -webkit-flex-wrap: wrap;
+          -moz-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-align: center;
+          -moz-box-align: center;
+          box-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          -o-align-items: center;
+          align-items: center;
+          -ms-flex-align: center; }
+          #header div.navegacao-cap a.cap div.txt p {
+            width: 100%;
+            margin: 0; }
+            #header div.navegacao-cap a.cap div.txt p.num {
+              font-size: 1.4em;
+              line-height: 1;
+              text-align: center; }
+            #header div.navegacao-cap a.cap div.txt p.tit {
+              line-height: 1.2; }
+        #header div.navegacao-cap a.cap.prev {
+          border-right: 1px solid grey; }
+          #header div.navegacao-cap a.cap.prev svg {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg); }
+        #header div.navegacao-cap a.cap.next div.txt {
+          text-align: right; }
 
 #subcapitulos {
   padding: 30px 0;
@@ -1190,7 +1245,8 @@ article {
     width: auto;
     margin: 0;
     padding: 0.2em 0.3em;
-    font-size: 0.8em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.9em;
     line-height: 1;
     background-color: #e6e6e6;
     border-radius: 2px;

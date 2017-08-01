@@ -70,11 +70,11 @@ $padding-sumario-h: 15px;
 			@include align-items(center);
 			background-color: rgba(0,0,0,0.5);
 			color: map-get($cores, verdeclaro);
-			padding: 0.6em 0.6em 0.2em;
-			margin-bottom: 0.4em;
+			padding: 0.5em 0.4em 0.15em;
+			margin-bottom: 0.2em;
 			font-family: $fonte-heading;
 			font-weight: normal;
-			font-size: 2em;
+			font-size: 2.4em;
 			line-height: 1;
 
 
@@ -92,12 +92,12 @@ $padding-sumario-h: 15px;
 		}
 
 		.volume{
-			font-size: 1em;
+			font-size: 0.8em;
 			line-height: 1.1;
 			text-align: center;
-			color: map-get($cores, ciano);
+			color: map-get($cores, verdeclaro);
 			margin: 0;
-			padding: $padding-sumario-h/2 $padding-sumario-h/2 0 0;
+			padding: 0.3em;
 			position: absolute;
 			right: 0;
 			top: 0;
@@ -111,36 +111,92 @@ $padding-sumario-h: 15px;
 	}
 
 	div.navegacao-cap{
-		height: 30px;
 		width: 100%;
 		@include  display(flex);
+		@include flex-wrap(wrap);
 		a{
 			&, &:link, &:visited, &:hover, &:focus, &:active{
 				text-decoration: none;
 			}
 			color: map-get($cores, ciano);
-			width: 34%;
 			height: 100%;
 			display: inline-block;
-			text-align: center;
-			font-size: 1em;
-			font-weight: bold;
+			font-size: 0.9em;
+			border-bottom: 1px solid grey;
+
+			&:hover{
+				background-color: white;
+			}
+
+			&[disabled]{
+				visibility: hidden;
+				pointer-events: none;
+			}
 			svg{
 				display: inline;
-				height: 0.8em;
+				height: 0.7em;
 				width: auto;
 				&{
 					fill: map-get($cores, ciano);
 				}
 			}
 
+			&.home{
+				width: 100%;
+				text-align: center;
+			}
+
 			&.cap{
+
+
+				width: 50%;
+				padding: 0.5em;
 				@include display(flex);
-				@include align-items(center);
-				@include justify-content(center);
+
+				
+				div.seta{
+					padding: 0 1em;
+					@include display(flex);
+					@include align-items(center);
+					svg{
+						height: 35%;
+						width: auto;
+					}
+				}
+
+				div.txt{
+					width: 100%;
+					@include display(flex);
+					@include flex-wrap(wrap);
+					@include align-items(center);
+					p{
+						width: 100%;
+						margin: 0;
+						&.num{
+							font-size: 1.4em;
+							line-height: 1;
+							text-align: center;
+						}
+
+						&.tit{
+							line-height: 1.2;
+						}
+					}
+				}
+
 				&.prev{
+					border-right: 1px solid grey;
 					svg{
 						@include transform(rotate(180deg));
+					}
+				}
+
+				&.next{
+					div.txt{
+						text-align: right;
+					}
+					svg{
+						// @include transform(rotate(0deg));
 					}
 				}
 			}
@@ -627,7 +683,8 @@ article{
 		width: auto;
 		margin: 0;
 		padding: 0.2em 0.3em;
-		font-size: 0.8em;
+		font-family: $fonte-corpo;
+		font-size: 0.9em;
 		line-height: 1;
 		background-color: hsl(0,0,90%);
 		border-radius: 2px;
