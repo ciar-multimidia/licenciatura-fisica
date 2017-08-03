@@ -1036,9 +1036,7 @@ article {
     margin-top: 1em; }
     article *:first-child {
       margin-top: 0; }
-  article > * {
-    width: 630px; }
-  article > div.grid-2 {
+  article div.grid-2 {
     font-size: 0.9em;
     margin-top: 2em;
     display: -webkit-box;
@@ -1048,14 +1046,16 @@ article {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-    article > div.grid-2 + * {
+    article div.grid-2 + * {
       margin-top: 2em; }
-    article > div.grid-2 > * {
+    article div.grid-2 > * {
       margin: 0;
       width: 50%;
       margin-right: 2em; }
-      article > div.grid-2 > *:last-child {
+      article div.grid-2 > *:last-child {
         margin-right: 0; }
+  article > * {
+    width: 630px; }
   article > h1, article > h2, article > h3, article > h4 {
     color: #0090A7; }
   article > h2, article > h3, article > h4 {
