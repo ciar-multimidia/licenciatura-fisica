@@ -399,6 +399,23 @@ article{
 			width: $largura-artigo;
 		}
 
+		div.grid-2{
+			font-size: 0.9em;
+			margin-top: 2em;
+			& + *{
+				margin-top: 2em;
+			}
+			@include display(flex);
+			& > *{
+				margin: 0;
+				width: 50%;
+				margin-right: 2em;
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+
 		h1, h2, h3, h4{
 			color: map-get($cores, ciano);
 		}
@@ -522,6 +539,7 @@ article{
 			list-style-type: lower-alpha;
 		}
 	}
+
 
 	figure{
 		width: auto;
@@ -668,7 +686,7 @@ article{
 
 	
 
-	div{
+	%divsdestaque{
 		margin-top: 2em;
 		& + *{
 			margin-top: 2em;
@@ -723,6 +741,7 @@ article{
 	}
 
 	.nota-rodape{
+		@extend %divsdestaque;
 		position: absolute;
 		@extend %textomenor;
 		padding: 1em 1em 2em;
@@ -783,11 +802,13 @@ article{
 	}
 
 	.destaque{
+		@extend %divsdestaque;
 		padding: 1em 1em;
 		border-left: 5px double map-get($cores, ciano);
 	}
 
 	.caixa{
+		@extend %divsdestaque;
 		@extend %textomenor;
 		padding: 1.5em 1.5em 3em;
 		background: hsla(0,0,95%,1);
@@ -807,6 +828,7 @@ article{
 	}
 
 	.exercicio{
+		@extend %divsdestaque;
 		@extend %textomenor;
 		width: $largura-artigo-maxima;
 		padding: 1em #{($largura-artigo-maxima - $largura-artigo) / 2} 2em;

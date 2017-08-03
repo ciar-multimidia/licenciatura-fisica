@@ -1038,6 +1038,24 @@ article {
       margin-top: 0; }
   article > * {
     width: 630px; }
+  article > div.grid-2 {
+    font-size: 0.9em;
+    margin-top: 2em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    article > div.grid-2 + * {
+      margin-top: 2em; }
+    article > div.grid-2 > * {
+      margin: 0;
+      width: 50%;
+      margin-right: 2em; }
+      article > div.grid-2 > *:last-child {
+        margin-right: 0; }
   article > h1, article > h2, article > h3, article > h4 {
     color: #0090A7; }
   article > h2, article > h3, article > h4 {
@@ -1225,14 +1243,14 @@ article {
     top: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.9); }
-  article div {
+  article .nota-rodape, article .destaque, article .caixa, article .exercicio {
     margin-top: 2em; }
-    article div + * {
+    article .nota-rodape + *, article .destaque + *, article .caixa + *, article .exercicio + * {
       margin-top: 2em; }
-    article div h5 {
+    article .nota-rodape h5, article .destaque h5, article .caixa h5, article .exercicio h5 {
       font-size: 1.3em;
       font-family: "Roboto Slab", serif; }
-    article div h6 {
+    article .nota-rodape h6, article .destaque h6, article .caixa h6, article .exercicio h6 {
       font-size: 1.1em;
       font-family: "Source Sans Pro", sans-serif;
       font-weight: bold; }
