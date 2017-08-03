@@ -739,7 +739,6 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center; }
       #header div.navegacao-cap a.cap {
         width: 50%;
-        padding: 0.5em;
         display: -webkit-box;
         display: -moz-box;
         display: box;
@@ -748,7 +747,7 @@ h1, h2, h3, h4, h5, h6 {
         display: -ms-flexbox;
         display: flex; }
         #header div.navegacao-cap a.cap div.seta {
-          padding: 0 1em;
+          padding: 0 0.6em;
           display: -webkit-box;
           display: -moz-box;
           display: box;
@@ -770,6 +769,7 @@ h1, h2, h3, h4, h5, h6 {
             width: auto; }
         #header div.navegacao-cap a.cap div.txt {
           width: 100%;
+          padding: 0.5em;
           display: -webkit-box;
           display: -moz-box;
           display: box;
@@ -798,8 +798,7 @@ h1, h2, h3, h4, h5, h6 {
             margin: 0; }
             #header div.navegacao-cap a.cap div.txt p.num {
               font-size: 1.4em;
-              line-height: 1;
-              text-align: center; }
+              line-height: 1; }
             #header div.navegacao-cap a.cap div.txt p.tit {
               line-height: 1.2; }
         #header div.navegacao-cap a.cap.prev {
@@ -1110,6 +1109,10 @@ article {
       margin-top: 0; }
     article ol + *, article ul + * {
       margin-bottom: 1.5em; }
+  article ol.numeros {
+    list-style-type: decimal; }
+  article ol.letras {
+    list-style-type: lower-alpha; }
   article figure {
     width: auto;
     height: auto;

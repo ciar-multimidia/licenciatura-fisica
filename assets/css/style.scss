@@ -150,12 +150,11 @@ $padding-sumario-h: 15px;
 
 
 				width: 50%;
-				padding: 0.5em;
 				@include display(flex);
 
 				
 				div.seta{
-					padding: 0 1em;
+					padding: 0 0.6em;
 					@include display(flex);
 					@include align-items(center);
 					svg{
@@ -166,6 +165,7 @@ $padding-sumario-h: 15px;
 
 				div.txt{
 					width: 100%;
+					padding: 0.5em;
 					@include display(flex);
 					@include flex-wrap(wrap);
 					@include align-items(center);
@@ -175,7 +175,7 @@ $padding-sumario-h: 15px;
 						&.num{
 							font-size: 1.4em;
 							line-height: 1;
-							text-align: center;
+							// text-align: center;
 						}
 
 						&.tit{
@@ -510,6 +510,16 @@ article{
 		}
 		& + *{
 			margin-bottom: 1.5em;
+		}
+	}
+
+	ol{
+		&.numeros{
+			list-style-type: decimal;
+		}
+
+		&.letras{
+			list-style-type: lower-alpha;
 		}
 	}
 
