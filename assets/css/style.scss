@@ -394,22 +394,6 @@ article{
 		}
 	}
 
-	div.grid-2{
-		font-size: 0.9em;
-		margin-top: 2em;
-		& + *{
-			margin-top: 2em;
-		}
-		@include display(flex);
-		& > *{
-			margin: 0;
-			width: 50%;
-			margin-right: 2em;
-			&:last-child{
-				margin-right: 0;
-			}
-		}
-	}
 
 	& > {
 		*{
@@ -482,6 +466,23 @@ article{
 			font-style: italic;
 		}
 
+	}
+
+	div.grid-2{
+		font-size: 0.9em;
+		margin-top: 2em;
+		& + *{
+			margin-top: 2em;
+		}
+		@include display(flex);
+		& > *{
+			margin: 0;
+			width: 50%;
+			margin-right: 2em;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
 	} 
 
 	p{
@@ -515,8 +516,31 @@ article{
 	}
 
 	code{
+		font-size: 0.9em;
 		padding: 0.1em 0.4em;
 		background-color: hsl(0,0,90%);
+	}
+
+	pre{
+		padding: 2em;
+		background-color: hsl(0,0,90%);
+		max-height: 30em;
+		overflow: scroll;
+		font-size: 0.8em;
+		-moz-tab-size: 4; /* Code for Firefox */
+	      -o-tab-size: 4; /* Code for Opera 10.6-12.1 */
+		     tab-size: 4;
+		margin-top: 2em;
+		& + *{
+			margin-top: 2em;
+		}
+
+
+		code{
+			font-size: 1em;
+			background-color: transparent;
+			padding: 0;
+		}
 	}
 
 	
@@ -527,7 +551,7 @@ article{
 			margin-top: 0;
 		}
 		& + *{
-			margin-bottom: 1.5em;
+			margin-top: 1.5em;
 		}
 	}
 

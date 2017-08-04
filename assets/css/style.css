@@ -1036,24 +1036,6 @@ article {
     margin-top: 1em; }
     article *:first-child {
       margin-top: 0; }
-  article div.grid-2 {
-    font-size: 0.9em;
-    margin-top: 2em;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex; }
-    article div.grid-2 + * {
-      margin-top: 2em; }
-    article div.grid-2 > * {
-      margin: 0;
-      width: 50%;
-      margin-right: 2em; }
-      article div.grid-2 > *:last-child {
-        margin-right: 0; }
   article > * {
     width: 630px; }
   article > h1, article > h2, article > h3, article > h4 {
@@ -1095,6 +1077,24 @@ article {
     font-weight: bold; }
   article > h6 {
     font-style: italic; }
+  article div.grid-2 {
+    font-size: 0.9em;
+    margin-top: 2em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    article div.grid-2 + * {
+      margin-top: 2em; }
+    article div.grid-2 > * {
+      margin: 0;
+      width: 50%;
+      margin-right: 2em; }
+      article div.grid-2 > *:last-child {
+        margin-right: 0; }
   article p {
     margin-top: 1.25em; }
     article p.formula {
@@ -1118,15 +1118,34 @@ article {
       overflow-wrap: break-word;
       word-break: break-all; }
   article code {
+    font-size: 0.9em;
     padding: 0.1em 0.4em;
     background-color: #e6e6e6; }
+  article pre {
+    padding: 2em;
+    background-color: #e6e6e6;
+    max-height: 30em;
+    overflow: scroll;
+    font-size: 0.8em;
+    -moz-tab-size: 4;
+    /* Code for Firefox */
+    -o-tab-size: 4;
+    /* Code for Opera 10.6-12.1 */
+    tab-size: 4;
+    margin-top: 2em; }
+    article pre + * {
+      margin-top: 2em; }
+    article pre code {
+      font-size: 1em;
+      background-color: transparent;
+      padding: 0; }
   article ol, article ul {
     padding-left: 2em;
     margin-top: 1.5em; }
     article ol li, article ul li {
       margin-top: 0; }
     article ol + *, article ul + * {
-      margin-bottom: 1.5em; }
+      margin-top: 1.5em; }
   article ol.numeros {
     list-style-type: decimal; }
   article ol.letras {
