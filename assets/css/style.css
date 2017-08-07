@@ -701,6 +701,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.2em; }
   #header div.navegacao-cap {
     width: 100%;
+    height: 42px;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -708,109 +709,89 @@ h1, h2, h3, h4, h5, h6 {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
     #header div.navegacao-cap a {
-      color: #0090A7;
-      height: 100%;
       display: inline-block;
+      color: #0090A7;
+      -webkit-transition: background-color 0.1s linear;
+      -moz-transition: background-color 0.1s linear;
+      transition: background-color 0.1s linear;
+      height: 100%;
       font-size: 0.9em;
-      border-bottom: 1px solid grey; }
+      font-family: "Roboto Slab", serif;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-top-width: 0px;
+      border-left-width: 0px;
+      border-collapse: collapse;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center; }
       #header div.navegacao-cap a, #header div.navegacao-cap a:link, #header div.navegacao-cap a:visited, #header div.navegacao-cap a:hover, #header div.navegacao-cap a:focus, #header div.navegacao-cap a:active {
         text-decoration: none; }
+      #header div.navegacao-cap a:first-child {
+        border-left-width: 1px; }
       #header div.navegacao-cap a:hover {
-        background-color: white; }
+        background-color: rgba(166, 216, 190, 0.6); }
       #header div.navegacao-cap a[disabled] {
-        visibility: hidden;
-        pointer-events: none; }
-      #header div.navegacao-cap a svg {
-        display: inline;
-        height: 0.7em;
-        width: auto; }
-        #header div.navegacao-cap a svg {
-          fill: #0090A7; }
-      #header div.navegacao-cap a.home {
-        width: 100%;
+        display: none; }
+      #header div.navegacao-cap a.home, #header div.navegacao-cap a.fichatecnica {
+        width: 50%;
         text-align: center; }
       #header div.navegacao-cap a.cap {
-        width: 50%;
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex; }
-        #header div.navegacao-cap a.cap div.seta {
-          padding: 0 0.6em;
-          display: -webkit-box;
-          display: -moz-box;
-          display: box;
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-          -moz-box-align: center;
-          box-align: center;
-          -webkit-align-items: center;
-          -moz-align-items: center;
-          -ms-align-items: center;
-          -o-align-items: center;
-          align-items: center;
-          -ms-flex-align: center; }
-          #header div.navegacao-cap a.cap div.seta svg {
-            height: 35%;
-            width: auto; }
-        #header div.navegacao-cap a.cap div.txt {
-          width: 100%;
-          padding: 0.5em;
-          display: -webkit-box;
-          display: -moz-box;
-          display: box;
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-lines: multiple;
-          -moz-box-lines: multiple;
-          box-lines: multiple;
-          -webkit-flex-wrap: wrap;
-          -moz-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-          -webkit-box-align: center;
-          -moz-box-align: center;
-          box-align: center;
-          -webkit-align-items: center;
-          -moz-align-items: center;
-          -ms-align-items: center;
-          -o-align-items: center;
-          align-items: center;
-          -ms-flex-align: center; }
-          #header div.navegacao-cap a.cap div.txt p {
-            width: 100%;
-            margin: 0; }
-            #header div.navegacao-cap a.cap div.txt p.num {
-              font-size: 1.4em;
-              line-height: 1; }
-            #header div.navegacao-cap a.cap div.txt p.tit {
-              line-height: 1.2; }
-        #header div.navegacao-cap a.cap.prev {
-          border-right: 1px solid grey; }
-          #header div.navegacao-cap a.cap.prev svg {
-            -webkit-transform: rotate(180deg);
-            -moz-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-            -o-transform: rotate(180deg);
-            transform: rotate(180deg); }
-        #header div.navegacao-cap a.cap.next div.txt {
-          text-align: right; }
+        width: 42px;
+        height: 100%;
+        -webkit-flex-shrink: 0;
+        -moz-flex-shrink: 0;
+        flex-shrink: 0;
+        -ms-flex-negative: 0; }
+        #header div.navegacao-cap a.cap p {
+          margin: 0;
+          line-height: 1; }
+        #header div.navegacao-cap a.cap svg {
+          display: inline;
+          height: 0.7em;
+          line-height: 1;
+          width: auto; }
+          #header div.navegacao-cap a.cap svg {
+            fill: #0090A7; }
+        #header div.navegacao-cap a.cap.prev p {
+          margin-left: 0.2em; }
+        #header div.navegacao-cap a.cap.prev svg {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg); }
+        #header div.navegacao-cap a.cap.next p {
+          margin-right: 0.2em; }
 
 #subcapitulos {
   padding: 30px 0;

@@ -112,89 +112,81 @@ $padding-sumario-h: 15px;
 
 	div.navegacao-cap{
 		width: 100%;
-		@include  display(flex);
-		@include flex-wrap(wrap);
+		height: 42px;
+		@include display(flex);
+		@include flex-wrap(nowrap);
 		a{
 			&, &:link, &:visited, &:hover, &:focus, &:active{
 				text-decoration: none;
 			}
-			color: map-get($cores, ciano);
-			height: 100%;
 			display: inline-block;
+			color: map-get($cores, ciano);
+			@include transition(background-color 0.1s linear);
+			height: 100%;
 			font-size: 0.9em;
-			border-bottom: 1px solid grey;
+			font-family: $fonte-heading;
+			border: 1px solid hsla(0,0,0%, 0.2);
+			border-top-width: 0px;
+			border-left-width: 0px;
+			border-collapse: collapse;
+			@include display(flex);
+			@include justify-content(center);
+			@include align-items(center);
+
+			&:first-child{
+				border-left-width: 1px;
+			}
 
 			&:hover{
-				background-color: white;
+				background-color: transparentize( map-get($cores, verdeclaro), 0.4 );
 			}
 
 			&[disabled]{
-				visibility: hidden;
-				pointer-events: none;
-			}
-			svg{
-				display: inline;
-				height: 0.7em;
-				width: auto;
-				&{
-					fill: map-get($cores, ciano);
-				}
+				display: none;
 			}
 
-			&.home{
-				width: 100%;
+			&.home, &.fichatecnica{
+				width: 50%;
 				text-align: center;
 			}
 
 			&.cap{
+				width: 42px;
+				height: 100%;
+				@include flex-shrink(0);
+				// border: 0;
 
 
-				width: 50%;
-				@include display(flex);
+				p{
+					margin: 0;
+					line-height: 1;
+				}
 
-				
-				div.seta{
-					padding: 0 0.6em;
-					@include display(flex);
-					@include align-items(center);
-					svg{
-						height: 35%;
-						width: auto;
+				svg{
+					display: inline;
+					height: 0.7em;
+					line-height: 1;
+					width: auto;
+					&{
+						fill: map-get($cores, ciano);
 					}
 				}
 
-				div.txt{
-					width: 100%;
-					padding: 0.5em;
-					@include display(flex);
-					@include flex-wrap(wrap);
-					@include align-items(center);
-					p{
-						width: 100%;
-						margin: 0;
-						&.num{
-							font-size: 1.4em;
-							line-height: 1;
-							// text-align: center;
-						}
-
-						&.tit{
-							line-height: 1.2;
-						}
-					}
-				}
 
 				&.prev{
-					border-right: 1px solid grey;
+					p{
+						margin-left: 0.2em;
+					}
 					svg{
 						@include transform(rotate(180deg));
 					}
 				}
 
 				&.next{
-					div.txt{
-						text-align: right;
+					p{
+						margin-right: 0.2em;
 					}
+					
 					svg{
 						// @include transform(rotate(0deg));
 					}
