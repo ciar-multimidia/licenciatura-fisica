@@ -367,11 +367,541 @@ matriz necessário para termos uma imagem com boa qualidade, é bastante comum
 	usarmos algum algoritmo de compressão para comprimirmos a imagem.</p>
 
 
+<p>Uma imagem digital pode ser classificada como:</p>
+
+	<uL>
+		
+		<li>Raster ou bitmap, que é uma imagem gerada pela divisão da região
+      em diversos pontos (um pixel), como uma matriz, e a cada ponto associa-se
+      um vetor com informações sobre a a cor, intensidade luminosa, etc. De
+      fato é uma matriz 3D e esse formato também é referido como um de mapa de
+      bits (do inglês bitmap que significa mapa de bits). Note que para obtermos
+      uma boa resolução precisamos de muitos pontos, então para armazenarmos essa
+      matriz usamos algoritmos de compressão. Basicamente, o que difere cada um
+      dos formatos bitmaps são os seus algoritmos de compressão, sendo uns livres
+      e outros não. Os formatos de imagens bitmap mais comuns são</li>
+		<ul>
+			<li><b>.bmp</b> Formato proprietário que pode ou não ser comprimido.</li>
+			<li><b>.gif</b> Formato proprietário ideal para imagens com poucas cores.</li>
+			<li><b>.png</b> É um formato livre sem perdas, e bastante compacto, que foi
+				elaborado para ser o substituto livre do <b>.gif</b>.</li>
+				<li><b>.jpg</b> É um formato que usa uma compressão com perda de informação,
+         e com isso a qualidade pode variar muito dependendo das taxas de compressão.
+         Ele abdica de alguma da qualidade da imagem para manter os tamanhos dos
+         arquivos pequenos. Indicado para fotos.</li>
+         <li><b>.tif</b> É um formato proprietário, sem perdas.</li>
+
+		</ul>
+
+		<li>Um desenho vetorial, em que os pontos da imagem são representados
+      por vetores matemáticos num sistema de coordenadas cartesianas, ligados
+      entre si por linhas que vão de um ponto a outro. Esse tipo de imagem
+      permite um redimensionamento em qualquer escala sem perda de qualidade
+      por ser baseada em uma estrutura matemática. Entretanto no momento da
+      impressão o equipamento faz a sua conversão em uma imagem bitmap adequada
+      as suas características. Note que impressoras jato de tintas, laser e outras
+      imprimem bitmaps, pois imprimem sequências de pontos dispostos em linhas
+      e colunas, cuja frequência, por sua vez, definem a resolução da impressora.
+      O processo de conversão de uma imagem vetorial numa bitmap é chamado de
+      rasterização, e é executado por um RIP (<i>Raster Image Processor</i>).</li></ul>
+
+
+      <li>Os formatos de imagens vetoriais mais comuns são
+
+      	<ul><li><b>.svg</b> Formato livre, editável para gráficos vetoriais. O mais
+         indicado para lidar com imagens vetoriais.</li>
+         <li><b>.cdr</b> Formato proprietário da Corel(R).</li>
+         <li><b>.ai</b>  Formato proprietário do Adobe Illustrator.</li>
+         <li><b>.eps</b> Formato livre não editável de imagens.</li></ul></li>
 
 
 
 
+<p>Basicamente a qualidade de uma imagem digital deve-se a dois aspectos:</p>
 
+	<ul> 
+
+		<li>a quantidade de pixel por polegada (resolução da imagem).</li>
+		<li>o número de pixels na horizontal e na vertical (tamanho da imagem em
+   pontos ou centímetros)</li></ul>
+
+
+<p>Por exemplo: Se uma imagem possuí 1000 pixels $×$ 1000 pixels, significa dizer
+que possuí 1 milhão de pixels, ou 1 Mp, mas isso não quer dizer necessariamente
+que está imagem é de alta qualidade, porque ainda falta a relação com a
+quantidade de pixels por polegada (DPIs) da imagem. Para uma boa definição é
+preciso que a imagem tenha 300 DPIs por polegada, isso permite que se faça uma
+cópia de alta qualidade em papel fotográfico, o tamanho desta cópia ($10 ×15$ cm
+ou $15 ×18$ cm) vai depender de quantos pixels a imagem possuí na vertical e
+	quantos na horizontal.</p>
+
+
+<p>Abaixo listamos dois softwares livres, com versões disponíveis para diversos
+	sistemas operacionais:</p>
+
+
+
+	<p><b>GIMP –</b> Utilizado para processamento de imagens e
+   fotografias. Pode-se criar gráficos e logotipos, redimensionar fotos,
+   alterar cores, combinar imagens utilizando o paradigma de camadas, remover
+   partes indesejadas das imagens e converter arquivos entre diferentes formados
+   de imagem digital. O sítio oficial é <a target="blank" href="http://www.gimp.org/">http://www.gimp.org/</a>. Uma boa
+   fonte para os usuários brasileiros é o sítio "Portal da comunidade
+   Brasileira de Gimp"  <a target="blank" href="http://www.ogimp.com.br/">http://www.ogimp.com.br/</a> no você pode encontrar
+   uma série de artigos e tutoriais.</p>
+
+
+   <p><b>Inkscape –</b> Um editor SVG (Scalable Vectorial Graphics) para
+   desenhos vetoriais, logotipos, posters, icones, etc. e com capacidade
+   similares ao Adobe Illustrator, CorelDraw e Visio. Este é o software
+   mais indicado para fazer ilustrações, pois ele exporta o resultado
+   final em diversos formatos bitmap. Ele possuí uma série extensões
+   muito úteis, entre elas pode-se resaltar a extensão "Desenhar Função"
+   a qual desenha uma função matemática e a "Fórmula LaTeX" a qual
+   entra-se o código LaTeX e ele desenha o código  LaTeX. O sítio
+   oficial é <a target="blank" href="http://www.inkscape.org/">http://www.inkscape.org/</a> enquanto uma boa fonte de informação
+   para os usuários brasileiros é encontrado no sítio "Inkscape Brasil"
+  <a target="blank" href="hhttp://wiki.softwarelivre.org/InkscapeBrasil/">http://wiki.softwarelivre.org/InkscapeBrasil/</a>.</p>
+
+
+  <h3>A internet</h3>
+
+
+<p>A internet é formada basicamente pela ligação entre computadores,
+que chamamos de rede de computadores, permitindo uma comunicação
+entre eles de forma transparente para o usuário, principalmente
+através do protocolo TCP/IP. A história do seu desenvolvimento até
+a criação da "World Wide Web" (WWW) em 1991 pelo físico inglês
+Tim Berners-Lee que trabalhava no CERN está bem descrita no sítio
+<a target="blank" href="http://pt.wikipedia.org/wiki/Internet">http://pt.wikipedia.org/wiki/Internet</a>. Em sua entrevista a
+revista VEJA (Abril de 2006
+<a target="blank" href="http://veja.abril.com.br/especiais/tecnologia_2006/p_040.html">http://veja.abril.com.br/especiais/tecnologia_2006/p_040.html</a>),
+Tim Berners-Lee disse que não quis patentear o seu invento, e credita
+seu sucesso ao fato dela não estar vinculada a nenhum sistema proprietário,
+pelo qual as pessoas teriam de pagar para ter acesso. Segundo ele muitos
+	outros projetos semelhantes fracassaram por não serem abertos.</p>
+
+<p>A internet hoje se caracteriza por ser uma grande fonte de informações
+distribuídas por todo o mundo. Ela hoje abriga milhões de páginas com
+textos, imagens, sons e vídeos. O grande volume de informações disponíveis
+na Web criou o problema de localizar rapidamente a informação desejada.
+Para tal, há muitas ferramentas disponíveis, entretanto, hoje o mecanismo de
+busca de informação na Web mais conhecido pelos usuários da Web talvez seja o
+o "Google" <a target="blank" href="https://www.google.com/">http://www.google.com.br/</a>. Além disso, hoje possivelmente
+ele seja o mais eficiente mecanismo de busca de toda Web, e por isso,
+apresentaremos algumas dicas de como torna uma busca com o Google mais
+	eficiente.</p>
+
+<p>O "Google" iniciou-se simplesmente como um mecanismo de busca, mas devido ao
+seu crescimento exponencial, ele hoje oferece uma série de ferramentas listadas
+no sítio <a target="blank" href="http://www.google.com.br/intl/pt-BR/options/">http://www.google.com.br/intl/pt-BR/options/</a> . Os serviços
+oferecidos para a busca de informações são:</p>
+
+	<p><b>Acadêmico –</b> Pesquise trabalhos acadêmicos</p>
+
+	<p><b>Barra de ferramentas –</b> Adicione uma caixa de pesquisa ao seu navegador</p>
+   
+	<p><b>Google Chrome –</b> Um navegador desenvolvido para ser rápido, estável e
+		seguro</p>
+
+		<p><b>Desktop –</b> Pesquise no seu próprio computador</p>
+   
+		<p><b>Diretório –</b> Navegue pela web por tópico</p>
+   
+		<p><b>Earth –</b> Explore o mundo do seu computador</p>
+   
+		<p><b>iGoogle – </b> Adicione notícias, jogos e muito mais à página inicial do
+			Google</p>
+
+		<p><b>Imagens –</b> Pesquise imagens na web</p>
+   
+		<p><b>Livros –</b> Pesquise textos de livros na íntegra e descubra novos textos</p>
+   
+		<p><b>Maps –</b> Consulte mapas e encontre a melhor rota</p>
+   
+		<p><b>Pesquisa de blogs– </b> Encontre blogs sobre os assuntos que lhe interessam</p>
+   
+		<p><b>Pesquisa na web – </b> Pesquise em mais de 8 bilhões de páginas</p>
+
+
+<p>Primeiro vamos descrever alguns parâmetros e operadores simples que permitem que
+		a busca seja mais eficiente. Quanto aos termos e operadores da busca temos:</p>
+
+
+
+		<p><b>Maiúsculas/Minúsculas e Acentuação –</b> O sistema de busca não faz distinção
+  entre palavras que contenham letras maiúsculas/minúsculas e acentuação,
+  portanto qualquer uma das seguintes expressões irá fornecer o mesmo resultado:
+  <code>FISICA</code>, <code>FÍsIcA</code>, <code>fiSiCA</code>.</p>
+
+  <p><b>Aspas –</b> Com o conteúdo "entre aspas" efetua-se uma busca pela
+  ocorrência exata da expressão que está entre as aspas, matendo a mesma
+  sequência e forma dos termos que constituem a expressão.</p>
+  
+  <p><b>Sinal de subtração –</b> Usa-se esse sinal/operador entre alguns termos,
+  após a expressão de busca, para que as expressões contendo esses termos
+  não apareçam no resultado da busca. Por exemplo, para buscar "Física"
+  sem a palavra "Educação" deve-se digitar: <code>física -Educação</code>.
+  Note que entre "física" e o <i>sinal menos</i> há um espaço enquanto
+  o sinal é digitado junto com a palavra que se deseja excluir.</p>
+
+  <p><b>Sinal de soma –</b> Usa-se esse sinal entre alguns termos, após a
+  expressão de busca, para que as expressões contendo exatamente esses
+  termos apareçam no resultado da busca. Por exemplo, para buscar "Física"
+  sem a palavra "Educação" e que contenha a palavra "Mecânica" deve-se
+  digitar: <code>física -Educação +Mecânica</code>. Observe que os espaços
+  são importantes.</p>
+
+  <p><b>Sinal de asterisco * –</b> Ao incluir esse caractere entre dois termos de
+   uma busca, ele irá considerar como válida qualquer expressão entre os dois
+   termos da busca, por isso, ele é chamado de caractere de preenchimento.
+   Por exemplo, a busca <code>software livre * licença</code> irá retornar as
+   ocorrências de <code>software livre</code> mais qualquer expressão/palavra e
+   <code>licença</code>.</p>
+
+   <p><b>OR ou OU </b> Termo usado para realizar buscas alternativas. Por
+   exemplo, para buscar \texttt{Física (mecânica OU eletricidade) -automotiva
+   -automovel -autos} irá buscar todas as ocorrências de <code>Física</code> e
+   <code>mecânica</code> sem ser automotiva ou todas as ocorrências de <code>Física</code> e
+   <code>eletricidade</code> sem ser automotiva. Note que o termo <code>OR</code> ou
+   <code>OU</code> precisam ser maiúsculos e que os parênteses servem para agrupar.</p>
+
+   <p><b>define:termo –</b> Operador para buscar por definições do termo. Por exemplo, para
+   	buscar as definições do termo piezoelétrico digite <code>define:piezoelétrico</code>.</p>
+
+   	<p><b>info:URL </b> Operador que mostra informações que o Google tem sobre o sítio buscado.
+   Por exemplo, informações sobre o sítio da UFG são obtidas digitando-se
+   <code>info:www.ufg.br</code> e para obter informações do sítio do Uol digite
+   <code>info:www.uol.com.br</code>. Essa busca retornará as seguintes informações
+   para a URL:
+   <ul> <li>Uma descrição do sítio da Web e um <i>link</i> para o sítio.</li>
+   	<li>Mostrar o cache do Google para a URL.</li>
+   	<li>Encontrar páginas na Web que sejam semelhantes a URL.</li>
+   	<li>Encontrar páginas na Web que tenham um link para a URL.</li>
+   	<li>Localizar páginas de sítio para a URL</li>
+   	<li>Encontrar páginas na Web que contenham o termo "URL"</li></ul>
+  </p>
+
+
+  <p>Essas informações podem ser obtidas individualmente com um operador
+   de busca específico.</p>
+
+<p><b>termo+site:URL – </b>busca por expressões que contenham a palavra "termo"
+   no sítio cujo endereço é URL. Por exemplo, para buscar o termo "linux" no
+   sítio da ufg digita-se \texttt{linux site:www.ufg.br}.</p>
+
+   <p><b>link:URl – </b>operador de busca por "páginas externas" que se referenciam
+   ao sítio URL. Por exemplo, os sítios que fazem referência ao sítio do Instituto
+   de Física da UFG, são obtidos com \texttt{link:www.if.ufg.br}</p>
+
+   <p><b>related:URL – </b>operador de busca por páginas similares a da URL fornecida.
+   Por exemplo, a busca \texttt{related:www.science.org} retornará páginas que tenham
+   um conteúdo similar ao do sítio \texttt{www.science.org}.</p>
+
+   <p><b>allinanchor – </b>O "anchor" é o texto que se clica em um \emph{hyperlink}.
+   Este é um texto descritivo e não uma URL. O operador \texttt{allinanchor:}
+   encontra todos os termos da pesquisa no texto "anchor".</p>
+
+   <p><b>inanchor – </b>Use o operador \texttt{inanchor:} quando for incluir um único
+   termo na busca somente em expressões que fazem parte do "anchor".</p>
+
+   <p><b>allintext – </b>O operador \texttt{allintext:} encontrar todos os termos da
+   sua busca no texto da página Web. Ele ignora os termos da busca em qualquer
+   outra parte da página, seja no título, no "anchor" ou mesmo na URL.</p>
+
+   <p><b>intext – </b>Este operador busca nos textos de uma página Web um único
+   termo que pode aparecer em qualquer parte da página.</p>
+
+   <p><b>allintitle – </b>O operador \texttt{allintitle:} permite encontrar páginas
+   da Web em que o termo da busca faça parte do título da página.</p>
+
+   <p><b>intitle – </b>Use o operador \texttt{intitle:} quando a busca for feita
+   somente no título das páginas Web.</p>
+
+   <p><b>allinurl – </b>Operador usado para obter resultados que incluam somente páginas
+   da Web nas quais todos os termos da pesquisa apareçam na URL. Essa é uma busca
+   muito restritiva, pois ela restringe os termos da busca somente às URL dos sítios.</p>
+
+   <p><b>inurl – </b>Use o operador \texttt{inurl:} para encontrar páginas Web que tenham
+   um único termo de busca na URL, enquanto todos os outros termos da busca podem aparecer
+   em outros lugares dentro da página da Web retornada.</p>
+
+   <p><b>Filetype – </b>Operador usado para procurar ocorrências de algum formato de arquivo
+   específico. Por exemplo, para encontrar documentos no formato pdf sobre radiação
+   devemos buscar: \texttt{radiação filetype:pdf}.</p>
+
+   <p><b>Time – </b>Operador para buscar o horário das principais cidades do mundo,
+   por exemplo: \texttt{time:cuiabá} retorna a data e a hora em Cuiabá.</p>
+
+   <p><b>Weather – </b>Operador para buscar uma previsão do tempo para as principais cidades
+   do mundo, por exemplo: \texttt{weather:goiânia} retorna a previsão do tempo para
+   a cidade de Goiânia.</p>
+
+   <p><b>Movie – </b>Operador para buscar por títulos de filmes, por exemplo
+   \texttt{Movie: the 300 Spartans}</p>
+
+   <p><b>Director – </b>Operador para buscar por o nome de um diretor de um filme, por exemplo
+    \texttt{Director: the 300 Spartans}.</p>
+
+   <p><b>Calculadora – </b>Na campo de busca do Google, digitando-se uma expressão matemática,
+   ele efetuará a conta. Por exemplo, ao digitar a expressão \texttt{8$\wedge$3-2}, o Google
+   retorna o valor \texttt{510}. Ele possui algumas funções matemáticas intrínsecas, como
+   por exemplo, \texttt{ln(e$\wedge$2)} ele retorna corretamente o valor \texttt{2}.</p>
+
+   <p><b>Conversão de Moedas – </b>faz a conversão de uma moeda em outra, por exemplo
+   \texttt{10 doolar in real} ou ainda \texttt{1 dollar in euro}.</p>
+
+   <p><b>Conversão de temperatura – </b>converte uma escala termométrica em outra, por
+   exemplo \texttt{95 F in C} irá resultar em 35.</p>
+
+   <p><b>Conversão de distâncias – </b>realiza a conversão de distâncias, por exemplo
+   \texttt{10 miles in kilometers}.</p>
+
+   <p><b>Conversão de velocidade – </b>realiza a conversão de velocidade, por exemplo
+   \texttt{80 kph to mph}.</p>
+
+
+  <h3>O Sistema TeX/LaTeX</h3>
+
+
+<p>O TeX é um sistema tipografia criado por Donald E. Knuth
+para produção de materiais de alta qualidade tipográfica. Na
+realidade, ele é uma linguagem computacional que permite a definição
+de um sistema de composição de tipos (composição tipográfica) de alta
+qualidade. Sua execução permite a criação, visualização e impressão
+de textos técnicos especialmente aqueles que necessitam da rica
+	simbologia matemática.</p>
+
+<p>O TeX é um processador de macros com grandes possibilidades de
+programação, o que torna o um sistema livre extremamente flexível,
+e além disso os textos resultantes desses sistema possuem uma alta
+qualidade gráfica. Esse sistema é excelente para criação de documentos
+que contenham fórmulas matemáticas, pois é muito simples escrevê-lás
+nele, mesmo fórmulas muito complexas, e o resultado final é excelente.
+Por causa disso, o TeX é extremamente popular em universidades e em
+	meios acadêmicos.</p>
+
+<p>Junto com o TeX, Knuth também desenvolveu um conjunto de macros chamado
+	"<i>plain TeX</i>" que contém um número de macros básicos para a criação
+de documentos. Escrever um texto diretamente em TeX, significa usar este
+	conjunto mínimo de macros "<i>plain TeX</i>" e o editor de textos usado
+pode ser qualquer um, desde que ele salve o texto sem formatação. O uso
+direto do TeX não é muito comum devido à sua complexidade, pois a maioria
+das pessoas que utilizam o TeX o utilizam por meio do pacote de macros
+LaTeX, que permite a criação de documentos descrevendo o seu conteúdo, e
+	não sua forma.</p>
+
+<p>O LaTeX/LaTeX consiste de um conjunto de macros para o processador
+de textos TeX, que é utilizado amplamente para a produção de textos
+matemáticos e científicos devido à alta qualidade tipográfica do material
+gerado. Atualmente há macros para variedade muito grande de textos, que vão
+por exemplo da edição de partituras musicais até a edição de livros de
+Xadrez/Gamão, Sudoku, posters, apresentações, etc. No sítio
+<a target="blank" href="http://texcatalogue.sarovar.org/">http://texcatalogue.sarovar.org/</a> temos o "TeX Catalogue
+(Preface Home Edition)" de  Graham Williams, que é um catálogo bastante
+	completo dos macros do LaTeX.</p>
+
+<p>Os macros do  sistema LaTeX fornecem ao usuário um conjunto de comandos
+de alto nível e alta flexibilidade, que permitem abstrações para lidar com
+bibliografias, citações, formatos de páginas, referência cruzada e tudo mais
+	que não seja relacionado ao conteúdo do documento em si.</p>
+
+<p>As desvantagens de usarmos o sistema LaTeX diante do processadores de textos
+	comuns são:</p>
+
+	<ul>
+		
+		<li>Exige maior esforço inicial de aprendizagem se comparado aos editores de
+  texto tradicionais.</li>
+		<li>Normalmente não é possível ver o resultado final do documento enquanto
+    digitamos o texto.</li>
+		<li>Trabalhar com tabelas e figuras é um pouco mais difícil do que
+    nos editores de texto tradicionais./li>
+		<li>É muito difícil escrever documentos desorganizados e desestruturados.
+</li>	
+<li>Como não é um processador de textos específicos, não há um corretor
+  gramatical para o documento, e dependendo do editor escolhido pode-se ou não
+  ter um dicionário para correção do texto.</li>
+
+	</ul>
+
+<p>Já algumas das vantagens em se usar o LaTeX são:</p>
+
+<uL>
+
+   <li> Os usuários precisam aprender apenas alguns poucos
+   comandos de fácil compreensão que especificam a estrutura
+   lógica de um documento.
+
+   <li> É possível encontrar diversos "layouts" profissionalmente
+   criados, que deixam um documento realmente com qualidade "de
+   gráfica".</li>
+
+   <li> Torna-se extremamente fácil incluir fórmulas matemáticas
+   	complexas no texto.</li>
+
+   <li> Gera arquivos nos formatos pdf e ps livremente.
+
+   <li> Possibilidade de mudar completamente a formatação do texto
+   	com um único comando.</li>
+
+   <li> É gratuito e encontrado em versões tanto para Linux como para
+   	Windows e diversos outros sistemas operacionais.</li>
+
+   <li> Até mesmo estruturas relativamente complexas como notas de
+   rodapé, referências,índices e bibliografias podem ser criados
+   facilmente.</li>
+
+   <li> Produção do texto é incrementada já que o autor deixa de se
+   	preocupar com detalhes de formatação.</li>
+
+   <li> A portabilidade do documento em relação aos diversos sistemas
+   operacionais e a sua independência quanto ao editor de texto usado
+   para escrever o documento.</li>
+
+   <li> Permite que um documento complexo com muitas páginas, seja
+   quebrado em diversos pequenos documentos sem correr o risco de perdas
+   e de alteração da formatação original do documento.</li>
+
+   <li> Fácil criação e manutenção de referências cruzadas, índices,
+   glóssarios, tabelas de conteúdo, etc. Mesmo na junção de partes de
+   um documento as referências não são perdidas.</li>
+
+   <li> Manutenção do documento, com o tempo. Os documentos escritos
+   à vinte anos ainda podem ser trabalhados e modificados caso seja
+   necessário, sem que haja perdas de formatação ou de texto ou fontes.</li>
+
+   <li> Portabilidade entre os diversos tipos de documentos. Um documento
+   LaTeX escrito na forma de uma artigo pode facilmente ser transformado
+   em um documento com uma, duas ou três colunas, em um poster, em um livro
+   ou relatório, em uma apresentação, etc., e tudo isso sem modificações no
+   texto original.</li>
+
+   <li> Há possibilidade de se comentar partes do texto, sem ser necessário
+   	apagar essa parte do texto do documento.</li></ul>
+
+
+<p>O LaTeX possui uma série de estilos de documentos para para gerarmos:
+	</p>
+	<ul>
+		<li> Cartas, Artigos, Relatórios, Livros;</li>
+		<li> Teses: Pode-se criar estilo próprio;</li>
+		<li> Monografias: Gera todos os índices e glossários automaticamente.</li>
+		<li> Referências via um banco de dados, o bibtex.</li>
+		<li> Cartões de visitas, panfletos, etc;</li>
+		<li> Partituras de musicas;</li>
+		<li> Apresentações;</li>
+		<li> Posteres.</li>
+	</ul>
+<p>Além dos documentos, o LaTeX pode gerar apresentações nos formatos ps ou
+pdf com alta qualidade gráfica e permitindo algumas animações. Quando todos
+os seus textos estão escritos em LaTeX, pode-se facilmente aproveitar o
+texto de um documento para gerar uma apresentação, bastando para isso, mudar
+o estilo do documento. Diferentemente dos pacotes de escritório onde não
+conseguimos aproveitar as fórmulas digitadas nas apresentações, em um texto
+LaTeX tudo que foi digitado pode ser aproveitado. Há diversos estilos para
+	gerarmos apresentações, porém os mais comuns são:</p>
+
+<ul>
+	<li> Slides;</li>
+	<li> Seminar;</li>
+	<li> Prosper;</li>
+	<li> Powerdot;</li>
+	<li> Foiltex;</li>
+	<li> Ppower4;</li>
+	<li> Beamer;</li>
+	<li> TexPower;</li>
+	<li> Pdfslide;</li>
+	<li> Pdfscreen</li>
+	<li> Ifmslide;</li>
+	<li> etc.</li>
+
+	</ul>
+
+<p>Atualmente há um grande uso do estilo \texttt{beamer}, por possuir
+algumas características interessantes, entretanto para isso ele
+introduz muito código específico em suas apresentações o que
+dificulta o reaproveitamento da apresentação para gerar uma artigo,
+relatório, etc. Além disso ele usa como padrão um outro conjunto de
+fontes que não é o padrão do LaTeX, o que para apresentações
+que não possuem fórmulas fornece um bom resultado visual. Porém,
+para apresentações que possuem fórmulas, esse conjunto de fonte
+fornece um resultado apenas satisfatório em relação ao padrão
+	LaTeX.</p>
+
+<p>Particularmente, prefiro o estilo \texttt{powerdot} que possuí
+um bom número de modelos e, além disso, não introduz grandes mudanças
+no texto LaTeX, o que permite um fácil reaproveitamento do texto
+	gerado para a aprsentação.</p>
+
+	<h4>Distribuições TeX/LaTeX</h4>
+
+<p>O TeX/LaTeX é distribuído livremente para diversos
+sistemas operacionais e entre suas distribuições destacam-se
+	as seguintes:</p>
+
+
+<p><b>LyX –</b> ele é um processador de textos livre, cujo resultado final posui
+  a qualidade do LaTeX, já que ele usa o LaTeX. Entretano ele é do tipo
+  se aproxima um pouco dos processadored do tipo WYSIWYM. Ele combina a força
+  e flexibilidade do sistema TeX/LaTeX com a facilidade de uma edição gráfica.
+  Seu sítio é <a target="blank" href="http://www.lyx.org/">http://www.lyx.org/</a></p>
+
+  <p><b>TeXmacs –</b> É um processador de textos livre desenvolvido pela FSF
+  tanto para Windos quanto para Linux. Ele é um software do tipo "o que
+  você vê é o que voce obtém" (WYSIWYG), que possui um formato próprio,
+  mas exporta e importa LaTeX e HTML. <a target="blank" href="http://www.texmacs.org/">http://www.texmacs.org/</a></p>
+
+  <p><b>TeXnicCenter –</b> É um excelente editor freewares para Windows, que
+  está em constante desenvolvimento, mas já contém muitas ferramentas
+  boas, como gerenciar referências cruzadas por você (os \texttt{\label}),
+  bookmarks, ferramenta para localização de erros (leitura do .log pelo
+  programa) e suporta busca inversa TeX &lt;-&gt; DVI, suporte para EOL (estilo
+  de "fim de linha") de vários sistemas operacionais. Além disso possui
+  uma integração com o MikTex. O seu sitio oficial é
+  <a target="blank" href="http://www.texniccenter.org/">http://www.texniccenter.org/</a></p>
+
+  <p><b>Kile –</b> Excelente editor LaTeX, disponível em todas as
+  	distribuições Gnu/Linux. <a target="blank" href="hhttp://kile.sourceforge.net/">http://kile.sourceforge.net/</a></p>
+
+
+  	<h4>Documentação do Sistema TeX/LaTeX</h4>
+
+
+<p>Por ser um sistema livre o TeX/LaTeX possuí um grande
+número de usuários e uma boa documentação. No sítio da wikipedia
+<a target="blank" href="http://pt.wikipedia.org/">http://pt.wikipedia.org/</a>wiki/LaTeX encontramos um boa fonte
+de informações para começarmos a usar o sistema TeX/LaTeX. Para
+os usuários brasileiros um bom começo é o sítio da Wiki to TeX-BR.org
+cuja a página é <a target="blank" href="http://www.tex-br.org/">http://www.tex-br.org/</a>. A seguir listamos
+algumas fontes de documentos TeX/LaTeX e páginas da Web onde
+	encontrar ajuda:</p>
+
+
+<p><b>Tex-Br –</b>  Página dos usuários brasileiros de LaTeX, a Wiki to TeX-BR
+   <a target="blank" href="http://www.tex-br.org/">http://www.tex-br.org/</a>.
+
+   <p><b>Wiki LaTeX –</b>  Página da Wikipedia sobre o TeX/LaTeX,
+  <a target="blank" href="http://pt.wikipedia.org/wiki/LaTeX">http://pt.wikipedia.org/wiki/LaTeX</a>.
+
+   <p><b>ABNT –</b>  Implementação das normas ABNT no LaTeX, o abnTeX
+  <a target="blank" href="http://abntex.codigolivre.org.br/">http://abntex.codigolivre.org.br/</a>
+
+
+   <p><b>Lshort –</b>  "A short introduction to \LaTeX2e"
+  <a target="blank" href="http://www.ctan.org/tex-archive/info/lshort/">http://www.ctan.org/tex-archive/info/lshort/</a> um excelente tutorial
+   LaTeX, escrito por Tobi Oetiker<a target="blank" href="http://people.ee.ethz.ch/~oetiker/">http://people.ee.ethz.ch/~oetiker/</a>,
+   que possuí traduções para o português. O interessante desse tutorial é
+   que ele disponibiliza o código fonte LaTeX.
+
+   <p><b>LaTeX Project –</b>  Página oficial do projeto LaTeX
+  <a target="blank" href="http://www.latex-project.org/">http://www.latex-project.org/</a>.
+
+   <p><b>TUG - TeX Users Group –</b>  Págian do grupo de usuários do TeX/LaTeX
+  <a target="blank" href="http://www.tug.org">http://www.tug.org</a>.
+
+   <p><b>The Comprehensive TeX Archive Network –</b>  O repositório de pacotes,
+   documentação, fontes  e utilitários TeX/LaTeX.<a target="blank" href="http://www.ctan.org">http://www.ctan.org</a>
 
 
 
