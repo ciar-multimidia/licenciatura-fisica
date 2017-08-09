@@ -369,7 +369,7 @@ matriz necessário para termos uma imagem com boa qualidade, é bastante comum
 
 <p>Uma imagem digital pode ser classificada como:</p>
 
-	<uL>
+	<ul>
 		
 		<li>Raster ou bitmap, que é uma imagem gerada pela divisão da região
       em diversos pontos (um pixel), como uma matriz, e a cada ponto associa-se
@@ -901,7 +901,513 @@ algumas fontes de documentos TeX/LaTeX e páginas da Web onde
   <a target="blank" href="http://www.tug.org">http://www.tug.org</a>.
 
    <p><b>The Comprehensive TeX Archive Network –</b>  O repositório de pacotes,
-   documentação, fontes  e utilitários TeX/LaTeX.<a target="blank" href="http://www.ctan.org">http://www.ctan.org</a>
+   documentação, fontes  e utilitários TeX/LaTeX. <a target="blank" href="http://www.ctan.org">http://www.ctan.org</a>
+
+   <h2>Ferramentas Gráficas: Gnuplot</h2>
+
+   <h3>Introdução</h3>
+
+
+<p>Os resultados de um trabalho podem ser divididos em experimental ou teórico.
+Em geral os resultados experimentais fornecem uma tabela de dados enquanto o
+teórico fornecem algumas funções. A análise desses resultados baseiam-se
+nos gráficos das tabelas dos resultados experimentais e nos gráficos das funções.
+Quando realizamos uma medida experimental, a melhor forma de armazenarmos os
+dados para fazermos uma análise é gerarmos um arquivo sem formatação com os dados.
+Esse arquivo pode ter colunas de dados se forem necessárias, mas o mais importante é
+que haja um padrão entre os espaçamento das colunas. É usual a extensão
+	\texttt{.dat} para arquivos de dados. A seguir mostramos um arquivo de dados</p>
+
+<pre><code>-0.0500  3.25426398E+00  4.29330253E-01  3.24613849E-01
+-0.0453  4.00233133E+00  4.87050240E-01  4.27249918E-01
+-0.0407  4.80082771E+00  1.17749487E+00  4.88683301E-01
+-0.0360  5.62540177E+00  2.05995541E+00  4.46065079E-01
+-0.0313  6.44791727E+00  2.12621122E+00  5.83923911E-01
+-0.0267  7.23785608E+00  1.11837154E+00  1.17313039E+00
+-0.0220  7.96398030E+00  7.58906697E-01  1.58538204E+00
+-0.0173  8.59614034E+00  4.13721660E+00  1.05517370E+00
+-0.0127  9.10709784E+00  1.30175180E+01  1.58848978E+00
+-0.0080  9.47422561E+00  2.52587361E+01  9.49695964E+00
+-0.0033  9.68095227E+00  3.51664703E+01  4.57359130E+01
+ 0.0013  9.71783684E+00  3.72056381E+01  1.24673380E+02
+ 0.0060  9.58318675E+00  3.01711387E+01  2.21362917E+00
+ 0.0107  9.28316906E+00  1.81320165E+01  3.21859637E+00
+ 0.0153  8.83140584E+00  7.28983273E+00  3.47251613E+00
+ 0.0200  8.24808660E+00  1.57903316E+00  1.73052079E+00
+ 0.0247  7.55866966E+00  7.13190315E-01  6.40542496E-01
+ 0.0293  6.79227614E+00  1.77587828E+00  6.36689290E-01
+ 0.0340  5.97990290E+00  2.23916001E+00  7.31803957E-01
+ 0.0387  5.15259144E+00  1.58858988E+00  5.51496405E-01
+ 0.0433  4.33968802E+00  7.09698193E-01  3.73725689E-01
+ 0.0480  3.56731732E+00  3.86009235E-01  3.31797933E-01
+
+# No fim do arquivo pode-se colocar comentários.
+# Note que 1.0E-2 é 1.0 x 10**{-2} ou seja 0.01.
+	# Observe ainda que o separador decimal é o ponto e não a virgula.</code></pre>
+
+<p>Para preservar os dados de uma medida, é recomendável que não se use um software
+específico para guardá-los, tais como uma planilha eletrônica ou a planilha de
+um software gráfico específico, pois todos eles possuem um formato próprio que
+outros software não reconhecem. Porém todos os softwares destinados a análise de
+dados são capazes de ler um arquivo de dados sem formatação, com isso, têm-se
+uma portabilidade temporal para os seus dados sendo possível usar diversos
+	softwares para sua análise de dados, não se restringindo a um único software.</p>
+
+<p>Há diversos softwares livres para fazermos gráficos, entretanto, o Gnuplot além da
+qualidade dos seus gráficos a sua ''flexibilidade'' é muito grande o que nos levou a
+optarmos por ele. A seguir apresentaremos as características básicas do Gnuplot.</p>
+
+
+<h3>Introdução ao Gnuplot</h3>
+
+
+<p>O Gnuplot é um programa interativo livre, baseado em linhas de comando, para
+fazer gráficos de alta qualidade com versões para os sistemas operacionais
+Linux, MS Windows, Open Solaris, OSX, VMS, etc e muitos outros. Ele foi criado
+originalmente para permitir que cientistas e estudantes pudessem visualizar
+funções matemáticas e dados de modo iterativo, entretanto, ele cresceu muito e
+	atualmente é usado por outros programas livres, tais como o octave, maxima, etc.</p>
+
+<p>Ele suporta muitos tipos de gráficos em duas e três dimensões, respectivamente
+gráficos 2D e 3D. Ele pode desenhar, linhas, pontos, caixas, contornos, campos
+vetoriais, superfícies, e vários textos associados. Ele possuí uma diversidade
+de drivers que permitem que ele exporte os gráfico em mais de cinquenta tipos
+diferentes de formatos de saída, entre os quais destacam-se: os terminas com
+telas interativas e a saídas para arquivos nos formatos \texttt{.eps},
+\texttt{.fig}, \texttt{.jpg}, \texttt{.svg}, \texttt{.pbm}, \texttt{.pdf},
+\texttt{.png}, LaTeX e metafont. O Gnuplot é um software pequeno e portável, o
+arquivo usado para gerar um gráfico pode ser usado posteriormente em uma nova
+	versão mantendo toda sua funcionalidade.</p>
+
+<p>Toda versão do Gnuplot, possui em sua página oficial <a target="blank" href="http://www.gnuplot.info/">http://www.gnuplot.info/</a>,
+um "link" chamado "demo gallery", que é uma galeria com uma demonstração das
+funcionalidades do Gnuplot, note que esta galeria é organizada por seções. Portanto,
+quando precisar de fazer um gráfico,  procure por um exemplo do gráfico desejado
+	nesse "link".</p>
+
+<p>O Gnuplot é um software com as seguintes funcionalidades:</p>
+
+	
+<ol>
+	
+	<li>Possuí um conjunto de funções matemáticas implementadas;</li>
+	<li>Faz gráfico de funções algébricas, sendo eles:
+
+		<ul><li>gráficos unidimensionais;</li>
+		<li>gráficos bidimensionais;</li>
+		<li>gráficos de funções paramétricas;</li>
+		<li>gráficos em coordenadas polares;</li>
+
+		</ul></li>
+	<li>Faz gráficos de um arquivo de dados, podendo ser:
+		<ul><li>gráficos unidimensionais;</li>
+		<li>gráficos bidimensionais;</li>
+		<li>gráficos em escalas logarítmicas;</li>
+
+
+		</ul></li>
+
+	<li>Faz ajuste de curvas;</li>
+	<li>Exporta o resultado final em mais de 50 formatos diferentes, os seus "Terminais";</li>
+	<li>Permite a construção de "scripts".</li>
+
+
+</ol>
+
+<h3>Funções Matemáticas</h3>
+
+<p>Aqui apresentamos uma lista parcial da funções matemáticas mais comuns disponibilizadas
+	pelo Gnuplot.</p>
+
+<p>$\func{abs}(x)$ Para $x$ qualquer, retorna o valor absoluto de $x$ com o mesmo tipo de $x$.</p>
+<p>$\func{abs}(x)$ Para $x$ qualquer, retorna $\sqrt{\Re(x)^2+\Im(x)^2}$ para $x$ complexo.</p>
+<p>$\func{acos}(x)$ Para $x$ qualquer, retorna um valor entre $-\pi \leq acos(x) \leq \pi$ se $-1\leq x \leq 1$.</p>
+<p>$\func{acosh}(x)$ Para $x$ qualquer, retorna um valor entre $-\pi \leq acos(x) \leq \pi$ se $ x \geq 1$.</p>
+<p>$arg(x)$ Para $x$ qualquer, retorna a fase de $x$.</p>
+	<p>$asin(x)$ Para $x$ qualquer, retorna o $\sen^{-1} x$ (inverso do seno).</p>
+	<p>$asinh(x)$ Para $x$ qualquer, retorna o $\senh^{-1} x$ (inverso do seno hiperbólico).</p>
+	<p>$atan(x)$ Para $x$ qualquer, retorna o $\tg^{-1} x$ (inverso da tangente).</p>
+	<p>$atan2(y,x)$ Para $x$ e $y$ inteiros ou reais, retorna  $\tg^{-1}(y/x)$ (inverso da tangente).</p>
+	<p>$atanh(x)$ Para $x$ qualquer, retorna o $tgh^{-1} x$ (inverso da tangente hiperbólica).</p>
+	<p>$cos(x)$]  Para $x$ qualquer, retorna o cosseno de $x$, $\cos x$.</p>
+	<p>$cosh(x)$ Para $x$ qualquer, retorna o cosseno hiperbólico de $x$, $\cosh x$, .</p>
+	<p>$exp(x)$ Para $x$ qualquer, retorna $e^{x}$.</p>
+	<p>$gamma(x)$ Para $x$ qualquer, retorna a função gama $\hbox{Gamma}(\hbox{real}(x))$, do real($x$).</p>
+	<p>$imag(x)$ Para $x$ complexo, retorna a parte imaginária $x$ como um número real.</p>
+	<p>$int(x)$ Para $x$ real, retorna a parte inteira de $x$, truncando a parte decimal.</p>
+	<p>$log(x)$ Para $x$ qualquer, retorna o logaritmo natural de $x$ (base $e$), $\ln x = \log_{e} x$.</p>
+	<p>$log10(x)$ Para $x$ qualquer, retorna o logartitmo de $x$ na base $10$, $\log_{10} x$.</p>
+	<p>$norm(x)$ Para $x$ qualquer, retorna a função distribuição normal (Gaussiana) do real($x$).</p>
+	<p>$rand(x)$ Para $x$ qualquer, retorna um número pseudo a</p>
+	<p>$sgn(x)$ Para $x$ qualquer, retorna $1$ se $x>0$, $-1$ se $x&lt;0$, $0$ se $x=0$. O imag($x$) é ignorado.</p>
+	<p>$sin(x)$ Para $x$ qualquer, retorna  $\sen x$.</p>
+	<p>$sinh(x)$ Para $x$ qualquer, retorna $\func{senh} x$.</p>
+	<p>$sqrt(x)$ Para $x$ qualquer, retorna $\sqrt{x}$.</p>
+	<p>$tan(x)$ Para $x$ qualquer, retorna $\tg x$, a tangente de $x$.</p>
+	<p>$tanh(x)$ Para $x$ qualquer, retorna $tgh x$, a tangente hiperbólica de $x$.</p>
+	<p>$tm\_hour(x)$] Retorna um inteiro para a hora.</p>
+	<p>$tm\_mday(x)$] Retorna um inteiro para o dia do mês.</p>
+	<p>$tm\_min(x)$] Retorna um inteiro para o minuto.</p>
+	<p>$tm\_mon(x)$] Retorna um inteiro para o mês.</p>
+	<p>$tm\_sec(x)$] Retorna um inteiro para o segundo.</p>
+	<p>$tm\_wday(x)$] Retorna um inteiro para o dia da semana.</p>
+	<p>$tm\_yday(x)$] Retorna um inteiro para o dia do ano.</p>
+	<p>$tm\_year(x)$] Retorna um inteiro para o ano.</p>
+	<p>$valid(x)$] Retorna um inteiro para o teste validade da $column(x)$ durante a manipulação de dados.</p>
+	<p>$rand(0)$] Retorna um número pseudo aleatório no intervalo $0\leq rand(0) \leq 1$ gerado a partir do valor corrente da semente interna de $32$-bits.</p>
+	<p>$rand(-1)$] Reinicializa ambas as sementes para um valor padrão.</p>
+<p>$rand(x)$ Para $x>0$ inicializa ambas as sementes para um valor baseado no
+	valor de $x$.</p>
+	<p>$rand({x,y})$ Para $x>0$ inicializa a semente $1$ (seed1) para $x$ e a semente $2$ (seed2) para $y$..</p>
+
+
+
+
+<p>A partir destas funções básicas, podemos criar uma função qualquer para
+fazermos um gráfico, conforme exemplo a seguir de uma distribuição gaussiana
+	centrada em zero, para isto, chame o \emph{Gnuplot} e digite os seguintes comandos:</p>
+
+
+<pre><code>gnuplot> g(x)= exp(-x**2)
+gnuplot> plot g(x)</code></pre>
+
+
+<p>Podemos construir uma função um pouco mais elaborada, como</p>
+
+<pre><code>gnuplot> f(x)=sin(2.0*x)/(2*x)
+gnuplot> plot f(x)</code></pre>
+
+	<p>Podemos ter combinações de funções elementares como</p>
+
+<pre><code>gnuplot> f(x)=sin (2.0* x )*log( abs(x) )
+gnuplot> plot f(x)</code></pre>
+
+
+<p>ou combinações de funções definidas no próprio ambiente
+como no caso</p>
+
+<pre><code>gnuplot> E(x)=exp(-abs(x/5))
+gnuplot> h(x)=E(x)*cos(2*x)
+gnuplot> plot h(x), E(x), -E(x)</code></pre>
+
+
+<h3>Expressões e Operadores</h3>
+
+
+<p>Quanto as expressões matemáticas, os parenteses podem ser usados para
+alterar a ordem de cálculo de uma expressão. Os operadores no \emph{Gnuplot}
+são os mesmos da linguagem de programação C, já o operador $**$ exponenciação
+é o mesmo da linguagem de programação FORTRAN. A seguir apresentamos algumas
+	tabelas com os operadores usados pelo gnuplot.</p>
+
+
+<table>
+<caption>Tabela 2.1 – Operadores Unitários</caption>
+
+  <tr><thead>
+    <th>Símbolo</th>
+    <th>Exemplo</th>
+    <th>Explicação</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>–</td>
+    <td>–a</td>
+    <td>menos unitário</td>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>+a</td>
+    <td>mais unitário</td>
+  </tr>
+  <tr>
+    <td>~</td>
+    <td>~a</td>
+    <td>complemento</td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>!a</td>
+    <td>Negação lógica</td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>!a</td>
+    <td>Fatorial</td>
+  </tr>
+  <tr>
+    <td>$</td>
+    <td>$3</td>
+    <td>chama argumento/ coluna durante uma manipulação</td>
+	</tr></tbody>
+</table>
+
+	<p>O operador ternário $f=a?b:c$, pode ser expresso matematicamente como:</p>
+
+<p class="formula"></p>\begin{equation}
+ f =
+\begin{cases}
+ b & \text{ Se } a = 0 \\
+ c & \text{ Se } a \neq 0
+\end{cases}
+	\end{equation}</p>
+
+
+<table>
+<caption>Tabela 2.2 – Operadores Matemáticos</caption>
+
+  <tr><thead>
+    <th>Símbolo</th>
+    <th>Exemplo</th>
+    <th>Explicação</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>**</td>
+    <td>a* *b</td>
+    <td>Exponenciação</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>a * b</td>
+    <td>Multiplicação</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>a / b</td>
+    <td>Divisão</td>
+  </tr>
+  <tr>
+    <td>%</td>
+    <td>a%b</td>
+    <td>Módulo*</td>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>a + b</td>
+    <td>Adição</td>
+  </tr>
+  <tr>
+    <td>–</td>
+    <td>a – b</td>
+    <td>Subtração</td>
+	</tr></tbody>
+</table>
+
+
+<table>
+<caption>Tabela 2.3 – Operador Ternário</caption>
+
+  <tr><thead>
+    <th>Símbolo</th>
+    <th>Exemplo</th>
+    <th>Explicação</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>?:</td>
+    <td>a?b : c</td>
+    <td>Operação Ternária</td>
+	</tr></tbody>
+</table>
+
+
+
+<p>Esse operador é proveniente da linguagem de programação C. A variável
+$a$ pode ser uma expressão inteira, então para avaliar o resultado
+desta expressão o primeiro argumento $a$, que deve ser um inteiro, é
+calculado. Se ele for verdade (diferente de zero), o segundo $b$ é
+calculado e retornado, de outro modo, o terceiro $c$ é calculado e
+	retornado.</p>
+
+<p>A seguir apresentamos a tabela dos operadores lógicos, para tomada
+	de decisão.</p>
+
+
+
+<caption>Tabela 2.4 – Operadores Lógicos</caption>
+
+<table>
+  <tr><thead>
+    <th>Símbolo</th>
+    <th>Exemplo</th>
+    <th>Explicação</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>==</td>
+    <td>a = = b</td>
+    <td>Igualdade</td>
+  </tr>
+  <tr>
+    <td>!=</td>
+    <td>a! = b</td>
+    <td>Desigualdade</td>
+  </tr>
+  <tr>
+    <td>&lt;</td>
+    <td>a &lt; b</td>
+    <td>Menor que</td>
+  </tr>
+  <tr>
+    <td>&lt;=</td>
+    <td>a &lt; = b</td>
+    <td>Menor ou igual a</td>
+  </tr>
+  <tr>
+    <td>&gt;</td>
+    <td>a &gt; b</td>
+    <td>Maior que</td>
+  </tr>
+  <tr>
+    <td>&gt;=</td>
+    <td>a &gt; = b</td>
+    <td>Maior ou igual a</td>
+  </tr>
+  <tr>
+    <td>&amp;</td>
+    <td>a &amp; b</td>
+    <td>Bits* E</td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>a ^ b</td>
+    <td>Bit* OU exclusivo</td>
+  </tr>
+  <tr>
+    <td>|</td>
+    <td>a|b</td>
+    <td>Bit* OU inclusivo</td>
+  </tr>
+  <tr>
+    <td>&amp;&amp;</td>
+    <td>a&amp;&amp;b</td>
+    <td>Lógico* E</td>
+  </tr>
+  <tr>
+    <td>||</td>
+    <td>a||</td>
+    <td>Lógico* OU</td>
+	</tr></tbody>
+</table>
+
+
+<p>Agora mostraremos algumas aplicações dos operadores, definidos
+	anteriormente. Por exemplo, para fazer um gráfico da função</p>
+
+
+<p class="formula">
+	\[
+	g(x) =
+	\begin{cases}
+	sen(x) &amp; \text{se} &amp; 0 \leq x < 1\\
+	1/x &amp; \text{se} &amp; 1 \leq x < 2 
+	\end{cases}
+	,
+	\]
+</p>
+
+<p>chamamos o Gnuplot, e em seu terminal definimos a função $g(x)$
+	digitando:</p>
+
+	<pre><code>gnuplot&gt; g(x)= 0 <=x &amp;&amp; x&lt;1 ? sin(x) : 1<=x &amp;&amp; x&lt;2 ? 1/x : 1/0 </code></pre>
+
+
+<p>e o seu gráfico é obtido com o comando \texttt{plot} digitando-se,</p>
+
+<pre><code>gnuplot&gt; plot g(x)</code></pre>
+
+
+	<p>A função passo de Heaviside é definida como</p>
+
+
+
+<p class="formula">
+\[
+\theta (x) =
+\begin{cases}
+0 &amp; \text{se} &amp; x < 0 \\
+1 &amp; \text{se} &amp; x > 0
+\end{cases}
+\]	
+</p>
+
+	<p>no Gnuplot definimos ela com</p>
+
+
+<pre><code>gnuplot> f(x) = x&lt;0 ? 0 : x&gt;0 ? 1 : 1/0
+gnuplot&gt; plot f(x)</code></pre>
+
+
+<p><b>Exemplo 1:</b> O gráfico da função abaixo</p>
+
+<p class="formula">
+	
+	\[
+H(x) =
+\begin{cases}
+f(x)=3x-40 &amp; \text{se} &amp; 2 \leq x < \leq 6 \\
+g(x)=-x^2+2x-8 &amp; \text{se} &amp; Outros casos
+\end{cases}
+\]
+</p>
+
+	<p>é obtido com o seguinte digitando-se.</p>
+
+
+<pre><code>reset
+set xtics 1
+set grid
+set xrange [0:10]
+f(x)=3*x-40
+g(x)=-x**2+2*x-8
+h(x)=(2<=x &amp;&amp; x<=8) ? f(x):g(x) 
+plot h(x) title "Função Composta"</code></pre>
+
+
+<p>Para descobrir o significado dos comandos desconhecidos do exemplo anterior
+	basta digitar o comando  \texttt{help nome\_do\_comando}, por exemplo:</p>
+
+<pre><code>gnuplot> help reset
+gnuplot> help reset
+ The 'reset' command causes all graph-related options that can be set with
+ the 'set' command to take on their default values. This command is useful, 
+ e.g., to restore the default graph settings at the end of a command file, 
+ or to return to a defined state after lots of settings have been changed 
+ within a command file. Please refer to the 'set' command to see the default 
+ values that the various options take.
+
+ The following are _not_ affected by 'reset'.
+      'set term' 'set output' 'set loadpath' 'set fontpath'
+      'set encoding' 'set decimalsign' 'set locale'
+
+ 'reset errors' clears only the error state variables GPVAL_ERRNO and
+ GPVAL_ERRMSG.
+
+ 'reset bind' restores all hotkey bindings to their default state.
+
+Subtopics available for reset:
+    bind              errors
+
+Subtopic of reset:</code></pre>
+
+<h3>Definindo Funções</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
