@@ -605,7 +605,7 @@ h1, h2, h3, h4, h5, h6 {
           font-size: 0.9em;
           line-height: 1.4; }
 
-#sumario {
+#nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -614,15 +614,54 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f3f6f7;
   overflow: scroll; }
   @media print {
-    #sumario {
+    #nav {
       display: none; } }
 
 #header {
   display: block;
-  width: 100%; }
-  #header div.cont-titulo {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 144, 167, 0)), color-stop(20%, rgba(0, 144, 167, 0)), to(rgba(0, 144, 167, 0.6))), #001F3C;
-    background: linear-gradient(to bottom, rgba(0, 144, 167, 0) 0%, rgba(0, 144, 167, 0) 20%, rgba(0, 144, 167, 0.6) 100%), #001F3C;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 144, 167, 0)), color-stop(20%, rgba(0, 144, 167, 0)), to(rgba(0, 144, 167, 0.6))), #001F3C;
+  background: linear-gradient(to bottom, rgba(0, 144, 167, 0) 0%, rgba(0, 144, 167, 0) 20%, rgba(0, 144, 167, 0.6) 100%), #001F3C; }
+  #header div.volume {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    font-weight: 300;
+    font-size: 0.9em; }
+    #header div.volume p {
+      margin: 0;
+      padding: 0.6em 0;
+      line-height: 1;
+      display: inline-block;
+      color: #A6D8BE; }
+    #header div.volume div.bts a {
+      display: inline-block;
+      line-height: 1;
+      padding: 0.6em 0;
+      margin-left: 1em;
+      text-decoration: none;
+      color: #0090A7;
+      -webkit-transition: color 0.2s linear;
+      -moz-transition: color 0.2s linear;
+      transition: color 0.2s linear; }
+      #header div.volume div.bts a:hover {
+        color: white; }
+  #header div.cont-caps {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -649,8 +688,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     padding: 15px;
     padding-top: 0;
+    margin-top: 1.5em;
     position: relative; }
-    #header div.cont-titulo .numero-capitulo {
+    #header div.cont-caps .bt-caps {
       display: -webkit-box;
       display: -moz-box;
       display: box;
@@ -658,25 +698,65 @@ h1, h2, h3, h4, h5, h6 {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
-      text-align: center;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      box-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -o-align-items: center;
-      align-items: center;
-      -ms-flex-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #A6D8BE;
-      padding: 0.5em 0.4em 0.15em;
-      margin-bottom: 0.2em;
-      font-family: "Roboto Slab", serif;
-      font-weight: normal;
-      font-size: 2.4em;
-      line-height: 1; }
-    #header div.cont-titulo .titulo_capitulo {
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #header div.cont-caps .bt-caps a {
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 30px;
+        height: 36px;
+        margin-right: 0.3em;
+        margin-bottom: 0.3em;
+        font-size: 1.2em;
+        line-height: 1;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: rgba(166, 216, 190, 0.5);
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        -webkit-transition-property: color, background-color;
+        -moz-transition-property: color, background-color;
+        transition-property: color, background-color;
+        display: -webkit-inline-box;
+        display: -moz-inline-box;
+        display: inline-box;
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -ms-flex-align: center; }
+        #header div.cont-caps .bt-caps a:hover:not(.atual), #header div.cont-caps .bt-caps a.atual {
+          background-color: rgba(0, 0, 0, 0.6);
+          color: #A6D8BE; }
+        #header div.cont-caps .bt-caps a[disabled]:hover {
+          cursor: default; }
+    #header div.cont-caps .titulo_capitulo {
+      margin-top: 0.5em;
       width: 100%;
       display: block;
       text-align: left;
@@ -685,116 +765,9 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 1.3em;
       line-height: 1.5;
       text-shadow: 0px 1px 3px #001F3C; }
-    #header div.cont-titulo .volume {
-      font-size: 0.8em;
-      line-height: 1.1;
-      text-align: center;
-      color: #A6D8BE;
-      margin: 0;
-      padding: 0.3em;
-      position: absolute;
-      right: 0;
-      top: 0; }
-      #header div.cont-titulo .volume span {
-        display: block;
-        font-weight: bold;
-        font-size: 1.2em; }
-  #header div.navegacao-cap {
-    width: 100%;
-    height: 42px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-lines: single;
-    -moz-box-lines: single;
-    box-lines: single;
-    -webkit-flex-wrap: nowrap;
-    -moz-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap; }
-    #header div.navegacao-cap a {
-      display: inline-block;
-      color: #0090A7;
-      -webkit-transition: background-color 0.1s linear;
-      -moz-transition: background-color 0.1s linear;
-      transition: background-color 0.1s linear;
-      height: 100%;
-      font-size: 0.9em;
-      font-family: "Roboto Slab", serif;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-top-width: 0px;
-      border-left-width: 0px;
-      border-collapse: collapse;
-      display: -webkit-box;
-      display: -moz-box;
-      display: box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -moz-box-pack: center;
-      box-pack: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      -ms-justify-content: center;
-      -o-justify-content: center;
-      justify-content: center;
-      -ms-flex-pack: center;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      box-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -o-align-items: center;
-      align-items: center;
-      -ms-flex-align: center; }
-      #header div.navegacao-cap a, #header div.navegacao-cap a:link, #header div.navegacao-cap a:visited, #header div.navegacao-cap a:hover, #header div.navegacao-cap a:focus, #header div.navegacao-cap a:active {
-        text-decoration: none; }
-      #header div.navegacao-cap a:first-child {
-        border-left-width: 1px; }
-      #header div.navegacao-cap a:hover {
-        background-color: rgba(166, 216, 190, 0.6); }
-      #header div.navegacao-cap a[disabled] {
-        display: none; }
-      #header div.navegacao-cap a.home, #header div.navegacao-cap a.fichatecnica {
-        width: 50%;
-        text-align: center; }
-      #header div.navegacao-cap a.cap {
-        width: 42px;
-        height: 100%;
-        -webkit-flex-shrink: 0;
-        -moz-flex-shrink: 0;
-        flex-shrink: 0;
-        -ms-flex-negative: 0; }
-        #header div.navegacao-cap a.cap p {
-          margin: 0;
-          line-height: 1; }
-        #header div.navegacao-cap a.cap svg {
-          display: inline;
-          height: 0.7em;
-          line-height: 1;
-          width: auto; }
-          #header div.navegacao-cap a.cap svg {
-            fill: #0090A7; }
-        #header div.navegacao-cap a.cap.prev p {
-          margin-left: 0.2em; }
-        #header div.navegacao-cap a.cap.prev svg {
-          -webkit-transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          transform: rotate(180deg); }
-        #header div.navegacao-cap a.cap.next p {
-          margin-right: 0.2em; }
 
 #subcapitulos {
-  padding: 30px 0;
+  padding: 15px 0 30px;
   line-height: 1.4; }
   #subcapitulos a, #subcapitulos a:link, #subcapitulos a:visited, #subcapitulos a:hover, #subcapitulos a:focus, #subcapitulos a:active {
     text-decoration: none;
@@ -804,7 +777,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     padding: 0.6em 15px;
     counter-increment: subcaps;
-    margin-top: 1em; }
+    margin-top: 0.5em; }
     #subcapitulos > a:first-child {
       margin-top: 0; }
     #subcapitulos > a:before {

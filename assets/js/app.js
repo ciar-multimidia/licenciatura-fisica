@@ -143,6 +143,9 @@ jQuery(document).ready(function($) {
 
 	// Códigos para "debug"
 
+	// Notas de rodapé: 
+	// 		1. O número de notas é o mesmo de botões?
+	// 		2. Notas e botões estão enumerados corretamente?			
 	if (btRodape.length !== notasRodape.length) {
 		console.warn('O número de notas de rodapé não coincide com o número de botões que ativam notas. Existem '+notasRodape.length+' notas e '+btRodape.length+ ' botões');
 	} else{
@@ -164,9 +167,19 @@ jQuery(document).ready(function($) {
 		}
 	}
 
+	// Sumário e cabeçalho:
+	// 		1. O número de links do sumário é o mesmo que o número de cabeçalhos (h2 e h3) do texto?
+	// 		2. Um log comparando o texto do menu e o texto dos cabeçalhos.
 	if (btSubcaps.length !== headings.length) {
 		console.warn('O número de links no sumário não coincide com o número de cabeçalhos.');
 	}
+
+	console.groupCollapsed('Comparação dos links do sumário e dos cabeçalhos:');
+	btSubcaps.each(function(index, el) {
+		console.log( 'link: '+$(el).text()+'\n'
+			+ 'cabeçalho: ' + headings.eq(index).text());
+	});
+	console.groupEnd();
 
 	var nPrimeiraPagina = parseInt(paginas.eq(0).text());
 	var nUltimaPagina = parseInt(paginas.eq(paginas.length-1).text());
@@ -179,6 +192,23 @@ jQuery(document).ready(function($) {
 	if (!artigo.children().eq(0).is('span.pagina')) {
 		console.warn('O primeiro elemento do capítulo deve ser uma tag de paginação.');
 	}
+
+	var pags_jaTeveUmErro = false;
+	paginas.each(function(index, el) {
+		if (!$(el).parent().is('article')) {
+			if (pags_jaTeveUmErro === false) {
+				console.group('As seguintes páginas não são filhas diretas do article (foram colocadas dentro de uma tag errada):');
+				pags_jaTeveUmErro = true;
+			}
+			console.warn($(el).text());
+			if (pags_jaTeveUmErro === true && index === paginas.length-1) {
+				console.groupEnd();
+
+			}
+		}
+	});
+
+
 	
 
 
