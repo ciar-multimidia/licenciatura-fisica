@@ -1,6 +1,6 @@
-<h2>INFORMÁTICA BÁSICA</h2>
+<h2>Informática Básica</h2>
 
-<p>Ao ligar o computador, ele inicia o sistema operacional, o qual
+<p>Ao Ligar o computador, ele inicia o sistema operacional, o qual
 carrega uma série de programas com instruções para gerenciar os
 diversos recursos da máquina, entre eles podemos citar, o teclado,
 o mouse, leitor de CD/DVD, a memória RAM, os arquivos gravados no
@@ -1394,7 +1394,944 @@ Subtopic of reset:</code></pre>
 <h3>Definindo Funções</h3>
 
 
+	<p>No ambiente do Gnuplot é muito fácil definir uma função,
+no exemplo abaixo definimos uma função quadrática, cujos
+parâetros também são variáveis.</p>
 
+<pre><code>gnuplot> a=1
+gnuplot> b=-2
+gnuplot> c=3
+gnuplot> f(x)=a*x**2+b*x+c
+gnuplot> plot f(x)</code></pre>
+
+	<p>Ao redefinirmos o valor da variável \texttt{a}, obtemos um outro gráfico,
+para a mesma função.</p>
+
+<pre><code>gnuplot> a=-1.0
+gnuplot> plot f(x)</code></pre>
+
+<p>Uma outra forma de variarmos os parâmetros seria definirmos uma função de
+quatro variáveis, sendo três delas parâmetros de passagens para os gráficos,
+	como ilustrado abaixo:</p>
+
+<pre><code>gnuplot> f(x,a,b,c)=a*x**2+b*x+c
+gnuplot> plot f(x,1,-2,3), f(x,-1,-2,3)</code></pre>
+
+
+<p>Outras possibilidades de definirmos uma função no ambiente são
+mostradas no exemplo a seguir:</p>
+
+
+<pre><code>gnuplot> w = 2
+gnuplot> q = floor(tan(pi/2 - 0.1))
+gnuplot> f(x) = sin(w*x)
+gnuplot> sinc(x) = sin(pi*x)/(pi*x)
+gnuplot> delta(t) = (t == 0)
+gnuplot> ramp(t) = (t > 0) ? t : 0
+gnuplot> min(a,b) = (a < b) ? a : b
+gnuplot> comb(n,k) = n!/(k!*(n-k)!)
+gnuplot> len3d(x,y,z) = sqrt(x*x+y*y+z*z)
+gnuplot> plot f(x)=sin(x*a), a=0.2,f(x), a=0.4,f(x)</code></pre>
+
+
+
+<h3>Controle Sobre os Eixos e Escalas</h3>
+
+
+<p>Agora que vimos como fazer um gráfico, vamos obter
+um controle  sobre alguns aspectos do gráfico.
+Para isso, apresentaremos alguns comandos do Gnuplot
+e o seu significado.</p>
+
+
+	<p>\texttt{set grid} Ativa a grade no gráfico.</p>
+
+	<p>\texttt{set nogrid} ou \texttt{unset grid} desativa a grade no gráfico.</p>
+
+	<p>\texttt{set xrange  [x0:xf]} Define o intervalo de variação do eixo $x$.</p>
+
+	<p>\texttt{set yrange  [y0:yf]} Define o intervalo de variação do eixo$y$.</p>
+
+   <p>\texttt{set zrange  [z0:zf]} Define o intervalo de variação do eixo$z$
+   	em graficos (3D).</p>
+
+   <p>\texttt{set autoscale} Faz com que a escolha de variação dos eixos sejam
+   	feitas de forma automática.</p>
+
+   <p>\texttt{set samples n} Define o número \texttt{n} de pontos usados para
+   	fazer o gráfico. O padrão é 100.</p>
+
+   <p>\texttt{set key on} ou  \texttt{set key off} Habilita o desabilita a
+   	legenda do gráfico.</p>
+
+   	<p>\texttt{plot f(x)} Faz o gráfico de $f(x)$.</p>
+
+   <p>\texttt{replot f(x)} ou \texttt{rep f(x)} Adiciona o gráfico de $f(x)$
+   	ao anterior sem apagá-lo.</p>
+
+   	<p>\texttt{test} Mostra as definições padrões.</p>
+
+   	<p>\texttt{reset} Reinicializa as variáveis internas aos valores padrões.</p>
+
+   	<p>\texttt{clear} limpa a tela.</p>
+
+
+
+<pre><code>Cria um título:                  	> set title "Trajetória da partícula"
+Põe uma legenda no eixo-x:       	> set xlabel "Posição (meters)"
+Põe uma legenda no eixo-y:       	> set ylabel "Altura (m)"
+Muda a variação do eixo-x:       	> set xrange [0.0:5.0]
+Muda a variação do eixo-y:       	> set yrange [0:100]
+Variação dos eixos é automática: 	> set autoscale
+Mova a legenda do gráfico:       	> set key 0.01,90
+Apague a legenda do gráfico:     	> unset key
+Põe uma legenda sobre a curva:   	> set label "Ponto escolhido" at 1.0, 60
+Remove todas as legendas:        	> unset label
+Gráfico usando eixos-log:        	> set logscale
+Gráfico usando eixo-y log:       	> unset logscale; set logscale y
+Muda as marcas do eixo-x:        	> set xtics (1.0,2.0,3.0,4.0,5.0)
+Retorna as marcas padrões:       	> unset xtics; set xtics auto</code></pre>
+
+
+
+<pre><code>gnuplot > plot sin(x/2) with points
+gnuplot > plot sin(x/2) with lines
+gnuplot > plot sin(x/2) with linespoints
+gnuplot > plot sin(x/2) with dots
+gnuplot > plot sin(x/2) with impulses</code></pre>
+
+
+<p>A seguir apresentamos alguns exemplos para testar e verificar
+	o que ocorre em cada caso:</p>
+
+
+<pre><code>gnuplot > plot sin(x/2) with points lt 3
+gnuplot > plot sin(x/2) with points pt 1 ps 1.8
+gnuplot > plot sin(x/2) with lines lt 5 lw 2
+gnuplot > plot sin(x/2) with linespoints lt 1 lw 1.5
+gnuplot > plot sin(x/2) with impulses 9
+
+gnuplot > plot [0:pi/2] sin(x/2) with points 10 6
+gnuplot > rep cos(4*x) with impulses 3</code></pre>
+
+
+
+<pre><code>gnuplot > set xrange [-2*pi: 2*pi]
+gnuplot > f(x)=sin(x/2)
+gnuplot > plot f(x)</code></pre>
+
+<pre><code>gnuplot > f(x,b)=sin(x/b)
+gnuplot > plot [-2*pi:2*pi] f(x,2)</code></pre>
+
+<pre><code>gnuplot > g(x)=sin(x*a)
+gnuplot > plot [-2*pi:2*pi] g(x); a=0.5
+gnuplot> plot [-2*pi:2*pi] [-1.2:1.2] g(x); a=2.0</code></pre>
+
+<pre><code>gnuplot > set xrange [-2*pi:2*pi]
+gnuplot > f(x,a)=sin(a*x)
+gnuplot > plot f(x,0.5)</code></pre>
+
+
+<p>Mostramos a seguir como preencher uma curva.</p>
+
+
+<pre><code>gnuplot> plot -cos(x)/(1+0.1*x**2) w filledcurves y1=0
+gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc y1=0          # Abreviando o comando
+gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc y1=0 lc rgb "cyan"   #Cor
+gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc above y1=0
+gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc below y1=0
+
+gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc above y1=0.2
+
+gnuplot> plot sin(x)/x w l, -cos(x)/(1+0.1*x**2) w filledc \
+ y1=0 lc rgb "cyan" t 'Azul', sin(2*x)/x w l</code></pre>
+
+
+ <p>Por exemplo, para preencher a curva entre vejamos o exemplo
+abaixo, inicialmente vejam a diferença entre as duas curvas,</p>
+
+
+<pre><code>reset
+set xr[-2.5:2.5]
+plot erf(x) w l lt 2 lw 1.5, tanh(x) w l lt 3 lw 1.5</code></pre>
+
+
+<p>Agora vamos preencher a região entre as duas curvas com
+	a cor amarela \verb|"#ffff00"|, conforme o exemplo abaixo:</p>
+
+<pre><code>reset
+set xr[-2.5:2.5]
+plot erf(x) w filledcurves below lt 2 lc rgb "#ffff00" title '', \
+  tanh(x) w filledcurves above lt 5 lc rgb "#ffffff" title ''
+replot erf(x) w l lt 2 lw 2, tanh(x) w l lt 5 lw 2</code></pre>
+
+<h3>Gráficos de um Arquivo de Dados</h3>
+
+<p>Considere como exemplo os dados apresentados no fim da seção 2.1
+para ilustrarmos a capacidade do Gnuplot em fazer gráficos. Copie os dados
+em um arquivo chamado \texttt{dados.dat} e refaça os exemplos a seguir:</p>
+
+
+<pre><code>gnuplot > reset
+gnuplot > plot "dados.dat" using 1:2
+gnuplot > plot "dados.dat" using 1:2 with lines</code></pre>
+
+
+<pre><code>gnuplot > reset
+gnuplot > plot "dados.dat" using 1:2 with lines
+gnuplot > replot "dados.dat" using 1:3 with lines
+gnuplot > replot "dados.dat" u 1:4 w l</code></pre>
+
+<p>Note que na última linha abreviamos os comandos \texttt{using},
+\texttt{with lines}. Este resultado também pode ser obtido com
+uma única linha de comando,</p>
+
+<pre><code>gnuplot > reset
+gnuplot> plot "dados.dat" u 1:2 w l, "dados.dat" u 1:3 w l, \
+> "dados.dat" u 1:4 w l</code></pre>
+
+<p>Note que a barra invertida significa uma quebra de linha, ou seja,
+	que o comando irá continuar na linha seguinte.</p>
+
+	<p>Agora vamos alterar as cores e largura das linhas,</p>
+
+<pre><code>gnuplot > reset
+gnuplot > plot "dados.dat" using ($1):($2) with lines linecolor 3 \ 
+ linewidth 1.5
+gnuplot > plot "dados.dat" using ($1):($3) with lines lc 5 lw 2</code></pre>
+
+
+<p>Ao fazermos o gráfico de um arquivo com muitas colunas, ou
+mesmo só com duas colunas, podemos realizar algumas operações
+	sobre as colunas, conforme o exemplo abaixo:</p>
+
+<pre><code>using ($1):($2 +$3)
+using ($1):($2 +3*($3))
+	using ($2):($4)/100</code></pre>
+
+<p>Para um arquivo de dados, faça um gráfico da média dos
+valores das colunas $2$ e $3$ em função dos dados da coluna $1$,
+	mas somente se os dados da coluna $4$ forem não negativos.</p>
+
+	<pre><code>gnuplot> plot 'dados.dat' using 1:( $4<0? 1/0: ($2+$3)/2) w l</code></pre>
+
+<p>O gnuplot também possui algumas funções para realizar uma
+interpolação entre alguns pontos, suavizando a curva. Observer
+	o exemplo:</p>
+
+<pre><code>gnuplot> plot "dados.dat" u 1:4 w l, "dados.dat" u 1:4 smooth bezier w l, \
+>"dados.dat" u 1:4 smooth csplines w l</code></pre>
+
+<h3>Mais Controles Sobre os Eixos</h3>
+
+<p>Agora apresentaremos algums comandos para controlar
+algumas características dos eixos.</p>
+
+<p>\texttt{\texttt{set xtics $\Delta x$}] Aqui $\Delta x$
+   é o valor do intervalo de pontos no eixo $x$.
+
+ <p>\texttt{set mxtics n}] número de divisões no
+   intervalo de pontos $\Delta x$ do eixo $x$.
+
+ <p>\texttt{set ytics $\Delta y$} Valor do intervalo
+   de pontos no eixo $y$.
+ <p>\texttt{set mytics n} número de divisões no
+   intervalo de pontos $\Delta y$ do eixo $y$.
+ <p>\texttt{set xlabel "Nome do eixo x"}
+ <p>\texttt{set ylabel "Nome do eixo y"}
+ <p>\texttt{set title "Nome do gráfico"}
+
+
+ <pre><code>gnuplot > reset
+gnuplot > set grid
+gnuplot > set xtics 2
+gnuplot > set mxtics 2
+gnuplot > set ytics 40
+gnuplot > set mytics 2
+gnuplot > set xrange [0:25]
+gnuplot > set title "Funcao Parabolica \n Teste 1"
+gnuplot > set xlabel "X - Tempo (s)"
+gnuplot > set ylabel "Y- Aceleracao (m/s2)"
+gnuplot > f(x,a,b,c)=a+b*x+c*x**2
+gnuplot > plot f(x,120,-5,0.1) t "funcao 1" with points 3 5
+gnuplot > rep f(x,80,+10,-0.15) t "funcao 2" with lines 8</code></pre>
+
+
+<p>No Gnuplot os carácteres especiais são obtidos somente para
+o terminal postscript, para os outros terminais algumas das
+características das fontes podem ou não estar disponíveis.
+Para o uso do modo postscript você deve consultar o arquivo
+	ps_guide.ps quem vem junto com a documentação do gnuplot.</p>
+
+
+<h3>Posicionamento das Legendas</h3>
+
+
+<p>O posicionamento das legendas podem ser controlados pelos
+	seguintes parâmetros:</p>
+
+
+<p>\texttt{set key left bottom} Canto inferior
+   esquerdo.
+   <p>\texttt{set key right bottom} Canto inferior
+   direito.
+   <p>\texttt{set key left top} Canto superior
+   esquerdo.
+   <p>\texttt{set key right top} Canto superior
+   direito.
+
+<h3>Gráficos de Superfícies</h3>
+
+<p>O camando \texttt{splot} é usado para fazer gráficos
+em três dimensões, conforme ilsutra os exemplos a seguir:</p>
+
+<pre><code>reset
+set grid
+set format z "%4.2f"
+f(x,y)=log(sqrt( x*x + y*y))
+splot f(x,y)</code></pre>
+
+<p>Note que ao posicionar o mouse sobre o gráfico e pressionar o botão da
+direita (dos destros), surge o um ícone indicando que o gráfico pode ser
+girado. Enquanto o botão estiver pressionado o gráfico irá acompanhar o
+	movimento do mouse.</p>
+
+	<p>Os comandos novos, possuem o seguinte significado:</p>
+
+
+	<p>\texttt{set format} Formato dos valores numéricos</p>
+	<p>\texttt{set hidden3D} No modo 3D, esconde o que fica atrás da superfície.</p>
+
+<pre><code>eset
+set grid
+set format z "%4.2f"
+f(x,y)=log(sqrt( x*x + y*y))
+splot f(x,y)</code></pre>
+
+<p>Note que ao posicionar o mouse sobre o gráfico e pressionar o botão da
+direita (dos destros), surge o um ícone indicando que o gráfico pode ser
+girado. Enquanto o botão estiver pressionado o gráfico irá acompanhar o
+	movimento do mouse.</p>
+
+	<p>Os comandos novos, possuem o seguinte significado:</p>
+
+<p>\texttt{set format} Formato dos valores numéricos
+<p>\texttt{set hidden3D} No modo 3D, esconde o que fica atrás da superfície.
+
+<pre><code>reset
+set grid
+set xlabel "X"
+set ylabel "Y"
+set zlabel "Z"
+set title "Exemplo de Superficie"
+set ztics 0.50
+set format z "%4.2f"
+f(x,y)=sin(y/7)*cos(x/5)
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+splot f(x,y) t "Superfície"</code></pre>
+
+<p>Agora vamos melhorar este gráfico, tente agora</p>
+
+<pre><code>reset
+set grid
+unset key
+set isosamples 50,50
+set xlabel "X"
+set ylabel "Y"
+set zlabel "Z"
+set title "Exemplo de Superficie"
+set ztics 0.50
+set format z "%4.2f"
+f(x,y)=sin(y/7)*cos(x/5)
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+set xr[-25:25]
+set yr[-25:25]
+splot f(x,y) t "Superfície"</code></pre>
+
+<p>Verifique o que cada comando introduz, simplesmente
+retirando o comando.</p>
+
+<h3>Multiplos Gráficos Numa Página</h3>
+
+<p>Agora veremos como fazer múltiplos gráficos em uma só
+janela. Vamos começar introduzindo um gráfico dentro do
+outro, conforme o exemplo a seguir.</p>
+
+<pre><code>reset
+set multiplot
+plot sin(x)
+set origin 0.5,0.5 set size 0.4,0.4 clear
+plot cos(x)
+unset multiplot</code></pre>
+
+<p>Neste próximo exemplo dividi-se a janela em quatro
+	parte e fazemos os gráficos nestas.</p>
+
+
+<pre><code>reset
+set multiplot layout 2,2 title "seno versus cossenos"
+set size 0.45,0.45
+set origin 0.0, 0.0
+set xr[-4*pi:4*pi]
+set xtics ("-4" -4*pi, "-3" -3*pi, "-2" -2*pi, "-1" -pi, "0" 0 , \ "1" pi, "2" 2*pi, "3" 3*pi, "4" 4*pi)
+plot sin(x)
+set size 0.45,0.45
+set origin 0.0, 0.50
+set xr[-4*pi:4*pi]
+set xtics ("-4" -4*pi, "-3" -3*pi, "-2" -2*pi, "-1" -pi, "0" 0 , \ "1" pi, "2" 2*pi, "3" 3*pi, "4" 4*pi)
+plot cos(x)
+set size 0.45,0.45
+set origin 0.50, 0.0
+set xr[-4*pi:4*pi]
+set xtics ("-4" -4*pi, "-3" -3*pi, "-2" -2*pi, "-1" -pi, "0" 0 , \ "1" pi, "2" 2*pi, "3" 3*pi, "4" 4*pi)
+plot sin(2*x)/(2*x)
+set size 0.45,0.45
+set origin 0.50, 0.50
+set xtics ("-4" -4*pi, "-3" -3*pi, "-2" -2*pi, "-1" -pi, "0" 0 , \ "1" pi, "2" 2*pi, "3" 3*pi, "4" 4*pi)
+plot (cos(2*x)-1)/(2*x)
+unset multiplot</code></pre>
+
+
+<h3>Usando um Arquivo</h3>
+
+<p>Se você tem um arquivo chamado \texttt{sup.gp}
+	com o seguinte conteúdo:</p>
+
+<pre><code>reset
+set grid
+set xlabel "X"
+set ylabel "Y"
+set zlabel "Z"
+set title "Exemplo de Superficie"
+set ztics 0.50
+set isosamples 50, 50
+set format z "%4.2f"
+f(x,y)=sin(y/7)*cos(x/5)
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+splot f(x,y) t""</code></pre>
+
+
+<p>Você pode chamá-lo no gnuplot com o seguinte comando:</p>
+
+<pre><code>gnuplot> load "sup.gp"</code></pre>
+
+<h4>Rodando scripts</h4>
+
+<p>Se você tem um arquivo chamado \texttt{sup.gp} com o seguinte conteúdo:</p>
+
+<pre><code>reset
+set grid
+set xlabel "X"
+set ylabel "Y"
+set zlabel "Z"
+set title "Exemplo de Superficie"
+set ztics 0.50
+set isosamples 50, 50
+set format z "%4.2f"
+f(x,y)=sin(y/7)*cos(x/5)
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+splot f(x,y) t""
+pause -1</code></pre>
+
+<p>no sistema operacional Linux, abra um terminal e digite:</p>
+
+<pre><code>$ gnuplot sup.gp</code></pre>
+
+<p>Você terá um gráfico na tela e ao pressionar enter
+	ele será fechado.</p>
+
+<h4>Salvar gráfico</h4>	
+
+<p>Para gerar as figuras: sup.eps, sup.fig, sup.png e sup.svg
+use o exemplo a seguir:</p>
+
+<pre><code>reset
+set encoding iso_8859_1
+set grid
+set xlabel "X"
+set ylabel "Y"
+set zlabel "Z"
+set title "Exemplo de Superficie"
+set ztics 0.50
+set format z "%4.2f"
+f(x,y)=sin(y/7)*cos(x/5)
+set isosamples 50, 50
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+splot f(x,y) t""
+# Aqui será gerado o grafico no formato EPS
+set terminal postscript landscape enhanced color lw 2 "Helvetica" 14
+set out "sup.eps"
+replot
+set output           # Volta a saida output para seu valor padrao
+# Aqui será gerado o grafico no formato FIG
+set term fig big color fontsize 14 thickness 2
+set out "sup.fig"
+replot
+set output           # Volta a saida output para seu valor padrao
+# Aqui será gerado o grafico no formato PNG
+set term png notransparent truecolor linewidth 2 fon "Helvetica,14" \
+enhanced size 1024,768
+set out "sup.png"
+replot
+set output           # Volta a saida output para seu valor padrao
+# Aqui será gerado o grafico no formato SVG
+set term svg size 1024,768 dynamic enhanced fname "Helvetica" \
+fsize 14 linewidth 2
+set out "sup.svg"
+replot
+set output
+set terminal wxt    # Retorna ao terminal padrão do Linux</code></pre>
+
+<p>Ao carregar este arquivo no Gnuplot com o comando:</p>
+
+
+<pre><code>gnuplot> load "sup.gp"</code></pre>
+
+<p>como resultado teremos o gráfico em quatro formato de arquivos
+diferentes, sendo os formatos vetoriais \texttt{.svg} e \texttt{.fig}
+	editáveis com o software para desenhar "inkscape".</p>
+
+<h3>Ajuste de Curvas "Fit"</h3>
+
+<p>Ajuste dos dado do arquivo dados.dat com uma função
+pré-definida qualquer, por exemplo:</p>
+
+<pre><code>gnuplot> f1(x) = a1*exp(-B1*x**2)   # define a funcao para o ajuste
+gnuplot> a1 = 10; b1 = 200;         # chute inicial para a1 e b1</code></pre>
+
+<p>Agora para ajustar a curva use o comando:</p>
+
+<pre><code>gnuplot> fit f1(x) 'dados.dat' using 1:2 via a1, b1
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a1              = 9.76472          +/- 0.01418      (0.1452%)
+b1              = 429.503          +/- 1.958        (0.4558%)</code></pre>
+
+<p>Já o comando:</p>
+
+<pre><code>gnuplot> f2(x) = a2 *exp(-b2*x**2)   # define a funcao para o ajuste
+gnuplot> a2 = 20; b2 = 100;         # chute inicial para a2 e b2
+gnuplot> fit f2(x) 'dados.dat' using 1:3 via a2, b2
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a2              = 38.1419          +/- 0.7631       (2.001%)
+b2              = 6802.34          +/- 314.3        (4.62%)</code></pre>
+
+
+<p>A curva ajustada e os dados, agora podem ser plotados com o comando:</p>
+
+<pre><code>gnuplot> set key at 0.045,37 title "F(x)=A*exp(-B*x**2)" # Titulo do grafico!
+gnuplot> set title "Distribuição Gaussiana ajustada"       # Note a nova linha com o \n!
+gnuplot> set pointsize 1.5                                 # Largura do ponto!
+gnuplot> set xlabel 'Largura, {/Symbol D}x'                # Simbolo Greek!
+gnuplot> set ylabel 'Intensidade, {/Times-Italic I}_A, (A)' # italicos!
+gnuplot> plot "dados.dat" using 1:2 title 'Exp. 1' with points lt 1,\
+      "dados.dat" using 1:3 title 'Exp. 2' with points lt 3,\
+      f1(x) title 'Fit Exp. 1' w l,\
+      f2(x) title 'Fit Exp. 2' w l</code></pre>
+
+
+<h3>Referências</h3>
+
+	<p><b>Página oficial do Gunuplot –</b> <a target="blank" href="http://www.gnuplot.info/">http://www.gnuplot.info/</a>. Acessada em 10/01/2011.</p>
+
+	<p><b>Dicas e Truques do Gnuplot –</b><a target="blank" href="http://t16web.lanl.gov/Kawano/gnuplot/ index-e.html">http://t16web.lanl.gov/Kawano/gnuplot/ index-e.html</a>. Acessada em 10/01/2011.</p>
+
+	<p><b>Introdução ao Gnuplot –</b> <a target="blank" href="http://www4.fct.unesp.br/docentes/carto/galo/web/gnuplot/fct.htm">http://www4.fct.unesp.br/docentes/carto/galo/web/gnuplot/fct.htm</a>. Acessada em 10/01/2011.</p>
+
+	<p><b>Introdução ao Gnuplot –</b> <a target="blank" href="http://www.calculo-numerico.sobralmatematica.org/textos/gnuplot_introducao.pdf">http://www.calculo-numerico.sobralmatematica.org/textos/gnuplot_introducao.pdf</a>. Acessada em 10/01/2011.</p>
+
+	<p><b>Gnuplottricks –</b> Neste blog <a target="blank" href="http://gnuplot-tricks.blogspot.com/">http://gnuplot-tricks.blogspot.com/</a> há um grande número
+	de exemplos das possibilidades do Gnuplot. Acessado em 10/01/2011.</p>
+
+
+<h2>Scilab</h2>
+
+<h3>Introdução</h3>
+
+<p>O Scilab é um software científico para computação numérica bastante flexível
+e que fornece um poderoso ambiente computacional de código aberto para aplicações
+científicas e em engenharia. Sua origem e desenvolvimento podem ser
+sumarizados em:</p>
+
+	<ul>
+		
+
+		<li>Em 1990 foi iniciado seu desenvolvimento pelos
+   pesquisadores do INRIA (Institut National de Recherche
+   en Informatique et en Automatique) e do ENPC (École
+   Nationale des Ponts et Chaussées).</li>
+		<li>Em maio de 2003 foi criado o Consórcio Scilab que
+   tornou-se responsável pelo seu desenvolvimento.</li>
+		<li>É distribuído gratuitamente e em código aberto via
+   Internet desde 1994.</li>
+		<li>Devido sua qualidade é usado em diversos ambientes
+   industriais e educacionais pelo mundo.</li>
+
+
+	</ul>
+
+	<p>Suas principais características são:</p>
+
+	<ul>
+		
+		<li>Distribuição gratuita, com código fonte disponível. Linguagem
+   simples e de fácil aprendizado;</li>
+		<li>Possui um bom sistema de auxílio ao usuário, help;</li>
+		<li>Poderoso ambiente para geração de gráficos 2D e 3D, inclusive
+   com animação;</li>
+		<li>Possui várias funções para manipulação de matrizes. As operações
+   de concatenação, acesso e extração de elementos, transposição, adição e
+   multiplicação de matrizes são facilmente realizadas;</li>
+		<li>Permite trabalhar com polinômios, funções de transferência, sistemas
+   lineares e grafos;</li>
+		<li>Define-se facilmente uma função;</li>
+		<li>Permite o acesso a rotinas escritas nas linguagens FORTRAN ou C;</li>
+		<li>Processamento em paralelo;</li>
+		<li>Um excelente "help", o  qual traz uma descrição da função desejada
+   e um exemplo do seu uso. Além disso, ele também possuí um demo para as suas
+   diversas habilidades.</li>
+
+
+	</ul>
+
+<p>Este texto é uma pequena introdução ao software Scilab, e descreveremos
+rapidamente as seguintes características dele:</p>
+
+
+	<ol>
+		
+	<li>O ambiente do Scilab.</li>
+	<li>Algumas Funções Primitivas.</li>
+	<li>Como obter ajuda.</li>
+	<li>Polinômios, Vetores e Matrizes.</li>
+	<li>Programação.</li>
+	<li>Gráficos.</li>
+
+	</ol>
+
+<p>Por ser um software livre de alta qualidade, encontramos facilmente na internet
+	um grande número de textos sobre o mesmo. Podemos destacar,</p>
+
+
+<p><a target="blank" href="http://wiki.scilab.org/">http://wiki.scilab.org/</a> A Wiki do Scilab. Nesta Wiki, em <a target="blank" href="http://wiki.scilab.org/Tutorials">http://wiki.scilab.org/Tutorials</a> encontra-se o tutorial em português do Luís Soares Barretos que é um bom material.</p>
+
+<p><a target="blank" href="http://www.dca.ufrn.br/~pmotta/">http://www.dca.ufrn.br/~pmotta/</a> Página do prof. Paulo S. Motta Pires,
+   que fez um pequeno manual em português da versão 3.0 do Scilab. Ela está
+   sendo redirecionada para <a target="blank" href="http://www.rau-tu.unicamp.br/nou-rau/softwarelivre/document/?code=134">http://www.rau-tu.unicamp.br/nou-rau/softwarelivre/document/?code=134</a>.</p>
+
+<p><a target="blank" href="http://www.das.ufsc.br/~werner/nivelamento/index.html ">http://www.das.ufsc.br/~werner/nivelamento/index.html </a> Página com apostilas do Scilab.</p>
+
+<p><a target="blank" href="http://aquarius.ime.eb.br/~aecc/">http://aquarius.ime.eb.br/~aecc/</a> Página do Eduardo Carrilho com material sobre o Scilab.</p>
+
+<p><a target="blank" href="http://pt.wikipedia.org/wiki/Scilab">http://pt.wikipedia.org/wiki/Scilab</a></p>
+
+<p><a target="blank" href="http://en.wikipedia.org/wiki/Scilab">http://en.wikipedia.org/wiki/Scilab</a></p>
+
+
+<h4>Variáveis Especiais</h4>
+
+
+<p>O scilab possui um grande número de funções intrínsecas, que podem
+ser dividas em categorias, entre elas pode-se citar:</p>
+
+	<ul>
+<li>Programação;</li>
+ <li>Álgebra linear;</li>
+ <li>Equações diferenciais;</li>
+ <li>Estatística;</li>
+ <li>Processamento de sinais;</li>
+ <li>Polinômios;/li>
+ <li>Gráficos 2D e 3D;</li>
+ <li>Ajuste de curvas;</li>
+ <li>Cálculo numérico;</li>
+ <li>Paralelização<;/li>
+ <li>Interface com C e Fortran;</li>
+ <li>Interação com o sistema operacional.</li>	
+
+
+	</ul>
+
+
+<p>A seguir apresentamos um pequena lista de funções
+em que o usuário interagem com o Scilab. Para
+	maiores detalhes consulte o manual.</p>
+
+
+
+	<p>texttt{abort} Interrompe à avaliação de uma instrução.</p>
+
+	<p>texttt{apropos} Procura por palavras-chave na ajuda do Scilab.</p>
+
+	<p>texttt{clear} Limpa o conteúdo de todas as variáveis definidas.</p>
+
+	<p>texttt{clearglobal} Limpa o conteúdo de todas as variáveis globais.</p>
+
+	<p>texttt{edit} Abre um editor de funções próprio do Scilab.</p>
+
+	<p>texttt{exit} Termina a sessão Scilab corrente.</p>
+
+	<p>texttt{getmemory} Retorna as memórias livre e total do sistema.</p>
+
+	<p>texttt{getmodules} Retorna a lista de módulos instalados no Scilab.</p>
+
+	<p>texttt{getos} Retorna o nome e a versão do Sistema Operacional.</p>
+
+	<p>texttt{getscilabmode} Retorna o modo do Scilab.</p>
+
+	<p>texttt{getshell} Retorna o interpretador de comando corrente.</p>
+
+	<p>texttt{getversion} Retorna o nome da versão do Scilab.</p>
+
+	<p>texttt{pause} Modo de pausa, abre uma seção filha da atual seção do Scilab, no mesmo terminal.</p>
+
+	<p>texttt{quit} Decresce o nível de pausa ou termina o Scilab.</p>
+
+	<p>texttt{resume} Retorna ou pára a execução de uma função e copia algumas de suas variáveis locais.</p>
+
+	<p>texttt{ver} Retorna informações sobre a versão do Scilab.</p>
+
+	<p>texttt{what} Lista todas as funções primitivas do Scilab.</p>
+
+	<p>texttt{who} listagem de variáveis.</p>
+
+	<p>texttt{who\_user} listagem das variáveis do usuário.</p>
+
+	<p>texttt{whos} listagem completa das variáveis do Scilab na seção.</p>
+
+
+<p>Vejamos um exemplo:</p>
+
+
+<pre><code>-->SCI      // Diretório no qual o Scilab foi instalado
+ SCI  =
+
+ /usr/share/scilab/
+
+-->pwd     // Diretório no qual esta trabalhando
+-->PWD     // Diretório no qual esta trabalhando
+ PWD  =
+
+ /home/salviano
+
+-->home    // Diretório no qual esta trabalhando
+ home  =
+
+ /home/salviano
+
+-->chdir('Progs') // Mudar de diretório
+
+-->cd('/home/salviano/Documentos') // Mudar de diretório</code></pre>
+
+	<p>No Scilab tudo que vem depois de "//" é um comentário.</p>
+
+
+<h3>Comandos de Interacao com o Shell</h3>
+
+
+	<ul>
+		
+		<li> host</li>
+		<li> unix</li>
+		<li> unix\_g</li>
+		<li> unix\_s</li>
+		<li> unix\_w</li>
+		<li> unix\_x</li>
+
+	</ul>
+
+<pre><code>-->unix_w('ls -alh')  // Lista arquivos no diretorio que se está trabalhando
+total 94M
+drwxrwxr-x 93 salviano salviano  12K 2006-10-05 11:29 .
+drwxr-xr-x 11 root     root     4,0K 2006-05-22 11:00 ..
+-rw-r--r--  1 salviano salviano 3,2K 2004-07-04 15:10 0004029.gz
+-rw-rw-r--  1 salviano salviano 136K 2006-04-05 18:28 3band_model.ppt
+drwxr-xr-x  3 salviano salviano 4,0K 2005-12-13 09:10 .adobe
+drwxr-xr-x  2 salviano salviano 4,0K 2005-04-23 16:49 .alexandria</code></pre>
+
+
+<h3>Iniciando com o Scilab</h3>
+
+
+<p>Agora uma vez na interface do Scilab, digite os comandos
+abaixo e veja o que ocorre.</p>
+
+
+<pre><code>-->a=1    // Verifique o que ocorre
+-->a=1;   // Veja o que ocorre
+-->a      // Veja o que ocorre
+-->clear  // Veja o que ocorre
+-->a      // Veja o que ocorre
+
+-->i=1:5      // Verifique o que ocorre
+-->i=1:0.5:5  // Veja o que ocorre
+
+-->a=2,b=3   // Veja o que ocorre
+-->clear     // Reinicializa as variáveis do sistema
+-->a
+-->b</code></pre>
+
+<p>De acordo com o exemplo, anterior o sinal de \texttt{;} no fim de um comando
+diz para o Scilab executar o comando sem fornecer um retorno.</p>
+
+<pre><code>-->a=5,b=10;
+-->save('dados.dat',a,b) // Salva no arquivo binário as variáveis a e b
+-->clear                 // Limpa as variáveis
+-->a
+-->b
+-->load('dados.dat','a','b') // Lê as variáveis a e b no arquivo binário
+-->a
+-->b
+-->d1=diary('file.txt')//Salva seção, o que for digitado a partir deste ponto
+-->a=10,v0=0,x0=10;
+-->t=1;
+-->x=x0+v0*t+0.5*a*t^2;
+-->diary(d1,'close')          // Fecha o arquivo.</code></pre>
+
+<p>A função \texttt{diary} é muito útil para testarmos algumas funções
+ou a digitarmos alguns valores iniciais, pois ela guarda aquilo que
+	digitamos em um arquivo que pode ser lido posteriormente.</p>
+
+<p>No exemplo abaixo, apresentamos um outro comando que é bastante útil
+quando estamos fazendo alguma operação e precisamos de calcular um outro
+	valor antes de prosseguirmos.</p>
+
+<pre><code>-->a=2, pause
+    a  =
+          2.
+-1->a=3
+     a  =
+          3.
+-1->a=2*a
+     a  =
+          6.
+-1->return
+-->a
+    a  =
+        2.</code></pre>
+
+<p>O comando \texttt{pause}, interrompe a execução da seção atual e abre uma nova
+seção, que recebe um prompt para indicar o nível de pause (exemplo:
+\texttt{-1->}). Neste ponto, o usuário está num novo espaço de trabalho em que
+todas as variáveis de nível inferior (em particular todas as variáveis da
+função) estão disponíveis. Para retornar ao espaço de trabalho em que o comando
+\texttt{pause} foi chamado, usa-se o comando "\texttt{return}" Neste modo,
+\texttt{[\ldots]=return(\ldots)} retorna as variáveis dos argumentos
+\texttt{(\ldots)} ao espaço de trabalho inicial com nomes na saída
+\texttt{[\ldots]}. Caso contrário, as variáveis de nível inferior são protegidas
+e não podem ser modificadas. Este modo pode ser cancelado pelo comando
+"\texttt{abort}".</p>
+
+<h3>Número Complexos</h3>
+
+<p>Agora veremos como o Scilab trabalha com os números complexos.</p>
+
+
+<pre><code>-->a=1+2*%i
+    a  =
+         1. + 2.i
+-->b=1-2*%i
+    b  =
+        1. - 2.i
+-->a*b
+    ans  =
+           5.
+-->conj(a)
+    ans  =
+           1. - 2.i
+-->norm(a)
+    ans  =
+           2.236068
+-->[Ro,Theta]=polar(a)
+     Theta  = 1.1071487 + 5.071E-17i
+     Ro     = 2.236068</code></pre>
+
+<h3>Constantes Especiais</h3>
+
+<p>O Scilab tem definido internamente algumas constantes especiais
+como o \texttt{\%i}, \texttt{\%pi}, \texttt{\%e}, e \texttt{\%eps},
+que estão listadas na tabela 3.1 abaixo.</p>
+
+<p>Note que, a constante \texttt{\%eps} representa a precisão da máquina,
+ou seja, \texttt{\%eps} é o maior número da máquina que
+	$1+\mbox{\texttt{\%eps}}=1$.</p>
+
+
+
+<table>
+
+<caption>Tabela 3.1 – Constantes especiais do Scilab.</caption>
+  <tr><thead>
+    <th>Constante</th>
+    <th>Valor/ Significado</th>
+    <th>Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>%e</td>
+    <td>Número de Euler: $e$ = 2.7182818 . . .</td>
+    <td>x = %e^3</td>
+  </tr>
+  <tr>
+    <td>%eps</td>
+    <td>Precisão da “máquina” do Scilab</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>%f</td>
+    <td>Valor lógico Falso (false).</td>
+    <td>Resp = 7 == 3 + 2</td>
+  </tr>
+  <tr>
+    <td>%i</td>
+    <td>Número imaginário: i = √−1</td>
+    <td>z = 2-5*%i</td>
+  </tr>
+  <tr>
+    <td>%inf</td>
+    <td>Infinito</td>
+    <td>Inf = %inf</td>
+  </tr>
+  <tr>
+    <td>%nan</td>
+    <td>"not a number"</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>%pi</td>
+    <td>Número pi: π = 3.1415927 . . .</td>
+    <td>Area = %pi*R^2</td>
+  </tr>
+  <tr>
+    <td>%s</td>
+    <td>Polinômio com uma única raiz em zero, com s<br>sendo o nome da variável. A constante %s, é definida como poly (0,'s' ).</td>
+    <td>P = poly(0,'s')</td>
+  </tr>
+  <tr>
+    <td>%t</td>
+    <td>Valor lógico Verdade (true).</td>
+    <td>Resp = 5 &gt; 3 + 1</td>
+  </tr>
+  <tr>
+    <td>%z</td>
+    <td>Polinômio com apenas uma raiz em zero e variável z</td>
+    <td>P=3+5*%z-3*%z^2</td>
+	</tr></tbody>
+</table>
 
 
 
