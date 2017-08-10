@@ -31,6 +31,148 @@ $padding-sumario-h: 15px;
 		display: none;
 	}
 
+	&.intro{
+		background: 
+		-webkit-gradient(
+			linear, 
+			left top, left bottom, 
+			from(transparentize(map-get($cores, ciano), 1)),
+			color-stop(20%, transparentize(map-get($cores, ciano), 1)),
+			to(transparentize(map-get($cores, ciano), 0))
+		),
+		map-get($cores, azulmarinho);
+
+		background: 
+		linear-gradient(
+			to bottom, 
+			transparentize(map-get($cores, ciano), 1) 0%,
+			transparentize(map-get($cores, ciano), 1) 20%,
+			transparentize(map-get($cores, ciano), 0) 100%
+		),
+		map-get($cores, azulmarinho);
+		
+	}
+
+}
+
+#headerintro{
+	.outrosvolumes{
+		background-color: hsla(0,0,0%,0.2);
+		padding: 0 $padding-sumario-h;
+		@include display(flex);
+		@include justify-content(space-between);
+		font-weight: 300;
+		font-size: 0.9em;
+
+		a,button{
+			display: inline-block;
+			line-height: 1;
+			padding: 0.6em 0;
+			text-decoration: none;
+			color: map-get($cores, ciano);
+			@include transition(color 0.2s linear);
+
+			svg{
+				height: 1em;
+				width: auto;
+				line-height: 1;
+				display: inline;
+				vertical-align: middle;
+				@include transform(rotate(180deg));
+				*{
+					fill: map-get($cores, ciano);
+					@include transition(fill 0.2s linear);
+
+				}
+			}
+			&:hover{
+				color: white;
+				svg *{
+					fill: white;
+				}
+			}
+		}
+	}
+
+	.logo-volume{
+		width: 100%;
+		@include display(flex);
+		@include justify-content(center);
+		@include flex-wrap(wrap);
+		img{
+			width: 40%;
+			height: auto;
+		}
+
+		h1{
+			font-size: 1.2em;
+			text-align: center;
+			width: 100%;
+			color: map-get($cores, ciano);
+		}
+	}
+}
+
+nav#navcapitulos{
+	width: 100%;
+	margin-top: 2em;
+	padding: 0 $padding-sumario-h; 
+	ol{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		li{
+			width: 100%;
+			margin-bottom: 0.3em;
+			a{
+				width: 100%;
+				color: map-get($cores, ciano);
+				@include transition(color 0.1s linear);	
+				text-decoration: none;
+				font-size: 1em;
+				font-family: $fonte-heading;
+				font-weight: 300;
+				@include display(flex);
+
+				p{
+					margin: 0;
+					line-height: 1.4;
+				}
+
+				div.numero, div.titulocap{
+					background-color: hsla(0,0,0%,0.4);
+					@include transition(background-color 0.1s linear);
+				}
+
+				div.numero{
+					padding: 1em 0;
+					width: 40px;
+					@include flex-shrink(0);
+					margin-right: 0.3em;
+					@include  display(flex);
+					@include justify-content(center);
+					@include align-items(center);
+					p{
+						font-weight: bold;
+					}
+				}
+
+				div.titulocap{
+					padding: 1em;
+					width: 100%;
+				}
+
+
+				&:hover{
+					color: map-get($cores, verdeclaro);
+					div.numero, div.titulocap{
+						background-color: hsla(0,0,0%,0.6);
+					}
+				}
+			}
+		}
+	}
 }
 
 #header{
@@ -62,24 +204,32 @@ $padding-sumario-h: 15px;
 		@include justify-content(space-between);
 		font-weight: 300;
 		font-size: 0.9em;
-		p{
-			margin: 0;
-			padding: 0.6em 0;
-			line-height: 1;
+
+		a{
 			display: inline-block;
-			color: map-get($cores, verdeclaro);
-		}
-		div.bts{
-			a{
-				display: inline-block;
+			line-height: 1;
+			padding: 0.6em 0;
+			text-decoration: none;
+			color: map-get($cores, ciano);
+			@include transition(color 0.2s linear);
+
+			svg{
+				height: 1em;
+				width: auto;
 				line-height: 1;
-				padding: 0.6em 0;
-				margin-left: 1em;
-				text-decoration: none;
-				color: map-get($cores, ciano);
-				@include transition(color 0.2s linear);
-				&:hover{
-					color: white;
+				display: inline;
+				vertical-align: middle;
+				@include transform(rotate(180deg));
+				*{
+					fill: map-get($cores, ciano);
+					@include transition(fill 0.2s linear);
+
+				}
+			}
+			&:hover{
+				color: white;
+				svg *{
+					fill: white;
 				}
 			}
 		}

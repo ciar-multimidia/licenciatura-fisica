@@ -3,14 +3,35 @@
 	require_once 'includes/head.php';
  ?>
 
-<div id="nav">
-	<ol>
-		<?php 
-			for ($i=0; $i < count($nomes_capitulos); $i++) { 
-				echo '<li><a href="capitulo.php?'. $nomes_capitulos[$i]['uri'] . '">' . $nomes_capitulos[$i]['nome'] . '</a></li>';
-			}
-		 ?>
-	</ol>
+<div id="nav" class="intro">
+	<header id="headerintro">
+		<div class="outrosvolumes">
+			<a href="../index.php"><?php print(file_get_contents('../assets/img/ico_arrow3.svg')) ?> Outros volumes</a>
+			<a>Ficha técnica</a>
+		</div>
+		<div class="logo-volume">
+			<img src="../assets/img/logo_curso.svg" alt="Logotipo do eBook Licenciatura em Física">
+			<h1>Volume <?php print $volume; ?></h1>
+		</div>
+	</header>
+
+	<nav id="navcapitulos">
+		<ol>
+			<?php for ($i=0; $i < count($nomes_capitulos); $i++) : ?>
+				<li><a href="capitulo.php?<?php print $nomes_capitulos[$i]['uri'] ?>">
+					<div class="numero">
+						<p><?php print $i+1; ?></p>
+					</div>
+					<div class="titulocap">
+						<p><?php print $nomes_capitulos[$i]['nome']; ?></p>
+					</div>
+				</a></li>
+	
+			
+			<?php endfor; ?>
+		</ol>
+	</nav>
+	
 </div>
 
 <main>

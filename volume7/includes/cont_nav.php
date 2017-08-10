@@ -2,11 +2,8 @@
 	<header id="header">
 
 		<div class="volume">
-			<p>Volume <?php print $volume ?></p>
-			<div class="bts">
-				<a href="index.php" class="home">Introdução</a>
-				<a href="index.php" class="fichatecnica">Ficha técnica</a>
-			</div>
+			<a href="index.php"><?php print(file_get_contents('../assets/img/ico_arrow3.svg')) ?> Volume <?php print $volume ?></a>
+			<a href="index.php" class="fichatecnica">Ficha técnica</a>
 		</div>
 
 		<div class="cont-caps">
