@@ -2333,6 +2333,416 @@ ou seja, \texttt{\%eps} é o maior número da máquina que
 	</tr></tbody>
 </table>
 
+	<p>Essas variáveis são consideradas <i>predefinidas</i>. Elas são
+protegidas não podendo ser alteradas, entretanto, pode-se predefinir
+suas próprias variáveis com o comando \texttt{predef}, por exemplo,
+definindo \texttt{i=sqrt(-1)} em vez de \texttt{\%i}. Neste caso,
+provavelmente o melhor é definir suas variáveis especiais
+no arquivo com as suas configurações iniciais, no Linux
+	\texttt{<home dir>/.scilab}.</home>
+
+<h3>Polinômios</h3>
+
+<p>O Scilab possuí uma função interna específica para tratar com
+	polinômios. No Scilab os polinômios</p>
+
+	<ul>
+		<li>são criados através da função poly.</li>
+		<li>de mesma variável, podem ser somados, subtraídos,
+   multiplicados e divididos.</li>
+		<li>podem ser gerados através de suas raízes.</li>
+		<li>podem ser gerados através de seus coeficientes.</li>
+	</ul>
+
+<p>Para um vetor \texttt{A}, \texttt{p=poly(A,'x')} define o polinômio
+p(x) com a variável \texttt{x} de modo que \texttt{roots(p)} = \texttt{A}).</p>
+
+
+<pre><code>-->A=[-2 3 7];   // Cria um vetor
+-->p=poly(A,'x') //Cria um polinômio cujas asa raízes são o vetor de entrada.
+p  =
+               2   3
+    42 + x - 8x + x
+-->roots(p)  // Determina as raízes do polinômio
+ ans  =
+    3.
+  - 2.
+    7.</code></pre>
+
+<p>Por exemplo, verifique cada um dos exemplos abaixo:</p>
+
+
+	<ul>
+		<li>O comando \texttt{p=poly([-1,2],'x')} cria um polinômio
+   com raízes $-1$ e $2$.</li>
+		<li>O comando \texttt{roots(p)} encontra as raízes do polinômio
+   \texttt{p}.</li>
+		<li>O comando \texttt{q=poly([-4 2 -1], 'x',
+  'coeff')} cria o
+   polinômio $q(x)= - 4 + 2x - x^{2}$.</li>
+		<li>Podemos somar, subtrair multiplicar e dividir polinômios.</li>
+	</ul>
+
+<pre><code>-->roots(poly([-4 2 -1], 'x', 'coeff'))
+ ans  =
+    1. + 1.7320508i
+    1. - 1.7320508i</code></pre>
+
+
+<p>Para complementar o exemplo, os dois polinômios podem ser multiplicados,
+divididos, somandos ou subtraídos como mostra a seqüência de comandos,</p>
+
+<pre><code>-->p * q // Multiplicacao
+-->p / q // Divisao
+ans =
+2
+2 - 3s + s
+----------
+1 + 2s
+-->[r, q] = pdiv(p,q) // Efetuando a divisao: q=quociente, r=resto
+q =
+- 1.75 + 0.5s
+r =
+3.75
+-->p + q // Adicao
+-->p - q // Subtracao
+--></code></pre>
+
+<h3>Scilab: Vetores</h3>
+
+<p>A seguir mostramos como trabalhar com vetores no ambiente do Scilab.
+Mas antes veremos algumas operações básicas.</p>
+
+<p>A seguir temos alguns exemplos de operações matriciais.</p>
+
+
+
+<table>
+
+
+<caption>Tabela 3.2 – Exemplo do uso de vetores no Scilab</caption>
+  <tr><thead>
+    <th>Operador</th>
+    <th>Valor/Significado</th>
+    <th>Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>:</td>
+    <td>Cria vetor/matriz num intervalo</td>
+    <td>v=[inicio:incremento:fim]</td>
+  </tr>
+  <tr>
+    <td>linspace()</td>
+    <td>Cria vetor/matriz num intervalo</td>
+    <td>v=linspace[inicio,fim,incremento]</td>
+  </tr>
+  <tr>
+    <td>[]</td>
+    <td>Cria um vetor ou matriz</td>
+    <td> A=[1 2 3] // Cria vetor linha<br> B=[4, 5, 6] // Cria vetor linha <br> C=[1; 2; 3] // Cria vetor coluna</td>
+  </tr>
+  <tr>
+    <td>;</td>
+    <td>Separador de linhas</td>
+    <td>A=B*C;</td>
+  </tr>
+  <tr>
+    <td>( )</td>
+    <td>Extração/ Inserção</td>
+    <td>m=A(2)<br>A(1)=5</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Operações matriciais</td>
+    <td>A*B // produto escalar<br> A*B'// produto escalar <br> 2*B // produto por um escalar <br> B/2 // divisão por um escalar <br> C*A // é uma matriz de 3 x 3</td>
+  </tr>
+  <tr>
+    <td>+ </td>
+    <td>Soma dos elementos</td>
+    <td>A+B // retorna [5 7 9]</td>
+  </tr>
+  <tr>
+    <td>–</td>
+    <td>Subtração dos elementos</td>
+    <td>A-B // retorna [-3 -3 -3]</td>
+  </tr>
+  <tr>
+    <td>'</td>
+    <td>Transpõe Vetor/Matrix</td>
+    <td>x // Vetor transposto</td>
+  </tr>
+  <tr>
+    <td>size()</td>
+    <td>fornece a dimensão do vetor</td>
+    <td>size(x) // Retorna 5 <br>size(C*A) // Retorna 3x3</td>
+  </tr>
+  <tr>
+    <td>ones()</td>
+    <td>Preenche vetor com 1</td>
+    <td>a=ones (1 : 6)</td>
+  </tr>
+  <tr>
+    <td>zeros()</td>
+    <td>Preenche vetor com 0</td>
+    <td>b=zeros(1: 6)</td>
+  </tr>
+  <tr>
+    <td>norm()</td>
+    <td>Módulo do vetor</td>
+    <td>norm (A) // retorna 3.741657</td>
+  </tr>
+  <tr>
+    <td>min()</td>
+    <td>Mínimo do Vetor/Matriz</td>
+    <td>min (A) // retorna 1</td>
+  </tr>
+  <tr>
+    <td>max()</td>
+    <td>Máximo do Vetor/Matriz</td>
+    <td>max(C*A) // retorna 9</td>
+  </tr>
+  <tr>
+    <td>prod()</td>
+    <td>Produto dos elementos</td>
+    <td>prod(A)  // retorna 6</td>
+  </tr>
+  <tr>
+    <td>sum()</td>
+    <td>Soma dos elementos</td>
+    <td>sum (B) // retorna 15</td>
+  </tr>
+  <tr>
+    <td>inv()</td>
+    <td>Matriz inversa</td>
+    <td>inv(matriz)</td>
+  </tr>
+  <tr>
+    <td>eye()</td>
+    <td>Matriz identidade</td>
+    <td>D=eye(n,n) // Identidade <br> D=eye(A) // Identidade com mesma dimensão de A</td>
+	</tr></tbody>
+</table>
+
+<pre><code>-->a=1:1:3;  // Cria vetor com 3 elementos na sequência
+-->x=[1 -3 4]; y=[2; 1; -3]; w=[2 3 -1];
+-->x*w
+    !--error 10
+Multiplicação incoerente.
+
+-->x*w' // w' é a transposta de w
+ ans  = - 11.
+-->c=y*x // Multiplicação matricial
+ c  =
+    2.  - 6.    8.
+    1.  - 3.    4.
+  - 3.    9.  - 12.
+-->c(2,2)
+ ans  = - 3.
+-->c(2,2)*x(2) // Acesso a um elemento da matriz
+ ans  = 9.
+->norm(w)      // Retorna a norma do vetor
+ ans  = 3.7416574
+-->A = [ 1 2 3; 4 5 6; 7 8 9]
+ A  =
+    1.    2.    3.
+    4.    5.    6.
+    7.    8.    9.
+-->A*c      // Multiplicação matricial
+ ans  =
+  - 5.    15.  - 20.
+  - 5.    15.  - 20.
+  - 5.    15.  - 20.
+-->prod(x)
+ ans  = - 12.
+-->max(A)
+ ans  = 9.
+-->min(c)
+ ans  = - 12.
+-->inv(A)
+Aviso:
+A matriz é quase singular ou possui má escala. rcond =    4.5916D-41
+ ans  =
+   1.0D+15 *
+    2.2512502  - 4.5025004    2.2512502
+  - 4.5025004    9.0050008  - 4.5025004
+    2.2512502  - 4.5025004    2.2512502</code></pre>
+
+
+<p>As operações matriciais a serem realizadas termo a termo são obtidas
+usando um ponto antes da operação \texttt{( .* ./ )}, por exemplo,
+para obter um vetor linha da multiplicação de elemento por
+elemento dos vetores linha A e B, fazemos: \texttt{A.*B}</p>
+
+
+<table>
+
+<caption>Tabela 3.3 – Operadores matemáticos básicos do Scilab. As operações pontuais são realizadas elemento por elemento de uma matriz ou vetor.</caption>
+
+  <tr><thead>
+    <th>Op.</th>
+    <th>Operação</th>
+    <th>Sintaxe/ Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>+</td>
+    <td>Adição</td>
+    <td>Ad = 423.31 + 221.07</td>
+  </tr>
+  <tr>
+    <td>–</td>
+    <td>Subtração</td>
+    <td>Sub = 423.31 - 121.07</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Multiplicação</td>
+    <td>Mult = Ad*3</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Divisão total à direita</td>
+    <td>Div = Sub/3</td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>Potenciação</td>
+    <td>Pot = Ad^3</td>
+  </tr>
+  <tr>
+    <td>.^</td>
+    <td>Potenciação pontual</td>
+    <td>Mat = Mat.^3</td>
+  </tr>
+  <tr>
+    <td>\</td>
+    <td>Divisão total à esquerda</td>
+    <td>Vec = Vec \Mat</td>
+  </tr>
+  <tr>
+    <td>.*</td>
+    <td>Multiplicação pontual</td>
+    <td>MatR = MatA.*MatB</td>
+  </tr>
+  <tr>
+    <td>./</td>
+    <td>Divisão pontual à direita</td>
+    <td>MatR = MatA./MatB</td>
+  </tr>
+  <tr>
+    <td>.\</td>
+    <td>Divisão pontual à esquerda</td>
+    <td>MatR = = MatA.\MatB</td>
+  </tr>
+  <tr>
+    <td>.*.</td>
+    <td>Produto tensorial, Kronecker</td>
+    <td>PTen = C.*.D</td>
+  </tr>
+  <tr>
+    <td>./.</td>
+    <td>Divisão tensorial à direita, Kronecker</td>
+    <td>DTen1 = C./.D</td>
+  </tr>
+  <tr>
+    <td>.\.</td>
+    <td>Divisão tensorial à esquerda, Kronecker</td>
+    <td>DTen2 = C.\.D</td>
+	</tr></tbody>
+</table>
+
+
+
+<pre><code>-->x=[1 2 3]; y=[1 2 3];
+-->x.*y
+ ans  = 1.    4.    9.
+-->y./x
+ ans  =  1.    1.    1.
+-->A = [ 1 2 3; 4 5 6; 7 8 9];
+-->B = [ 2 2 2; 2 2 2; 2 2 2];
+-->A .\ B
+ ans  =
+    2.           1.      0.6666667
+    0.5          0.4     0.3333333
+    0.2857143    0.25    0.2222222</code></pre>
+
+
+<h3>Matrizes e elementos de Matrizes</h3>
+
+
+<p>Vamos considerar as seguintes  matrizes</p>
+
+
+<p class="formula">
+\[
+A=
+\begin{pmatrix} 
+1 &amp; 2 &amp; 3 \\
+-5 &amp; 4 &amp; -2 \\
+-3 &amp; 7 &amp; 1
+\end{pmatrix}
+
+\qquad
+B=
+\begin{pmatrix}
+-3 &amp; 4 &amp; -1 \\
+4 &amp; -2 &amp; 8 \\
+2 &amp; -5 &amp; 1
+\end{pmatrix}
+
+	\]</p>
+
+<p>O comando:</p>
+
+	<ul>
+		<li>\texttt{A = [1 2 3; -5 4 -2; -3 7 1]} cria a matriz $A$.</li>
+		<li>\texttt{B = [-3 4 -1; 4 -2 8; 2 -5 1]} cria a matriz $B$</li>
+		<li> \texttt{A(1,2)} mostra o elemento $A_{1,2}$ da matriz $A$.</li>
+		<li>\texttt{size(A)} é uma matriz de $3 \times 3$.</li>
+		<li>\texttt{A'} é a transposta da matriz \texttt{A}.</li>
+		<li>\texttt{V(2:5)} acessa todos os elementos $V_{2}$,
+ $V_{3}$, $V_{4}$ e $V_{5}$ do vetor $V$.</li>
+		<li>\texttt{V(1:2:9)} acessa todos os elementos ímpares
+entre $1$ e $9$ do vetor $V$.</li>
+		<li>\texttt{A(:,2)} lista todos os elementos da coluna $2$.</li>
+		<li>\texttt{v(\$)}, acessa  último elemento de v.</li>
+		<li>\texttt{A(\$-1,:)}, acessa a segunda linha da matriz $A$.</li>
+		<li>\texttt{testmatrix} gera algumas matrizes particulares.</li>
+		<li>\texttt{testmatrix('hilb',n)}, gera
+uma matriz de Hilbert de dimensão n.</li>
+		<li>\texttt{testmatrix('magic',n)}, gera
+uma matriz quadrado mágico de dimensão n.</li>
+		<li>\texttt{trace(M)} retorna o traço da matriz M</li>
+		<li>\texttt{B=rand(n,m)} ou \texttt{B=rand(A)}, gera matrizes com
+elementos aleatórios.</li>
+		<li>\texttt{A(1,:)} lista todos elementos da linha 1 enquanto</li>
+		<li>\texttt{A(:,2)} lista todos elementos da coluna 2.</li>
+		<li>\texttt{v=[A(1,:); A(3,:)]} cria um vetor coluna:</li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		
+	</ul>
+
+
+
+
+
+
+
+
+
 
 
 
