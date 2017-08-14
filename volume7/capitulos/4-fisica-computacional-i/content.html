@@ -1,3 +1,4 @@
+<span class="pagina"></span>
 <h2>Informática Básica</h2>
 
 <p>Ao Ligar o computador, ele inicia o sistema operacional, o qual
@@ -171,7 +172,7 @@ filosóficos e/ou políticos do software livre, pois estes aspectos são
 	</div>
 
 
-<h3>{Softwares Acadêmicos Livres</h3>
+<h3>Softwares Acadêmicos Livres</h3>
 
 <ol>
 	
@@ -727,7 +728,7 @@ bibliografias, citações, formatos de páginas, referência cruzada e tudo mais
 
 <p>Já algumas das vantagens em se usar o LaTeX são:</p>
 
-<uL>
+<ul>
 
    <li> Os usuários precisam aprender apenas alguns poucos
    comandos de fácil compreensão que especificam a estrutura
@@ -941,9 +942,9 @@ que haja um padrão entre os espaçamento das colunas. É usual a extensão
  0.0433  4.33968802E+00  7.09698193E-01  3.73725689E-01
  0.0480  3.56731732E+00  3.86009235E-01  3.31797933E-01
 
-# No fim do arquivo pode-se colocar comentários.
-# Note que 1.0E-2 é 1.0 x 10**{-2} ou seja 0.01.
-	# Observe ainda que o separador decimal é o ponto e não a virgula.</code></pre>
+# No fim do arquivo pode-se colocar coment&aacute;rios.
+# Note que 1.0E-2 &eacute; 1.0 x 10**{-2} ou seja 0.01.
+	# Observe ainda que o separador decimal &eacute; o ponto e n&atilde;o a virgula.</code></pre>
 
 <p>Para preservar os dados de uma medida, é recomendável que não se use um software
 específico para guardá-los, tais como uma planilha eletrônica ou a planilha de
@@ -1068,27 +1069,27 @@ fazermos um gráfico, conforme exemplo a seguir de uma distribuição gaussiana
 	centrada em zero, para isto, chame o \emph{Gnuplot} e digite os seguintes comandos:</p>
 
 
-<pre><code>gnuplot> g(x)= exp(-x**2)
-gnuplot> plot g(x)</code></pre>
+<pre><code>gnuplot&gt; g(x)= exp(-x**2)
+gnuplot&gt; plot g(x)</code></pre>
 
 
 <p>Podemos construir uma função um pouco mais elaborada, como</p>
 
-<pre><code>gnuplot> f(x)=sin(2.0*x)/(2*x)
-gnuplot> plot f(x)</code></pre>
+<pre><code>gnuplot&gt; f(x)=sin(2.0*x)/(2*x)
+gnuplot&gt; plot f(x)</code></pre>
 
 	<p>Podemos ter combinações de funções elementares como</p>
 
-<pre><code>gnuplot> f(x)=sin (2.0* x )*log( abs(x) )
-gnuplot> plot f(x)</code></pre>
+<pre><code>gnuplot&gt; f(x)=sin (2.0* x )*log( abs(x) )
+gnuplot&gt; plot f(x)</code></pre>
 
 
 <p>ou combinações de funções definidas no próprio ambiente
 como no caso</p>
 
-<pre><code>gnuplot> E(x)=exp(-abs(x/5))
-gnuplot> h(x)=E(x)*cos(2*x)
-gnuplot> plot h(x), E(x), -E(x)</code></pre>
+<pre><code>gnuplot&gt; E(x)=exp(-abs(x/5))
+gnuplot&gt; h(x)=E(x)*cos(2*x)
+gnuplot&gt; plot h(x), E(x), -E(x)</code></pre>
 
 
 <h3>Expressões e Operadores</h3>
@@ -1310,12 +1311,12 @@ calculado e retornado, de outro modo, o terceiro $c$ é calculado e
 <p>chamamos o Gnuplot, e em seu terminal definimos a função $g(x)$
 	digitando:</p>
 
-	<pre><code>gnuplot&gt; g(x)= 0 <=x &amp;&amp; x&lt;1 ? sin(x) : 1<=x &amp;&amp; x&lt;2 ? 1/x : 1/0 </code></pre>
+	<pre><code>gnuplot&amp;gt; g(x)= 0 &lt;=x &amp;amp;&amp;amp; x&amp;lt;1 ? sin(x) : 1&lt;=x &amp;amp;&amp;amp; x&amp;lt;2 ? 1/x : 1/0 </code></pre>
 
 
 <p>e o seu gráfico é obtido com o comando \texttt{plot} digitando-se,</p>
 
-<pre><code>gnuplot&gt; plot g(x)</code></pre>
+<pre><code>gnuplot&amp;gt; plot g(x)</code></pre>
 
 
 	<p>A função passo de Heaviside é definida como</p>
@@ -1335,8 +1336,8 @@ calculado e retornado, de outro modo, o terceiro $c$ é calculado e
 	<p>no Gnuplot definimos ela com</p>
 
 
-<pre><code>gnuplot> f(x) = x&lt;0 ? 0 : x&gt;0 ? 1 : 1/0
-gnuplot&gt; plot f(x)</code></pre>
+<pre><code>gnuplot&gt; f(x) = x&amp;lt;0 ? 0 : x&amp;gt;0 ? 1 : 1/0
+gnuplot&amp;gt; plot f(x)</code></pre>
 
 
 <p><b>Exemplo 1:</b> O gráfico da função abaixo</p>
@@ -1361,30 +1362,30 @@ set grid
 set xrange [0:10]
 f(x)=3*x-40
 g(x)=-x**2+2*x-8
-h(x)=(2<=x &amp;&amp; x<=8) ? f(x):g(x) 
-plot h(x) title "Função Composta"</code></pre>
+h(x)=(2&lt;=x &amp;amp;&amp;amp; x&lt;=8) ? f(x):g(x) 
+plot h(x) title &quot;Fun&ccedil;&atilde;o Composta&quot;</code></pre>
 
 
 <p>Para descobrir o significado dos comandos desconhecidos do exemplo anterior
 	basta digitar o comando  \texttt{help nome\_do\_comando}, por exemplo:</p>
 
-<pre><code>gnuplot> help reset
-gnuplot> help reset
- The 'reset' command causes all graph-related options that can be set with
- the 'set' command to take on their default values. This command is useful, 
+<pre><code>gnuplot&gt; help reset
+gnuplot&gt; help reset
+ The &#039;reset&#039; command causes all graph-related options that can be set with
+ the &#039;set&#039; command to take on their default values. This command is useful, 
  e.g., to restore the default graph settings at the end of a command file, 
  or to return to a defined state after lots of settings have been changed 
- within a command file. Please refer to the 'set' command to see the default 
+ within a command file. Please refer to the &#039;set&#039; command to see the default 
  values that the various options take.
 
- The following are _not_ affected by 'reset'.
-      'set term' 'set output' 'set loadpath' 'set fontpath'
-      'set encoding' 'set decimalsign' 'set locale'
+ The following are _not_ affected by &#039;reset&#039;.
+      &#039;set term&#039; &#039;set output&#039; &#039;set loadpath&#039; &#039;set fontpath&#039;
+      &#039;set encoding&#039; &#039;set decimalsign&#039; &#039;set locale&#039;
 
- 'reset errors' clears only the error state variables GPVAL_ERRNO and
+ &#039;reset errors&#039; clears only the error state variables GPVAL_ERRNO and
  GPVAL_ERRMSG.
 
- 'reset bind' restores all hotkey bindings to their default state.
+ &#039;reset bind&#039; restores all hotkey bindings to their default state.
 
 Subtopics available for reset:
     bind              errors
@@ -1398,40 +1399,40 @@ Subtopic of reset:</code></pre>
 no exemplo abaixo definimos uma função quadrática, cujos
 parâetros também são variáveis.</p>
 
-<pre><code>gnuplot> a=1
-gnuplot> b=-2
-gnuplot> c=3
-gnuplot> f(x)=a*x**2+b*x+c
-gnuplot> plot f(x)</code></pre>
+<pre><code>gnuplot&gt; a=1
+gnuplot&gt; b=-2
+gnuplot&gt; c=3
+gnuplot&gt; f(x)=a*x**2+b*x+c
+gnuplot&gt; plot f(x)</code></pre>
 
 	<p>Ao redefinirmos o valor da variável \texttt{a}, obtemos um outro gráfico,
 para a mesma função.</p>
 
-<pre><code>gnuplot> a=-1.0
-gnuplot> plot f(x)</code></pre>
+<pre><code>gnuplot&gt; a=-1.0
+gnuplot&gt; plot f(x)</code></pre>
 
 <p>Uma outra forma de variarmos os parâmetros seria definirmos uma função de
 quatro variáveis, sendo três delas parâmetros de passagens para os gráficos,
 	como ilustrado abaixo:</p>
 
-<pre><code>gnuplot> f(x,a,b,c)=a*x**2+b*x+c
-gnuplot> plot f(x,1,-2,3), f(x,-1,-2,3)</code></pre>
+<pre><code>gnuplot&gt; f(x,a,b,c)=a*x**2+b*x+c
+gnuplot&gt; plot f(x,1,-2,3), f(x,-1,-2,3)</code></pre>
 
 
 <p>Outras possibilidades de definirmos uma função no ambiente são
 mostradas no exemplo a seguir:</p>
 
 
-<pre><code>gnuplot> w = 2
-gnuplot> q = floor(tan(pi/2 - 0.1))
-gnuplot> f(x) = sin(w*x)
-gnuplot> sinc(x) = sin(pi*x)/(pi*x)
-gnuplot> delta(t) = (t == 0)
-gnuplot> ramp(t) = (t > 0) ? t : 0
-gnuplot> min(a,b) = (a < b) ? a : b
-gnuplot> comb(n,k) = n!/(k!*(n-k)!)
-gnuplot> len3d(x,y,z) = sqrt(x*x+y*y+z*z)
-gnuplot> plot f(x)=sin(x*a), a=0.2,f(x), a=0.4,f(x)</code></pre>
+<pre><code>gnuplot&gt; w = 2
+gnuplot&gt; q = floor(tan(pi/2 - 0.1))
+gnuplot&gt; f(x) = sin(w*x)
+gnuplot&gt; sinc(x) = sin(pi*x)/(pi*x)
+gnuplot&gt; delta(t) = (t == 0)
+gnuplot&gt; ramp(t) = (t &gt; 0) ? t : 0
+gnuplot&gt; min(a,b) = (a &lt; b) ? a : b
+gnuplot&gt; comb(n,k) = n!/(k!*(n-k)!)
+gnuplot&gt; len3d(x,y,z) = sqrt(x*x+y*y+z*z)
+gnuplot&gt; plot f(x)=sin(x*a), a=0.2,f(x), a=0.4,f(x)</code></pre>
 
 
 
@@ -1477,74 +1478,74 @@ e o seu significado.</p>
 
 
 
-<pre><code>Cria um título:                  	> set title "Trajetória da partícula"
-Põe uma legenda no eixo-x:       	> set xlabel "Posição (meters)"
-Põe uma legenda no eixo-y:       	> set ylabel "Altura (m)"
-Muda a variação do eixo-x:       	> set xrange [0.0:5.0]
-Muda a variação do eixo-y:       	> set yrange [0:100]
-Variação dos eixos é automática: 	> set autoscale
-Mova a legenda do gráfico:       	> set key 0.01,90
-Apague a legenda do gráfico:     	> unset key
-Põe uma legenda sobre a curva:   	> set label "Ponto escolhido" at 1.0, 60
-Remove todas as legendas:        	> unset label
-Gráfico usando eixos-log:        	> set logscale
-Gráfico usando eixo-y log:       	> unset logscale; set logscale y
-Muda as marcas do eixo-x:        	> set xtics (1.0,2.0,3.0,4.0,5.0)
-Retorna as marcas padrões:       	> unset xtics; set xtics auto</code></pre>
+<pre><code>Cria um t&iacute;tulo:                  	&gt; set title &quot;Trajet&oacute;ria da part&iacute;cula&quot;
+P&otilde;e uma legenda no eixo-x:       	&gt; set xlabel &quot;Posi&ccedil;&atilde;o (meters)&quot;
+P&otilde;e uma legenda no eixo-y:       	&gt; set ylabel &quot;Altura (m)&quot;
+Muda a varia&ccedil;&atilde;o do eixo-x:       	&gt; set xrange [0.0:5.0]
+Muda a varia&ccedil;&atilde;o do eixo-y:       	&gt; set yrange [0:100]
+Varia&ccedil;&atilde;o dos eixos &eacute; autom&aacute;tica: 	&gt; set autoscale
+Mova a legenda do gr&aacute;fico:       	&gt; set key 0.01,90
+Apague a legenda do gr&aacute;fico:     	&gt; unset key
+P&otilde;e uma legenda sobre a curva:   	&gt; set label &quot;Ponto escolhido&quot; at 1.0, 60
+Remove todas as legendas:        	&gt; unset label
+Gr&aacute;fico usando eixos-log:        	&gt; set logscale
+Gr&aacute;fico usando eixo-y log:       	&gt; unset logscale; set logscale y
+Muda as marcas do eixo-x:        	&gt; set xtics (1.0,2.0,3.0,4.0,5.0)
+Retorna as marcas padr&otilde;es:       	&gt; unset xtics; set xtics auto</code></pre>
 
 
 
-<pre><code>gnuplot > plot sin(x/2) with points
-gnuplot > plot sin(x/2) with lines
-gnuplot > plot sin(x/2) with linespoints
-gnuplot > plot sin(x/2) with dots
-gnuplot > plot sin(x/2) with impulses</code></pre>
+<pre><code>gnuplot &gt; plot sin(x/2) with points
+gnuplot &gt; plot sin(x/2) with lines
+gnuplot &gt; plot sin(x/2) with linespoints
+gnuplot &gt; plot sin(x/2) with dots
+gnuplot &gt; plot sin(x/2) with impulses</code></pre>
 
 
 <p>A seguir apresentamos alguns exemplos para testar e verificar
 	o que ocorre em cada caso:</p>
 
 
-<pre><code>gnuplot > plot sin(x/2) with points lt 3
-gnuplot > plot sin(x/2) with points pt 1 ps 1.8
-gnuplot > plot sin(x/2) with lines lt 5 lw 2
-gnuplot > plot sin(x/2) with linespoints lt 1 lw 1.5
-gnuplot > plot sin(x/2) with impulses 9
+<pre><code>gnuplot &gt; plot sin(x/2) with points lt 3
+gnuplot &gt; plot sin(x/2) with points pt 1 ps 1.8
+gnuplot &gt; plot sin(x/2) with lines lt 5 lw 2
+gnuplot &gt; plot sin(x/2) with linespoints lt 1 lw 1.5
+gnuplot &gt; plot sin(x/2) with impulses 9
 
-gnuplot > plot [0:pi/2] sin(x/2) with points 10 6
-gnuplot > rep cos(4*x) with impulses 3</code></pre>
+gnuplot &gt; plot [0:pi/2] sin(x/2) with points 10 6
+gnuplot &gt; rep cos(4*x) with impulses 3</code></pre>
 
 
 
-<pre><code>gnuplot > set xrange [-2*pi: 2*pi]
-gnuplot > f(x)=sin(x/2)
-gnuplot > plot f(x)</code></pre>
+<pre><code>gnuplot &gt; set xrange [-2*pi: 2*pi]
+gnuplot &gt; f(x)=sin(x/2)
+gnuplot &gt; plot f(x)</code></pre>
 
-<pre><code>gnuplot > f(x,b)=sin(x/b)
-gnuplot > plot [-2*pi:2*pi] f(x,2)</code></pre>
+<pre><code>gnuplot &gt; f(x,b)=sin(x/b)
+gnuplot &gt; plot [-2*pi:2*pi] f(x,2)</code></pre>
 
-<pre><code>gnuplot > g(x)=sin(x*a)
-gnuplot > plot [-2*pi:2*pi] g(x); a=0.5
-gnuplot> plot [-2*pi:2*pi] [-1.2:1.2] g(x); a=2.0</code></pre>
+<pre><code>gnuplot &gt; g(x)=sin(x*a)
+gnuplot &gt; plot [-2*pi:2*pi] g(x); a=0.5
+gnuplot&gt; plot [-2*pi:2*pi] [-1.2:1.2] g(x); a=2.0</code></pre>
 
-<pre><code>gnuplot > set xrange [-2*pi:2*pi]
-gnuplot > f(x,a)=sin(a*x)
-gnuplot > plot f(x,0.5)</code></pre>
+<pre><code>gnuplot &gt; set xrange [-2*pi:2*pi]
+gnuplot &gt; f(x,a)=sin(a*x)
+gnuplot &gt; plot f(x,0.5)</code></pre>
 
 
 <p>Mostramos a seguir como preencher uma curva.</p>
 
 
-<pre><code>gnuplot> plot -cos(x)/(1+0.1*x**2) w filledcurves y1=0
-gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc y1=0          # Abreviando o comando
-gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc y1=0 lc rgb "cyan"   #Cor
-gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc above y1=0
-gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc below y1=0
+<pre><code>gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledcurves y1=0
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc y1=0          # Abreviando o comando
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc y1=0 lc rgb &quot;cyan&quot;   #Cor
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc above y1=0
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc below y1=0
 
-gnuplot> plot -cos(x)/(1+0.1*x**2) w filledc above y1=0.2
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc above y1=0.2
 
-gnuplot> plot sin(x)/x w l, -cos(x)/(1+0.1*x**2) w filledc \
- y1=0 lc rgb "cyan" t 'Azul', sin(2*x)/x w l</code></pre>
+gnuplot&gt; plot sin(x)/x w l, -cos(x)/(1+0.1*x**2) w filledc \
+ y1=0 lc rgb &quot;cyan&quot; t &#039;Azul&#039;, sin(2*x)/x w l</code></pre>
 
 
  <p>Por exemplo, para preencher a curva entre vejamos o exemplo
@@ -1561,8 +1562,8 @@ plot erf(x) w l lt 2 lw 1.5, tanh(x) w l lt 3 lw 1.5</code></pre>
 
 <pre><code>reset
 set xr[-2.5:2.5]
-plot erf(x) w filledcurves below lt 2 lc rgb "#ffff00" title '', \
-  tanh(x) w filledcurves above lt 5 lc rgb "#ffffff" title ''
+plot erf(x) w filledcurves below lt 2 lc rgb &quot;#ffff00&quot; title &#039;&#039;, \
+  tanh(x) w filledcurves above lt 5 lc rgb &quot;#ffffff&quot; title &#039;&#039;
 replot erf(x) w l lt 2 lw 2, tanh(x) w l lt 5 lw 2</code></pre>
 
 <h3>Gráficos de um Arquivo de Dados</h3>
@@ -1572,33 +1573,33 @@ para ilustrarmos a capacidade do Gnuplot em fazer gráficos. Copie os dados
 em um arquivo chamado \texttt{dados.dat} e refaça os exemplos a seguir:</p>
 
 
-<pre><code>gnuplot > reset
-gnuplot > plot "dados.dat" using 1:2
-gnuplot > plot "dados.dat" using 1:2 with lines</code></pre>
+<pre><code>gnuplot &gt; reset
+gnuplot &gt; plot &quot;dados.dat&quot; using 1:2
+gnuplot &gt; plot &quot;dados.dat&quot; using 1:2 with lines</code></pre>
 
 
-<pre><code>gnuplot > reset
-gnuplot > plot "dados.dat" using 1:2 with lines
-gnuplot > replot "dados.dat" using 1:3 with lines
-gnuplot > replot "dados.dat" u 1:4 w l</code></pre>
+<pre><code>gnuplot &gt; reset
+gnuplot &gt; plot &quot;dados.dat&quot; using 1:2 with lines
+gnuplot &gt; replot &quot;dados.dat&quot; using 1:3 with lines
+gnuplot &gt; replot &quot;dados.dat&quot; u 1:4 w l</code></pre>
 
 <p>Note que na última linha abreviamos os comandos \texttt{using},
 \texttt{with lines}. Este resultado também pode ser obtido com
 uma única linha de comando,</p>
 
-<pre><code>gnuplot > reset
-gnuplot> plot "dados.dat" u 1:2 w l, "dados.dat" u 1:3 w l, \
-> "dados.dat" u 1:4 w l</code></pre>
+<pre><code>gnuplot &gt; reset
+gnuplot&gt; plot &quot;dados.dat&quot; u 1:2 w l, &quot;dados.dat&quot; u 1:3 w l, \
+&gt; &quot;dados.dat&quot; u 1:4 w l</code></pre>
 
 <p>Note que a barra invertida significa uma quebra de linha, ou seja,
 	que o comando irá continuar na linha seguinte.</p>
 
 	<p>Agora vamos alterar as cores e largura das linhas,</p>
 
-<pre><code>gnuplot > reset
-gnuplot > plot "dados.dat" using ($1):($2) with lines linecolor 3 \ 
+<pre><code>gnuplot &gt; reset
+gnuplot &gt; plot &quot;dados.dat&quot; using ($1):($2) with lines linecolor 3 \ 
  linewidth 1.5
-gnuplot > plot "dados.dat" using ($1):($3) with lines lc 5 lw 2</code></pre>
+gnuplot &gt; plot &quot;dados.dat&quot; using ($1):($3) with lines lc 5 lw 2</code></pre>
 
 
 <p>Ao fazermos o gráfico de um arquivo com muitas colunas, ou
@@ -1613,14 +1614,14 @@ using ($1):($2 +3*($3))
 valores das colunas $2$ e $3$ em função dos dados da coluna $1$,
 	mas somente se os dados da coluna $4$ forem não negativos.</p>
 
-	<pre><code>gnuplot> plot 'dados.dat' using 1:( $4<0? 1/0: ($2+$3)/2) w l</code></pre>
+	<pre><code>gnuplot&gt; plot &#039;dados.dat&#039; using 1:( $4&lt;0? 1/0: ($2+$3)/2) w l</code></pre>
 
 <p>O gnuplot também possui algumas funções para realizar uma
 interpolação entre alguns pontos, suavizando a curva. Observer
 	o exemplo:</p>
 
-<pre><code>gnuplot> plot "dados.dat" u 1:4 w l, "dados.dat" u 1:4 smooth bezier w l, \
->"dados.dat" u 1:4 smooth csplines w l</code></pre>
+<pre><code>gnuplot&gt; plot &quot;dados.dat&quot; u 1:4 w l, &quot;dados.dat&quot; u 1:4 smooth bezier w l, \
+&gt;&quot;dados.dat&quot; u 1:4 smooth csplines w l</code></pre>
 
 <h3>Mais Controles Sobre os Eixos</h3>
 
@@ -1642,19 +1643,19 @@ algumas características dos eixos.</p>
  <p>\texttt{set title "Nome do gráfico"}
 
 
- <pre><code>gnuplot > reset
-gnuplot > set grid
-gnuplot > set xtics 2
-gnuplot > set mxtics 2
-gnuplot > set ytics 40
-gnuplot > set mytics 2
-gnuplot > set xrange [0:25]
-gnuplot > set title "Funcao Parabolica \n Teste 1"
-gnuplot > set xlabel "X - Tempo (s)"
-gnuplot > set ylabel "Y- Aceleracao (m/s2)"
-gnuplot > f(x,a,b,c)=a+b*x+c*x**2
-gnuplot > plot f(x,120,-5,0.1) t "funcao 1" with points 3 5
-gnuplot > rep f(x,80,+10,-0.15) t "funcao 2" with lines 8</code></pre>
+ <pre><code>gnuplot &gt; reset
+gnuplot &gt; set grid
+gnuplot &gt; set xtics 2
+gnuplot &gt; set mxtics 2
+gnuplot &gt; set ytics 40
+gnuplot &gt; set mytics 2
+gnuplot &gt; set xrange [0:25]
+gnuplot &gt; set title &quot;Funcao Parabolica \n Teste 1&quot;
+gnuplot &gt; set xlabel &quot;X - Tempo (s)&quot;
+gnuplot &gt; set ylabel &quot;Y- Aceleracao (m/s2)&quot;
+gnuplot &gt; f(x,a,b,c)=a+b*x+c*x**2
+gnuplot &gt; plot f(x,120,-5,0.1) t &quot;funcao 1&quot; with points 3 5
+gnuplot &gt; rep f(x,80,+10,-0.15) t &quot;funcao 2&quot; with lines 8</code></pre>
 
 
 <p>No Gnuplot os carácteres especiais são obtidos somente para
@@ -1687,7 +1688,7 @@ em três dimensões, conforme ilsutra os exemplos a seguir:</p>
 
 <pre><code>reset
 set grid
-set format z "%4.2f"
+set format z &quot;%4.2f&quot;
 f(x,y)=log(sqrt( x*x + y*y))
 splot f(x,y)</code></pre>
 
@@ -1704,7 +1705,7 @@ girado. Enquanto o botão estiver pressionado o gráfico irá acompanhar o
 
 <pre><code>eset
 set grid
-set format z "%4.2f"
+set format z &quot;%4.2f&quot;
 f(x,y)=log(sqrt( x*x + y*y))
 splot f(x,y)</code></pre>
 
@@ -1720,17 +1721,17 @@ girado. Enquanto o botão estiver pressionado o gráfico irá acompanhar o
 
 <pre><code>reset
 set grid
-set xlabel "X"
-set ylabel "Y"
-set zlabel "Z"
-set title "Exemplo de Superficie"
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
 set ztics 0.50
-set format z "%4.2f"
+set format z &quot;%4.2f&quot;
 f(x,y)=sin(y/7)*cos(x/5)
 set cntrparam levels incremental -1,0.25,1
 set contour base
 set hidden3d
-splot f(x,y) t "Superfície"</code></pre>
+splot f(x,y) t &quot;Superf&iacute;cie&quot;</code></pre>
 
 <p>Agora vamos melhorar este gráfico, tente agora</p>
 
@@ -1738,24 +1739,24 @@ splot f(x,y) t "Superfície"</code></pre>
 set grid
 unset key
 set isosamples 50,50
-set xlabel "X"
-set ylabel "Y"
-set zlabel "Z"
-set title "Exemplo de Superficie"
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
 set ztics 0.50
-set format z "%4.2f"
+set format z &quot;%4.2f&quot;
 f(x,y)=sin(y/7)*cos(x/5)
 set cntrparam levels incremental -1,0.25,1
 set contour base
 set hidden3d
 set xr[-25:25]
 set yr[-25:25]
-splot f(x,y) t "Superfície"</code></pre>
+splot f(x,y) t &quot;Superf&iacute;cie&quot;</code></pre>
 
 <p>Verifique o que cada comando introduz, simplesmente
 retirando o comando.</p>
 
-<h3>Multiplos Gráficos Numa Página</h3>
+<h3>Múltiplos Gráficos Numa Página</h3>
 
 <p>Agora veremos como fazer múltiplos gráficos em uma só
 janela. Vamos começar introduzindo um gráfico dentro do
@@ -1773,25 +1774,25 @@ unset multiplot</code></pre>
 
 
 <pre><code>reset
-set multiplot layout 2,2 title "seno versus cossenos"
+set multiplot layout 2,2 title &quot;seno versus cossenos&quot;
 set size 0.45,0.45
 set origin 0.0, 0.0
 set xr[-4*pi:4*pi]
-set xtics ("-4" -4*pi, "-3" -3*pi, "-2" -2*pi, "-1" -pi, "0" 0 , \ "1" pi, "2" 2*pi, "3" 3*pi, "4" 4*pi)
+set xtics (&quot;-4&quot; -4*pi, &quot;-3&quot; -3*pi, &quot;-2&quot; -2*pi, &quot;-1&quot; -pi, &quot;0&quot; 0 , \ &quot;1&quot; pi, &quot;2&quot; 2*pi, &quot;3&quot; 3*pi, &quot;4&quot; 4*pi)
 plot sin(x)
 set size 0.45,0.45
 set origin 0.0, 0.50
 set xr[-4*pi:4*pi]
-set xtics ("-4" -4*pi, "-3" -3*pi, "-2" -2*pi, "-1" -pi, "0" 0 , \ "1" pi, "2" 2*pi, "3" 3*pi, "4" 4*pi)
+set xtics (&quot;-4&quot; -4*pi, &quot;-3&quot; -3*pi, &quot;-2&quot; -2*pi, &quot;-1&quot; -pi, &quot;0&quot; 0 , \ &quot;1&quot; pi, &quot;2&quot; 2*pi, &quot;3&quot; 3*pi, &quot;4&quot; 4*pi)
 plot cos(x)
 set size 0.45,0.45
 set origin 0.50, 0.0
 set xr[-4*pi:4*pi]
-set xtics ("-4" -4*pi, "-3" -3*pi, "-2" -2*pi, "-1" -pi, "0" 0 , \ "1" pi, "2" 2*pi, "3" 3*pi, "4" 4*pi)
+set xtics (&quot;-4&quot; -4*pi, &quot;-3&quot; -3*pi, &quot;-2&quot; -2*pi, &quot;-1&quot; -pi, &quot;0&quot; 0 , \ &quot;1&quot; pi, &quot;2&quot; 2*pi, &quot;3&quot; 3*pi, &quot;4&quot; 4*pi)
 plot sin(2*x)/(2*x)
 set size 0.45,0.45
 set origin 0.50, 0.50
-set xtics ("-4" -4*pi, "-3" -3*pi, "-2" -2*pi, "-1" -pi, "0" 0 , \ "1" pi, "2" 2*pi, "3" 3*pi, "4" 4*pi)
+set xtics (&quot;-4&quot; -4*pi, &quot;-3&quot; -3*pi, &quot;-2&quot; -2*pi, &quot;-1&quot; -pi, &quot;0&quot; 0 , \ &quot;1&quot; pi, &quot;2&quot; 2*pi, &quot;3&quot; 3*pi, &quot;4&quot; 4*pi)
 plot (cos(2*x)-1)/(2*x)
 unset multiplot</code></pre>
 
@@ -1803,23 +1804,23 @@ unset multiplot</code></pre>
 
 <pre><code>reset
 set grid
-set xlabel "X"
-set ylabel "Y"
-set zlabel "Z"
-set title "Exemplo de Superficie"
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
 set ztics 0.50
 set isosamples 50, 50
-set format z "%4.2f"
+set format z &quot;%4.2f&quot;
 f(x,y)=sin(y/7)*cos(x/5)
 set cntrparam levels incremental -1,0.25,1
 set contour base
 set hidden3d
-splot f(x,y) t""</code></pre>
+splot f(x,y) t&quot;&quot;</code></pre>
 
 
 <p>Você pode chamá-lo no gnuplot com o seguinte comando:</p>
 
-<pre><code>gnuplot> load "sup.gp"</code></pre>
+<pre><code>gnuplot&gt; load &quot;sup.gp&quot;</code></pre>
 
 <h4>Rodando scripts</h4>
 
@@ -1827,18 +1828,18 @@ splot f(x,y) t""</code></pre>
 
 <pre><code>reset
 set grid
-set xlabel "X"
-set ylabel "Y"
-set zlabel "Z"
-set title "Exemplo de Superficie"
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
 set ztics 0.50
 set isosamples 50, 50
-set format z "%4.2f"
+set format z &quot;%4.2f&quot;
 f(x,y)=sin(y/7)*cos(x/5)
 set cntrparam levels incremental -1,0.25,1
 set contour base
 set hidden3d
-splot f(x,y) t""
+splot f(x,y) t&quot;&quot;
 pause -1</code></pre>
 
 <p>no sistema operacional Linux, abra um terminal e digite:</p>
@@ -1856,46 +1857,46 @@ use o exemplo a seguir:</p>
 <pre><code>reset
 set encoding iso_8859_1
 set grid
-set xlabel "X"
-set ylabel "Y"
-set zlabel "Z"
-set title "Exemplo de Superficie"
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
 set ztics 0.50
-set format z "%4.2f"
+set format z &quot;%4.2f&quot;
 f(x,y)=sin(y/7)*cos(x/5)
 set isosamples 50, 50
 set cntrparam levels incremental -1,0.25,1
 set contour base
 set hidden3d
-splot f(x,y) t""
-# Aqui será gerado o grafico no formato EPS
-set terminal postscript landscape enhanced color lw 2 "Helvetica" 14
-set out "sup.eps"
+splot f(x,y) t&quot;&quot;
+# Aqui ser&aacute; gerado o grafico no formato EPS
+set terminal postscript landscape enhanced color lw 2 &quot;Helvetica&quot; 14
+set out &quot;sup.eps&quot;
 replot
 set output           # Volta a saida output para seu valor padrao
-# Aqui será gerado o grafico no formato FIG
+# Aqui ser&aacute; gerado o grafico no formato FIG
 set term fig big color fontsize 14 thickness 2
-set out "sup.fig"
+set out &quot;sup.fig&quot;
 replot
 set output           # Volta a saida output para seu valor padrao
-# Aqui será gerado o grafico no formato PNG
-set term png notransparent truecolor linewidth 2 fon "Helvetica,14" \
+# Aqui ser&aacute; gerado o grafico no formato PNG
+set term png notransparent truecolor linewidth 2 fon &quot;Helvetica,14&quot; \
 enhanced size 1024,768
-set out "sup.png"
+set out &quot;sup.png&quot;
 replot
 set output           # Volta a saida output para seu valor padrao
-# Aqui será gerado o grafico no formato SVG
-set term svg size 1024,768 dynamic enhanced fname "Helvetica" \
+# Aqui ser&aacute; gerado o grafico no formato SVG
+set term svg size 1024,768 dynamic enhanced fname &quot;Helvetica&quot; \
 fsize 14 linewidth 2
-set out "sup.svg"
+set out &quot;sup.svg&quot;
 replot
 set output
-set terminal wxt    # Retorna ao terminal padrão do Linux</code></pre>
+set terminal wxt    # Retorna ao terminal padr&atilde;o do Linux</code></pre>
 
 <p>Ao carregar este arquivo no Gnuplot com o comando:</p>
 
 
-<pre><code>gnuplot> load "sup.gp"</code></pre>
+<pre><code>gnuplot&gt; load &quot;sup.gp&quot;</code></pre>
 
 <p>como resultado teremos o gráfico em quatro formato de arquivos
 diferentes, sendo os formatos vetoriais \texttt{.svg} e \texttt{.fig}
@@ -1906,12 +1907,12 @@ diferentes, sendo os formatos vetoriais \texttt{.svg} e \texttt{.fig}
 <p>Ajuste dos dado do arquivo dados.dat com uma função
 pré-definida qualquer, por exemplo:</p>
 
-<pre><code>gnuplot> f1(x) = a1*exp(-B1*x**2)   # define a funcao para o ajuste
-gnuplot> a1 = 10; b1 = 200;         # chute inicial para a1 e b1</code></pre>
+<pre><code>gnuplot&gt; f1(x) = a1*exp(-B1*x**2)   # define a funcao para o ajuste
+gnuplot&gt; a1 = 10; b1 = 200;         # chute inicial para a1 e b1</code></pre>
 
 <p>Agora para ajustar a curva use o comando:</p>
 
-<pre><code>gnuplot> fit f1(x) 'dados.dat' using 1:2 via a1, b1
+<pre><code>gnuplot&gt; fit f1(x) &#039;dados.dat&#039; using 1:2 via a1, b1
 
 Final set of parameters            Asymptotic Standard Error
 =======================            ==========================
@@ -1921,9 +1922,9 @@ b1              = 429.503          +/- 1.958        (0.4558%)</code></pre>
 
 <p>Já o comando:</p>
 
-<pre><code>gnuplot> f2(x) = a2 *exp(-b2*x**2)   # define a funcao para o ajuste
-gnuplot> a2 = 20; b2 = 100;         # chute inicial para a2 e b2
-gnuplot> fit f2(x) 'dados.dat' using 1:3 via a2, b2
+<pre><code>gnuplot&gt; f2(x) = a2 *exp(-b2*x**2)   # define a funcao para o ajuste
+gnuplot&gt; a2 = 20; b2 = 100;         # chute inicial para a2 e b2
+gnuplot&gt; fit f2(x) &#039;dados.dat&#039; using 1:3 via a2, b2
 
 Final set of parameters            Asymptotic Standard Error
 =======================            ==========================
@@ -1934,15 +1935,15 @@ b2              = 6802.34          +/- 314.3        (4.62%)</code></pre>
 
 <p>A curva ajustada e os dados, agora podem ser plotados com o comando:</p>
 
-<pre><code>gnuplot> set key at 0.045,37 title "F(x)=A*exp(-B*x**2)" # Titulo do grafico!
-gnuplot> set title "Distribuição Gaussiana ajustada"       # Note a nova linha com o \n!
-gnuplot> set pointsize 1.5                                 # Largura do ponto!
-gnuplot> set xlabel 'Largura, {/Symbol D}x'                # Simbolo Greek!
-gnuplot> set ylabel 'Intensidade, {/Times-Italic I}_A, (A)' # italicos!
-gnuplot> plot "dados.dat" using 1:2 title 'Exp. 1' with points lt 1,\
-      "dados.dat" using 1:3 title 'Exp. 2' with points lt 3,\
-      f1(x) title 'Fit Exp. 1' w l,\
-      f2(x) title 'Fit Exp. 2' w l</code></pre>
+<pre><code>gnuplot&gt; set key at 0.045,37 title &quot;F(x)=A*exp(-B*x**2)&quot; # Titulo do grafico!
+gnuplot&gt; set title &quot;Distribui&ccedil;&atilde;o Gaussiana ajustada&quot;       # Note a nova linha com o \n!
+gnuplot&gt; set pointsize 1.5                                 # Largura do ponto!
+gnuplot&gt; set xlabel &#039;Largura, {/Symbol D}x&#039;                # Simbolo Greek!
+gnuplot&gt; set ylabel &#039;Intensidade, {/Times-Italic I}_A, (A)&#039; # italicos!
+gnuplot&gt; plot &quot;dados.dat&quot; using 1:2 title &#039;Exp. 1&#039; with points lt 1,\
+      &quot;dados.dat&quot; using 1:3 title &#039;Exp. 2&#039; with points lt 3,\
+      f1(x) title &#039;Fit Exp. 1&#039; w l,\
+      f2(x) title &#039;Fit Exp. 2&#039; w l</code></pre>
 
 
 <h3>Referências</h3>
@@ -2117,27 +2118,27 @@ em que o usuário interagem com o Scilab. Para
 <p>Vejamos um exemplo:</p>
 
 
-<pre><code>-->SCI      // Diretório no qual o Scilab foi instalado
+<pre><code>--&gt;SCI      // Diret&oacute;rio no qual o Scilab foi instalado
  SCI  =
 
  /usr/share/scilab/
 
--->pwd     // Diretório no qual esta trabalhando
--->PWD     // Diretório no qual esta trabalhando
+--&gt;pwd     // Diret&oacute;rio no qual esta trabalhando
+--&gt;PWD     // Diret&oacute;rio no qual esta trabalhando
  PWD  =
 
  /home/salviano
 
--->home    // Diretório no qual esta trabalhando
+--&gt;home    // Diret&oacute;rio no qual esta trabalhando
  home  =
 
  /home/salviano
 
--->chdir('Progs') // Mudar de diretório
+--&gt;chdir(&#039;Progs&#039;) // Mudar de diret&oacute;rio
 
--->cd('/home/salviano/Documentos') // Mudar de diretório</code></pre>
+--&gt;cd(&#039;/home/salviano/Documentos&#039;) // Mudar de diret&oacute;rio</code></pre>
 
-	<p>No Scilab tudo que vem depois de "//" é um comentário.</p>
+<p>No Scilab tudo que vem depois de "//" é um comentário.</p>
 
 
 <h3>Comandos de Interacao com o Shell</h3>
@@ -2154,7 +2155,7 @@ em que o usuário interagem com o Scilab. Para
 
 	</ul>
 
-<pre><code>-->unix_w('ls -alh')  // Lista arquivos no diretorio que se está trabalhando
+<pre><code>--&gt;unix_w(&#039;ls -alh&#039;)  // Lista arquivos no diretorio que se est&aacute; trabalhando
 total 94M
 drwxrwxr-x 93 salviano salviano  12K 2006-10-05 11:29 .
 drwxr-xr-x 11 root     root     4,0K 2006-05-22 11:00 ..
@@ -2171,36 +2172,36 @@ drwxr-xr-x  2 salviano salviano 4,0K 2005-04-23 16:49 .alexandria</code></pre>
 abaixo e veja o que ocorre.</p>
 
 
-<pre><code>-->a=1    // Verifique o que ocorre
--->a=1;   // Veja o que ocorre
--->a      // Veja o que ocorre
--->clear  // Veja o que ocorre
--->a      // Veja o que ocorre
+<pre><code>--&gt;a=1    // Verifique o que ocorre
+--&gt;a=1;   // Veja o que ocorre
+--&gt;a      // Veja o que ocorre
+--&gt;clear  // Veja o que ocorre
+--&gt;a      // Veja o que ocorre
 
--->i=1:5      // Verifique o que ocorre
--->i=1:0.5:5  // Veja o que ocorre
+--&gt;i=1:5      // Verifique o que ocorre
+--&gt;i=1:0.5:5  // Veja o que ocorre
 
--->a=2,b=3   // Veja o que ocorre
--->clear     // Reinicializa as variáveis do sistema
--->a
--->b</code></pre>
+--&gt;a=2,b=3   // Veja o que ocorre
+--&gt;clear     // Reinicializa as vari&aacute;veis do sistema
+--&gt;a
+--&gt;b</code></pre>
 
 <p>De acordo com o exemplo, anterior o sinal de \texttt{;} no fim de um comando
 diz para o Scilab executar o comando sem fornecer um retorno.</p>
 
-<pre><code>-->a=5,b=10;
--->save('dados.dat',a,b) // Salva no arquivo binário as variáveis a e b
--->clear                 // Limpa as variáveis
--->a
--->b
--->load('dados.dat','a','b') // Lê as variáveis a e b no arquivo binário
--->a
--->b
--->d1=diary('file.txt')//Salva seção, o que for digitado a partir deste ponto
--->a=10,v0=0,x0=10;
--->t=1;
--->x=x0+v0*t+0.5*a*t^2;
--->diary(d1,'close')          // Fecha o arquivo.</code></pre>
+<pre><code>--&gt;a=5,b=10;
+--&gt;save(&#039;dados.dat&#039;,a,b) // Salva no arquivo bin&aacute;rio as vari&aacute;veis a e b
+--&gt;clear                 // Limpa as vari&aacute;veis
+--&gt;a
+--&gt;b
+--&gt;load(&#039;dados.dat&#039;,&#039;a&#039;,&#039;b&#039;) // L&ecirc; as vari&aacute;veis a e b no arquivo bin&aacute;rio
+--&gt;a
+--&gt;b
+--&gt;d1=diary(&#039;file.txt&#039;)//Salva se&ccedil;&atilde;o, o que for digitado a partir deste ponto
+--&gt;a=10,v0=0,x0=10;
+--&gt;t=1;
+--&gt;x=x0+v0*t+0.5*a*t^2;
+--&gt;diary(d1,&#039;close&#039;)          // Fecha o arquivo.</code></pre>
 
 <p>A função \texttt{diary} é muito útil para testarmos algumas funções
 ou a digitarmos alguns valores iniciais, pois ela guarda aquilo que
@@ -2210,17 +2211,17 @@ ou a digitarmos alguns valores iniciais, pois ela guarda aquilo que
 quando estamos fazendo alguma operação e precisamos de calcular um outro
 	valor antes de prosseguirmos.</p>
 
-<pre><code>-->a=2, pause
+<pre><code>--&gt;a=2, pause
     a  =
           2.
--1->a=3
+-1-&gt;a=3
      a  =
           3.
--1->a=2*a
+-1-&gt;a=2*a
      a  =
           6.
--1->return
--->a
+-1-&gt;return
+--&gt;a
     a  =
         2.</code></pre>
 
@@ -2236,27 +2237,27 @@ função) estão disponíveis. Para retornar ao espaço de trabalho em que o com
 e não podem ser modificadas. Este modo pode ser cancelado pelo comando
 "\texttt{abort}".</p>
 
-<h3>Número Complexos</h3>
+<h3>Números Complexos</h3>
 
 <p>Agora veremos como o Scilab trabalha com os números complexos.</p>
 
 
-<pre><code>-->a=1+2*%i
+<pre><code>--&gt;a=1+2*%i
     a  =
          1. + 2.i
--->b=1-2*%i
+--&gt;b=1-2*%i
     b  =
         1. - 2.i
--->a*b
+--&gt;a*b
     ans  =
            5.
--->conj(a)
+--&gt;conj(a)
     ans  =
            1. - 2.i
--->norm(a)
+--&gt;norm(a)
     ans  =
            2.236068
--->[Ro,Theta]=polar(a)
+--&gt;[Ro,Theta]=polar(a)
      Theta  = 1.1071487 + 5.071E-17i
      Ro     = 2.236068</code></pre>
 
@@ -2358,12 +2359,12 @@ no arquivo com as suas configurações iniciais, no Linux
 p(x) com a variável \texttt{x} de modo que \texttt{roots(p)} = \texttt{A}).</p>
 
 
-<pre><code>-->A=[-2 3 7];   // Cria um vetor
--->p=poly(A,'x') //Cria um polinômio cujas asa raízes são o vetor de entrada.
+<pre><code>--&gt;A=[-2 3 7];   // Cria um vetor
+--&gt;p=poly(A,&#039;x&#039;) //Cria um polin&ocirc;mio cujas asa ra&iacute;zes s&atilde;o o vetor de entrada.
 p  =
                2   3
     42 + x - 8x + x
--->roots(p)  // Determina as raízes do polinômio
+--&gt;roots(p)  // Determina as ra&iacute;zes do polin&ocirc;mio
  ans  =
     3.
   - 2.
@@ -2383,7 +2384,7 @@ p  =
 		<li>Podemos somar, subtrair multiplicar e dividir polinômios.</li>
 	</ul>
 
-<pre><code>-->roots(poly([-4 2 -1], 'x', 'coeff'))
+<pre><code>--&gt;roots(poly([-4 2 -1], &#039;x&#039;, &#039;coeff&#039;))
  ans  =
     1. + 1.7320508i
     1. - 1.7320508i</code></pre>
@@ -2392,21 +2393,21 @@ p  =
 <p>Para complementar o exemplo, os dois polinômios podem ser multiplicados,
 divididos, somandos ou subtraídos como mostra a seqüência de comandos,</p>
 
-<pre><code>-->p * q // Multiplicacao
--->p / q // Divisao
+<pre><code>--&gt;p * q // Multiplicacao
+--&gt;p / q // Divisao
 ans =
 2
 2 - 3s + s
 ----------
 1 + 2s
--->[r, q] = pdiv(p,q) // Efetuando a divisao: q=quociente, r=resto
+--&gt;[r, q] = pdiv(p,q) // Efetuando a divisao: q=quociente, r=resto
 q =
 - 1.75 + 0.5s
 r =
 3.75
--->p + q // Adicao
--->p - q // Subtracao
---></code></pre>
+--&gt;p + q // Adicao
+--&gt;p - q // Subtracao
+--&gt;</code></pre>
 
 <h3>Scilab: Vetores</h3>
 
@@ -2524,44 +2525,44 @@ Mas antes veremos algumas operações básicas.</p>
 	</tr></tbody>
 </table>
 
-<pre><code>-->a=1:1:3;  // Cria vetor com 3 elementos na sequência
--->x=[1 -3 4]; y=[2; 1; -3]; w=[2 3 -1];
--->x*w
+<pre><code>--&amp;gt;a=1:1:3;  // Cria vetor com 3 elementos na sequ&ecirc;ncia
+--&amp;gt;x=[1 -3 4]; y=[2; 1; -3]; w=[2 3 -1];
+--&amp;gt;x*w
     !--error 10
-Multiplicação incoerente.
+Multiplica&ccedil;&atilde;o incoerente.
 
--->x*w' // w' é a transposta de w
+--&amp;gt;x*w&#039; // w&#039; &eacute; a transposta de w
  ans  = - 11.
--->c=y*x // Multiplicação matricial
+--&amp;gt;c=y*x // Multiplica&ccedil;&atilde;o matricial
  c  =
     2.  - 6.    8.
     1.  - 3.    4.
   - 3.    9.  - 12.
--->c(2,2)
+--&amp;gt;c(2,2)
  ans  = - 3.
--->c(2,2)*x(2) // Acesso a um elemento da matriz
+--&amp;gt;c(2,2)*x(2) // Acesso a um elemento da matriz
  ans  = 9.
-->norm(w)      // Retorna a norma do vetor
+-&amp;gt;norm(w)      // Retorna a norma do vetor
  ans  = 3.7416574
--->A = [ 1 2 3; 4 5 6; 7 8 9]
+--&amp;gt;A = [ 1 2 3; 4 5 6; 7 8 9]
  A  =
     1.    2.    3.
     4.    5.    6.
     7.    8.    9.
--->A*c      // Multiplicação matricial
+--&amp;gt;A*c      // Multiplica&ccedil;&atilde;o matricial
  ans  =
   - 5.    15.  - 20.
   - 5.    15.  - 20.
   - 5.    15.  - 20.
--->prod(x)
+--&amp;gt;prod(x)
  ans  = - 12.
--->max(A)
+--&amp;gt;max(A)
  ans  = 9.
--->min(c)
+--&amp;gt;min(c)
  ans  = - 12.
--->inv(A)
+--&amp;gt;inv(A)
 Aviso:
-A matriz é quase singular ou possui má escala. rcond =    4.5916D-41
+A matriz &eacute; quase singular ou possui m&aacute; escala. rcond =    4.5916D-41
  ans  =
    1.0D+15 *
     2.2512502  - 4.5025004    2.2512502
@@ -2654,14 +2655,14 @@ elemento dos vetores linha A e B, fazemos: \texttt{A.*B}</p>
 
 
 
-<pre><code>-->x=[1 2 3]; y=[1 2 3];
--->x.*y
+<pre><code>--&gt;x=[1 2 3]; y=[1 2 3];
+--&gt;x.*y
  ans  = 1.    4.    9.
--->y./x
+--&gt;y./x
  ans  =  1.    1.    1.
--->A = [ 1 2 3; 4 5 6; 7 8 9];
--->B = [ 2 2 2; 2 2 2; 2 2 2];
--->A .\ B
+--&gt;A = [ 1 2 3; 4 5 6; 7 8 9];
+--&gt;B = [ 2 2 2; 2 2 2; 2 2 2];
+--&gt;A .\ B
  ans  =
     2.           1.      0.6666667
     0.5          0.4     0.3333333
@@ -2719,65 +2720,767 @@ elementos aleatórios.</li>
 		<li>\texttt{A(1,:)} lista todos elementos da linha 1 enquanto</li>
 		<li>\texttt{A(:,2)} lista todos elementos da coluna 2.</li>
 		<li>\texttt{v=[A(1,:); A(3,:)]} cria um vetor coluna:</li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
+		<li>\texttt{sum(B,{\textquotesingle}r{\textquotesingle})} e
+ \texttt{prod(B,{\textquotesingle}r{\textquotesingle})}
+respectivamente somam e fazem o produto por colunas, para
+produzir uma linha.</li>
+		<li>\texttt{sum(B,{\textquotesingle}c{\textquotesingle})} e
+\texttt{prod(B,{\textquotesingle}c{\textquotesingle})}
+respectivamente somam e fazem o produto por linhas, para
+produzir uma coluna.</li>
+		<li>\texttt{[x0,nsA] = linsolve(A,c[,x0])}, determina a
+solução do Sistema Linear $A \cdot x+c = 0$:</li>
 		
 	</ul>
 
+<h3>Gráficos</h3>
+
+<p>Vamos iniciar fazendo gráficos simples, conforme o exemplo:</p>
+
+<pre><code>--&gt; x=1:10;  // Cria vetor x de 10 elementos,com passo 1
+--&gt; plot(x,x^2,&#039;b-&#039;,x,10*x,&#039;r-&#039;); // Note: &#039;b-&#039; &eacute; azul com tra&ccedil;o</code></pre>
+
+<p>O comando \texttt{clf()} apaga o gráfico corrente.
+então</p>
+
+<pre><code>--&gt; clf(); // apaga o gr&aacute;fico anterior
+--&gt; t=-2*
+--&gt; clf(); // apaga o gr&aacute;fico anterior</code></pre>
+
+<pre><code>x=linspace(1,11,20);
+y=linspace(-2,2,20);
+plot2d(x,y,style=-1);</code></pre>
+
+<p>Para fazer gráficos no Scilab, primeiro é necessário
+definir uma função. No Scilab isso é feito usando o
+comando \texttt{deff} da seguinte forma</p>
+
+<pre><code>deff(&#039;[y1]=f1(x)&#039;,&#039;y1=x^2-2*x-3&#039;); // Uma vari&aacute;vel
+deff(&#039;[y2]=f2(x)&#039;,&#039;y2=x^2-2&#039;);            // Uma vari&aacute;vel
+[s1]=fsolve(1,f,0.0001);   // Determina as ra&iacute;zes de f1(x)
+[s2]=fsolve(1,f,0.0001);   // Determina as ra&iacute;zes de f2(x)
+x=-5:0.1:5;                // Cria o vetor x com o intervalo
+plot(x,f1);                // Faz o gr&aacute;fico de f1
+plot(x,f2);                // Faz o gr&aacute;fico de f2</code></pre>
+
+<pre><code>deff (&#039;[y]=f(x)&#039;,&#039;y=3*x+x.*sin(x)&#039;)
+x=1:.5:100;
+fplot2d(x,f)</code></pre>
+
+<p>Agora com a ajuda do help faça o gráfico da função</p>
+
+<p class="formula">
+\begin{equation}
+ y(x) = \dfrac{x|x|}{1+x^2}
+\end{equation}
+<span class="numero_formula">4.2</span>	
+</p>
+
+<p>com os seguintes comandos</p>
+
+	<ul>
+		<li>plot2d(x,y)</li>
+		<li>fplot2d(x,f)</li>
+		<li>fplot2d1(x,f)</li>
+		<li>plot2d2(x,y)</li>
+	</ul>
+
+<p>Para obter o gráfico 3D da equação $z=x^4 - y^4$ faça</p>
+
+<pre><code>deff (&#039;[z]=f(x,y)&#039;,&#039;z = x^4 - y^4&#039;);
+x=-4:.20:4; y=x;
+clf();
+fplot3d(x,y,f);</code></pre>
+
+<p>Agora faremos o gráfico das seguintes funções $f(x,y)= x^3 - y^3$ e $g(x,y)= sin(x^2) - y^2$.</p>
+
+<pre><code>deff (&#039;z=f(x,y)&#039;,&#039;z = x^3 - y^3&#039;);
+deff (&#039;z=g(x,y)&#039;,&#039;z = sin(x^2) - y^2&#039;);
+x=-4:.2:4; y=x;
+f1=scf(1); //criando figura com id==1 e a torna a figura corrente
+f0=scf(0); //criando figura com id==0 e a torna a figura corrente
+xlabel(&#039;X&#039;); // r&oacute;tulo do eixo x
+ylabel(&#039;Y&#039;); // r&oacute;tulo do eixo y
+xtitle(&#039;f(x,y)=x^3 - y^3&#039;);  // titulo do gr&aacute;fico
+fplot3d(x,y,f) //desenhando na figura corrente (id=0)
+scf(f1); // ajustando a primeira figura criada como sendo a corrente
+xtitle(&#039;g(x,y)=sin(x^2) - y^2&#039;);  // titulo do gr&aacute;fico
+fplot3d1(x,y,g) //desenhando na figura corrente (id=1)</code></pre>
+
+<p>A seguir mostramos como obter um gráfico paramétrico.</p>
+
+<pre><code>t=0:
+param3d(cos(t),sin(t),t/</code></pre>
+
+
+<h2>Maxima</h2>
+
+	<h3>Introdução</h3>
+
+<p>O software Maxima é um sistema para manipulação de expressões simbólicas e
+numéricas, incluindo diferenciação, integração, séries de Taylor,
+transformadas de Laplace, equações diferenciais ordinárias, sistemas de equações
+lineares, polinômios, conjuntos, listas, vetores, matrizes, e tensores.
+O Maxima produz resultados com alta precisão numérica por meio das frações
+exatas, inteiros com precisão arbitrária e números de ponto flutuante com
+precisão variável. O Maxima também pode fazer gráficos de funções e dados em
+	duas e três dimensões.</p>
+
+<p>O Maxima é um sistema de código aberto que pode ser compilado em muitos sistemas
+operacionias, incluindo Windows, Linux e MacOS X. Em sua página oficial,
+o código está disponibilizado, assim como os binários compilados para Windows e
+	Linux.</p>
+
+<p>Atual versão do Maxima é uma evolução do sistema de computação algébrica
+Macsyma desenvolvido no fim dos anos 1960 pelo ``Massachusetts Institute
+of Technology'' (MIT). Em 1982 o MIT forneceu uma cópia do Macsyma para o
+Departamento de Energia (DOE) e essa cópia, que passou a ser chamada de
+Macsyma DOE, foi mantida pelo professor William F. Schelter da Universidade
+do Texas no perído de 1982 à 2001, ano de sua morte. Além disso, em 1998,
+o professor Schelter obteve permissão do Departamento de Energia para liberar
+o código fonte do Macsyma DOE sob a Licença Pública GNU, e em 2000 ele iniciou
+o projeto Maxima no SourceForge para manter e desenvolver o Macsyma DOE, que desde
+	então passou a ser chamado Maxima.</p>
+
+<p>A versão do Maxima sobre a qual este trabalho irá tratar é a 5.21.1, a qual é
+a que está disponível na última versão do ubuntu 10.10. A versão
+	mais atual, entretanto é a 5.23.2.</p>
+
+<p>Pretendemos apresentar algumas noções básicas do Maxima, e para tal
+abordaremos os seguintes tópicos:</p>
+
+<ul>
+	<li>Operações básicas;</li>
+	<li>Construção de Gráficos;</li>
+	<li>Limites;</li>
+	<li>Diferenciação;</li>
+	<li>Integração;</li>
+	<li>Equações Diferenciais;</li>
+	<li>Matrizes e Álgebra linear;</li>
+</ul>
+
+<p>utras informações podem ser obtidas do manula do Maxima. Há uma versão em
+	português do mesmo em sua página oficial.</p>
+
+<p>Para o Linux há duas interfaces gráficas para o Maxima, o wxMaxima e Xmaxima,
+a diferença entre elas está na forma de interção com o usuário.</p>
+
+
+<h3>Operações Básicas</h3>
+
+
+<p>Ao iniciar o Maxima abre uma interface de terminal na qual aparece o
+símbolo \verb|(%i1)| representa a posição na memória de cada operação
+	a ser realizada.</p>
+
+<p>As operações serão digitadas na frente do símbolo (%i1), em que
+o "i" no meio significa entrada do inglês "INPUT", enquanto a saída
+do programa será representada pelo símbolo (%ox), com o "o" sendo
+	saída do inglês "OUTPUT".</p>
+
+<p>Toda expresão digitada deve terminar com um ";"" para indicar ao Maxima
+	que a expressão já pode ser avaliada, como no exemplo abaixo:</p>
+
+<pre><code>(%i1) 1 + 2; (ENTRADA - INPUT - representado pelo i no Maxima)
+(%o1) 3 (SA&Iacute;DA - OUTPUT - representada pelo o no Maxima)</code></pre>
+
+
+<p>Na tabela 4.1 abaixo listamos os operadores matemáticos básicos do Maxima.</p>
 
 
 
+<table>
+<caption>Tabela 4.1 – Operadores matemáticos básicos do Maxima.</caption>
+  <tr><thead> 
+    <th>Op.</th>
+    <th>Operação</th>
+    <th>Sintaxe/ Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>+</td>
+    <td>Adição</td>
+    <td>Ad = 423.31 + 221.07;</td>
+  </tr>
+  <tr>
+    <td>–</td>
+    <td>Subtração</td>
+    <td>Sub = 423.31 - 121.07;</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Multiplicação</td>
+    <td>Mult = Ad*3;</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Divisão</td>
+    <td>Div = Sub/3;</td>
+  </tr>
+  <tr>
+    <td>/\ ou **</td>
+    <td>Potenciação</td>
+    <td>Pot = Ad^3; ou Pot = Ad**3;</td>
+	</tr></tbody>
+</table>
+
+<p>Na tabela 4.2 listamos algumas constantes especiais do Maxima.</p>
+
+
+<p>Os espaços não são necessários, apenas auxiliam na leitura. O
+Maxima é sensível a maiúsculas e minúsculas assim como seus
+	parâmetros, por exemplo:</p>
+
+<pre><code>(%i1) cos (%pi); 
+(%o1) -1
+(%i2) COS(%PI); 
+%o2) COS(%PI)</code></pre>
+
+<table>
+
+<caption>Tabela 4.2 - Constantes especiais do Maxima.</caption>
+  <tr><thead>
+    <th>Constante</th>
+    <th>Valor/ Significado</th>
+    <th>Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>%e</td>
+    <td>Número de Euler: e = 2.7182818 . . .</td>
+    <td>x = %e^3;</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>Valor lógico Falso</td>
+    <td>Resp=7==3+2;</td>
+  </tr>
+  <tr>
+    <td>%i</td>
+    <td>Número imaginário: i =,√−1</td>
+    <td>z = 2-5*%i;</td>
+  </tr>
+  <tr>
+    <td>ind</td>
+    <td>Resultado de limite indefinido</td>
+    <td>limit (sin(1/x), x, 0);</td>
+  </tr>
+  <tr>
+    <td>inf</td>
+    <td>Real positivo infinito</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>infinity</td>
+    <td>Complexo infinito</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>minf</td>
+    <td>Real negativo infinito</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>%phi</td>
+    <td>Razão Dourada φ = 1.618033988749895</td>
+    <td>float((1 + sqrt(5))/2);</td>
+  </tr>
+  <tr>
+    <td>%pi</td>
+    <td>Número pi: π = 3.1415927 . . .</td>
+    <td>Area = %pi*R^2</td>
+  </tr>
+  <tr>
+    <td>true</td>
+    <td>Valor lógico Verdade</td>
+    <td>Resp=5&gt;3+1</td>
+  </tr>
+  <tr>
+    <td>und</td>
+    <td>Resultado indefinido</td>
+    <td>limit(1/x, x, 0);</td>
+  </tr>
+  <tr>
+    <td>zeroa</td>
+    <td>Infinitesimal maior que zero</td>
+    <td>limit(x+zeroa);</td>
+  </tr>
+  <tr>
+    <td>zerob</td>
+    <td>Infinitesimal menor que zero</td>
+    <td>limit(x+zerob);</td>
+	</tr></tbody>
+</table>
+
+<p>Para obter mais informações sobre determinados comandos, basta você
+	digitar:</p>
+
+<pre><code>(%i1) describe(termo buscado);
+(%i2) apropos(termo buscado);
+(%i3) help termo buscado;
+(%i4) ? termo buscado;
+(%i5) ?? termo buscado;</code></pre>
+
+<p>O Maxima tenta tornar os resultados mais exatos possíveis, entretanto
+em alguns casos desejamos um número de ponto flutuante como por
+	exemplo:</p>
+
+<pre><code>(%i1) 3*log(8);
+(%o1) 3 log(8)</code></pre>
+
+<p>nesse caso ele não retornou um número, então devemos dizer a ele
+	que desejamos um número de ponto flutuante, assim:</p>
+
+<pre><code>(%i1) float(3 * log(8));
+(%o1)   6.238324625039507
+(%i2) sin(%);
+(%o2)  - 0.17848127766415</code></pre>
+
+<p>O comando \texttt{%} é bastante usado, pois ele representa o último
+	resultado apresentado pelo Maxima, como no exemplo anterior.</p>
+
+<p>Em cálculo numérico, as vezes os resultados e os cálculos efetuados
+necessitam de ser expressos com um determinado número de casas decimais
+e/ou algarismos significativos. Podemos estabelecer essa precisão mediante
+a fixação de um valor à variável interna global \texttt{fpprec}
+"float point precision", que por padrão no Máxima é 16. Para isso, fazemos</p>
+
+<pre><code>(%i1) fpprec : 30;
+(%o1) 30
+(%i2) bfloat(3*log(8));
+(%o2) 6.23832462503950778475508909313b0</code></pre>
+
+<p>Para atribuir valores a variáveis, basta apenas declarar da seguinte
+	forma:</p>
+
+<pre><code>(%i1) g : 9.8;
+(%o1)  9.8
+(%i2) e : 1.602e-19;
+(%o2)  1.602E-19
+(%i3) e*g;
+(%o3)  1.56996E-18</code></pre>
+
+<p>Para resolver equações algébricas usa-se a função \texttt{solve}, da
+seguinte maneira:</p>
+
+<pre><code>(%i1) solve (3*x^2-6*x-9=0);
+(%o1) [x = 3, x = - 1]</code></pre>
+
+<p>Esta função é bastante útil e pode ser usada de várias modos,
+como, por exemplo, para resolver uma equação de duas incógnitas
+	e deixar o resultado em função de uma delas, como no exemplo:</p>
+
+<pre><code>(%i1) solve(log(x^2+y^2)-1=0, y);
+(%o1) [ y = &minus; (%e &minus; x2), y = sqrt(%e &minus; x2)]</code></pre>
+
+<p>Nos casos em que o número de equações é igual ao número de
+incógnitas, a função \texttt{solve} tentará dar uma solução
+para o sistema quando houver, como por exemplo:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) solve([x+y+4*z=0, y-z+2*x=8, z+3*x-2*y=4]);
+
+(%o1)  $[[z=-\frac{18}{17},y=\frac{26}{17},x=\frac{46}{17}]]$</code></pre> -->
+
+<p>O Maxima possui algumas funções para trabalhar com funções
+	algébricas, como no exemplo abaixo</p>
+
+<pre><code>(%i1) expand ((x + y)^6);
+(%o1) y6 +6xy5 +15x2y4 +20x3y3 +15x4y2 +6x5y+x6
+(%i2) factor(x^6 - 1);
+(%o2) (x&minus;1) (x+1)  x2 &minus;x+1   x2 +x+1 </code></pre>
+
+
+<p>Para usar o último resultado de um cálculo, você pode atribuir a ele uma variável
+ou referir a ele por seu rótulo atribuído automaticamente. O comando \% refere-se
+	somente ao último resultado. Vejamos</p>
 
 
 
+<pre><code>(%i3) u: expand((x-y)^4);
+(%o3) y4 &minus;4xy3 +6x2 y2 &minus;4x3 y+x4 
+(%i4) diff(u,x);
+(%o4) &minus;4y3 +12xy2 &minus;12x2 y+4x3 
+(%i5) factor(%o4);
+(%o5) &minus;4 (y &minus; x)3</code></pre>
+
+<p>O Maxima também reconhece os números complexos</p>
+
+<pre><code>(%i1) cos(%pi);
+(%o1)                          - 1
+(%i2) exp(%i*%pi);
+(%o2)                          - 1</code></pre>
+
+<p>Para resolver sistemas lineares e equações cúbicas, usamos:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) linsolve ([3* x + 4* y = 7 , 2* x + a * y = 13] , [x , y ]);
+
+(%o2) $\quad[x=\frac{7\,a-52}{3\,a-8},y=\frac{25}{3\,a-8}]$
+
+(%i2) solve (x\^{}3 - 3*x\^{}2 + 5*x = 15, x);
+
+(%o2) $\quad[x=-\sqrt{5}\,i,x=\sqrt{5}\,i,x=3]$</code></pre> -->
 
 
+<p>O Maxima pode resolver sistemas de equações não-lineares,
+	como por exemplo:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) eq\_1: x\^{}2 + 3*x*y + y\^{}2 = 0\$
+
+(%i2) eq\_2: 3*x + y = 1}\$
+
+(%i3) solve([eq\_1, eq\_2]);
+
+(%o3) $\quad[[y=-\frac{3\,\sqrt{5}+7}{2},x=\frac{\sqrt{5}+3}{2}],[y=\frac{3\,\sqrt{5}-7}{2},x=-\frac{\sqrt{5}-3}{2}]]$</code></pre> -->
 
 
+<p>Note que para eliminar a impressão do resultado de um cálculo
+ou expressão, basta terminar o comando com o símbolo $ em vezes
+	do símbolo ;.</p>
+
+<p>Maxima pode gerar gráficos de uma ou mais funções:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(\%i1) eq\_1: x\^{}2 + 3*x*y + y\^{}2 = 0\$
+
+(%i2) eq\_2: 3*x + y = 1\$
+
+(%i3) solve ([eq\_1, eq\_2]);
+
+(%o3) $\quad[[y=-\frac{3\,\sqrt{5}+7}{2},x=\frac{\sqrt{5}+3}{2}],[y=\frac{3\,\sqrt{5}-7}{2},x=-\frac{\sqrt{5}-3}{2}]]$
+
+(%i4) kill(labels);
+
+(%o0) \qquad done
+
+(%i1) plot2d (sin(x)/x, [x, -20, 20]);
+
+(%o1)
+
+(%i2) plot2d ([atan(x), erf(x), tanh(x)], [x, -5, 5]);
+
+(%o2)
+
+(%i3) plot3d (sin(sqrt(x\^{}2 + y\^{}2))/sqrt(x\^{}2 + y\^{}2), [x, -12, 12],[y, -12, 12]);
+
+(%o3)</code></pre>
+ -->
+
+<p>Acima foram descritos os principais comandos para a manipulação
+dados no Maxima, assim sendo a partir daqui abordaremos assuntos
+	mais específicos.</p>
+
+<h3>Funções</h3>
+
+<p>É muito simples definir funções no Maxima, é muito parecido com o
+modo normal de se escrever, mudando somente o símbolo de atribuição
+	que no caso é \texttt{:=}, como pode se observar o exemplo:</p>
+
+<pre><code>(%i1) f(x):=x+2;
+(%o1) f(x) := x + 2
+(%i2) f(5);
+(%o2) 7</code></pre>
+
+<p>Pode-se definir também funções de n variáveis, respeitando a mesma
+sintaxe da anterior, somente colocando as variáveis entre vírgulas,
+	do seguinte modo:</p>
+
+<pre><code>(%i1) g(x,y,z) := x * y + 2 * z;
+(%o1) g(x, y, z) := x y + 2 z
+(%i2) g(1,2,3);
+(%o2) 8</code></pre>
+
+<h3>Limites</h3>
 
 
+<p>Limites são facilmente interpretados pelo Maxima, e possui uma
+sintaxe bastante simples, \texttt{limit(função, variável,
+	valor que tende a variável);}. Por exemplo:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) limit( (2*x+1)/(3*x+2), x,inf );
+
+(%o1) $ \frac{2}{3} $
+
+(%i1) limit(((z\^{}(2/3))/(z - sqrt(2 * z))), z, 8);
+
+(%o1)  1
+
+(%i2) limit((t\^{}2 + 6*t + 9)/(9 - t\^{}2), t, -3);
+</code></pre> -->
 
 
+<p>Alguns exemplos para funções trigonométricas:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) limit(sin(x)/x, x, 0);
+
+(%o1)  1
+
+(%i2) limit((1 - cos(3*x))/(2*x\^{}2), x, 0);
+
+(%o2)  $\frac{9}{4}$
+
+(%i3) limit((1 - cos(3*x))/(3*x), x, 0);
+
+(%o3)  0</code></pre> -->
+
+<p>Agora vamos tratar com os limites laterais. Para obter os
+limites de uma função quando seu argumento tende a um dado
+valor pela  esquerda, basta adicionar um quarto parâmetro, o
+	\texttt{minus}:</p>
+
+<pre><code>(%i1) limit(sqrt(x * (5-x)), x , 5, minus);
+(%o1) 0
+(%i1) limit(1/x, x, 0, minus) ;
+(%o1) minf</code></pre>
 
 
+<p>Já ao tomar o limite pela direita, basta adicionar o quarto
+	parâmetro \texttt{plus}:</p>
 
 
+<pre><code>(%i1) limit(sqrt((4*x)/(x-4)), x, 4, plus);
+(%o1) inf
+(%i2) limit(1/x, x, 0, plus);
+(%o2) inf</code></pre>
 
 
+<p>Como a derivada de uma função $f(x)$ é definida pelo seguinte limite,</p>
+
+<p class="formula">
+\begin{equation}
+ f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x) )}{\Delta x}
+\end{equation}
+<span class="numero_formula">4.3</span>	
+</p>
 
 
+<p>então, pode-se obter a derivada de uma função, utilizando apenas
+limites. Considere por exemplo o caso em que $ g(x) = f '(x) $,
+	e $f(x)=2x^2 + 3x$ conforme mostrado abaixo:</p>
 
 
+<pre><code>(\%i1) f(x):= 2 * x\^{}2 + 3 * x;
+
+(%o1) f(x) := 2 x^2 + 3 x
+
+(%i2) g(x) = limit((f(x + h)- f(x)) / h, h, 0);
+
+(%o2) g(x) = 4 x + 3</code></pre>
 
 
+<p>Um outro exemplo:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) f(x):=x - 1/x;
+
+(%o1) $f(x) = x - \frac{1}{x}$
+
+(%i2) g(x) = limit((f(x + h)- f(x)) / h, h, 0);
+
+(%o2) $g(x) = \frac{{x}^{2}+1}{{x}^{2}}$</code></pre> -->
 
 
+<p>Para o cálculo de um limite, o Maxima possui uma variável nomeada de
+	<i>lhospitallim</i>, a qual designa o número máximo de vezes que a regra
+L'Hospital é usada em um cálculo de limite. Isso evita ciclos infinitos em
+	casos como \texttt{limit(cot(x)/csc(x), x, 0);}. O valor padrão no Maxima é 4.</p>
+
+<p>Assim, visto como implementar limites no Maxima, passaremos então as
+	derivadas.</p>
+
+<h3>Derivadas</h3>
+
+<p>A diferenciação de uma função pode ser rapidamente obtida pela
+função \texttt{diff}, cuja sintaxe é a seguinte
+	\texttt{diff(função, variável);}. No exemplo</p>
+
+	<p>Aplicação:</p>
 
 
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(\%i1) diff((2*x\^{}2+3*x), x);
+
+(%o1) $ 4 x + 3 $
+
+(%i2) diff((x - 1/x), x);
+
+(%o2) $\frac{1}{x^2} + 1$
+
+(%i3) diff(sin(x), x);
+
+(%o3) $cos(x)$</code></pre> -->
 
 
+<p>Para obter a segunda derivada, ou a n-ésima derivada basta
+adicionar um terceiro parâmetro na função indicando quantas
+vezes a função deve ser diferenciada e sua sintaxe é
+\texttt{diff(função, variável, n);}. Por exemplo, para
+	determinar a primeira e a quarta derivada da função</p>
+
+<p class="formula">
+\begin{equation}
+ f(x) = 2cos(x^3) + \dfrac{sin(3x^2)}{x^2} + 4 \ln(x^{7/2})
+\end{equation}
+	<span class="numero_formula">4.4</span>
+</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) f(x) := 2*cos(x\^{}3)+sin(3*x\^{}2)/(x\^{}2)+4*log(x\^{}(7/2));
+
+(%o1) $f(x) :=2\,\cos\left( {x}^{3}\right) +\frac{\sin\left( 3\,{x}^{2}\right) }{{x}^{2}}
+       +4\,\mathrm{log}\left( {x}^{\frac{7}{2}}\right)$
+
+(%i2) diff (f(x), x); /* Esta &eacute; uma derivada primeira */
+
+(%o2) $-6\,{x}^{2}\,\mathrm{sin}\left( {x}^{3}\right) -\frac{2\,\mathrm{sin}\left( 3\,{x}^{2}\right) }{{x}^{3}}+\frac{6\,\mathrm{cos}\left( 3\,{x}^{2}\right) }{x}+\frac{14}{x}$
+
+(%i3) diff(f(x), x, 4); /* Esta &eacute; uma derivada de quarta ordem */
+
+(%o3) $648\,{x}^{5}\,\sin({x}^{3}) + 162\,{x}^{8}\cos({x}^{3}) -360\,{x}^{2}\cos({x}^{3}) + 1296\,{x}^{2}\sin( 3\,{x}^{2})-$
+
+\hspace{2em} $\frac{540\sin(3\,{x}^{2})}{{x}^{2}}+\frac{120\sin(3\,{x}^{2})}{{x}^{6}}-\frac{360\cos(3\,{x}^{2})}{{x}^{4}}+432\cos(3\,{x}^{2})-\frac{84}{{x}^{4}}$</code></pre> -->
+
+<p>Note que todo o texto entre \texttt{/* ...*/} é considerado pelo Maxima
+como um comentário.</p>
 
 
+<h3>Integrais</h3>
+
+<p>Para integrar uma função usa-se a função \texttt{integrate},
+cuja sintaxe para integrais indefinidas é
+\texttt{integrate(função, variável);} enquanto para para integrais
+com limites definidos a sintaxe é
+	\texttt{integrate(função, variável, limite\_inferior, limite\_superior);}.</p>
+
+<p>Considere os seguintes exemplos de integrais indefinidas:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) integrate(x\^{}3*((1 + x\^{}4)\^{}5), x);
+
+(%o1) $\frac{{\left( {x}^{4}+1\right) }^{6}}{24}$
+
+(%i2) integrate(x\^{}2*cos(4*x\^{}3), x);
+
+(%o2) $\frac{\sin\left( 4\,{x}^{3}\right) }{12}$
+
+(%i3) integrate(1/(x\^{}2+a\^{}2), x);
+
+(%o3) $\frac{\mathrm{atan}\left( \frac{x}{a}\right) }{a}$</code></pre> -->
+
+<p>Considere os seguintes exemplos de integrais definidas:</p>
+
+<!-- Descobrir como colocar fração dentro do "pre" -->
+
+<!-- <pre><code>(%i1) integrate((1+sqrt(t))\^{}2/sqrt(t), t, 1, 4);
+
+(%o1) $\quad \frac{38}{3} $
+
+(%i2) integrate(6 - x\^{}2 -x, x, -3, 2);
+
+(%o2) $\quad \frac{125}{6} $
+
+(%i3) assume(a&gt;0);  /* Dizemos que a&gt;0 */
+
+(%o3) $\quad [a&gt;0]$
+
+(%i4) integrate(1/(x\^{}2+a\^{}2), x, 0, inf);
+
+(%o4) $\quad \frac{\pi}{2\,a}$
+
+(%i5) integrate(sin(2*x)*tan(2*x), x,0,%pi/8);
+
+(%o5) $\quad \frac{\frac{\mathrm{log}\left( \frac{\sqrt{2}+2}{2}\right) }{2}-\frac{\mathrm{log}\left( -\frac{\sqrt{2}-2}{2}\right) }{2}-\frac{1}{\sqrt{2}}}{2}$
+
+(%i6) ratsimp(%);} /* Ir&aacute; simplificar o resultado anterior */
+
+(%o6) $\quad \frac{\sqrt{2}\,\mathrm{log}\left( \frac{\sqrt{2}+2}{2}\right) -\sqrt{2}\,\mathrm{log}\left( -\frac{\sqrt{2}-2}{2}\right) -2}{{2}^{\frac{5}{2}}}$</code></pre> -->
+
+<p>No caso de funções descontínuas no intervalo dado, o programa
+acusará o seguinte erro:</p>
+
+<pre><code>(%i1) integrate(1/x,x,-1,0);
+defint: integral is divergent.
+- an error. To debug this try: debugmode(true);</code></pre>
+
+<p>Nesse caso utilize os recursos de limites para verificar a condição\;
+de continuidade da função.</p>
 
 
+<h3>Construção de Gráficos</h3>
+
+<p>A seguir serão apresentadas as funções mais usadas para a
+	construção de gráficos com um exemplo de sua utilização.</p>
+
+<p>O comando \texttt{plot2d(expressão, x\_range, \ldots, opções, \ldots);} faz o gráfico
+da \texttt{expressão} como uma função da variável nomeada em \texttt{x\_range}, sobre o
+intervalo especificado em \texttt{x\_range}. Se a amplitude vertical não for
+	alternativamente especificada por <i>set_plot_option</i>, essa é escolhida
+automaticamente. Todas as opções possuem um valor padrão a menos que sejam
+alternativamente especificadas pelo comando
+	\texttt{set\_plot\_option}. Vejamos por exemplo,</p>
+
+<pre><code>(%i1)  plot2d(cos(x), [x, -4, 4])$</code></pre>
 
 
+<p>Agora vamos interpretar este comando. A função cujo gráfico será feito é o
+\texttt{cos(x)}. O primeiro parâmetro do termo \texttt{[x, -4, 4]}, significa
+que a variável do gráfico unidimensional é o \texttt{x}, e os outros dois
+valores  representam o valor mínimo e máximo que a variável \texttt{x} irá
+assumir no gráfico. Já no próximo exemplo, adicionamos os limites de variação
+do eixo das ordenadas, o eixo $y$.</p>
+
+<pre><code>(%i1)  plot2d (sec(x), [x, -2, 2], [y, -20, 20])$</code></pre>
+
+<p>ou ainda</p>
+
+<pre><code>(%i1) plot2d(tan(x), [x, -2, 2], [y, -18, 18]);</code></pre>
 
 
+<p>Podemos ainda fazer o gráfico de duas ou mais funções juntas,
+em um mesmo intervalo de variação, conforme ilustra o exemplo
+a seguir.</p>
 
+<pre><code>(%i1) h(x) := if x = 0.0 then 1 else sin(x)/x$
+(%i2) f(x) := sin(x)/x$
+(%i3) g(x) :=  exp(-0.5*x^2)$
+(%i4) plot2d([h,g], [x, -20, 20])$
+(%i5) plot2d([sin(x)/x, g], [x, -20, 20])$
+plot2d: expression evaluates to non-numeric value somewhere in plotting range.
+(%i6) plot2d([f,g], [x, -20, 20])$
+Division by 0
+#0: f(x=0.0)
+-- an error. To debug this try: debugmode(true);</code></pre>
 
+<p>Aqui definimos uma função co o uso das expressões relacionais, a condição
+	de igualdade do comando \texttt{if ... then ... else ....}</p>
 
+<p>O comando \texttt{plot3d (expressão, x\_range, y\_range, ..., opções, ...);}
+faz um gráfico em três dimensões de uma função de duas variáveis, como
+mostrado no exemplo abaixo.</p>
 
+<pre><code>(%i1) plot3d(x^3+sin(x), [x,-2,2], [y,-4,4])$
+(%i2) plot3d(sin(sqrt(x^2+y^2))/sqrt(x^2+y^2), [x,-10,10], [y,-10,10])$
+(%i3) plot3d(sin(sqrt(x^2+y^2))/sqrt(x^2+y^2), [x,-20,20], [y,-20,20],
+ [plot_format,gnuplot], [grid,50,50], [gnuplot_pm3d,true],
+ [gnuplot_preamble, &quot;set pm3d at bs&quot;])$</code></pre>
 
+ <p>Um outro exemplo,</p>
 
+ <pre><code>(%i1) plot3d([cos(x*y)*(3 + y*cos(x/2)), sin(x)*(3 + y*cos(x/2)),y*sin(x/2)],
+  [x, -%pi, %pi], [y, -1, 1]);</code></pre>
+
+ <p>Para maiores detalhes consulte o manual.</p>
