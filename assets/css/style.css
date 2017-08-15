@@ -427,6 +427,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #introportal {
   height: 100vh;
+  background-color: #001F3C;
   background: radial-gradient(110% 110% ellipse at bottom left, #0090A7 0%, rgba(0, 144, 167, 0) 100%), #001F3C;
   background-position: fixed;
   display: -webkit-box;
@@ -893,10 +894,11 @@ nav#navcapitulos {
         height: 36px;
         margin-right: 0.3em;
         margin-bottom: 0.3em;
+        border: 1px solid transparent;
         font-size: 1.2em;
         line-height: 1;
-        background-color: rgba(0, 0, 0, 0.2);
-        color: rgba(166, 216, 190, 0.5);
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #0090A7;
         -webkit-transition: all 0.2s linear;
         -moz-transition: all 0.2s linear;
         transition: all 0.2s linear;
@@ -931,6 +933,8 @@ nav#navcapitulos {
         #header div.cont-caps .bt-caps a:hover:not(.atual), #header div.cont-caps .bt-caps a.atual {
           background-color: rgba(0, 0, 0, 0.6);
           color: #A6D8BE; }
+        #header div.cont-caps .bt-caps a.atual {
+          border: 1px solid #A6D8BE; }
         #header div.cont-caps .bt-caps a[disabled]:hover {
           cursor: default; }
     #header div.cont-caps .titulo_capitulo {

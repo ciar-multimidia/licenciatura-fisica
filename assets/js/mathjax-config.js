@@ -3,6 +3,7 @@ window.MathJax = {
     tex2jax: {
       inlineMath: [ ['$','$'] ],
       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      skipTags: ["script","noscript","style","textarea"],
       processEscapes: true
     },
     TeX: {

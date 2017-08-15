@@ -1,5 +1,6 @@
 #introportal{
 	height: 100vh;
+	background-color: map-get($cores, azulmarinho);
 	background: radial-gradient(
 		110% 110% ellipse at bottom left,
 		map-get($cores, ciano) 0%,
