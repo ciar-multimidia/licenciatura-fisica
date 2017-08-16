@@ -6,6 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">	
 	<title>Licenciatura em Física</title>
 	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
-	

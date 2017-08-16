@@ -3,7 +3,7 @@
 
 		<div class="volume">
 			<a href="index.php"><?php print(file_get_contents('../assets/img/ico_arrow3.svg')) ?> Volume <?php print $volume ?></a>
-			<a class="fichatecnica">Ficha técnica</a>
+			<a href="ficha-tecnica.php" class="fichatecnica">Ficha técnica</a>
 		</div>
 
 		<div class="cont-caps">

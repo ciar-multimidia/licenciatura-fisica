@@ -20,13 +20,16 @@
 
 <?php 
 	require_once 'includes/head.php';
-	require_once 'includes/cont_nav.php';
  ?>
+
+ <body>
+
+ <?php require_once 'includes/cont_nav.php'; ?>
 
 
 
  <main>
- 	<article>
+ 	<article class="capitulo">
  		<?php 
 	 		 $content = file_get_contents($path_capitulo . '/content.html');
 	 		 $content = str_replace('[[caminho]]', $path_capitulo, $content);
@@ -37,8 +40,24 @@
  	</article>
  </main>
 
+ <div id="loader">
+	<div class="posrel">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+	</div>
+</div>
+
 
 	
- <?php
- require_once 'includes/scripts.php';
+  <?php
+ require_once 'includes/scripts/jquery.php';
+ require_once 'includes/scripts/mathjax.php';
+ require_once 'includes/scripts/appjs.php';
  ?>
+
+ </body>
+</html>

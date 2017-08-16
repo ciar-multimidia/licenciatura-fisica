@@ -263,11 +263,11 @@ com a tag.</p>
 
 <pre>
 <code>btRodape.on('click', function(event) {
-	var thisNumero = parseInt($(this).attr('data-numero'));
+	var thisNumero = parseInt(＄(this).attr('data-numero'));
 	if (thisNumero !== rodapeAtual) {
-		var thisTop = $(this).offset().top;
-		var thisLeft = $(this).position().left;
-		var thisHeight = $(this).outerHeight();
+		var thisTop = ＄(this).offset().top;
+		var thisLeft = ＄(this).position().left;
+		var thisHeight = ＄(this).outerHeight();
 		notasRodape.filter('[data-numero=\''+rodapeAtual+'\']').addClass('easing-saida');
 		notasRodape.removeClass('visivel');
 		var notaRevelar = notasRodape.filter('[data-numero=\'' + thisNumero + '\']');
@@ -299,7 +299,7 @@ com a tag.</p>
 			}
 		})();
 		btRodape.removeClass('ativado');
-		$(this).addClass('ativado');
+		＄(this).addClass('ativado');
 		notaRevelar.css({
 			'top': topNota,
 			'left': leftNota
