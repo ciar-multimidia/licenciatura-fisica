@@ -175,6 +175,9 @@ filosóficos e/ou políticos do software livre, pois estes aspectos são
 
 <h3>Softwares Acadêmicos Livres</h3>
 
+<p>Além da docência, em seu cotidiano o docente usa alguns
+	softwares para</p>
+
 <ol>
 	
 	<li>escrever textos;</li>
@@ -239,7 +242,7 @@ de processadores de textos enquanto o vi, o emacs, o nano, o mcedit,
 <p>Para escrevermos um texto devemos saber se ele é</p>
 
 
-	<ol>
+	<ul>
 		
 		<li>um texto puro, sem formatação, por exemplo,
 
@@ -256,7 +259,7 @@ de processadores de textos enquanto o vi, o emacs, o nano, o mcedit,
 				<li>uma monografia;</li>
 				<li>etc.</li></ul>
 		</li>
-	</ol>
+	</ul>
 
 
 
@@ -853,6 +856,38 @@ no texto LaTeX, o que permite um fácil reaproveitamento do texto
 sistemas operacionais e entre suas distribuições destacam-se
 	as seguintes:</p>
 
+	<p><b>Tex Live –</b> é uma distribuição TeX/LaTeX2e que possui arquivos
+  para os mais diversos sistemas Unix, Gnu/Linux e também Windows. Ela
+  inclui todos os programas, pacotes com macros, fontes livres, e suporte
+  para uma grande variedade de línguas. No sítio <a target="blank" href="http://www.tug.org/texlive/">http://www.tug.org/texlive/</a> pode-se obter</p>
+
+<ul>
+     <li>Um DVD, com toda a distribuição para os diversos sitemas
+     	operacionais.</li>
+   <li>Uma completa documentação de todo o sistema TeX/LaTeX2e e seus
+   	pacotes de macros.</li>
+   	<li>Um sistema TeX Live portável, para DVD ou USB.</li>
+ </ul>
+
+ <p>A distribuição TeX Live é a padrão, dos sistemas Gnu/Linux atuais.</p>
+
+  <p><b>MiKTeX –</b>  É uma distribuição completa do LaTeX2e com todos os
+  macros. Ela possui uma execelente integração com o Windows, e agora
+  encontra-se na versão 2.9. É fácil de instalar e pode-se
+  optar pelas versões Inatalação básca "Basic MiKTeX 2.9 Installer"
+  com um tamaho da ordem de 138.32 MB ou por uma instalação via internet
+  a "MiKTeX 2.9 Net Installer" de tamanho 5.51 MB, na qual você seleciona
+  os pacotes que deseja instalar.  <a target="blank" href="http://miktex.org/">http://miktex.org/</a></p>
+
+  <p><b>The Comprehensive TeX Archive Network (CTAN) –</b> fornece todo o conjunto
+  de softwares, fonte, pacotes de macros, documentação, etc, para editarmos
+  um texto LaTeX2e. O seu sítio é <a target="blank" href="http://www.ctan.org/">http://www.ctan.org/</a>.</p>
+
+<p>Há diversas interfaces gráficas para digitarmos um texto TeX/LaTeX, e
+entre elas há um bom número de interfaces gráficas livres, das quais
+	destacamos as seguintes:</p>
+
+
 
 <p><b>LyX –</b> ele é um processador de textos livre, cujo resultado final posui
   a qualidade do LaTeX, já que ele usa o LaTeX. Entretano ele é do tipo
@@ -957,7 +992,7 @@ que haja um padrão entre os espaçamento das colunas. É usual a extensão
 
 # No fim do arquivo pode-se colocar coment&aacute;rios.
 # Note que 1.0E-2 &eacute; 1.0 x 10**{-2} ou seja 0.01.
-	# Observe ainda que o separador decimal &eacute; o ponto e n&atilde;o a virgula.</code></pre>
+# Observe ainda que o separador decimal &eacute; o ponto e n&atilde;o a virgula.</code></pre>
 
 <p>Para preservar os dados de uma medida, é recomendável que não se use um software
 específico para guardá-los, tais como uma planilha eletrônica ou a planilha de
@@ -1061,17 +1096,17 @@ quando precisar de fazer um gráfico,  procure por um exemplo do gráfico deseja
 	<p>$sqrt(x)$ Para $x$ qualquer, retorna $\sqrt{x}$.</p>
 	<p>$tan(x)$ Para $x$ qualquer, retorna $\tg x$, a tangente de $x$.</p>
 	<p>$tanh(x)$ Para $x$ qualquer, retorna $tgh x$, a tangente hiperbólica de $x$.</p>
-	<p>$tm_hour(x)$] Retorna um inteiro para a hora.</p>
-	<p>$tm_mday(x)$] Retorna um inteiro para o dia do mês.</p>
-	<p>$tm_min(x)$] Retorna um inteiro para o minuto.</p>
-	<p>$tm_mon(x)$] Retorna um inteiro para o mês.</p>
-	<p>$tm_sec(x)$] Retorna um inteiro para o segundo.</p>
-	<p>$tm_wday(x)$] Retorna um inteiro para o dia da semana.</p>
-	<p>$tm_yday(x)$] Retorna um inteiro para o dia do ano.</p>
-	<p>$tm_year(x)$] Retorna um inteiro para o ano.</p>
-	<p>$valid(x)$] Retorna um inteiro para o teste validade da $column(x)$ durante a manipulação de dados.</p>
-	<p>$rand(0)$] Retorna um número pseudo aleatório no intervalo $0\leq rand(0) \leq 1$ gerado a partir do valor corrente da semente interna de $32$-bits.</p>
-	<p>$rand(-1)$] Reinicializa ambas as sementes para um valor padrão.</p>
+	<p>$tm\_hour(x)$ Retorna um inteiro para a hora.</p>
+	<p>$tm\_mday(x)$ Retorna um inteiro para o dia do mês.</p>
+	<p>$tm\_min(x)$ Retorna um inteiro para o minuto.</p>
+	<p>$tm\_mon(x)$ Retorna um inteiro para o mês.</p>
+	<p>$tm\_sec(x)$ Retorna um inteiro para o segundo.</p>
+	<p>$tm\_wday(x)$ Retorna um inteiro para o dia da semana.</p>
+	<p>$tm\_yday(x)$ Retorna um inteiro para o dia do ano.</p>
+	<p>$tm\_year(x)$ Retorna um inteiro para o ano.</p>
+	<p>$valid(x)$ Retorna um inteiro para o teste validade da $column(x)$ durante a manipulação de dados.</p>
+	<p>$rand(0)$ Retorna um número pseudo aleatório no intervalo $0\leq rand(0) \leq 1$ gerado a partir do valor corrente da semente interna de $32$-bits.</p>
+	<p>$rand(-1)$ Reinicializa ambas as sementes para um valor padrão.</p>
 <p>$rand(x)$ Para $x>0$ inicializa ambas as sementes para um valor baseado no
 	valor de $x$.</p>
 	<p>$rand({x,y})$ Para $x>0$ inicializa a semente $1$ (seed1) para $x$ e a semente $2$ (seed2) para $y$..</p>
@@ -1406,6 +1441,10 @@ Subtopics available for reset:
 
 Subtopic of reset:</code></pre>
 
+<p>Caso haja ramificações do comando aparecerá, no fim da tela a expressão
+<code>Subtopic of nome_do_comando:</code>, conforme ilustra o exemplo
+	anterior.</p>
+
 <span class="pagina"></span>
 
 <h3>Definindo Funções</h3>
@@ -1553,7 +1592,8 @@ gnuplot &gt; plot f(x,0.5)</code></pre>
 
 
 <pre><code>gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledcurves y1=0
-gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc y1=0          # Abreviando o comando
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc y1=0
+# Abreviando o comando
 gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc y1=0 lc rgb &quot;cyan&quot;   #Cor
 gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc above y1=0
 gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc below y1=0
@@ -1632,7 +1672,7 @@ using (&#65284;2):(&#65284;4)/100
 valores das colunas $2$ e $3$ em função dos dados da coluna $1$,
 	mas somente se os dados da coluna $4$ forem não negativos.</p>
 
-	<pre><code>gnuplot&gt; plot &#039;dados.dat&#039; using 1:( $4&lt;0? 1/0: ($2+$3)/2) w l</code></pre>
+	<pre><code>gnuplot&gt; plot &#039;dados.dat&#039; using 1:( &#65284 4&lt;0? 1/0: (&#65284 2 + &#65284 3)/2) w l</code></pre>
 
 <p>O gnuplot também possui algumas funções para realizar uma
 interpolação entre alguns pontos, suavizando a curva. Observer
@@ -1784,7 +1824,9 @@ outro, conforme o exemplo a seguir.</p>
 <pre><code>reset
 set multiplot
 plot sin(x)
-set origin 0.5,0.5 set size 0.4,0.4 clear
+set origin 0.5,0.5 
+set size 0.4,0.4 
+clear
 plot cos(x)
 unset multiplot</code></pre>
 
@@ -2050,21 +2092,24 @@ rapidamente as seguintes características dele:</p>
 
 <p>Por ser um software livre de alta qualidade, encontramos facilmente na internet
 	um grande número de textos sobre o mesmo. Podemos destacar,</p>
+<ul>
 
+<li><a target="blank" href="http://www.scilab.org/">http://www.scilab.org/</a> Sua página e lá encontra-se
+   um manual de utilização da última versão em português.</li>
 
-<p><a target="blank" href="http://wiki.scilab.org/">http://wiki.scilab.org/</a> A Wiki do Scilab. Nesta Wiki, em <a target="blank" href="http://wiki.scilab.org/Tutorials">http://wiki.scilab.org/Tutorials</a> encontra-se o tutorial em português do Luís Soares Barretos que é um bom material.</p>
+	<li><a target="blank" href="http://wiki.scilab.org/">http://wiki.scilab.org/</a> A Wiki do Scilab. Nesta Wiki, em <a target="blank" href="http://wiki.scilab.org/Tutorials">http://wiki.scilab.org/Tutorials</a> encontra-se o tutorial em português do Luís Soares Barretos que é um bom material.</li>
 
-<p><a target="blank" href="http://www.dca.ufrn.br/~pmotta/">http://www.dca.ufrn.br/~pmotta/</a> Página do prof. Paulo S. Motta Pires,
+<li><a target="blank" href="http://www.dca.ufrn.br/~pmotta/">http://www.dca.ufrn.br/~pmotta/</a> Página do prof. Paulo S. Motta Pires,
    que fez um pequeno manual em português da versão 3.0 do Scilab. Ela está
-   sendo redirecionada para <a target="blank" href="http://www.rau-tu.unicamp.br/nou-rau/softwarelivre/document/?code=134">http://www.rau-tu.unicamp.br/nou-rau/softwarelivre/document/?code=134</a>.</p>
+   sendo redirecionada para <a target="blank" href="http://www.rau-tu.unicamp.br/nou-rau/softwarelivre/document/?code=134">http://www.rau-tu.unicamp.br/nou-rau/softwarelivre/document/?code=134</a>.</li>
 
-<p><a target="blank" href="http://www.das.ufsc.br/~werner/nivelamento/index.html ">http://www.das.ufsc.br/~werner/nivelamento/index.html </a> Página com apostilas do Scilab.</p>
+   <li><a target="blank" href="http://www.das.ufsc.br/~werner/nivelamento/index.html ">http://www.das.ufsc.br/~werner/nivelamento/index.html </a> Página com apostilas do Scilab.</li>
 
-<p><a target="blank" href="http://aquarius.ime.eb.br/~aecc/">http://aquarius.ime.eb.br/~aecc/</a> Página do Eduardo Carrilho com material sobre o Scilab.</p>
+   <li><a target="blank" href="http://aquarius.ime.eb.br/~aecc/">http://aquarius.ime.eb.br/~aecc/</a> Página do Eduardo Carrilho com material sobre o Scilab.</li>
 
-<p><a target="blank" href="http://pt.wikipedia.org/wiki/Scilab">http://pt.wikipedia.org/wiki/Scilab</a></p>
+   <li><a target="blank" href="http://pt.wikipedia.org/wiki/Scilab">http://pt.wikipedia.org/wiki/Scilab</a></li>
 
-<p><a target="blank" href="http://en.wikipedia.org/wiki/Scilab">http://en.wikipedia.org/wiki/Scilab</a></p>
+   <li><a target="blank" href="http://en.wikipedia.org/wiki/Scilab">http://en.wikipedia.org/wiki/Scilab</a></li></ul>
 
 
 <h4>Variáveis Especiais</h4>
