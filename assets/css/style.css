@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -618,8 +619,10 @@ h1, h2, h3, h4, h5, h6 {
     #nav {
       display: none; } }
   #nav.intro {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 144, 167, 0)), color-stop(20%, rgba(0, 144, 167, 0)), to(#0090a7)), #001F3C;
-    background: linear-gradient(to bottom, rgba(0, 144, 167, 0) 0%, rgba(0, 144, 167, 0) 20%, #0090a7 100%), #001F3C; }
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 144, 167, 0)), color-stop(60%, rgba(0, 144, 167, 0)), to(#0090a7)), #001F3C;
+    background: linear-gradient(to bottom, rgba(0, 144, 167, 0) 0%, rgba(0, 144, 167, 0) 60%, #0090a7 100%), #001F3C; }
+  #nav.fichatecnica {
+    height: 100%; }
 
 #headerintro .outrosvolumes {
   background-color: rgba(0, 0, 0, 0.2);
@@ -957,15 +960,29 @@ nav#navcapitulos {
   #subcapitulos > a {
     font-weight: bold;
     display: block;
-    padding: 0.6em 15px;
+    padding: 0.6em 30px 0.6em 15px;
     counter-increment: subcaps;
-    margin-top: 0.5em; }
+    margin-top: 0.5em;
+    position: relative; }
     #subcapitulos > a:first-child {
       margin-top: 0; }
     #subcapitulos > a:before {
       content: counter(subcaps) ". ";
       font-weight: bold;
       display: inline; }
+    #subcapitulos > a.atual:after {
+      font-size: 0.6em;
+      line-height: 1;
+      color: #0090A7;
+      content: '◀';
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
   #subcapitulos ol {
     font-size: 0.9em;
     padding: 0;
@@ -976,14 +993,28 @@ nav#navcapitulos {
     list-style-type: none;
     counter-increment: subsubcaps; }
     #subcapitulos li > a {
+      position: relative;
       padding: 0.3em 0;
       display: block;
       padding-left: calc( 1em + 15px );
-      padding-right: 15px; }
+      padding-right: 30px; }
       #subcapitulos li > a:before {
         content: counter(subcaps) "." counter(subsubcaps) ". ";
         font-weight: bold;
         display: inline; }
+      #subcapitulos li > a.atual:after {
+        font-size: 0.6em;
+        line-height: 1;
+        color: #0090A7;
+        content: '◀';
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%); }
   #subcapitulos > a, #subcapitulos li {
     -webkit-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
@@ -1126,6 +1157,7 @@ main {
 
 article {
   width: 100%;
+  padding-top: 3em;
   padding-bottom: 5em;
   position: relative;
   display: -webkit-box;
@@ -1172,47 +1204,10 @@ article {
     margin-top: 1em; }
     article *:first-child {
       margin-top: 0; }
+  article span.pagina:first-of-type + * {
+    margin-top: 0; }
   article > * {
     width: 630px; }
-  article > h1, article > h2, article > h3, article > h4 {
-    color: #0090A7; }
-  article > h2, article > h3, article > h4 {
-    margin-top: 1.5em; }
-    article > h2:before, article > h3:before, article > h4:before {
-      display: inline;
-      color: #666666; }
-    article > h2 + *, article > h3 + *, article > h4 + * {
-      margin-top: 0.5em !important; }
-  article > h1 {
-    font-size: 3em; }
-  article > h2 {
-    font-size: 2em;
-    counter-increment: heading_dois;
-    counter-reset: heading_tres; }
-    article > h2:before {
-      content: counter(heading_dois) ". "; }
-  article > h3 {
-    font-size: 1.4em;
-    counter-increment: heading_tres;
-    counter-reset: heading_quatro; }
-    article > h3:before {
-      content: counter(heading_dois) "." counter(heading_tres) " "; }
-  article > h4 {
-    font-size: 1em;
-    counter-increment: heading_quatro; }
-    article > h4:before {
-      content: counter(heading_dois) "." counter(heading_tres) "." counter(heading_quatro) " "; }
-  article > h5, article > h6 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1em;
-    color: inherit;
-    margin-top: 1.5em; }
-    article > h5 + *, article > h6 + * {
-      margin-top: 1em !important; }
-  article > h5 {
-    font-weight: bold; }
-  article > h6 {
-    font-style: italic; }
   article div.grid-2 {
     font-size: 0.9em;
     margin-top: 2em;
@@ -1231,6 +1226,29 @@ article {
       margin-right: 2em; }
       article div.grid-2 > *:last-child {
         margin-right: 0; }
+  article h1, article h2, article h3, article h4 {
+    color: #0090A7; }
+  article h2, article h3, article h4 {
+    margin-top: 1.5em; }
+  article h1 {
+    font-size: 3em; }
+  article h2 {
+    font-size: 3.2em; }
+  article h3 {
+    font-size: 1.8em; }
+  article h4 {
+    font-size: 1.4em; }
+  article h5, article h6 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    color: inherit;
+    margin-top: 1.5em; }
+    article h5 + *, article h6 + * {
+      margin-top: 1em; }
+  article h5 {
+    font-weight: bold; }
+  article h6 {
+    font-style: italic; }
   article p {
     margin-top: 1.25em; }
     article p.formula {
@@ -1542,5 +1560,60 @@ article {
     article .exercicio + .exercicio {
       border-top-width: 0px;
       margin-top: 0; }
+  article.capitulo h2:before, article.capitulo h3:before, article.capitulo h4:before {
+    display: inline;
+    color: #999999;
+    vertical-align: baseline; }
+  article.capitulo h2 {
+    font-size: 2.5em;
+    color: #0090A7;
+    counter-increment: heading_dois;
+    counter-reset: heading_tres; }
+    article.capitulo h2:before {
+      font-size: 0.7em;
+      content: counter(heading_dois) ". "; }
+  article.capitulo h3 {
+    counter-increment: heading_tres;
+    counter-reset: heading_quatro; }
+    article.capitulo h3:before {
+      font-size: 0.8em;
+      content: counter(heading_dois) "." counter(heading_tres) " "; }
+  article.capitulo h4 {
+    counter-increment: heading_quatro; }
+    article.capitulo h4:before {
+      font-size: 0.9em;
+      content: counter(heading_dois) "." counter(heading_tres) "." counter(heading_quatro) " "; }
+  article.fichatecnica h5 {
+    margin-top: 2em;
+    font-family: "Roboto Slab", serif;
+    color: #333333; }
+    article.fichatecnica h5 + * {
+      margin-top: 0; }
+  article.fichatecnica .fichacatalografica {
+    border: 1px solid black; }
+    article.fichatecnica .fichacatalografica .topo {
+      padding: 1em;
+      border-bottom: 1px solid black; }
+      article.fichatecnica .fichacatalografica .topo h5 {
+        margin-top: 0; }
+    article.fichatecnica .fichacatalografica .dados {
+      font-size: 0.9em;
+      margin: 0;
+      padding: 1em;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      article.fichatecnica .fichacatalografica .dados p.codigo {
+        margin: 0;
+        margin-right: 1em;
+        font-weight: bold; }
+      article.fichatecnica .fichacatalografica .dados .descricao {
+        margin: 0; }
+        article.fichatecnica .fichacatalografica .dados .descricao p.cdu {
+          text-align: right; }
 
 /*# sourceMappingURL=style.css.map */

@@ -101,6 +101,17 @@ jQuery(document).ready(function($) {
 
 	});
 
+	var btSubcaps = $('#subcapitulos a');
+	var headings = $('article h2, article h3');
+	var asideNav = $('#nav');
+
+	btSubcaps.each(function(index, el) {
+		$(el).on('click', function(event) {
+			event.preventDefault();
+			$('html, body').scrollTop(headings.eq(index).offset().top);
+		});	
+	});
+
 	var paginas = $('span.pagina');
 	var pagFixa = $('#pag-fixa');
 
@@ -108,6 +119,17 @@ jQuery(document).ready(function($) {
 		pagFixa.text(paginas.eq(0).text());
 
 		var pagAtual = 0;
+		var headingAtual = 0;
+
+		headings.each(function(index, el) {
+			if ($(window).scrollTop() >= $(el).offset().top-50) {
+				headingAtual = index;
+			}
+		});
+
+		btSubcaps.eq(headingAtual).addClass('atual');
+
+
 		$(window).on('scroll', function(event) {
 			var thisCorpo = $(this);
 			paginas.each(function(index, el) {
@@ -122,21 +144,26 @@ jQuery(document).ready(function($) {
 			});
 
 			pagFixa.text(paginas.eq(pagAtual).text());
+
+			var novoHeading = 0;
+			headings.each(function(index, el) {
+				if (thisCorpo.scrollTop() >= $(el).offset().top-50) {
+					novoHeading = index;
+				}
+			});
+
+			if (novoHeading !== headingAtual) {
+				btSubcaps.removeClass('atual');
+				btSubcaps.eq(novoHeading).addClass('atual');
+			}
+			headingAtual = novoHeading;
 		});
 	} else{
 		pagFixa.remove();
 	}
 
 
-	var btSubcaps = $('#subcapitulos a');
-	var headings = $('article h2, article h3');
-
-	btSubcaps.each(function(index, el) {
-		$(el).on('click', function(event) {
-			event.preventDefault();
-			$('html, body').scrollTop(headings.eq(index).offset().top);
-		});	
-	});
+	
 
 	
 

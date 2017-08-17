@@ -3,11 +3,13 @@
 	require_once 'includes/head.php';
  ?>
 
+ <body>
+
 <div id="nav" class="intro">
 	<header id="headerintro">
 		<div class="outrosvolumes">
 			<a href="../index.php"><?php print(file_get_contents('../assets/img/ico_arrow3.svg')) ?> Outros volumes</a>
-			<a>Ficha técnica</a>
+			<a href="ficha-tecnica.php">Ficha técnica</a>
 		</div>
 		<div class="logo-volume">
 			<img src="../assets/img/logo_curso.svg" alt="Logotipo do eBook Licenciatura em Física">
@@ -94,5 +96,9 @@
 
 
   <?php
- require_once 'includes/scripts.php';
+ require_once 'includes/scripts/jquery.php';
+ require_once 'includes/scripts/appjs.php';
  ?>
+
+  </body>
+</html>

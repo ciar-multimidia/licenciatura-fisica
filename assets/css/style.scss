@@ -37,7 +37,7 @@ $padding-sumario-h: 15px;
 			linear, 
 			left top, left bottom, 
 			from(transparentize(map-get($cores, ciano), 1)),
-			color-stop(20%, transparentize(map-get($cores, ciano), 1)),
+			color-stop(60%, transparentize(map-get($cores, ciano), 1)),
 			to(transparentize(map-get($cores, ciano), 0))
 		),
 		map-get($cores, azulmarinho);
@@ -46,11 +46,15 @@ $padding-sumario-h: 15px;
 		linear-gradient(
 			to bottom, 
 			transparentize(map-get($cores, ciano), 1) 0%,
-			transparentize(map-get($cores, ciano), 1) 20%,
+			transparentize(map-get($cores, ciano), 1) 60%,
 			transparentize(map-get($cores, ciano), 0) 100%
 		),
 		map-get($cores, azulmarinho);
 		
+	}
+
+	&.fichatecnica{
+		height: 100%;
 	}
 
 }
@@ -315,10 +319,11 @@ nav#navcapitulos{
 	& > a{
 		font-weight: bold;
 		display: block;
-		padding: 0.6em $padding-sumario-h;
+		padding: 0.6em $padding-sumario-h*2 0.6em $padding-sumario-h;
 		counter-increment: subcaps;
 		// color: map-get($cores, azulmarinho) !important;
 		margin-top: 0.5em;
+		position: relative;
 		&:first-child{
 			margin-top: 0;
 		}
@@ -326,6 +331,17 @@ nav#navcapitulos{
 			content: counter(subcaps)'. ';
 			font-weight: bold;
 			display: inline;
+		}
+
+		&.atual:after{
+			font-size: 0.6em;
+			line-height: 1;
+			color: map-get($cores, ciano);
+			content: '◀';
+			position: absolute;
+			right: $padding-sumario-h;
+			top: 50%;
+			@include transform(translateY(-50%));
 		}
 		
 	}
@@ -343,14 +359,25 @@ nav#navcapitulos{
 		list-style-type: none;
 		counter-increment: subsubcaps;
 		& > a{
+			position: relative;
 			padding: 0.3em 0;
 			display: block;
 			padding-left: calc( 1em + #{$padding-sumario-h} );
-			padding-right: $padding-sumario-h;
+			padding-right: $padding-sumario-h*2;
 			&:before{
 				content: counter(subcaps) '.' counter(subsubcaps) '. ';
 				font-weight: bold;
 				display: inline;
+			}
+			&.atual:after{
+				font-size: 0.6em;
+				line-height: 1;
+				color: map-get($cores, ciano);
+				content: '◀';
+				position: absolute;
+				right: $padding-sumario-h;
+				top: 50%;
+				@include transform(translateY(-50%));
 			}
 		}
 	}
@@ -467,6 +494,7 @@ main{
 
 article{
 	width: 100%;
+	padding-top: 3em;
 	padding-bottom: 5em;
 	position: relative;
 	@include display(flex);
@@ -487,78 +515,15 @@ article{
 		}
 	}
 
+	span.pagina:first-of-type + *{
+		margin-top: 0;
+	}
+
 
 	& > {
 		*{
 			width: $largura-artigo;
 		}
-
-
-		h1, h2, h3, h4{
-			color: map-get($cores, ciano);
-		}
-
-		h2, h3, h4{
-			margin-top: 1.5em;
-			&:before{
-				display: inline;
-				color: map-get($cores, texto_secundario);
-				// font-size: 0.9em;
-			}
-
-			& + *{
-				margin-top: 0.5em !important;
-			}
-		}
-
-		h1{
-			font-size: 3em;
-		}
-
-		h2{
-			font-size: 2em;
-			counter-increment: heading_dois;
-			&:before{
-				content: counter(heading_dois)'. ';
-			}
-			counter-reset: heading_tres;
-		}
-
-		h3{
-			font-size: 1.4em;
-			counter-increment: heading_tres;
-			&:before{
-				content: counter(heading_dois) '.' counter(heading_tres) ' ';
-			}
-			counter-reset: heading_quatro;
-		}
-
-		h4{
-			font-size: 1em;
-			counter-increment: heading_quatro;
-			&:before{
-				content: counter(heading_dois) '.' counter(heading_tres) '.' counter(heading_quatro) ' ';
-			}
-		}
-
-		h5, h6{
-			font-family: $fonte-corpo;
-			font-size: 1em;
-			color: inherit;
-			margin-top: 1.5em;
-			& + *{
-				margin-top: 1em !important;
-			}
-		}
-
-		h5{
-			font-weight: bold;
-		}
-
-		h6{
-			font-style: italic;
-		}
-
 	}
 
 	div.grid-2{
@@ -576,6 +541,49 @@ article{
 				margin-right: 0;
 			}
 		}
+	}
+
+	h1, h2, h3, h4{
+		color: map-get($cores, ciano);
+
+	}
+
+	h2, h3, h4{
+		margin-top: 1.5em;
+	}
+
+	h1{
+		font-size: 3em;
+	}
+
+	h2{
+		font-size: 3.2em;
+	}
+
+	h3{
+		font-size: 1.8em;
+	}
+
+	h4{
+		font-size: 1.4em;
+	}
+
+	h5, h6{
+		font-family: $fonte-corpo;
+		font-size: 1em;
+		color: inherit;
+		margin-top: 1.5em;
+		& + *{
+			margin-top: 1em;
+		}
+	}
+
+	h5{
+		font-weight: bold;
+	}
+
+	h6{
+		font-style: italic;
 	} 
 
 	p{
@@ -971,9 +979,89 @@ article{
 		}
 	}
 
+	&.capitulo{
+		h2, h3, h4{
 
+			&:before{
+				display: inline;
+				color: map-get($cores, texto_terciario);
+				vertical-align: baseline;
+				// font-size: 0.9em;
+			}
+		}
 
-	
+		h2{
+			font-size: 2.5em;
+			color: map-get($cores, ciano);
+			counter-increment: heading_dois;
+			&:before{
+				font-size: 0.7em;
+				content: counter(heading_dois)'. ';
+			}
+			counter-reset: heading_tres;
+		}
+
+		h3{
+			counter-increment: heading_tres;
+			&:before{
+				font-size: 0.8em;
+				content: counter(heading_dois) '.' counter(heading_tres) ' ';
+			}
+			counter-reset: heading_quatro;
+		}
+
+		h4{
+			counter-increment: heading_quatro;
+			&:before{
+				font-size: 0.9em;
+				content: counter(heading_dois) '.' counter(heading_tres) '.' counter(heading_quatro) ' ';
+			}
+		}
+	}
+
+	&.fichatecnica{
+		
+
+		h5{
+			margin-top: 2em;
+			font-family: $fonte-heading;
+			color: map-get($cores, texto_primario);
+			& + *{
+				margin-top: 0;
+			}
+		}
+
+		.fichacatalografica{
+			border: 1px solid black;
+			.topo{
+				padding: 1em;
+				border-bottom: 1px solid black;
+				h5{
+					margin-top: 0;
+				}	
+			}
+
+			.dados{
+				font-size: 0.9em;
+				margin: 0;
+				padding: 1em;
+				@include display(flex);
+				p.codigo{
+					margin: 0;
+					margin-right: 1em;
+					font-weight: bold;
+				}
+
+				.descricao{
+					margin: 0;
+					p.cdu{
+						text-align: right;
+					}
+				}
+			}
+			
+		}
+	}
 }
 
 
