@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 			}
 		});
 	} else{
-		console.log('Essa página não tem Mathjax');
+		// console.log('Essa página não tem Mathjax');
 	}
 
 
@@ -101,16 +101,20 @@ jQuery(document).ready(function($) {
 
 	});
 
-	var btSubcaps = $('#subcapitulos a');
+	var contSubcaps = $('#subcapitulos');
+	var btSubcaps = contSubcaps.find('a');
 	var headings = $('article h2, article h3');
 	var asideNav = $('#nav');
 
-	btSubcaps.each(function(index, el) {
-		$(el).on('click', function(event) {
-			event.preventDefault();
-			$('html, body').scrollTop(headings.eq(index).offset().top);
-		});	
-	});
+	if (contSubcaps.length > 0) {
+		btSubcaps.each(function(index, el) {
+			$(el).on('click', function(event) {
+				event.preventDefault();
+				$('html, body').scrollTop(headings.eq(index).offset().top);
+			});	
+		});
+	}
+	
 
 	var paginas = $('span.pagina');
 	var pagFixa = $('#pag-fixa');
@@ -197,16 +201,20 @@ jQuery(document).ready(function($) {
 	// Sumário e cabeçalho:
 	// 		1. O número de links do sumário é o mesmo que o número de cabeçalhos (h2 e h3) do texto?
 	// 		2. Um log comparando o texto do menu e o texto dos cabeçalhos.
-	if (btSubcaps.length !== headings.length) {
-		console.warn('O número de links no sumário não coincide com o número de cabeçalhos.');
-	}
 
-	console.groupCollapsed('Comparação dos links do sumário e dos cabeçalhos:');
-	btSubcaps.each(function(index, el) {
-		console.log( 'link: '+$(el).text()+'\n'
-			+ 'cabeçalho: ' + headings.eq(index).text());
-	});
-	console.groupEnd();
+	if (contSubcaps.length > 0) {
+		if (btSubcaps.length !== headings.length) {
+			console.warn('O número de links no sumário não coincide com o número de cabeçalhos.');
+		}
+
+		console.groupCollapsed('Comparação dos links do sumário e dos cabeçalhos:');
+		btSubcaps.each(function(index, el) {
+			console.log( 'link: '+$(el).text()+'\n'
+				+ 'cabeçalho: ' + headings.eq(index).text());
+		});
+		console.groupEnd();
+	}
+	
 
 	var nPrimeiraPagina = parseInt(paginas.eq(0).text());
 	var nUltimaPagina = parseInt(paginas.eq(paginas.length-1).text());

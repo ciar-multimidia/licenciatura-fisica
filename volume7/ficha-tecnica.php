@@ -51,12 +51,12 @@
         
 
         <h5>Pró-reitoria de Graduação</h5>
-       <p>Sandramara Matias Chaves</p>
+        <p>Gisele Araújo Prateado Gusmão </p>
 
         
 
         <h5>Coordenação Geral do Curso de Licenciatura em Física/EaD</h5>
-       <p> UFG - Osni Silva</p>
+        <p> UFG - Osni Silva</p>
 
         
 
@@ -91,8 +91,8 @@
 
        
 
-        <h5>Direção do Centro Integrado de Aprendizagem em Rede (Ciar)</h5>
-        <p>Leonardo Barra Santana de Souza</p>
+        <h5>Direção do Centro Integrado de Aprendizagem em Rede (CIAR)</h5>
+        <p>Marília de Goyaz</p>
 
         
 
@@ -108,14 +108,18 @@
         
 
         <h5>Design Gráfico - Projeto Editorial</h5>
-       <p> Equipe de Publicação Ciar</p>
+       <p> Equipe de Publicação CIAR</p>
 
-        
+
+        <h5>Desenvolvimento</h5>
+        <p>Victor Hugo César Godoi</p>
+
 
         <h5>Editoração</h5>
-        <p>Gabriel Benício Lopes</p>
+        <p>Guilherme Mendes<br>
+        Marina Giolo<br>
+        Victor Hugo César Godoi</p>
 
-        
 
         <h5>Ilustração e Imagens</h5>
         <p>Leandro Abreu<br>
@@ -129,7 +133,7 @@
         	<div class="dados">
         		<p class="codigo">C977</p>
         		<div class="descricao">
-        			<p>Curso de licenciatura em Física / autores Juan Bernardino Marques Barrio... [et al]; coordenadores Osni Silva, Carlito Lariucci. - Goiânia : FUNAPE : UFG/IF/Ciar, 2013.<br>
+        			<p>Curso de licenciatura em Física / autores Juan Bernardino Marques Barrio... [et al]; coordenadores Osni Silva, Carlito Lariucci. - Goiânia : FUNAPE : UFG/IF/CIAR, 2013.<br>
         			192p.</p>
         			<p>Conteúdo: v. 7 Física Estágio Supervisionado III. Física Moderna II. Física Computacional I e II. Astrofísica e Cosmologia.</p>
         			<p>ISBN:</p>
@@ -139,6 +143,58 @@
         	</div>
 
         </div>
+
+        <div class="marcas">
+        	 	<?php
+        		 	$outraslogos = array(
+        		 		array(
+        		 			'filename' => "logo_funape.svg",
+        		 			'href' => 'http://www.funape.org.br/site/',
+        		 			'title' => 'Link para o site da Funape',
+        		 			'alt' => 'Logo da Funape',
+        		 			'classe' => 'logo_funape'
+        		 		),
+        		 		array(
+        		 			'filename' => "logo_ciar.svg",
+        		 			'href' => 'http://www.ciar.ufg.br/',
+        		 			'title' => 'Link para o site do CIAR - Centro Integrado de Aprendizagem em Rede',
+        		 			'alt' => 'Logo do CIAR - Centro Integrado de Aprendizagem em Rede',
+        		 			'classe' => 'logo_ciar'
+        		 		),
+        		 		array(
+        		 			'filename' => "logo_uab.svg",
+        		 			'href' => 'http://www.capes.gov.br/uab',
+        		 			'title' => 'Link para o site da UAB - Universidade Aberta do Brasil',
+        		 			'alt' => 'Logo da UAB - Universidade Aberta do Brasil',
+        		 			'classe' => 'logo_uab'
+        		 		),
+        		 		array(
+        		 			'filename' => "logo_brasil.svg",
+        		 			'href' => 'http://www.brasil.gov.br/',
+        		 			'title' => 'Link para o site do Brasil',
+        		 			'alt' => 'Logo do Brasil',
+        		 			'classe' => 'logo_brasil'
+        		 		)
+        		 		
+        	 		);
+
+        	 	 for($i=0; $i < count($outraslogos); $i++):
+
+        	 	?>
+
+        		<a 
+        		href="<?php print($outraslogos[$i]['href']) ?>" 
+        		target='blank' 
+        		title='<?php print($outraslogos[$i]['title']) ?>'
+        		class='<?php print($outraslogos[$i]['classe']) ?>'>
+
+        			<?php print(file_get_contents('../assets/img/' . $outraslogos[$i]['filename'])) ?>
+
+        		</a>
+        	 	<?php endfor; ?>
+        </div>
+
+        <p align='center'>Goiânia, 2017</p>
 
        
 

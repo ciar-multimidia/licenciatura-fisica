@@ -7,8 +7,8 @@
 
 <div id="nav" class="intro">
 	<header id="headerintro">
-		<div class="outrosvolumes">
-			<a href="../index.php"><?php print(file_get_contents('../assets/img/ico_arrow3.svg')) ?> Outros volumes</a>
+		<div class="outrosvolumes umlink">
+			<!-- <a href="../index.php"><?php // print(file_get_contents('../assets/img/ico_arrow3.svg')) ?> Outros volumes</a> -->
 			<a href="ficha-tecnica.php">Ficha técnica</a>
 		</div>
 		<div class="logo-volume">

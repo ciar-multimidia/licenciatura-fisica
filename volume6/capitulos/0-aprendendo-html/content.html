@@ -1,3 +1,6 @@
+<span class="pagina">1</span>
+
+
 <h2>Parágrafos</h2>
 
 <!-- Tag de parágrafo: <p></p> -->
@@ -237,7 +240,7 @@ com a tag.</p>
 
 <p>Apesar do ebook não ser dividido em páginas e ser uma rolagem única, é necessário que ele seja dividido em páginas. Para inserir um indicador de página, deve-se usar a tag <code>&lt;span class=&quot;pagina&quot;&gt;&lt;/span&gt;</code>, e dentro da tag, colocar o número da página. Por exemplo, a página 73 ficaria assim:</p>
 
-<span class="pagina">73</span>
+<span class="pagina">2</span>
 
 <p>É essa linha cinza dividindo o material. A numeração está no canto direito.</p>
 <p>Esse elemento deve ser colocado à cada 500 palavras, arredondado para baixo até fechar uma tag. Isto é, se a contagem de 500 palavras terminar no meio de um parágrafo por exemplo, a paginação deve ser colocada <b>depois</b> que a tag acabar. </p>
@@ -255,6 +258,62 @@ com a tag.</p>
 <div class="nota-rodape" data-numero='2'>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eum in alias magni, voluptatum vel. Quod, culpa facere fugit quo quae cupiditate cumque aut facilis voluptate necessitatibus ducimus assumenda ipsam in unde dolor laudantium tempore harum, incidunt modi accusamus accusantium. Voluptatem repudiandae, dicta beatae quod iure soluta iste? Vero, provident.</p>
 </div>
+
+<h2>Código</h2>
+
+<pre>
+<code>btRodape.on('click', function(event) {
+	var thisNumero = parseInt(＄(this).attr('data-numero'));
+	if (thisNumero !== rodapeAtual) {
+		var thisTop = ＄(this).offset().top;
+		var thisLeft = ＄(this).position().left;
+		var thisHeight = ＄(this).outerHeight();
+		notasRodape.filter('[data-numero=\''+rodapeAtual+'\']').addClass('easing-saida');
+		notasRodape.removeClass('visivel');
+		var notaRevelar = notasRodape.filter('[data-numero=\'' + thisNumero + '\']');
+		notaRevelar.addClass('db');
+		notaRevelar.css({
+			'top': '',
+			'left': ''
+		});
+
+		var topNota = (function(){
+			var topCalculado = thisTop - notaRevelar.outerHeight();
+			if (topCalculado > 0) {
+				notaRevelar.removeClass('origem-top');
+				return thisTop - notaRevelar.outerHeight();
+			} else{
+				notaRevelar.addClass('origem-top');
+				return thisTop + thisHeight;
+			}
+		})();
+
+		var leftNota = (function(){
+			var leftCalculado = thisLeft - notaRevelar.outerWidth()/2;
+			if (leftCalculado < 0) {
+				return 0;
+			} else if(leftCalculado + notaRevelar.outerWidth() > artigo.width() ){
+				return artigo.width() - notaRevelar.outerWidth();
+			} else{
+				return leftCalculado;
+			}
+		})();
+		btRodape.removeClass('ativado');
+		＄(this).addClass('ativado');
+		notaRevelar.css({
+			'top': topNota,
+			'left': leftNota
+		}).addClass('visivel');
+
+
+		if (topNota < corpo.scrollTop()) {
+			corpo.animate({'scrollTop' : topNota}, 200);
+		}
+
+		rodapeAtual = thisNumero;
+	}
+});</code>
+</pre>
 
 
 <h2>Fórmulas matemáticas</h2>

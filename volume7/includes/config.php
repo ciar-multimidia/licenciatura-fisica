@@ -1,10 +1,6 @@
 <?php
 	$volume = 7;
 	$nomes_capitulos  = array(
-		array(
-				'nome' => 'Aprendendo HTML',
-				'uri' => '0-aprendendo-html'
-			),
 		array( 
 				'nome' => 'Astrofísica e Cosmologia',
 				'uri' => '1-astrofisica-e-cosmologia'

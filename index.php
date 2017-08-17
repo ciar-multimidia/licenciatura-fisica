@@ -74,8 +74,8 @@
 			<?php 
 
 
-				$numero_volumes = array(6, 7, 8);
-				// $numero_volumes = array(7);
+				// $numero_volumes = array(6, 7, 8);
+				$numero_volumes = array(7);
 
 				for ($i=0; $i < count($numero_volumes); $i++) :
 			 ?>

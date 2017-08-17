@@ -68,6 +68,10 @@ $padding-sumario-h: 15px;
 		font-weight: 300;
 		font-size: 0.9em;
 
+		&.umlink{
+			@include flex-direction(row-reverse);
+		}
+
 		a,button{
 			display: inline-block;
 			line-height: 1;
@@ -1033,6 +1037,7 @@ article{
 
 		.fichacatalografica{
 			border: 1px solid black;
+			margin-top: 3em;
 			.topo{
 				padding: 1em;
 				border-bottom: 1px solid black;
@@ -1061,6 +1066,50 @@ article{
 			}
 			
 		}
+
+		div.marcas{
+			margin-top: 2em;
+			max-width: 100%;
+			width: auto;
+			min-width: $largura-artigo;
+			@include display(flex);
+			@include justify-content(space-around);
+
+			& > a{
+				display: inline-block;
+				height: 40px;
+				margin: 0;
+				margin-right: 1em;
+				width: auto;
+
+				&.logo_funape{
+					height: 30px;
+				}
+
+				&.logo_ciar{
+					height: 30px;
+				}
+				&.logo_uab{
+					height: 40px;
+				}
+				&.logo_brasil{
+					height: 35px;
+				}
+
+
+
+				svg{
+					display: block;
+					width: auto;
+					height: 100%;
+					path, polygon, rect, circle, ellipse{
+						fill: map-get($cores, texto_primario);
+					}
+				}
+			}
+		}
+
+
 	}
 }
 

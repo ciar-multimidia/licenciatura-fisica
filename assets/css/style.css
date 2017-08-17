@@ -645,6 +645,17 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-pack: justify;
   font-weight: 300;
   font-size: 0.9em; }
+  #headerintro .outrosvolumes.umlink {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse; }
   #headerintro .outrosvolumes a, #headerintro .outrosvolumes button {
     display: inline-block;
     line-height: 1;
@@ -1590,7 +1601,8 @@ article {
     article.fichatecnica h5 + * {
       margin-top: 0; }
   article.fichatecnica .fichacatalografica {
-    border: 1px solid black; }
+    border: 1px solid black;
+    margin-top: 3em; }
     article.fichatecnica .fichacatalografica .topo {
       padding: 1em;
       border-bottom: 1px solid black; }
@@ -1615,5 +1627,46 @@ article {
         margin: 0; }
         article.fichatecnica .fichacatalografica .dados .descricao p.cdu {
           text-align: right; }
+  article.fichatecnica div.marcas {
+    margin-top: 2em;
+    max-width: 100%;
+    width: auto;
+    min-width: 630px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: distribute;
+    -moz-box-pack: distribute;
+    box-pack: distribute;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: distribute; }
+    article.fichatecnica div.marcas > a {
+      display: inline-block;
+      height: 40px;
+      margin: 0;
+      margin-right: 1em;
+      width: auto; }
+      article.fichatecnica div.marcas > a.logo_funape {
+        height: 30px; }
+      article.fichatecnica div.marcas > a.logo_ciar {
+        height: 30px; }
+      article.fichatecnica div.marcas > a.logo_uab {
+        height: 40px; }
+      article.fichatecnica div.marcas > a.logo_brasil {
+        height: 35px; }
+      article.fichatecnica div.marcas > a svg {
+        display: block;
+        width: auto;
+        height: 100%; }
+        article.fichatecnica div.marcas > a svg path, article.fichatecnica div.marcas > a svg polygon, article.fichatecnica div.marcas > a svg rect, article.fichatecnica div.marcas > a svg circle, article.fichatecnica div.marcas > a svg ellipse {
+          fill: #333333; }
 
 /*# sourceMappingURL=style.css.map */
