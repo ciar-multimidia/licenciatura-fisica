@@ -101,6 +101,12 @@ jQuery(document).ready(function($) {
 
 	});
 
+	var figuras = $('article figure');
+
+	figuras.on('click', function(event) {
+		$(this).toggleClass('maior');
+	});
+
 	var contSubcaps = $('#subcapitulos');
 	var btSubcaps = contSubcaps.find('a');
 	var headings = $('article h2, article h3');

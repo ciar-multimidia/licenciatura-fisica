@@ -675,8 +675,42 @@ article{
 		width: auto;
 		height: auto;
 		min-width: $largura-artigo-minima;
-		max-width: $largura-artigo-maxima;
+		max-width: $largura-artigo-minima;
+		@include transition(max-width 0.2s ease-out);
 		margin-top: 3em;
+		position: relative;
+
+
+		&:after{
+			content: '';
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			width: 40px;
+			height: 40px;
+			background-image: url(../img/ico_expand.svg);
+			background-size: contain;
+			opacity: 0;
+			@include transition(opacity 0.2s linear);
+		}
+
+		&:hover{
+			cursor: pointer;	
+			&:before{
+				opacity: 1;
+			}
+			&:after{
+				opacity: 1;
+			}
+		}
+
+		&.maior{
+			max-width: $largura-artigo-maxima;
+			&:after{
+				background-image: url(../img/ico_collapse.svg);
+			}
+		}
+
 		& + *{
 			margin-top: 3em;
 		}
