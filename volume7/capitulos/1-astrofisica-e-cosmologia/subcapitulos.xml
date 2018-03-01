@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sub-capitulos>
+
+    <subcap>
+        <title>Apresentação</title>
+        <uri>apresentacao</uri>
+    </subcap>
+
+    <subcap>
+        <title>As Estrelas</title>
+        <uri>as-estrelas</uri>
+        <subsubcaps>
+            <item>Introdução</item>
+            <item>Radiação de Corpo Negro e Atmosferas Estelares</item>
+            <item>Parâmetros Estelares</item>
+            <item>Distância das Estrelas Próximas</item>
+            <item>Tipos de Espectros</item>
+            <item>Diagrama de Hertzprung-Russel (H-R)</item>
+            <item>Evolução Estelar: Nascimento, Vida e Morte</item>
+        </subsubcaps>
+    </subcap>
+
+    <subcap>
+        <title>Cosmologia</title>
+        <uri>cosmologia</uri>
+        <subsubcaps>
+            <item>O Nascimento da Cosmologia</item>
+            <item>Geometria do Universo</item>
+            <item>A Radiação Cósmica de Fundo</item>
+            <item>Os Pilares do Universo</item>
+            <item>A Teoria do Big Bang</item>
+            <item>Inflação Cósmica</item>
+            <item>A teoria do Estado Estacionário</item>
+            <item>Energia e Matéria Escura</item>
+        </subsubcaps>
+    </subcap>
+
+    <subcap>
+        <title>Referências</title>
+        <uri>referencias</uri>
+    </subcap>
+
+</sub-capitulos>

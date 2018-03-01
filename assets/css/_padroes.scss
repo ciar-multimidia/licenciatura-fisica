@@ -23,7 +23,7 @@ body{
 	color: map-get($cores, texto_primario);
 	min-height: 100vh;
 	overflow-x: hidden;
-	@include hyphens(auto);
+	// @include hyphens(auto);
 }
 
 %textomenor{

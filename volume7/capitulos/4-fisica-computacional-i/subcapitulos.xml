@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sub-capitulos>
+
+    <subcap>
+        <title>Informática Básica</title>
+        <uri>informatica-basica</uri>
+        <subsubcaps>
+            <item>Software Livre</item>
+            <item>Softwares Acadêmicos Livres</item>
+            <item>Editores e Processadores de Texto</item>
+            <item>Pacotes para Escritório</item>
+            <item>Imagens</item>
+            <item>A internet</item>
+            <item>O Sistema TeX/LaTeX</item>    
+        </subsubcaps>
+    </subcap>
+
+    
+    <subcap>
+        <title>Ferramentas Gráficas: Gnuplot</title>
+        <uri>ferramentas-graficas-gnuplot</uri>
+        <subsubcaps>
+            <item>Introdução</item>
+            <item>Introdução ao Gnuplot</item>
+            <item>Funções Matemáticas</item>
+            <item>Expressões e Operadores</item>
+            <item>Definindo Funções</item>
+            <item>Controle Sobre os Eixos e Escalas</item>
+            <item>Gráficos de um Arquivo de Dados</item>
+            <item>Mais Controles Sobre os Eixos</item>
+            <item>Posicionamento das Legendas</item>
+            <item>Gráficos de Superfícies</item>
+            <item>Múltiplos Gráficos Numa Página</item>
+            <item>Usando um Arquivo</item>
+            <item>Ajuste de Curvas "Fit</item>
+            <item>Referências</item>  
+        </subsubcaps>
+    </subcap>
+
+    
+    <subcap>
+        <title>Scilab</title>
+        <uri>scilab</uri>
+        <subsubcaps>
+            <item>Introdução</item>
+            <item>Comandos de Interação com o Shell</item>
+            <item>Iniciando com o Scilab</item>
+            <item>Números Complexos</item>
+            <item>Constantes Especiais</item>
+            <item>Polinômios</item>
+            <item>Scilab: Vetores</item>
+            <item>Matrizes e elementos de Matrizes</item>
+            <item>Gráficos</item>
+        </subsubcaps>
+    </subcap>
+
+    
+    <subcap>
+        <title>Maxima</title>
+        <uri>maxima</uri>
+        <subsubcaps>
+            <item>Introdução</item>
+            <item>Operações Básicas</item>
+            <item>Funções</item>
+            <item>Limites</item>
+            <item>Derivadas</item>
+            <item>Integrais</item>
+            <item>Construção de Gráficos</item>
+        </subsubcaps>
+    </subcap>
+
+    
+</sub-capitulos>
