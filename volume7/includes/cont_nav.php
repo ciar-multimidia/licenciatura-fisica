@@ -14,7 +14,7 @@
 							class='atual'
 							disabled
 						<?php else: ?>
-						href="capitulo.php?<?php print $nomes_capitulos[$i]['uri'] ?>"
+						href="capitulo.php?cap=<?php print $nomes_capitulos[$i]['uri'] ?>"
 						title="<?php print $nomes_capitulos[$i]['nome'] ?>"
 
 						 <?php endif; ?>
@@ -27,8 +27,24 @@
 	</header>
 
 	<nav id="subcapitulos">
-		<?php 
-			print (file_get_contents($path_capitulo . '/nav.html'));
-		 ?>
+		<?php foreach ($xmlsubs->subcap as $subcap): ?>
+			<a 
+			href="<?php echo 'capitulo.php?cap=' . $uri_capitulo . '&sub=' . $subcap->uri; ?>">
+				<?php echo $subcap->title; ?>
+			</a>
+			
+
+			<?php if ($subcap->uri == $uri_subcap && $subcap->subsubcaps): ?>
+
+				<ol>
+				<?php foreach ($subcap->subsubcaps->item as $sscitem): ?>
+					<li><a href="#"><?php echo $sscitem; ?></a></li>
+				<?php endforeach; ?>
+				</ol>
+			<?php endif; ?>
+			
+			
+
+		<?php endforeach; ?>
 	</nav>
 </div>

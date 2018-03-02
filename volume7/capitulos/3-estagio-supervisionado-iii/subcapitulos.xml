@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sub-capitulos>
 
-    <subcap>
-        <title>Apresentação</title>
-        <uri>apresentacao</uri>
-    </subcap>
+<subcapitulos>
 
-
-    <subcap>
-        <title>Estágio Supervisionado III (Parte 1 e 2)</title>
-        <uri>estagio-supervisionado-iii-parte-1-e-2</uri>
-        <subsubcaps>
-            <item>Parte 1. Semi-Regência</item>
-            <item>Parte 2. Projeto de Ação e/ou Intervenção</item>
-        </subsubcaps>
-    </subcap>
+<subcap>
+    <title>Apresentação</title>
+    <uri>apresentacao</uri>
+</subcap>
 
 
-    <subcap>
-        <title>Referências</title>
-        <uri>referencias</uri>
-    </subcap>
+<subcap>
+    <title>Estágio Supervisionado III (Parte 1 e 2)</title>
+    <uri>estagio-supervisionado-iii-parte-1-e-2</uri>
+    <subsubcaps>
+        <item>Parte 1. Semi-Regência</item>
+        <item>Parte 2. Projeto de Ação e/ou Intervenção</item>
+    </subsubcaps>
+</subcap>
 
 
-</sub-capitulos>
+<subcap>
+    <title>Referências</title>
+    <uri>referencias</uri>
+</subcap>
+
+</subcapitulos>

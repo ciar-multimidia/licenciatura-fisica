@@ -8,8 +8,8 @@
 <div id="nav" class="intro">
 	<header id="headerintro">
 		<div class="outrosvolumes umlink">
-			<!-- <a href="../index.php"><?php // print(file_get_contents('../assets/img/ico_arrow3.svg')) ?> Outros volumes</a> -->
 			<a href="ficha-tecnica.php">Ficha técnica</a>
+			<a href="../index.php"><?php  print(file_get_contents('../assets/img/ico_arrow3.svg')) ?> Outros volumes</a>
 		</div>
 		<div class="logo-volume">
 			<img src="../assets/img/logo_curso.svg" alt="Logotipo do eBook Licenciatura em Física">
@@ -20,7 +20,7 @@
 	<nav id="navcapitulos">
 		<ol>
 			<?php for ($i=0; $i < count($nomes_capitulos); $i++) : ?>
-				<li><a href="capitulo.php?<?php print $nomes_capitulos[$i]['uri'] ?>">
+				<li><a href="capitulo.php?cap=<?php print $nomes_capitulos[$i]['uri'] ?>">
 					<div class="numero">
 						<p><?php print $i+1; ?></p>
 					</div>

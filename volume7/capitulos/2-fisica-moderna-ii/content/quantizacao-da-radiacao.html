@@ -1,0 +1,572 @@
+<h2>Quantização da Radiação</h2>
+
+<p>A Mecânica Quântica surgiu em 1900 com o trabalho pioneiro físico alemão Max Planck, que deu solução a um intrigante problema
+    não resolvido pela Física do século XIX, relacionado com a distribuição entre os diversos comprimentos de onda da energia
+    calorífica irradiada por um corpo quente. Planck demonstrou que sob certas condições ideais a energia se distribui de
+    um modo especial devido ao fato que a radiação eletromagnética é emitida pelo corpo quente em pacotes discretos que ele
+    chamou de "Quantum", que significa porção discreta, quantidade.</p>
+
+<p>Esta consideração, que os elétrons emitem ou absorvem energia em certas quantidades específicas, descontinuamente separadas,
+    além de ter solucionado o problema da radiação de corpo quente, estava indicando uma maneira inteiramente nova de compreender
+    nossa realidade física, indicava o surgimento de um novo paradigma, o paradigma quântico.</p>
+
+<p>De fato, nos anos seguintes a hipótese quântica continuou sendo estimulada por outros físicos, se consolidando cada vez mais
+    no cenário da Física e, atualmente, em várias outras áreas da Ciência e da Filosofia.</p>
+
+<p>Podemos considerar a Mecânica Quântica como sendo a maior revolução científica e filosófica do século passado.</p>
+
+<p>Depois de Planck, o primeiro a estimular a hipótese quântica foi Einstein em 1905, quando explicou o efeito fotoelétrico,
+    que consiste em arrancar elétrons da superfície de um metal, incidindo energia luminosa sobre ele. Para explicar os resultados
+    experimentais obtidos, Einstein considerou a radiação eletromagnética incidente como sendo constituída de quanta de energia,
+    atualmente chamados de fótons.</p>
+
+<p>Ocorre que a radiação eletromagnética já tinha sua natureza ondulatória demonstrada experimentalmente muitos anos antes por
+    Thomas Young. Assim, a partir da explicação do efeito fotoelétrico a radiação eletromagnética (luz) passou a ser descrita
+    em termos de seu caráter dual: podendo se manifestar tanto como onda quanto como partícula (fótons).</p>
+
+<p>Trataremos neste capítulo da quantização da radiação térmica - postulado de Planck e da radiação eletromagnética proposta
+    por Einstein.</p>
+
+
+<h3>Quantização da Radiação Térmica</h3>
+
+<p>Chamamos de radiação térmica a radiação emitida por um corpo devido à sua temperatura. De uma forma geral, o espectro de
+    radiação de um corpo quente depende da composição deste corpo. Há no entanto, corpos quentes que emitem espectros térmicos
+    de caráter universal, estes corpos são denominados de
+    <i>corpos negros
+    </i>, que nada mais são do que corpos que absorvem toda radiação térmica que incide sobre eles, não precisando serem
+    necessariamente negros.
+</p>
+
+<span class="pagina">41</span>
+
+<p>Um exemplo de corpo que absorve toda a radiação que incide sobre ele sem ser negro é uma cavidade contendo um pequeno orifício,
+    como mostrado na Figura (1.1). A radiação que incide nesta, através do orifício, é refletida várias vezes pelas paredes
+    sendo totalmente absorvida por estas.</p>
+
+
+<figure>
+    <img src="[[caminho]]/media/figura_1_1.jpg">
+    <figcaption>Figura 1.1 - Cavidade ligada ao exterior por um orifício. Após sucessivas reflexões a radiação incidente acaba sendo
+        completamente absorvida pelas paredes da cavidade.</figcaption>
+</figure>
+
+<p>Podemos especificar o espectro de radiação dentro de uma cavidade em termos da sua densidade de energia $\rho $. Uma cavidade
+    com paredes metálicas aquecidas uniformemente a uma temperatura $T$ faz com que suas paredes emitam radiação eletromagnética
+    na faixa térmica de frequências. A teoria eletromagnética clássica nos diz que a radiação dentro da cavidade existe na
+    forma de ondas estacionárias com nós sobre as superfícies metálicas. A distribuição de Boltzman é usada para calcular
+    a energia média destas ondas quando o sistema está em equilíbrio térmico. Façamos a seguir uma breve discussão sobre
+    a distribuição de Boltzman utilizada no cálculo da energia de cavidade.</p>
+
+
+<h4>A distribuição de Boltzman</h4>
+
+<p>A distribuição de Boltzman de energia $P(\varepsilon )$ é dada por</p>
+
+<p class="formula">
+    \begin{equation} P(\varepsilon )=\frac{e^{-\varepsilon /kT}}{kT} \label{01} \end{equation}
+    <span class="numero_formula">2.1</span>
+</p>
+
+<p>na qual $P(\varepsilon )d\varepsilon $ nos dá a probabilidade de encontrar um dado ente do sistema com energia entre $\varepsilon
+    $ e $% \varepsilon +d\varepsilon $, onde $k$ é a constante de Boltzmann e $T$ a temperatura. Ela nos dá informações completa
+    sobre as energias do sistema, um conjunto de ondas estacionárias oscilando em Movimento Harmônico Simples (MHS) em equilíbrio
+    térmico em uma cavidade de corpo negro. O valor médio $\bar{\varepsilon}$ das energias, considerando a energia na cavidade
+    como sendo uma variável contínua, é dada por</p>
+
+<p class="formula">
+    \begin{equation} \bar{\varepsilon}=\frac{\int_{0}^{\infty }\varepsilon P(\varepsilon )d\varepsilon }{\int_{0}^{\infty }P(\varepsilon
+    )d\varepsilon }. \label{02} \end{equation}
+    <span class="numero_formula">2.2</span>
+</p>
+
+<p>A integral no denominador da Eq.(1.2) nos dá a probabilidade de encontrar o ente com qualquer energia (de zero a infinito)
+    e portanto tem valor igual a 1. De fato,</p>
+
+<p class="formula">
+    \begin{equation} P=\int_{0}^{\infty }P(\varepsilon )d\varepsilon =\int_{0}^{\infty }\frac{% e^{-\varepsilon /kT}}{kT}d\varepsilon
+    =1, \label{03} \end{equation}
+    <span class="numero_formula">2.3</span>
+</p>
+
+<p>enquanto que a integral no numerador é a média de todas as energias $% \varepsilon $ ponderada pelas respectivas probabilidades
+    $P(\varepsilon )$ de encontrar este valor. Substituíndo a distribuição de Boltzmann de energia $P(\varepsilon )$ (Eq.1.1)
+    na expressão da energia média (Eq.1.2) obtemos</p>
+
+<p class="formula">
+    \begin{equation} \bar{\varepsilon}=\int_{0}^{\infty }\varepsilon P(\varepsilon )d\varepsilon =\int_{0}^{\infty }\varepsilon
+    \frac{e^{-\varepsilon /kT}}{kT}d\varepsilon =kT. \label{04} \end{equation}
+    <span class="numero_formula">2.4</span>
+</p>
+
+<p>Este resultado da energia média, quando substituído na expressão da densidade de energia leva a uma divergência com os resultados
+    experimentais. A Figura(1.2) mostra a densidade de energia de cavidade $\rho (\nu )$ em função da frequência $\nu $,
+    obtida usando-se o valor médio da energia dado pela Eq.(1.4), para uma temperatura fixa. A linha pontilhada é a previsão
+    teórica e a linha cheia representa os resultados experimentais.</p>
+
+<figure>
+    <img src="[[caminho]]/media/figura_1_2.jpg">
+    <figcaption>Figura 1.2 - Densidade de energia ρ(ν) em função da frequência ν para uma temperatura fixa T. A linha pontilhada corresponde
+        ao resultado teórico e a linha cheia aos resultados experimentais.</figcaption>
+</figure>
+
+<p>Como se pode ver, para baixos valores de frequência os resultados coincidem, a divergência ocorre para regiões de altas frequências,
+    região do ultravioleta, daí o fato de tal discrepância ter ficado conhecida na literatura como a
+    <i>catástrofe do ultravioleta
+    </i>. Esta divergência foi solucionada com a teoria de Planck em 1900 sobre a qual passaremos a falar.</p>
+
+<span class="pagina">42</span>
+
+
+<h4>O Postulado de Planck</h4>
+
+<p>Em 1900 o físico alemão Max Planck deu solução ao problema conhecido como a catástrofe do ultravioleta. Ele demonstrou que
+    sob certas condições ideais a energia dentro de uma cavidade se distribui de um modo especial, devido ao fato da radiação
+    eletromagnética ser emitida pelo corpo quente em pacotes discretos, quantum de energia. Ele modificou o cálculo do valor
+    da energia média $\bar{% \varepsilon}$, considerando a energia como uma variável discreta ($% \varepsilon =nh\nu $ ,
+    $n=0,1,2...$), ao invés de uma variável contínua. Calculou o valor médio das energias $\bar{\varepsilon}$ substituíndo
+    a integral da Eq.(1.4) por uma soma como mostram os cálculos a seguir</p>
+
+<p class="formula">
+    \[ \bar{\varepsilon}=\frac{\sum\limits_{n=0}^{\infty }\varepsilon P(\varepsilon )}{\sum\limits_{n=0}^{\infty }P(\varepsilon
+    )}=\frac{\sum\limits_{n=0}^{% \infty }nh\nu \frac{e^{-nh\nu /kT}}{kT}}{\sum\limits_{n=0}^{\infty }\frac{% e^{-nh\nu /kT}}{kT}}=\frac{kT\sum\limits_{n=0}^{\infty
+    }n\frac{h\nu }{kT}% \text{ }e^{-nh\nu /kT}}{\sum\limits_{n=0}^{\infty }e^{-nh\nu /kT}} \]
+</p>
+
+<p>chamando $\alpha =h\nu \thinspace / \thinspace kT$ obtemos</p>
+
+<p class="formula">
+    \[ \bar{\varepsilon}=\frac{kT\sum\limits_{n=0}^{\infty }n\alpha \text{ }% e^{-n\alpha }}{\sum\limits_{n=0}^{\infty }e^{-n\alpha
+    }}=-\alpha kT\frac{d}{% d\alpha }\text{ }\ln \sum\limits_{n=0}^{\infty }e^{-n\alpha }=-h\nu \frac{d}{% d\alpha }\text{
+    }\ln \left( 1-e^{-\alpha }\right) ^{-1} \]
+</p>
+
+<p class="formula">
+    \[ \bar{\varepsilon}=\frac{-h\nu }{\left( 1-e^{-\alpha }\right) ^{-1}}% (-1)\left( 1-e^{-\alpha }\right) ^{-2}\text{ }e^{-\alpha
+    }=\frac{h\nu e^{-\alpha }}{1-e^{-\alpha }}=\frac{h\nu }{e^{\alpha }-1} \]
+</p>
+
+<p class="formula">
+    \begin{equation} \bar{\varepsilon}=\frac{h\nu }{e^{h\nu /kT}-1}. \label{05} \end{equation}
+    <span class="numero_formula">2.5</span>
+</p>
+
+<p>Este resultado da energia média, Eq.(1.5), quando substituído na expressão da densidade de energia leva a uma perfeita concordância
+    entre os resultados experimentais, representado pela linha pontilhada na Figura(1.2). Na Eq.(1.5) $\nu $ é frequência
+    da radiação e $% h $ é a constante que recebeu o nome de
+    <i>constante de Planck</i>, que para completa concordância entre teoria e experimento foi obtido o valor
+</p>
+
+<p class="formula">
+    \[ h=6,63\times 10^{-34}J.s \]
+</p>
+
+<p>Observe que a constante de Planck tem a mesma unidade de momento angular, que é o Joule vezes segundo. Joule é a unidade
+    de energia no SI. Lembrando a relação entre Joule e eletron-volt, a saber</p>
+
+<p class="formula">
+    \[ 1eV=1,6\times 10^{-19}J, \]
+</p>
+
+<p>a constante de Planck pode também ser escrita em termos de eletron-volt</p>
+
+<p class="formula">
+    \[ h=4,14\times 10^{-15}eV.s \]
+</p>
+
+<br>
+
+
+<h5>Atividade de Verificação de Aprendizagem 1 (Atividade a distância)</h5>
+
+<div class="exercicio">
+    <h5>Questão 01</h5>
+    <p>Uma partícula é livre para se mover ao longo do eixo $x$ ($x\geq 0$). Se a probabilidade $P(x)$ de encontrá-la em uma
+        certa posição $x$ é </p>
+    <p class="formula">
+        \[ P(x)=\sqrt{\frac{2}{\pi }}\text{ }e^{-\frac{1}{2}x^{2}}, \]
+    </p>
+    <p>determine o valor médio $\bar{x}$ da sua posição.</p>
+</div>
+
+
+<div class="exercicio">
+    <h5>Questão 02</h5>
+    <p>Considere os seguintes números: $5,7,3,9,5,7,5,3$ representando as notas das provas de um estudante numa disciplina anual.</p>
+    <ol>
+        <li>Calcular diretamente a nota média do aluno.</li>
+        <li>Seja $x$ a variável significando a nota de uma determinada prova e $% f(x)$ o número de vezes que o número $x$ aparece.
+            Mostre que a nota média do aluno pode ser escrita como
+
+            <p class="formula">
+                \[ \bar{x}=\sum\limits_{n=0}^{4}xf(x)\left/ \sum\limits_{n=0}^{4}f(x)\right. \]
+            </p>
+        </li>
+        <li>Seja $P(x)$ a probabilidade de se obter a nota $x$. Mostre que $\bar{x}$ é dado por
+            <p class="formula">
+                \[ \bar{x}=\sum\limits_{n=0}^{4}xP(x) \]
+            </p>
+        </li>
+    </ol>
+</div>
+
+
+<div class="exercicio">
+    <h5>Questão 03</h5>
+    <p>Considere a seguinte função</p>
+    <p class="formula">
+        \[ f(x)=\left\{ \begin{array}{c} \frac{1}{10}(10-x)^{2} \qquad \text{ 0 }\leq x\leq 10 \\ \\ \quad f(x)=0 \qquad \text{ qualquer
+        outro }x\text{ }% \end{array}% \right. \text{} \]
+    </p>
+    <ol>
+        <li>Ache o valor médio de $x$ considerando $x$ uma variável contínua</li>
+        <li>Suponha que a variável $x$ seja discreta ao invés de contínua. Suponha que $\Delta x=1$, de modo que $x$ toma apenas
+            valores inteiros: $0,1,2,3...$. Calcule o valor de $\bar{x}$ e compare com o valor obtido em a).
+        </li>
+    </ol>
+</div>
+
+
+<div class="exercicio">
+    <h5>Questão 04</h5>
+    <p>Considere a distribuição de Boltzmann $P(\varepsilon )$ é dada pela Eq.(1.1).</p>
+    <ol>
+        <li>Considerando estas energias como uma variável discreta ($\varepsilon =nh\nu $ , $n=0,1,2...$) calcule o valor médio
+            das energias $\bar{% \varepsilon}$. Mostre que $\bar{\varepsilon}=\frac{h\nu }{e^{{\large h\nu /kT% }}-1}$.
+        </li>
+        <li>Considerando estas energias como uma variável contínua, calcule o valor médio das energias $\bar{\varepsilon}$. Mostre
+            que neste caso $\bar{\varepsilon}=kT$.</li>
+    </ol>
+</div>
+
+
+<h3>Quantização da Radiação Eletromagnética</h3>
+
+<p>Depois de Planck, o primeiro a estimular a hipótese quântica foi Einstein em 1905, quando ele explicou o efeito fotoelétrico,
+    que consiste em arrancar elétrons da superfície de um metal, incidindo energia luminosa sobre ele. Para explicar os resultados
+    experimentais observados, Einstein considerou a radiação eletromagnética incidente também como sendo constituída de quantum
+    de energia, atualmente também chamados de fótons.</p>
+
+<span class="pagina">43</span>
+
+<p>Inicialmente a teoria de Einstein foi muito questionada por Planck que acreditava que a hipótese da quantização da energia
+    serviria apenas para radiação em cavidades, uma vez que, neste caso, a radiação formava ondas estacionárias com nós fixos
+    nas paredes da cavidade, tendo portanto apenas alguns modos normais de vibração e por consequência apenas alguns comprimentos
+    de onda e, consequentemente, apenas algumas frequências possíveis. Como a energia dependia da frequência, então esta
+    também deveria possuir apenas alguns valores discretos. No entanto, a hipótese de Einstein era mais geral, mas audaciosa,
+    ele considerava que também a radiação fora da cavidade, dita radiação viajante era também discreta, formada de pacotes
+    de energia, e logo sua teoria for comprovada experimentalmente. Os três principais experimentos que necessitam de uma
+    teoria corpuscular da radiação para serem explicados quantitativamente são:
+    <i>o efeito fotoelétrico</i>,
+    <i>o efeito compton</i> e
+    <i>o efeito de produção e aniquilação de pares</i>, sobre os quais passamos a descrever a seguir. Somente cerca de vinte
+    anos depois é que foi proposto e posteriormente observado em laboratório, que assim como a luz, também a matéria possui
+    a dicotomia onda-partícula, podendo se comportar também tanto como onda como partícula. A dualidade onda-partícula da
+    matéria proposta por Louis de Broglie será tratada no Capítulo 2.</p>
+
+
+<h4>O efeito fotoelétrico</h4>
+
+<p>O efeito fotoelétrico consiste na emissão de elétrons de uma superfície metálica, devido à incidência de radiação sobre esta
+    superfície. Os elétrons emitidos da superfície metálica são detectados sob a forma de corrente elétrica, que é carga
+    em movimento, através de um amperímetro, conforme mostra a Figura(1.3).</p>
+
+<figure>
+    <img src="[[caminho]]/media/figura_1_3.jpg">
+    <figcaption>Figura 1.3 - Efeito fotoelétrico: emissão de elétrons de uma superfície metálica, devido à incidência de radiação formada
+        de pacotes discretos de energia (fótons) sobre esta superfície.</figcaption>
+</figure>
+
+<p>Considera-se que a radiação incidente é formada de pacotes discretos de energia, também chamados de fótons cada um com energia
+    que depende apenas da frequência da radiação, a qual é dada por
+</p>
+
+<p class="formula">
+    \begin{equation} E_{foton}=h\nu \label{06} \end{equation}
+    <span class="numero_formula">2.6</span>
+</p>
+
+<p>onde $h$ é a constante de Planck e $\nu $ é a frequência da radiação incidente. Após absorver um fóton de energia $h\nu $,
+    a energia cinética do elétron $K$ é dada por</p>
+
+<p class="formula">
+    \begin{equation} K=h\nu -\phi \label{07} \end{equation}
+    <span class="numero_formula">2.7</span>
+</p>
+
+<p>onde $\phi $ é o trabalho necessário para remover o elétron do metal, conhecida como função trabalho. A Eq.(1.7) é a equação
+    fotoelétrica. Ela nos diz que a energia cinética dos elétrons é dada pela energia do fóton que ele absorve menos a energia
+    gasta para arrancá-los da placa. Assim sendo, a menor energia que um fóton deve ter para arrancar um elétron é igual
+    à função trabalho $\phi $, que depende de que tipo de material a placa é feita.
+</p>
+
+<p>Do ponto de vista
+    <i>qualitativo</i>, se a radiação incidente sobre a placa for tratada como uma onda, também se explica a emissão de elétrons
+    desta, que surge na forma de corrente elétrica. Os elétrons absorvem a energia da onda e são arrancados. No entanto,
+    do ponto de vista
+    <i>quantitativo</i> torna-se necessário uma teoria corpuscular da radiação para se explicar os resultados experimentais
+    observados. As principais característica do efeito fotoelétrico que fazem com que a radiação incidente deva ser tratada
+    como partícula e não como onda para poderem ser explicados são:</p>
+
+<span class="pagina">44</span>
+
+<ol>
+    <li>POTENCIAL DE CORTE: Pela teoria ondulatória, aumentando a intensidade da luz incidente, os elétrons arrancados deveriam
+        ser mais energéticos, uma vez que absorveriam mais energia, no entanto a energia cinética máxima dos elétrons observada
+        são dadas, independe da intensidade da luz incidente, por
+
+        <p class="formula">
+            \begin{equation} K_{\max }=eV_{0} \label{08} \end{equation}
+            <span class="numero_formula">2.8</span>
+        </p>
+
+        onde $V_{0}$ é chamado potencial de corte, que é o potencial frenador, necessário para parar os elétrons que são arrancados
+        da placa metálica.</li>
+    <br>
+    <li>LIMIAR DE FREQUÊNCIA: Pela teoria ondulatória, o efeito fotoelétrico deveria ocorrer para qualquer frequência da luz,
+        desde que a intensidade fosse o bastante para dar a energia necessária à ejeção dos elétrons. No entanto, observa-se
+        uma frequência limiar, abaixo da qual o efeito fotoelétrico não ocorre.
+        <br>
+        <br> Ocorre que em ambos os casos
+        <i>1</i> e
+        <i>2</i>, aumentar a intensidade da luz, significa aumentar apenas o número de quantum de energia, ou fótons, cada um
+        deles com a mesma frequência e portanto mesma energia $(E_{f% \acute{o}ton}=h\nu $ $)$. Como cada elétron deve absorver
+        um único fóton para escapar (teoria corpuscular da radiação) se cada fótons não possuir energia suficiente para arrancar
+        um elétron, não ocorrerá o efeito fotoelétrico. De acordo com a Eq.(1.17) esta energia mínima é a função trabalho.</li>
+    <br>
+    <li>AUSÊNCIA DE RETARDAMENTO: Pela teoria ondulatória da luz, a energia luminosa está uniformemente distribuída sobre a frente
+        de onda. Portanto deveria haver um intervalo de tempo estimado na ordem de 2 min entre o instante em que a luz começa
+        a incidir sobre a superfície e o instante da ejeção do fotoelétron. No entanto, nenhum retardamento é observado experimentalmente.</li>
+</ol>
+
+<p>Em 1914, Millikan verificou experimentalmente a lei do efeito fotoelétrico e Einstein recebeu o Prêmio Nobel em 1921. Hoje
+    em dia a hipótese do fóton é usada em todo o espectro eletromagnético.</p>
+
+<p>No efeito fotoelétrico, fótons são absorvidos no processo. Isto requer que os elétrons estejam ligados a átomos ou sólidos
+    para conservação de energia e momento linear e as energia envolvidas no processo são baixas energias, da ordem de eletron-volt.</p>
+
+
+<h4>O efeito Compton</h4>
+
+<p>O efeito Compton é outro processo que necessita de uma teoria corpuscular da radiação para explicar os resultados experimentais
+    quantitativamente. Ao contrário do efeito fotoelétrico, não é um processo que envolve a absorção de fótons, mas apenas
+    o espalhamento de fótons por elétrons, portanto os elétrons são alvos livres e as energia envolvidas no processo são
+    médias, da ordem de $keV$. Compton realizou uma experiência incidindo fótons de comprimento de onda $\lambda $ sobre
+    um alvo e mediu o comprimento de onda do fóton espalhado para vários ângulos de espalhamento, conforme mostra a Figura(1.4).</p>
+
+<figure>
+    <img src="[[caminho]]/media/figura_1_4.jpg">
+    <figcaption>Figura 1.4 - Fóton de comprimento de onda $% \lambda _{0}$ incide sobre um elétron livre em repouso e é espalhado de
+        um ângulo $\theta $ enquanto o elétron se afasta segundo um ângulo $\varphi $.</figcaption>
+</figure>
+
+<p>A seguir faremos a dedução da variação do comprimento de onda $\Delta \lambda $ no espalhamento Compton de fótons por elétrons
+    livres em repouso de massa $m_{0}$, considerando que após a colisão o fóton é espalhado de um ângulo $\theta $, enquanto
+    que o elétron se afasta segundo um ângulo $\varphi $, conforme a Figura(1.4). Consideramos o choque elástico e a energia
+    que o elétron adquire após a colisão sendo relativística, a qual é dada por</p>
+
+<span class="pagina">45</span>
+
+<p class="formula">
+    \begin{equation} E=\sqrt{(pc)^{2}+(m_{0}c^{2})^{2}} \label{09} \end{equation}
+    <span class="numero_formula">2.9</span>
+</p>
+
+<p>onde $p$ é o momento linear do elétron. Esta hipótese da energia relativística do elétron é necessária porque o processo
+    envolve energias da ordem de $keV$, onde os efeitos relativísticos passam a ser importantes.</p>
+
+<p>Consideremos um fóton inicialmente com momentum $p_{0}$, energia $E_{0}$ incidindo sobre um elétron em repouso ($p_{i}=0$,
+    $E_{i}=m_{0}c^{2}$) sendo espalhado de um ângulo $\theta $, ficando com momentum $p_{1}$, energia $E_{1}$ e o elétron
+    se afastando segundo um ângulo $\varphi $ com momentum $p_{f}=p$ e energia cinética $K$.</p>
+
+<p>Conservação do momento: $\overrightarrow{P}_{i}=\overrightarrow{P}% _{f}$
+</p>
+
+<p class="formula">
+    \begin{equation} \text{Eixo x:}\mathit{\ \qquad }p_{0}=p_{1}\cos \theta +p\cos \varphi \Longrightarrow (p_{0}-p_{1}\cos \theta
+    )^{2}=p^{2}\cos ^{2}\varphi =p_{0}^{2}+p_{1}^{2}\cos ^{2}\theta -2p_{0}p_{1}\cos \theta \label{10} \end{equation}
+    <span class="numero_formula">2.10</span>
+</p>
+
+<p class="formula">
+    \begin{equation} \text{Eixo y:}\mathit{\ \qquad }0=p_{1}\sin \theta -p\sin \varphi \Longrightarrow p_{1}^{2}\sin ^{2}\theta
+    =p^{2}\sin ^{2}\varphi \label{11} \end{equation}
+    <span class="numero_formula">2.11</span>
+</p>
+
+<p>Somando (1.10) + (1.11) obtemos</p>
+
+<p class="formula">
+    \begin{equation} p^{2}(\sin ^{2}\varphi +\cos ^{2}\varphi )=p^{2}=p_{0}^{2}+p_{1}^{2}-2p_{0}p_{1}\cos \theta \label{12} \end{equation}
+    <span class="numero_formula">2.12</span>
+</p>
+
+<p>Conservação da Energia: $E_{i}=E_{f}$. A variação da energia do fóton $(E_{f\acute{o}ton}=h\nu =pc)$ é igual à energia cinética
+    do elétron: $E_{0}-E_{1}=K$.</p>
+
+<p class="formula">
+    \begin{equation} K=E_{0}-E_{1}=c(p_{0}-p_{1}) \label{13} \end{equation}
+    <span class="numero_formula">2.13</span>
+</p>
+
+<p>Por outro lado temos que para o elétron:</p>
+
+<p class="formula">
+    \begin{eqnarray} E^{2} &=&(p^{2}c^{2})^{2}+(m_{0}c^{2})^{2}=(K+(m_{0}c^{2}))^{2}=K^{2}+(m_{0}c^{2})^{2}+2Km_{0}c^{2} \nonumber
+    \\ \\ K^{2}+2Km_{0}c^{2} &=&c^{2}p^{2}\Longrightarrow \frac{K^{2}}{c^{2}}% +2Km_{0}=p^{2} \label{14} \end{eqnarray}
+    <span class="numero_formula">2.14</span>
+</p>
+
+<p>Substituíndo (1.12) e (1.13) em (1. 14) obtemos:</p>
+
+<p class="formula">
+    \[ (p_{0}-p_{1})^{2}+2c(p_{0}-p_{1})m_{0}=p_{0}^{2}+p_{1}^{2}-2p_{0}p_{1}\cos \theta \]
+    <br> \[ p_{0}^{2}+p_{1}^{2}-2p_{0}p_{1}+2m_{0}cp_{0}-2m_{0}cp_{1}-p_{0}^{2}-p_{1}^{2}+2p_{0}p_{1}\cos \theta =0\Longrightarrow
+    p_{0}p_{1}(1-\cos \theta )=m_{0}c(p_{0}-p_{1}) \]
+    <br> \[ \frac{(p_{0}-p_{1})}{p_{0}p_{1}}=\frac{1}{m_{0}c}(1-\cos \theta )\Longrightarrow \frac{1}{p_{1}}-\frac{1}{p_{0}}=\frac{1}{m_{0}c}(1-\cos
+    \theta )\Longrightarrow \frac{h}{p_{1}}-\frac{h}{p_{0}}=\frac{h}{m_{0}c}% (1-\cos \theta ), \]
+</p>
+
+<p>e onde obtemos que</p>
+
+<p class="formula">
+    \begin{equation} \Delta \lambda =\lambda _{1}-\lambda _{0}=\frac{h}{m_{o}c}(1-\cos \theta ).% \text{ } \label{15} \end{equation}
+    <span class="numero_formula">2.15</span>
+</p>
+
+<p>A experiência realizada por Compton está de acordo com a expressão teórica dada pela Eq.(1.15) e a explicação era que o feixe
+    de fótons incidente não era uma luz de frequência $\nu $, mas um conjunto de fótons, cada um com energia $E=h\nu $ e
+    que estes fotons colidiam com os elétrons livres do alvo da mesma forma que colidem duas bolas de bilhar, ou seja, tanto
+    o elétron como o fóton incidente se comportam como partículas.</p>
+
+
+<h4>Produção e aniquilação de pares</h4>
+
+<p>Um processo onde fótons perdem sua energia na interação com a matéria é chamado processo de produção de pares, que assim
+    como o efeito fotoelétrico e o efeito compton requer um tratamento corpuscular da radiação. Falaremos agora deste processo
+    e também do processo de aniquilação de pares, que são processos que envolvem altas energias, da ordem de $MeV$ (mega
+    eletron-volt).</p>
+
+<p>No processo chamado criação de pares, um fóton de alta energia colide com um núcleo pesado, perdendo toda sua energia $h\nu
+    $, a qual reaparece na forma de massa de repouso e energia cinética de um par: elétron e pósitron. O pósitron é uma partícula
+    com a mesma massa do elétron e a mesma carga com sinal positivo (é um elétron positivo), de forma que com o processo
+    nenhuma carga elétrica é criada já que o par criado tem carga total igual a zero. A energia de repouso relacionada com
+    a massa de repouso é dada por</p>
+
+<p class="formula">
+    \begin{equation} E_{R}=m_{0}c^{2} \label{16} \end{equation}
+    <span class="numero_formula">2.16</span>
+</p>
+
+<p>Isto significa que mesmo em repouso o pósitron e o elétron possuem cada um deles uma energia (energia de repouso) dada pela
+    Eq.(1.16), onde $% m_{0}=9,1\times 10^{-31}kg$ e $c$ é a velocidade da luz: $c=3\times 10^{8}m/s$. Com estes valores
+    podemos calcular a energia de repouso de cada uma das partículas </p>
+
+<p class="formula">
+    \begin{eqnarray*} E_{R} &=&\left[ (9,1\times 10^{-31}kg)\times (3\times 10^{8}m/s)^{2}\right] \\ \\ &=&81,9\times 10^{-15}kg.m^{2}/s^{2}
+    \end{eqnarray*}
+</p>
+
+<p>Uma análise dimensional nos mostra que $kg.m^{2}/s^{2}$ tem dimensão de Joule ($J$) a unidade de energia no SI. De fato,
+    $ \ kg.m^{2}/s^{2}=kg.(m/s^{2}).m=N.m=J$. Lembrando que $1eV=1,6\times 10^{-19}J$, obtemos para a energia de repouso
+    o valor</p>
+
+<p class="formula">
+    \begin{equation} E_{R}=81,9\times 10^{-15}J=0,511eV. \label{17} \end{equation}
+    <span class="numero_formula">2.17</span>
+</p>
+
+<p>O par criado no processo tem, portanto, energia de repouso igual a $2\times 0,511eV$, ou seja, em torno de um mega eletron-volt
+    ($\sim 1MeV$), assim sendo, a menor energia que um fóton pode ter para criar um par elétron-pósitron deve ser $1MeV$.
+    Fótons assim, altamente energéticos, são fótons de raios cósmicos e podem ser obtidos também em aceleradores de partículas.</p>
+
+<span class="pagina">46</span>
+
+<p>A equação da conservação da energia total relativística no processo de criação de pares é dada por</p>
+
+<p class="formula">
+    \begin{equation} h\nu =E_{-}+E_{+} \label{18} \end{equation}
+    <span class="numero_formula">2.18</span>
+</p>
+
+<p>onde $h\nu $ é a energia do fóton e $E_{-}$ é a energia total do elétron, que é a soma da sua energia cinética $K_{-}$ e
+    da sua energia de repouso $m_{0}c^{2}$</p>
+
+<p class="formula">
+    \begin{equation} E_{-}=K_{-}+m_{0}c^{2}. \label{19} \end{equation}
+    <span class="numero_formula">2.19</span>
+</p>
+
+<p>Da mesma forma temos que</p>
+
+<p class="formula">
+    \begin{equation} E_{+}=K_{+}+m_{0}c^{2}. \label{20} \end{equation}
+    <span class="numero_formula">2.20</span>
+</p>
+
+<p>é a energia total do pósitron.</p>
+
+<p>O processo inverso é chamado aniquilação de pares, onde um elétron e um pósitron inicialmente em repouso ($K_{-}=K_{+}=0$)
+    se unem e são aniquilados, aparecendo em seu lugar fótons. De fato, dissemos fótons, no plural, porque o par estando
+    em repouso, não possui momento linear, se em seu lugar surgir apenas um fóton (fótons possuem momentos lineares) violaria
+    a conservação do momento linear. Assim sendo, o par aniquilado deve gerar dois ou mais fótons de forma que o momento
+    linear total destes seja também nulo.</p>
+
+<br>
+
+
+<h5>Atividade de Verificação de Aprendizagem 2 (Atividade a distância)</h5>
+
+<div class="exercicio">
+    <h5>Questão 01</h5>
+    <p>A luz amarela de uma lâmpada de sódio, usada na iluminação de estradas, tem o comprimento de onda de $589nm$. Qual a
+        energia de um fóton emitido por uma dessas lâmpadas?</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 02</h5>
+    <p>Uma lâmpada de potência igual a $400W$ emite luz com comprimento de onda igual a $4\times 10^{-7}m$. Determine a taxa
+        com que os fótons são emitidos (ou seja o número de fótons por segundo que a lâmpada emite).</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 03</h5>
+    <p>O comprimento de onda do
+        <i>limiar</i> fotoelétrico da prata é $325\times 10^{-9}m$. Calcule a energia cinética máxima dos elétrons ejetados
+        de uma superfície de prata pela luz ultravioleta de comprimento de onda $\lambda =254\times 10^{-9}m$.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 04</h5>
+    <p>Raios $X$ com comprimento de onda $\lambda =0,71\times 10^{-10}m$ ejetam fotoelétrons de uma folha de ouro. Estes elétrons
+        descrevem círculos de raios $r=1,88\times 10^{-2}m$ em uma região onde há um campo de indução magnética $B=10^{-2}T$.
+        Calcule:</p>
+    <ol>
+        <li>A energia cinética destes fotoelétrons</li>
+        <li>A função trabalho do ouro.</li>
+    </ol>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 05</h5>
+    <p>Fótons com comprimento de onda $2,4\times 10^{-12}m$ incidem sobre um alvo que contém elétrons livres. Encontre o comprimento
+        de onda de um fóton que for espalhado de um ângulo de $30^{0}$ em relação à direção de incidência.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 06</h5>
+    <p>Determine a variação máxima do comprimento de onda $\Delta \lambda $, no espalhamento Compton de fótons por elétrons.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 07</h5>
+    <p>Suponha que um par elétron-pósitron seja formado por um fóton que tenha energia
+        <i>limite</i> para que o processo ocorra. Neste caso, calcule o momento transferido ao núcleo no processo.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 08</h5>
+    <p>Produz-se um par de tal forma que o pósitron esteja em repouso e o elétron tenha uma energia cinética de $1,0$ $% MeV$
+        e se move na direção na qual o fóton que produziu o par incidia. Desprezando a anergia transmitida ao núcleo do átomo
+        próximo, encontre a energia do fóton incidente.</p>
+</div>

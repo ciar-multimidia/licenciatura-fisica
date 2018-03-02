@@ -1,0 +1,396 @@
+<h2>A Teoria de Schrödinger da Mecânica Quântica</h2>
+
+<p>As evidências experimentais de que partículas microscópicas, como o elétron, possuem natureza dual, podendo se comportarem
+    tanto como onda quanto como partícula, faz com que estas não possam serem descritas como um ponto, com coordenada e momento
+    bem definidos. Foi Erwin Schrödinger quem desenvolveu a teoria da mecânica quântica para as ondas de matéria. Ele propôs
+    uma equação, que leva o seu nome, cuja solução nos dá as funções de onda que descrevem o movimento das partículas microscópicas.</p>
+
+<p>A equação de Schrödinger é uma equação diferencial linear, de segunda ordem, escrita em termos da função de onda $\psi (x,t)$
+    que descreve o movimento das partículas. Resolver a equação de Schrödinger significa encontrar esta função de onda. Conhecendo-se
+    a função de onda que descreve o movimento da partícula, pode-se fazer previsões sobre o seu movimento em geral, assim
+    como da sua posição, momento, energia, etc. Todos obtidos de acordo com a teoria quântica, uma teoria probabilística,
+    diferente da teoria clássica, que é uma teoria determinística.</p>
+
+<span class="pagina">58</span>
+
+<p>A seguir apresentaremos a Equação de Schrödinger, assim como os argumentos plausíveis que levaram a esta e, em seguida, mostraremos
+    a interpretação probabilística dada para a função de onda por Max Born.</p>
+
+
+<h3>A Equação de Schrödinger</h3>
+
+<p>Embora de Broglie tenha postulado que partículas como o elétron pudessem se comportar como onda, postulando um comprimento
+    de onda para estas, ele não fez um tratamento completo para as ondas de matéria, que levasse em consideração, por exemplo,
+    as forças específicas que atuam sobre estas. Este tratamento completo foi proposto por Schrödinger. Ele propôs para descrever
+    as ondas de matéria a equação diferencial linear de segunda ordem dada por </p>
+
+<p class="formula">
+    \begin{equation} -\frac{\hbar ^{2}}{2m}\frac{\partial ^{2}\psi (x,t)}{\partial x^{2}}% +V(x,t)\psi (x)=i\hbar \frac{\partial
+    \psi (x,t)}{\partial t} \label{4.1} \end{equation}
+    <span class="numero_formula">2.37</span>
+</p>
+
+<p>onde $\psi (x,t)$ é a função de onda que descreve o movimento da partícula e $V(x,t)$ é a energia potencial a que a partícula
+    está submetida, ela está relacionada com a força $\vec{F}(r)$ que atua sobre a partícula, através da relação</p>
+
+<p class="formula">
+    \begin{equation} V(x,t)=-\int \vec{F}(r)\cdot d\vec{r}. \label{04.2} \end{equation}
+    <span class="numero_formula">2.38</span>
+</p>
+
+<p>Para se resolver a equação de Schrödinger dada pela Eq.(4.1) deve-se especificar esta energia potencial $V(x,t).$ Para cada
+    tipo de força específica que atua na partícula, temos a respectiva energia potencial, de acordo com a Eq.(4.2) e para
+    cada potencial $V(x,t)$ na Eq.(4.2) temos uma equação específica, a qual resulta em uma função de onda $\psi (x,t)$ específica
+    a descrever o movimento da partícula. A equação de Schrödinger é ainda consistente com o postulado de de Broglie $\lambda
+    =h/p$ e com a equação</p>
+
+<p class="formula">
+    \begin{equation} E=p^{2}/2m+V(x,t) \label{4.3} \end{equation}
+    <span class="numero_formula">2.39</span>
+</p>
+
+<p>que relaciona a energia total $E$ de uma partícula de massa $m$ com sua energia cinética $p^{2}/2m$ e sua energia potencial
+    $V(x,t)$.</p>
+
+<p>A solução da equação de Schrödinger nos dá as funções de onda específicas $\psi (x,t)$, as quais descrevem o movimento das
+    partículas. Mas qual o significado da função de onda? Como ela é utilizada nos cálculos de valores médios? é o que veremos
+    a seguir.</p>
+
+<h3>A Equação de Schrödinger Independente do Tempo</h3>
+
+<p>A equação de Schrödinger dada pela Eq.(4.1) é chamada equação de Schrödinger dependente do tempo. É uma equação dependente
+    de duas variáveis: posição e tempo. Para se resolver uma equação deste tipo usa-se a técnica de separação de variáveis,
+    a qual permite separar a equação dependente de duas variáveis em duas equações, cada uma delas dependente apenas de uma
+    das variáveis.</p>
+
+<p>
+    <i>Exemplo 4.1</i> Separe a função de onda solução da Equação de Schrödinger dependente do tempo nas suas partes espacial
+    e temporal, obtenha a Equação de Schrödinger independente do tempo, para um potencial genérico $V(x)$, dependente apenas
+    da posição e resolva a Equação de Schrödinger dependente apenas do tempo.</p>
+
+<p>
+    <i>Fazendo</i> $\psi (x,t)=\psi (x)$ $\varphi (t)$
+    <i>e substituíndo na equação de Schrödinger dada pela Eq.(4.1) obtemos</i>
+</p>
+
+<p class="formula">
+    \[ -\varphi (t)\frac{\hbar ^{2}}{2m}\frac{\partial ^{2}\psi (x)}{\partial x^{2}} +V(x)\psi (x)\text{ }\varphi (t)=\psi (x)i\hbar
+    \frac{\partial \varphi (t)}{ \partial t} , \]
+</p>
+
+<p>
+    <i>agora dividindo tudo por</i> $\psi (x)$ $\varphi (t)$</p>
+
+<p class="formula">
+    \[ -\frac{\hbar ^{2}}{\psi (x)2m}\frac{\partial ^{2}\psi (x)}{\partial x^{2}}% +V(x)=\frac{i\hbar }{\varphi (t)}\frac{\partial
+    \varphi (t)}{\partial t}. \]
+</p>
+
+<p>
+    <i>O lado direito da Equação acima só depende de t e o lado esquerdo só depende de x. A única maneira da igualdade se verificar
+        é ambos os lados sendo iguais a uma constante: chamando esta constante de E temos</i>
+</p>
+
+<p class="formula">
+    \[ -\frac{\hbar ^{2}}{\psi (x)2m}\frac{d^{2}\psi (x)}{dx^{2}}+V(x)=E, \]
+</p>
+
+<p>
+    <i>ou ainda</i>
+</p>
+
+<p class="formula">
+    \begin{equation} \frac{d^{2}\psi (x)}{dx^{2}}+\frac{2m}{\hbar ^{2}}\left( E-V(x)\right) \psi (x)=0, \label{4.4} \end{equation}
+    <span class="numero_formula">2.40</span>
+</p>
+
+<p>
+    <i>que é a equação de Schrödinger independente do tempo. A equação dependente do tempo é dada por</i>
+</p>
+
+<p class="formula">
+    \[ \frac{i\hbar }{\varphi (t)}\frac{d\varphi (t)}{dt}=E\Longrightarrow \frac{% d\varphi (t)}{\varphi (t)}=-\frac{iE}{\hbar
+    }\text{ }dt \]
+</p>
+
+<p>
+    <i>cuja solução é obtida, integrando os dois lados, de onde se obtém</i>
+</p>
+
+<p class="formula">
+    \begin{equation} \varphi (t)=\text{ }e^{-\frac{iEt}{\hbar }}. \label{4.5} \end{equation}
+    <span class="numero_formula">2.41</span>
+</p>
+
+<span class="pagina">59</span>
+
+<p>A função de onda total, a qual é dada por $\psi (x,t)=\psi (x)$ $\varphi (t)$ pode ser escrita como</p>
+
+<p class="formula">
+    \begin{equation} \psi (x,t)=\psi (x)e^{-\frac{iEt}{\hbar }} \label{4.6} \end{equation}
+    <span class="numero_formula">2.42</span>
+</p>
+
+<p>onde $\psi (x)$ é a solução da equação independente do tempo, dada pela Eq.(4.4) e que para ser determinada, precisa-se especificar
+    o potencial $V(x)$ dependente apenas da posição.</p>
+
+<h3>A Função de Onda</h3>
+
+<p>A equação de Schrödinger é uma equação linear. Schrödinger entendeu que para uma equação descrever o movimento de partículas
+    que se comportam como ondas, ela deve ser linear, pois para equações diferenciais lineares, a superposição de soluções,
+    também é solução, de onde se pode obter os efeitos ondulatórios, tais como interferência e difração, presentes em ondas.</p>
+
+<p>
+    <i>Exemplo 4.2</i> Se as funções de onda $\psi _{1}(x,t)$, $\psi _{2}(x,t)$ e $\psi _{3}(x,t)$ são três soluções da equação
+    de Schrödinger, dada pela Eq.(4.1) para um potencial particular $V(x,t)$, mostre que a combinação linear arbitrária $\psi
+    (x,t)=c_{1}\psi _{1}(x,t)+c_{2}\psi _{2}(x,t)+c_{3}\psi _{3}(x,t)$ também é uma solução desta equação.</p>
+
+<p>
+    <i>Substituíndo</i> $\psi (x,t)=c_{1}\psi _{1}(x,t)+c_{2}\psi _{2}(x,t)+c_{3}\psi _{3}(x,t)$
+    <i>na Eq.(4.1) obtemos</i>
+</p>
+
+<p class="formula">
+    \begin{eqnarray*} &&-\frac{\hbar ^{2}}{2m}\frac{\partial ^{2}}{\partial x^{2}}\left\{ c_{1}\psi _{1}(x,t)+c_{2}\psi _{2}(x,t)+c_{3}\psi
+    _{3}(x,t)\right\} \end{eqnarray*}
+</p>
+
+<p class="formula">
+    \begin{eqnarray*} &&+V(x,t)\left\{ c_{1}\psi _{1}(x,t)+c_{2}\psi _{2}(x,t)+c_{3}\psi _{3}(x,t)\right\} \end{eqnarray*}
+</p>
+
+<p class="formula">
+    \begin{eqnarray*} &=&-i\hbar \frac{\partial }{\partial t}\left\{ c_{1}\psi _{1}(x,t)+c_{2}\psi _{2}(x,t)+c_{3}\psi _{3}(x,t)\right\}
+    . \end{eqnarray*}
+</p>
+
+<p>
+    <i>A qual pode ser reescrita como</i>
+</p>
+
+<p class="formula">
+    \begin{eqnarray*} &&c_{1}\left\{ -\frac{\hbar ^{2}}{2m}\text{ }\frac{\partial ^{2}}{\partial x^{2}}\psi _{1}(x,t)+V\psi _{1}(x,t)-i\hbar
+    \frac{\partial }{\partial t}\psi _{1}(x,t)\right\} \end{eqnarray*}
+</p>
+
+
+<p class="formula">
+    \begin{eqnarray*} &&+c_{2}\left\{ -\frac{\hbar ^{2}}{2m}\text{ }\frac{\partial ^{2}}{\partial x^{2}}\psi _{2}(x,t)+V\psi
+    _{2}(x,t)-i\hbar \frac{\partial }{\partial t}\psi _{2}(x,t)\right\} \end{eqnarray*}
+</p>
+
+
+<p class="formula">
+    \begin{eqnarray*} &&+c_{3}\left\{ -\frac{\hbar ^{2}}{2m}\text{ }\frac{\partial ^{2}}{\partial x^{2}}\psi _{3}(x,t)+V\psi
+    _{3}(x,t)-i\hbar \frac{\partial }{\partial t}\psi _{3}(x,t)\right\} =\text{ }0. \end{eqnarray*}
+</p>
+
+<p>
+    <i>Como</i>$\psi _{1}(x,t)$, $\psi _{2}(x,t)$
+    <i>e</i> $\psi _{3}(x,t)$
+    <i>são três soluções da equação de Schrödinger, cada um dos termos entre chaves são nulos, logo</i>$\psi (x,t)=c_{1}\psi
+    _{1}(x,t)+c_{2}\psi _{2}(x,t)+c_{3}\psi _{3}(x,t)$
+    <i>satisfaz à Equação de Schrödinger!</i>
+</p>
+
+<p>De uma forma geral, a função de onda $\psi (x,t)$ é uma grandeza complexa. A interpretação física desta foi dada por Max
+    Born. Ele propôs que a ligação básica entre as propriedades da função de onda $\psi (x,t)$ e o comportamento da partícula
+    associada é expressa em termos da densidade de probabilidade $P(x,t)$. Esta grandeza especifica a probabilidade, por
+    unidade de comprimento do eixo $x$, de encontrar a partícula próxima da coordenada $x$ em um instante $t$. De acordo
+    com o postulado de Born, a relação entre a densidade de probabilidade e a função de onda é</p>
+
+<p class="formula">
+    \begin{equation} P(x,t)=\psi ^{\ast }(x,t) \ \psi \ (x,t) \label{4.7} \end{equation}
+    <span class="numero_formula">2.43</span>
+</p>
+
+<p>onde o símbolo $\psi ^{\ast }(x,t)$ representa o complexo conjugado de $\psi (x,t).$ A probabilidade $P$ portanto, é a integral
+    ao longo do eixo $x$ da densidade de probabilidade.</p>
+
+<p>Para cálculos da densidade de probabilidade e probabilidade, é suficiente utilizar apenas a função de onda espacial, uma
+    vez que a função de onda dependente do tempo, dada pela Eq.(4.5) é uma exponencial complexa, quando multiplicada pelo
+    seu complexo conjugado, resulta em $\varphi (t)\varphi ^{\ast }(t)=$ $e^{-\frac{iEt}{\hbar }}e^{% \frac{iEt}{\hbar }}=1$,
+    não influenciando na densidade de probabilidade. Assim sendo, na densidade de probabilidade definida pela Eq.(4.7) basta
+    utilizar a função de onda independente do tempo.</p>
+
+<p>
+    <i>Exemplo 4.3</i> Uma partícula se encontra dentro de uma caixa de comprimento $L$, podendo ser descrita pela função de
+    onda independente do tempo, dada por </p>
+
+<p class="formula">
+    \[ \psi (x)=\left\{ \begin{array}{l} i\sqrt{\frac{2}{L}}\sin \left( \frac{\pi x}{L}\right) \hspace{2cm}0&lt;x&lt;L \\ \\
+    0\hspace{3cm}\text{para }x\text{ fora deste intervalo.}% \end{array} \right. \]
+</p>
+
+<p>Calcule a probabilidade de que uma certa medida da localização da partícula a encontre no intervalo entre entre $0$ e $L/2$.</p>
+
+<p class="formula">
+    \[ P=\int_{0}^{L/2}\psi ^{\ast }(x)\psi (x)dx=\frac{2}{L}\int_{0}^{L/2}\sin ^{2}(\frac{\pi x}{L})dx=\frac{2}{L}\frac{L}{4}=0,5
+    \ (50\%). \]
+</p>
+
+
+<h3>Valores Médios</h3>
+
+<p>Enquanto a mecânica clássica é uma teoria determinística, podendo-se determinar simultaneamente com precisão a posição e
+    o momento das partículas, a mecânica quântica é uma teoria probabilística, de acordo com a interpretação da função de
+    onda dada por Max Born. Assim sendo, ao invés de se determinar com precisão posição, momento, energia, etc das partículas,
+    o que se determina são os chamados valores médios, que são uma média estatísticas, obtidos com o auxílio das funções
+    de onda que descrevem o movimento das partículas. O valor médio da posição de uma partícula $\bar{x}$, descrita por uma
+    função de onda $\psi (x)$ é dado por</p>
+
+<span class="pagina">60</span>
+
+<p class="formula">
+    \begin{equation} \bar{x}=\int\limits_{-\infty }^{\infty }\psi ^{\ast }(x)x\psi (x)dx\text{,} \label{4.8} \end{equation}
+    <span class="numero_formula">2.44</span>
+</p>
+
+<p>o mesmo acontece para qualquer grandeza dependente da posição. De uma forma geral temos que</p>
+
+<p class="formula">
+    \begin{equation} \overline{f(x)}=\int\limits_{-\infty }^{\infty }\psi ^{\ast }(x)f(x)\psi (x)dx. \label{4.9} \end{equation}
+    <span class="numero_formula">2.45</span>
+</p>
+
+<p>Se a grandeza que se deseja calcular o valor médio é o momento linear $p$, ou depende deste, devemos nos lembrar, que $p$
+    não é independente de $x$, mas correlacionado a este, através do princípio de incerteza de Heisenberg. Portanto, na linguagem
+    da mecânica quântica, quando utilizamos as funções de onda no espaço das coordenadas $\psi (x)$, o momento linear não
+    atua como um número, mas como um operador. A representação de operador para o momento linear é dada pela seguinte expressão</p>
+
+<p class="formula">
+    \begin{equation} p_{op}=-i\hbar \frac{d}{dx}, \label{4.10} \end{equation}
+    <span class="numero_formula">2.46</span>
+</p>
+
+<p>assim sendo, o valor médio do momento linear, de acordo com a Eq.(4.9) é dado por</p>
+
+<p class="formula">
+    \begin{equation} \overline{p}=\int\limits_{-\infty }^{\infty }\psi ^{\ast }(x)p_{op}\psi (x)dx=\int\limits_{-\infty }^{\infty
+    }\psi ^{\ast }(x)\left( -i\hbar \frac{d% }{dx}\right) \psi (x)dx. \label{4.11} \end{equation}
+    <span class="numero_formula">2.47</span>
+</p>
+
+<p>
+    <i>Exemplo 4.4</i> A partir da função de onda para a partícula livre
+    <button class="botao-rodape" data-numero='2'></button>, a qual é dada por $\psi (x,t)=\cos (kx-\omega t)+i\sin (kx-\omega t)$, obtenha a representação de operador
+    para o momento linear dada pela Eq.(4.10).</p>
+
+<div class="nota-rodape" data-numero='2'>
+    <p> A chamada partícula livre é a partícula na qual não atuam nenhuma força sobre ela, tendo, portanto, de acordo com a Eq.(4.2)
+        potencial nulo. Sua função de onda é obtida da solução da Equação de Schrödinger dada pela Eq.(4.4) considerando-se
+        ali que V(x) =0.</p>
+</div>
+
+<p>
+    <i>Diferenciando em relação a</i> $x$
+    <i>a função de onda da partícula livre, obtemos:</i>
+</p>
+
+<p class="formula">
+    \begin{equation} \frac{\partial }{\partial x}\psi (x,t)=-k\sin (kx-\omega t)+ik\cos (kx-\omega t)=i\frac{p}{\hbar }\psi (x,t)
+    \label{4.12} \end{equation}
+    <span class="numero_formula">2.48</span>
+</p>
+
+<p>
+    <i>onde</i> $p\equiv \hbar k$ $\left( =\frac{h}{\lambda }\right)$.
+    <i>A Eq.(4.12) pode também ser reescrita como</i>
+</p>
+
+<p class="formula">
+    \[ p\left\{ \psi (x,t)\right\} =-i\hbar \frac{\partial }{\partial x}\left\{ \psi (x,t)\right\} \]
+</p>
+
+<p>
+    <i>que indica uma associação entre</i> $p$
+    <i>e o operador</i>
+    $-i\hbar \frac{\partial }{\partial x}.$</p>
+
+<p>O desvio médio padrão, ou seja, o erro na medida da posição $\Delta x$ e do momento $\Delta p$, a que se refere o princípio
+    de incerteza de Heisenberg, discutido no capítulo 3, são dados respectivamente por</p>
+
+<p class="formula">
+    \begin{equation} \Delta x=\sqrt{\overline{x^{2}}-\left( \overline{x}\right) ^{2}}\text{ } \label{4.13} \end{equation}
+    <span class="numero_formula">2.49</span>
+</p>
+
+<p>e também por</p>
+
+<p class="formula">
+    \begin{equation} \Delta p=\sqrt{\overline{p^{2}}-\left( \overline{p}\right) ^{2}} \label{4.14} \end{equation}
+    <span class="numero_formula">2.50</span>
+</p>
+
+<p>onde $\overline{x^{2}}$ $(\overline{p^{2}})$ é o valor médio da posição (momento) ao quadrado e $\left( \overline{x}\right)
+    ^{2}$ $[ \left( \overline{p}\right) ^{2} ]$ é o valor médio da posição (momento) elevado ao quadrado. O cursista deve
+    observar que estas grandezas são diferentes, e que as incertezas são dadas pela raiz quadrada desta diferença.</p>
+
+<p>A Eq.(4.4) é a equação de Schrödinger independente do tempo, uma equação diferencial de segunda ordem. Para se resolver esta
+    equação, pelas técnicas de solução de equações diferenciais já estudadas, deve-se especificar o tipo de potencial específico
+    que se quer estudar. Para vários tipos de potenciais a equação admite uma solução exata, analítica, como, por exemplo,
+    o potencial do oscilador hamônico, o potencial Coulombiano, a partícula livre (potencial nulo), partícula presa em alguns
+    tipos de poços de potencial, etc. A solução da equação de Schrödinger nos dá a função de onda que descreve o movimento
+    das partículas, a partir da qual se pode determinar os valores médios dos observáveis físicos, de acordo com as Eqs.(4.9)
+    e (4.11).</p>
+
+
+
+<span class="pagina">61</span>
+
+<h5>Atividade de Verificação de Aprendizagem 5 (Atividade a distância)</h5>
+
+<div class="exercicio">
+    <h5>Questão 01</h5>
+    <p>A ligação básica entre as propriedades da função de onda $\psi (x,t)$ e o comportamento da partícula associada é expressa
+        em termos da
+        <i>densidade de probabilidade</i>
+        $P(x,t)$. De acordo com o postulado de Born, a relação entre a densidade de probabilidade e a função de onda é</p>
+
+    <p class="formula">
+        \[ P(x,t)=\psi ^{\ast }(x,t)\psi (x,t) \]
+    </p>
+
+    <p>Mostre que $\psi ^{\ast }(x,t)\psi (x,t)$ é necessariamente real, e ou positivo ou nulo.</p>
+</div>
+
+
+<div class="exercicio">
+    <h5>Questão 02</h5>
+    <p>Uma partícula se encontra dentro de uma caixa de comprimento $L$, conforme mostra a Figura,</p>
+    <figure>
+        <img src="[[caminho]]/media/figura_q_2.jpg">
+    </figure>
+    <p>podendo ser descrita pela função de onda </p>
+    <p class="formula">
+        \[ \psi (x)=\left\{ \begin{array}{l} i\sqrt{\frac{2}{L}}\sin \left( \frac{\pi x}{L}\right) \hspace{2cm}0&lt;x&lt;L \\ \\
+        0\hspace{3cm}\text{para }x\text{ fora deste intervalo}% \end{array} \right. \]
+    </p>
+    <ol>
+        <li>Calcule o valor esperado da energia cinética da partícula.</li>
+        <li>Calcule a probabilidade de que uma certa medida da localização da partícula a encontre no intervalo entre entre $0$
+            e $L/2$.</li>
+        <li>Calcule o produto das incertezas na posição e no momento da partícula.</li>
+    </ol>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 03</h5>
+    <p>Uma partícula presa em uma caixa unidimensional de largura $a$ (sendo proibida de ser encontrada fora da caixa) oscila
+        entre as paredes desta que são colocadas nos pontos $x=\pm a/2$, e é descrita pela seguinte função de onda normalizada.</p>
+    <p class="formula">
+        \[ \psi (x)=\sqrt{\frac{2}{a}}\cos \left( \frac{\pi x}{a}\right) . \]
+    </p>
+    <p>Calcule a probabilidade de que, em uma certa medida, a partícula seja encontrada dentro de uma região medindo $a/3$,
+        medido a partir do extremo direito da caixa.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 04</h5>
+    <p>A função de onda do estado fundamental do oscilador harmônico unidimensional é dada por</p>
+    <p class="formula">
+        \[ \psi (x)=\frac{(km)^{1/8}}{(\pi \hbar )^{1/4}}\text{ }e^{-\left( \frac{\sqrt{% k\text{ }m}}{2\hbar }\right) x^{2}} \]
+    </p>
+    <p>onde $k$ é a constante elástica da mola. Calcule o valor esperado da energia total $\overline{E}$ do oscilador harmônico
+        neste estado.</p>
+</div>

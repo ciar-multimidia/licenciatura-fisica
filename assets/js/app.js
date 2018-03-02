@@ -115,8 +115,8 @@ jQuery(document).ready(function($) {
 	if (contSubcaps.length > 0) {
 		btSubcaps.each(function(index, el) {
 			$(el).on('click', function(event) {
-				event.preventDefault();
-				$('html, body').scrollTop(headings.eq(index).offset().top);
+				// event.preventDefault();
+				// $('html, body').scrollTop(headings.eq(index).offset().top);
 			});	
 		});
 	}
