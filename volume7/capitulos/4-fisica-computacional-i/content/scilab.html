@@ -1,0 +1,859 @@
+<h2>Scilab</h2>
+
+<h3>Introdução</h3>
+
+<p>O Scilab é um software científico para computação numérica bastante flexível
+e que fornece um poderoso ambiente computacional de código aberto para aplicações
+científicas e em engenharia. Sua origem e desenvolvimento podem ser
+sumarizados em:</p>
+
+	<ul>
+		
+
+		<li>Em 1990 foi iniciado seu desenvolvimento pelos
+   pesquisadores do INRIA (Institut National de Recherche
+   en Informatique et en Automatique) e do ENPC (École
+   Nationale des Ponts et Chaussées).</li>
+		<li>Em maio de 2003 foi criado o Consórcio Scilab que
+   tornou-se responsável pelo seu desenvolvimento.</li>
+		<li>É distribuído gratuitamente e em código aberto via
+   Internet desde 1994.</li>
+		<li>Devido sua qualidade é usado em diversos ambientes
+   industriais e educacionais pelo mundo.</li>
+
+
+	</ul>
+
+<span class="pagina">83</span>
+
+	<p>Suas principais características são:</p>
+
+	<ul>
+		
+		<li>Distribuição gratuita, com código fonte disponível. Linguagem
+   simples e de fácil aprendizado;</li>
+		<li>Possui um bom sistema de auxílio ao usuário, help;</li>
+		<li>Poderoso ambiente para geração de gráficos 2D e 3D, inclusive
+   com animação;</li>
+		<li>Possui várias funções para manipulação de matrizes. As operações
+   de concatenação, acesso e extração de elementos, transposição, adição e
+   multiplicação de matrizes são facilmente realizadas;</li>
+		<li>Permite trabalhar com polinômios, funções de transferência, sistemas
+   lineares e grafos;</li>
+		<li>Define-se facilmente uma função;</li>
+		<li>Permite o acesso a rotinas escritas nas linguagens FORTRAN ou C;</li>
+		<li>Processamento em paralelo;</li>
+		<li>Um excelente "help", o  qual traz uma descrição da função desejada
+   e um exemplo do seu uso. Além disso, ele também possuí um demo para as suas
+   diversas habilidades.</li>
+
+
+	</ul>
+
+<p>Este texto é uma pequena introdução ao software Scilab, e descreveremos
+rapidamente as seguintes características dele:</p>
+
+
+	<ol>
+		
+	<li>O ambiente do Scilab.</li>
+	<li>Algumas Funções Primitivas.</li>
+	<li>Como obter ajuda.</li>
+	<li>Polinômios, Vetores e Matrizes.</li>
+	<li>Programação.</li>
+	<li>Gráficos.</li>
+
+	</ol>
+
+<p>Por ser um software livre de alta qualidade, encontramos facilmente na internet
+	um grande número de textos sobre o mesmo. Podemos destacar,</p>
+<ul>
+
+<li><a target="blank" href="http://www.scilab.org/">http://www.scilab.org/</a> Sua página e lá encontra-se
+   um manual de utilização da última versão em português.</li>
+
+	<li><a target="blank" href="http://wiki.scilab.org/">http://wiki.scilab.org/</a> A Wiki do Scilab. Nesta Wiki, em <a target="blank" href="http://wiki.scilab.org/Tutorials">http://wiki.scilab.org/Tutorials</a> encontra-se o tutorial em português do Luís Soares Barretos que é um bom material.</li>
+
+<li><a target="blank" href="http://www.dca.ufrn.br/~pmotta/">http://www.dca.ufrn.br/~pmotta/</a> Página do prof. Paulo S. Motta Pires,
+   que fez um pequeno manual em português da versão 3.0 do Scilab. Ela está
+   sendo redirecionada para <a target="blank" href="http://www.rau-tu.unicamp.br/nou-rau/softwarelivre/document/?code=134">http://www.rau-tu.unicamp.br/nou-rau/softwarelivre/document/?code=134</a>.</li>
+
+   <li><a target="blank" href="http://www.das.ufsc.br/~werner/nivelamento/index.html ">http://www.das.ufsc.br/~werner/nivelamento/index.html </a> Página com apostilas do Scilab.</li>
+
+   <li><a target="blank" href="http://aquarius.ime.eb.br/~aecc/">http://aquarius.ime.eb.br/~aecc/</a> Página do Eduardo Carrilho com material sobre o Scilab.</li>
+
+   <li><a target="blank" href="http://pt.wikipedia.org/wiki/Scilab">http://pt.wikipedia.org/wiki/Scilab</a></li>
+
+   <li><a target="blank" href="http://en.wikipedia.org/wiki/Scilab">http://en.wikipedia.org/wiki/Scilab</a></li></ul>
+
+
+<h4>Variáveis Especiais</h4>
+
+
+<p>O scilab possui um grande número de funções intrínsecas, que podem
+ser dividas em categorias, entre elas pode-se citar:</p>
+
+	<ul>
+<li>Programação;</li>
+ <li>Álgebra linear;</li>
+ <li>Equações diferenciais;</li>
+ <li>Estatística;</li>
+ <li>Processamento de sinais;</li>
+ <li>Polinômios;</li>
+ <li>Gráficos 2D e 3D;</li>
+ <li>Ajuste de curvas;</li>
+ <li>Cálculo numérico;</li>
+ <li>Paralelização</li>
+ <li>Interface com C e Fortran;</li>
+ <li>Interação com o sistema operacional.</li>	
+
+
+	</ul>
+
+
+<p>A seguir apresentamos um pequena lista de funções
+em que o usuário interagem com o Scilab. Para
+	maiores detalhes consulte o manual.</p>
+
+
+
+	<p><code>abort</code> Interrompe à avaliação de uma instrução.</p>
+
+	<p><code>apropos</code> Procura por palavras-chave na ajuda do Scilab.</p>
+
+	<p><code>clear</code> Limpa o conteúdo de todas as variáveis definidas.</p>
+
+	<p><code>clearglobal</code> Limpa o conteúdo de todas as variáveis globais.</p>
+
+	<p><code>edit</code> Abre um editor de funções próprio do Scilab.</p>
+
+	<p><code>exit</code> Termina a sessão Scilab corrente.</p>
+
+	<p><code>getmemory</code> Retorna as memórias livre e total do sistema.</p>
+
+	<p><code>getmodules</code> Retorna a lista de módulos instalados no Scilab.</p>
+
+	<p><code>getos</code> Retorna o nome e a versão do Sistema Operacional.</p>
+
+	<p><code>getscilabmode</code> Retorna o modo do Scilab.</p>
+
+	<p><code>getshell</code> Retorna o interpretador de comando corrente.</p>
+
+	<p><code>getversion</code> Retorna o nome da versão do Scilab.</p>
+
+	<p><code>pause</code> Modo de pausa, abre uma seção filha da atual seção do Scilab, no mesmo terminal.</p>
+
+	<p><code>quit</code> Decresce o nível de pausa ou termina o Scilab.</p>
+
+	<p><code>resume</code> Retorna ou pára a execução de uma função e copia algumas de suas variáveis locais.</p>
+
+	<p><code>ver</code> Retorna informações sobre a versão do Scilab.</p>
+
+	<p><code>what</code> Lista todas as funções primitivas do Scilab.</p>
+
+	<p><code>who</code> listagem de variáveis.</p>
+
+	<p><code>who_user</code> listagem das variáveis do usuário.</p>
+
+	<p><code>whos</code> listagem completa das variáveis do Scilab na seção.</p>
+
+
+<p>Vejamos um exemplo:</p>
+
+
+<pre><code>--&gt;SCI      // Diret&oacute;rio no qual o Scilab foi instalado
+ SCI  =
+
+ /usr/share/scilab/
+
+--&gt;pwd     // Diret&oacute;rio no qual esta trabalhando
+--&gt;PWD     // Diret&oacute;rio no qual esta trabalhando
+ PWD  =
+
+ /home/salviano
+
+--&gt;home    // Diret&oacute;rio no qual esta trabalhando
+ home  =
+
+ /home/salviano
+
+--&gt;chdir(&#039;Progs&#039;) // Mudar de diret&oacute;rio
+
+--&gt;cd(&#039;/home/salviano/Documentos&#039;) // Mudar de diret&oacute;rio</code></pre>
+
+<p>No Scilab tudo que vem depois de "//" é um comentário.</p>
+
+
+<span class="pagina">84</span>
+
+<h3>Comandos de Interação com o Shell</h3>
+
+
+	<ul>
+		
+		<li> host</li>
+		<li> unix</li>
+		<li> unix_g</li>
+		<li> unix_s</li>
+		<li> unix_w</li>
+		<li> unix_x</li>
+
+	</ul>
+
+<pre><code>--&gt;unix_w(&#039;ls -alh&#039;)  // Lista arquivos no diretorio que se est&aacute; trabalhando
+total 94M
+drwxrwxr-x 93 salviano salviano  12K 2006-10-05 11:29 .
+drwxr-xr-x 11 root     root     4,0K 2006-05-22 11:00 ..
+-rw-r--r--  1 salviano salviano 3,2K 2004-07-04 15:10 0004029.gz
+-rw-rw-r--  1 salviano salviano 136K 2006-04-05 18:28 3band_model.ppt
+drwxr-xr-x  3 salviano salviano 4,0K 2005-12-13 09:10 .adobe
+drwxr-xr-x  2 salviano salviano 4,0K 2005-04-23 16:49 .alexandria</code></pre>
+
+
+<h3>Iniciando com o Scilab</h3>
+
+
+<p>Agora uma vez na interface do Scilab, digite os comandos
+abaixo e veja o que ocorre.</p>
+
+
+<pre><code>--&gt;a=1    // Verifique o que ocorre
+--&gt;a=1;   // Veja o que ocorre
+--&gt;a      // Veja o que ocorre
+--&gt;clear  // Veja o que ocorre
+--&gt;a      // Veja o que ocorre
+
+--&gt;i=1:5      // Verifique o que ocorre
+--&gt;i=1:0.5:5  // Veja o que ocorre
+
+--&gt;a=2,b=3   // Veja o que ocorre
+--&gt;clear     // Reinicializa as vari&aacute;veis do sistema
+--&gt;a
+--&gt;b</code></pre>
+
+<p>De acordo com o exemplo, anterior o sinal de <code>;</code> no fim de um comando
+diz para o Scilab executar o comando sem fornecer um retorno.</p>
+
+<pre><code>--&gt;a=5,b=10;
+--&gt;save(&#039;dados.dat&#039;,a,b) // Salva no arquivo bin&aacute;rio as vari&aacute;veis a e b
+--&gt;clear                 // Limpa as vari&aacute;veis
+--&gt;a
+--&gt;b
+--&gt;load(&#039;dados.dat&#039;,&#039;a&#039;,&#039;b&#039;) // L&ecirc; as vari&aacute;veis a e b no arquivo bin&aacute;rio
+--&gt;a
+--&gt;b
+--&gt;d1=diary(&#039;file.txt&#039;)//Salva se&ccedil;&atilde;o, o que for digitado a partir deste ponto
+--&gt;a=10,v0=0,x0=10;
+--&gt;t=1;
+--&gt;x=x0+v0*t+0.5*a*t^2;
+--&gt;diary(d1,&#039;close&#039;)          // Fecha o arquivo.</code></pre>
+
+<p>A função <code>diary</code> é muito útil para testarmos algumas funções
+ou a digitarmos alguns valores iniciais, pois ela guarda aquilo que
+	digitamos em um arquivo que pode ser lido posteriormente.</p>
+
+<p>No exemplo abaixo, apresentamos um outro comando que é bastante útil
+quando estamos fazendo alguma operação e precisamos de calcular um outro
+	valor antes de prosseguirmos.</p>
+
+<pre><code>--&gt;a=2, pause
+    a  =
+          2.
+-1-&gt;a=3
+     a  =
+          3.
+-1-&gt;a=2*a
+     a  =
+          6.
+-1-&gt;return
+--&gt;a
+    a  =
+        2.</code></pre>
+
+<p>O comando <code>pause</code>, interrompe a execução da seção atual e abre uma nova
+seção, que recebe um prompt para indicar o nível de pause (exemplo:
+<code>-1-></code>). Neste ponto, o usuário está num novo espaço de trabalho em que
+todas as variáveis de nível inferior (em particular todas as variáveis da
+função) estão disponíveis. Para retornar ao espaço de trabalho em que o comando
+<code>pause</code> foi chamado, usa-se o comando "<code>return</code>" Neste modo,
+<code>[…]=return(…)</code> retorna as variáveis dos argumentos
+<code>(…)</code> ao espaço de trabalho inicial com nomes na saída
+<code>[…]</code>. Caso contrário, as variáveis de nível inferior são protegidas
+e não podem ser modificadas. Este modo pode ser cancelado pelo comando
+"<code>abort</code>".</p>
+
+<h3>Números Complexos</h3>
+
+<p>Agora veremos como o Scilab trabalha com os números complexos.</p>
+
+
+<pre><code>--&gt;a=1+2*%i
+    a  =
+         1. + 2.i
+--&gt;b=1-2*%i
+    b  =
+        1. - 2.i
+--&gt;a*b
+    ans  =
+           5.
+--&gt;conj(a)
+    ans  =
+           1. - 2.i
+--&gt;norm(a)
+    ans  =
+           2.236068
+--&gt;[Ro,Theta]=polar(a)
+     Theta  = 1.1071487 + 5.071E-17i
+     Ro     = 2.236068</code></pre>
+
+<h3>Constantes Especiais</h3>
+
+<p>O Scilab tem definido internamente algumas constantes especiais
+como o <code>%i</code>, <code>%pi</code>, <code>%e</code>, e <code>%eps</code>,
+que estão listadas na tabela 3.1 abaixo.</p>
+
+<p>Note que, a constante <code>%eps</code> representa a precisão da máquina,
+ou seja, <code>%eps</code> é o maior número da máquina que
+	1+<code>%eps</code>=1.</p>
+
+
+
+<table>
+
+<caption>Tabela 3.1 – Constantes especiais do Scilab.</caption>
+  <tr><thead>
+    <th>Constante</th>
+    <th>Valor/ Significado</th>
+    <th>Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>%e</td>
+    <td>Número de Euler: $e$ = 2.7182818 . . .</td>
+    <td>x = %e^3</td>
+  </tr>
+  <tr>
+    <td>%eps</td>
+    <td>Precisão da “máquina” do Scilab</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>%f</td>
+    <td>Valor lógico Falso (false).</td>
+    <td>Resp = 7 == 3 + 2</td>
+  </tr>
+  <tr>
+    <td>%i</td>
+    <td>Número imaginário: i = √−1</td>
+    <td>z = 2-5*%i</td>
+  </tr>
+  <tr>
+    <td>%inf</td>
+    <td>Infinito</td>
+    <td>Inf = %inf</td>
+  </tr>
+  <tr>
+    <td>%nan</td>
+    <td>"not a number"</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>%pi</td>
+    <td>Número pi: π = 3.1415927 . . .</td>
+    <td>Area = %pi*R^2</td>
+  </tr>
+  <tr>
+    <td>%s</td>
+    <td>Polinômio com uma única raiz em zero, com s<br>sendo o nome da variável. A constante %s, é definida como poly (0,'s' ).</td>
+    <td>P = poly(0,'s')</td>
+  </tr>
+  <tr>
+    <td>%t</td>
+    <td>Valor lógico Verdade (true).</td>
+    <td>Resp = 5 &gt; 3 + 1</td>
+  </tr>
+  <tr>
+    <td>%z</td>
+    <td>Polinômio com apenas uma raiz em zero e variável z</td>
+    <td>P=3+5*%z-3*%z^2</td>
+	</tr></tbody>
+</table>
+
+	<p>Essas variáveis são consideradas <i>predefinidas</i>. Elas são
+protegidas não podendo ser alteradas, entretanto, pode-se predefinir
+suas próprias variáveis com o comando <code>predef</code>, por exemplo,
+definindo <code>i=sqrt(-1)</code> em vez de <code>%i</code>. Neste caso,
+provavelmente o melhor é definir suas variáveis especiais
+no arquivo com as suas configurações iniciais, no Linux.</p>
+
+<span class="pagina">85</span>
+
+<h3>Polinômios</h3>
+
+<p>O Scilab possuí uma função interna específica para tratar com
+	polinômios. No Scilab os polinômios</p>
+
+	<ul>
+		<li>são criados através da função poly.</li>
+		<li>de mesma variável, podem ser somados, subtraídos,
+   multiplicados e divididos.</li>
+		<li>podem ser gerados através de suas raízes.</li>
+		<li>podem ser gerados através de seus coeficientes.</li>
+	</ul>
+
+<p>Para um vetor <code>A</code>, <code>p=poly(A,'x')</code> define o polinômio
+p(x) com a variável <code>x</code> de modo que <code>roots(p)</code> = <code>A</code>).</p>
+
+
+<pre><code>--&gt;A=[-2 3 7];   // Cria um vetor
+--&gt;p=poly(A,&#039;x&#039;) //Cria um polin&ocirc;mio cujas asa ra&iacute;zes s&atilde;o o vetor de entrada.
+p  =
+               2   3
+    42 + x - 8x + x
+--&gt;roots(p)  // Determina as ra&iacute;zes do polin&ocirc;mio
+ ans  =
+    3.
+  - 2.
+    7.</code></pre>
+
+<p>Por exemplo, verifique cada um dos exemplos abaixo:</p>
+
+
+	<ul>
+		<li>O comando <code>p=poly([-1,2],'x')</code> cria um polinômio
+   com raízes $-1$ e $2$.</li>
+		<li>O comando <code>roots(p)</code> encontra as raízes do polinômio
+   <code>p</code>.</li>
+		<li>O comando <code>q=poly([-4 2 -1], 'x',
+			'coeff')</code> cria o
+   polinômio $q(x)= - 4 + 2x - x^{2}$.</li>
+		<li>Podemos somar, subtrair multiplicar e dividir polinômios.</li>
+	</ul>
+
+<pre><code>--&gt;roots(poly([-4 2 -1], &#039;x&#039;, &#039;coeff&#039;))
+ ans  =
+    1. + 1.7320508i
+    1. - 1.7320508i</code></pre>
+
+
+<p>Para complementar o exemplo, os dois polinômios podem ser multiplicados,
+divididos, somandos ou subtraídos como mostra a seqüência de comandos,</p>
+
+<pre><code>--&gt;p * q // Multiplicacao
+--&gt;p / q // Divisao
+ans =
+2
+2 - 3s + s
+----------
+1 + 2s
+--&gt;[r, q] = pdiv(p,q) // Efetuando a divisao: q=quociente, r=resto
+q =
+- 1.75 + 0.5s
+r =
+3.75
+--&gt;p + q // Adicao
+--&gt;p - q // Subtracao
+--&gt;</code></pre>
+
+<h3>Scilab: Vetores</h3>
+
+<p>A seguir mostramos como trabalhar com vetores no ambiente do Scilab.
+Mas antes veremos algumas operações básicas.</p>
+
+<p>A seguir temos alguns exemplos de operações matriciais.</p>
+
+
+
+<table>
+
+
+<caption>Tabela 3.2 – Exemplo do uso de vetores no Scilab</caption>
+  <tr><thead>
+    <th>Operador</th>
+    <th>Valor/Significado</th>
+    <th>Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>:</td>
+    <td>Cria vetor/matriz num intervalo</td>
+    <td>v=[inicio:incremento:fim]</td>
+  </tr>
+  <tr>
+    <td>linspace()</td>
+    <td>Cria vetor/matriz num intervalo</td>
+    <td>v=linspace[inicio,fim,incremento]</td>
+  </tr>
+  <tr>
+    <td>[]</td>
+    <td>Cria um vetor ou matriz</td>
+    <td> A=[1 2 3] // Cria vetor linha<br> B=[4, 5, 6] // Cria vetor linha <br> C=[1; 2; 3] // Cria vetor coluna</td>
+  </tr>
+  <tr>
+    <td>;</td>
+    <td>Separador de linhas</td>
+    <td>A=B*C;</td>
+  </tr>
+  <tr>
+    <td>( )</td>
+    <td>Extração/ Inserção</td>
+    <td>m=A(2)<br>A(1)=5</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Operações matriciais</td>
+    <td>A*B // produto escalar<br> A*B'// produto escalar <br> 2*B // produto por um escalar <br> B/2 // divisão por um escalar <br> C*A // é uma matriz de 3 x 3</td>
+  </tr>
+  <tr>
+    <td>+ </td>
+    <td>Soma dos elementos</td>
+    <td>A+B // retorna [5 7 9]</td>
+  </tr>
+  <tr>
+    <td>–</td>
+    <td>Subtração dos elementos</td>
+    <td>A-B // retorna [-3 -3 -3]</td>
+  </tr>
+  <tr>
+    <td>'</td>
+    <td>Transpõe Vetor/Matrix</td>
+    <td>x // Vetor transposto</td>
+  </tr>
+  <tr>
+    <td>size()</td>
+    <td>fornece a dimensão do vetor</td>
+    <td>size(x) // Retorna 5 <br>size(C*A) // Retorna 3x3</td>
+  </tr>
+  <tr>
+    <td>ones()</td>
+    <td>Preenche vetor com 1</td>
+    <td>a=ones (1 : 6)</td>
+  </tr>
+  <tr>
+    <td>zeros()</td>
+    <td>Preenche vetor com 0</td>
+    <td>b=zeros(1: 6)</td>
+  </tr>
+  <tr>
+    <td>norm()</td>
+    <td>Módulo do vetor</td>
+    <td>norm (A) // retorna 3.741657</td>
+  </tr>
+  <tr>
+    <td>min()</td>
+    <td>Mínimo do Vetor/Matriz</td>
+    <td>min (A) // retorna 1</td>
+  </tr>
+  <tr>
+    <td>max()</td>
+    <td>Máximo do Vetor/Matriz</td>
+    <td>max(C*A) // retorna 9</td>
+  </tr>
+  <tr>
+    <td>prod()</td>
+    <td>Produto dos elementos</td>
+    <td>prod(A)  // retorna 6</td>
+  </tr>
+  <tr>
+    <td>sum()</td>
+    <td>Soma dos elementos</td>
+    <td>sum (B) // retorna 15</td>
+  </tr>
+  <tr>
+    <td>inv()</td>
+    <td>Matriz inversa</td>
+    <td>inv(matriz)</td>
+  </tr>
+  <tr>
+    <td>eye()</td>
+    <td>Matriz identidade</td>
+    <td>D=eye(n,n) // Identidade <br> D=eye(A) // Identidade com mesma dimensão de A</td>
+	</tr></tbody>
+</table>
+
+<pre><code>-->a=1:1:3;  // Cria vetor com 3 elementos na sequ&ecirc;ncia
+-->x=[1 -3 4]; y=[2; 1; -3]; w=[2 3 -1];
+-->x*w
+    !--error 10
+Multiplica&ccedil;&atilde;o incoerente.
+
+-->x*w&#039; // w&#039; &eacute; a transposta de w
+ ans  = - 11.
+-->c=y*x // Multiplica&ccedil;&atilde;o matricial
+ c  =
+    2.  - 6.    8.
+    1.  - 3.    4.
+  - 3.    9.  - 12.
+-->c(2,2)
+ ans  = - 3.
+-->c(2,2)*x(2) // Acesso a um elemento da matriz
+ ans  = 9.
+->gt;norm(w)      // Retorna a norma do vetor
+ ans  = 3.7416574
+-->A = [ 1 2 3; 4 5 6; 7 8 9]
+ A  =
+    1.    2.    3.
+    4.    5.    6.
+    7.    8.    9.
+-->A*c      // Multiplica&ccedil;&atilde;o matricial
+ ans  =
+  - 5.    15.  - 20.
+  - 5.    15.  - 20.
+  - 5.    15.  - 20.
+-->prod(x)
+ ans  = - 12.
+-->max(A)
+ ans  = 9.
+-->min(c)
+ ans  = - 12.
+-->inv(A)
+Aviso:
+A matriz &eacute; quase singular ou possui m&aacute; escala. rcond =    4.5916D-41
+ ans  =
+   1.0D+15 *
+    2.2512502  - 4.5025004    2.2512502
+  - 4.5025004    9.0050008  - 4.5025004
+    2.2512502  - 4.5025004    2.2512502</code></pre>
+
+
+<p>As operações matriciais a serem realizadas termo a termo são obtidas
+usando um ponto antes da operação <code>( .* ./ )</code>, por exemplo,
+para obter um vetor linha da multiplicação de elemento por
+elemento dos vetores linha A e B, fazemos: <code>A.*B</code></p>
+
+
+<table>
+
+<caption>Tabela 3.3 – Operadores matemáticos básicos do Scilab. As operações pontuais são realizadas elemento por elemento de uma matriz ou vetor.</caption>
+
+  <tr><thead>
+    <th>Op.</th>
+    <th>Operação</th>
+    <th>Sintaxe/ Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>+</td>
+    <td>Adição</td>
+    <td>Ad = 423.31 + 221.07</td>
+  </tr>
+  <tr>
+    <td>–</td>
+    <td>Subtração</td>
+    <td>Sub = 423.31 - 121.07</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Multiplicação</td>
+    <td>Mult = Ad*3</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Divisão total à direita</td>
+    <td>Div = Sub/3</td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>Potenciação</td>
+    <td>Pot = Ad^3</td>
+  </tr>
+  <tr>
+    <td>.^</td>
+    <td>Potenciação pontual</td>
+    <td>Mat = Mat.^3</td>
+  </tr>
+  <tr>
+    <td>\</td>
+    <td>Divisão total à esquerda</td>
+    <td>Vec = Vec \Mat</td>
+  </tr>
+  <tr>
+    <td>.*</td>
+    <td>Multiplicação pontual</td>
+    <td>MatR = MatA.*MatB</td>
+  </tr>
+  <tr>
+    <td>./</td>
+    <td>Divisão pontual à direita</td>
+    <td>MatR = MatA./MatB</td>
+  </tr>
+  <tr>
+    <td>.\</td>
+    <td>Divisão pontual à esquerda</td>
+    <td>MatR = = MatA.\MatB</td>
+  </tr>
+  <tr>
+    <td>.*.</td>
+    <td>Produto tensorial, Kronecker</td>
+    <td>PTen = C.*.D</td>
+  </tr>
+  <tr>
+    <td>./.</td>
+    <td>Divisão tensorial à direita, Kronecker</td>
+    <td>DTen1 = C./.D</td>
+  </tr>
+  <tr>
+    <td>.\.</td>
+    <td>Divisão tensorial à esquerda, Kronecker</td>
+    <td>DTen2 = C.\.D</td>
+	</tr></tbody>
+</table>
+
+<span class="pagina">86</span>
+
+<pre><code>-->x=[1 2 3]; y=[1 2 3];
+-->x.*y
+ ans  = 1.    4.    9.
+-->y./x
+ ans  =  1.    1.    1.
+-->A = [ 1 2 3; 4 5 6; 7 8 9];
+-->B = [ 2 2 2; 2 2 2; 2 2 2];
+-->A .\ B
+ ans  =
+    2.           1.      0.6666667
+    0.5          0.4     0.3333333
+    0.2857143    0.25    0.2222222</code></pre>
+
+
+<h3>Matrizes e elementos de Matrizes</h3>
+
+
+<p>Vamos considerar as seguintes  matrizes</p>
+
+
+<p class="formula">
+\[
+A=
+\begin{pmatrix} 
+1 &amp; 2 &amp; 3 \\
+-5 &amp; 4 &amp; -2 \\
+-3 &amp; 7 &amp; 1
+\end{pmatrix}
+
+\qquad
+B=
+\begin{pmatrix}
+-3 &amp; 4 &amp; -1 \\
+4 &amp; -2 &amp; 8 \\
+2 &amp; -5 &amp; 1
+\end{pmatrix}
+
+	\]</p>
+
+<p>O comando:</p>
+
+	<ul>
+		<li><code>A = [1 2 3; -5 4 -2; -3 7 1]</code> cria a matriz $A$.</li>
+		<li><code>B = [-3 4 -1; 4 -2 8; 2 -5 1]</code> cria a matriz $B$</li>
+		<li> <code>A(1,2)</code> mostra o elemento $A_{1,2}$ da matriz $A$.</li>
+		<li><code>size(A)</code> é uma matriz de $3 \times 3$.</li>
+		<li><code>A'</code> é a transposta da matriz <code>A</code>.</li>
+		<li><code>V(2:5)</code> acessa todos os elementos $V_{2}$,
+ $V_{3}$, $V_{4}$ e $V_{5}$ do vetor $V$.</li>
+		<li><code>V(1:2:9)</code> acessa todos os elementos ímpares
+entre $1$ e $9$ do vetor $V$.</li>
+		<li><code>A(:,2)</code> lista todos os elementos da coluna $2$.</li>
+		<li><code>v(\$)</code>, acessa  último elemento de v.</li>
+		<li><code>A(\$-1,:)</code>, acessa a segunda linha da matriz $A$.</li>
+		<li><code>testmatrix</code> gera algumas matrizes particulares.</li>
+		<li><code>testmatrix('hilb',n)</code>, gera
+uma matriz de Hilbert de dimensão n.</li>
+		<li><code>testmatrix('magic',n)</code>, gera
+uma matriz quadrado mágico de dimensão n.</li>
+		<li><code>trace(M)</code> retorna o traço da matriz M</li>
+		<li><code>B=rand(n,m)</code> ou <code>B=rand(A)</code>, gera matrizes com
+elementos aleatórios.</li>
+		<li><code>A(1,:)</code> lista todos elementos da linha 1 enquanto</li>
+		<li><code>A(:,2)</code> lista todos elementos da coluna 2.</li>
+		<li><code>v=[A(1,:); A(3,:)]</code> cria um vetor coluna:</li>
+		<li><code>sum(B,'r')</code> e
+ <code>prod(B,'r')</code>
+respectivamente somam e fazem o produto por colunas, para
+produzir uma linha.</li>
+		<li><code>sum(B,'c')</code> e
+<code>prod(B,'c')</code>
+respectivamente somam e fazem o produto por linhas, para
+produzir uma coluna.</li>
+		<li><code>[x0,nsA] = linsolve(A,c[,x0])</code>, determina a
+solução do Sistema Linear $A \cdot x+c = 0$:</li>
+		
+	</ul>
+
+<h3>Gráficos</h3>
+
+<p>Vamos iniciar fazendo gráficos simples, conforme o exemplo:</p>
+
+<pre><code>-> x=1:10;  // Cria vetor x de 10 elementos,com passo 1
+-> plot(x,x^2,&#039;b-&#039;,x,10*x,&#039;r-&#039;); // Note: &#039;b-&#039; &eacute; azul com tra&ccedil;o</code></pre>
+
+<p>O comando <code>clf()</code> apaga o gráfico corrente.
+então</p>
+
+<pre><code>-> clf(); // apaga o gr&aacute;fico anterior
+-> t=-2*%pi:%pi/100:2*%pi;plot(t,sin(t),’r-’);
+-> clf(); // apaga o gr&aacute;fico anterior</code></pre>
+
+<pre><code>x=linspace(1,11,20);
+y=linspace(-2,2,20);
+plot2d(x,y,style=-1);</code></pre>
+
+<p>Para fazer gráficos no Scilab, primeiro é necessário
+definir uma função. No Scilab isso é feito usando o
+comando <code>deff</code> da seguinte forma</p>
+
+<pre><code>deff(&#039;[y1]=f1(x)&#039;,&#039;y1=x^2-2*x-3&#039;); // Uma vari&aacute;vel
+deff(&#039;[y2]=f2(x)&#039;,&#039;y2=x^2-2&#039;);            // Uma vari&aacute;vel
+[s1]=fsolve(1,f,0.0001);   // Determina as ra&iacute;zes de f1(x)
+[s2]=fsolve(1,f,0.0001);   // Determina as ra&iacute;zes de f2(x)
+x=-5:0.1:5;                // Cria o vetor x com o intervalo
+plot(x,f1);                // Faz o gr&aacute;fico de f1
+plot(x,f2);                // Faz o gr&aacute;fico de f2</code></pre>
+
+<pre><code>deff (&#039;[y]=f(x)&#039;,&#039;y=3*x+x.*sin(x)&#039;)
+x=1:.5:100;
+fplot2d(x,f)</code></pre>
+
+<p>Agora com a ajuda do help faça o gráfico da função</p>
+
+<p class="formula">
+\begin{equation}
+ y(x) = \dfrac{x|x|}{1+x^2}
+\end{equation}
+<span class="numero_formula">4.2</span>	
+</p>
+
+<p>com os seguintes comandos</p>
+
+	<ul>
+		<li>plot2d(x,y)</li>
+		<li>fplot2d(x,f)</li>
+		<li>fplot2d1(x,f)</li>
+		<li>plot2d2(x,y)</li>
+	</ul>
+
+<p>Para obter o gráfico 3D da equação $z=x^4 - y^4$ faça</p>
+
+<pre><code>deff (&#039;[z]=f(x,y)&#039;,&#039;z = x^4 - y^4&#039;);
+x=-4:.20:4; y=x;
+clf();
+fplot3d(x,y,f);</code></pre>
+
+<p>Agora faremos o gráfico das seguintes funções $f(x,y)= x^3 - y^3$ e $g(x,y)= sin(x^2) - y^2$.</p>
+
+<pre><code>deff (&#039;z=f(x,y)&#039;,&#039;z = x^3 - y^3&#039;);
+deff (&#039;z=g(x,y)&#039;,&#039;z = sin(x^2) - y^2&#039;);
+x=-4:.2:4; y=x;
+f1=scf(1); //criando figura com id==1 e a torna a figura corrente
+f0=scf(0); //criando figura com id==0 e a torna a figura corrente
+xlabel(&#039;X&#039;); // r&oacute;tulo do eixo x
+ylabel(&#039;Y&#039;); // r&oacute;tulo do eixo y
+xtitle(&#039;f(x,y)=x^3 - y^3&#039;);  // titulo do gr&aacute;fico
+fplot3d(x,y,f) //desenhando na figura corrente (id=0)
+scf(f1); // ajustando a primeira figura criada como sendo a corrente
+xtitle(&#039;g(x,y)=sin(x^2) - y^2&#039;);  // titulo do gr&aacute;fico
+fplot3d1(x,y,g) //desenhando na figura corrente (id=1)</code></pre>
+
+<p>A seguir mostramos como obter um gráfico paramétrico.</p>
+
+<pre><code>t=0:%pi/20:4*%pi;
+param3d(cos(t),sin(t),t/%pi);</code></pre>

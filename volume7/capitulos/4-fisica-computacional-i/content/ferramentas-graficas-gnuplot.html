@@ -1,0 +1,1069 @@
+<h2>Ferramentas Gráficas: Gnuplot</h2>
+
+   <h3>Introdução</h3>
+
+
+<p>Os resultados de um trabalho podem ser divididos em experimental ou teórico.
+Em geral os resultados experimentais fornecem uma tabela de dados enquanto o
+teórico fornecem algumas funções. A análise desses resultados baseiam-se
+nos gráficos das tabelas dos resultados experimentais e nos gráficos das funções.
+Quando realizamos uma medida experimental, a melhor forma de armazenarmos os
+dados para fazermos uma análise é gerarmos um arquivo sem formatação com os dados.
+Esse arquivo pode ter colunas de dados se forem necessárias, mas o mais importante é
+que haja um padrão entre os espaçamento das colunas. É usual a extensão
+	<code>.dat</code> para arquivos de dados. A seguir mostramos um arquivo de dados</p>
+
+<pre><code>-0.0500  3.25426398E+00  4.29330253E-01  3.24613849E-01
+-0.0453  4.00233133E+00  4.87050240E-01  4.27249918E-01
+-0.0407  4.80082771E+00  1.17749487E+00  4.88683301E-01
+-0.0360  5.62540177E+00  2.05995541E+00  4.46065079E-01
+-0.0313  6.44791727E+00  2.12621122E+00  5.83923911E-01
+-0.0267  7.23785608E+00  1.11837154E+00  1.17313039E+00
+-0.0220  7.96398030E+00  7.58906697E-01  1.58538204E+00
+-0.0173  8.59614034E+00  4.13721660E+00  1.05517370E+00
+-0.0127  9.10709784E+00  1.30175180E+01  1.58848978E+00
+-0.0080  9.47422561E+00  2.52587361E+01  9.49695964E+00
+-0.0033  9.68095227E+00  3.51664703E+01  4.57359130E+01
+ 0.0013  9.71783684E+00  3.72056381E+01  1.24673380E+02
+ 0.0060  9.58318675E+00  3.01711387E+01  2.21362917E+00
+ 0.0107  9.28316906E+00  1.81320165E+01  3.21859637E+00
+ 0.0153  8.83140584E+00  7.28983273E+00  3.47251613E+00
+ 0.0200  8.24808660E+00  1.57903316E+00  1.73052079E+00
+ 0.0247  7.55866966E+00  7.13190315E-01  6.40542496E-01
+ 0.0293  6.79227614E+00  1.77587828E+00  6.36689290E-01
+ 0.0340  5.97990290E+00  2.23916001E+00  7.31803957E-01
+ 0.0387  5.15259144E+00  1.58858988E+00  5.51496405E-01
+ 0.0433  4.33968802E+00  7.09698193E-01  3.73725689E-01
+ 0.0480  3.56731732E+00  3.86009235E-01  3.31797933E-01
+
+# No fim do arquivo pode-se colocar coment&aacute;rios.
+# Note que 1.0E-2 &eacute; 1.0 x 10**{-2} ou seja 0.01.
+# Observe ainda que o separador decimal &eacute; o ponto e n&atilde;o a virgula.</code></pre>
+
+<p>Para preservar os dados de uma medida, é recomendável que não se use um software
+específico para guardá-los, tais como uma planilha eletrônica ou a planilha de
+um software gráfico específico, pois todos eles possuem um formato próprio que
+outros software não reconhecem. Porém todos os softwares destinados a análise de
+dados são capazes de ler um arquivo de dados sem formatação, com isso, têm-se
+uma portabilidade temporal para os seus dados sendo possível usar diversos
+	softwares para sua análise de dados, não se restringindo a um único software.</p>
+
+<p>Há diversos softwares livres para fazermos gráficos, entretanto, o Gnuplot além da
+qualidade dos seus gráficos a sua ''flexibilidade'' é muito grande o que nos levou a
+optarmos por ele. A seguir apresentaremos as características básicas do Gnuplot.</p>
+
+
+<h3>Introdução ao Gnuplot</h3>
+
+
+<p>O Gnuplot é um programa interativo livre, baseado em linhas de comando, para
+fazer gráficos de alta qualidade com versões para os sistemas operacionais
+Linux, MS Windows, Open Solaris, OSX, VMS, etc e muitos outros. Ele foi criado
+originalmente para permitir que cientistas e estudantes pudessem visualizar
+funções matemáticas e dados de modo iterativo, entretanto, ele cresceu muito e
+	atualmente é usado por outros programas livres, tais como o octave, maxima, etc.</p>
+
+<p>Ele suporta muitos tipos de gráficos em duas e três dimensões, respectivamente
+gráficos 2D e 3D. Ele pode desenhar, linhas, pontos, caixas, contornos, campos
+vetoriais, superfícies, e vários textos associados. Ele possuí uma diversidade
+de drivers que permitem que ele exporte os gráfico em mais de cinquenta tipos
+diferentes de formatos de saída, entre os quais destacam-se: os terminas com
+telas interativas e a saídas para arquivos nos formatos <code>.eps</code>,
+<code>.fig</code>, <code>.jpg</code>, <code>.svg</code>, <code>.pbm</code>, <code>.pdf</code>,
+<code>.png</code>, LaTeX e metafont. O Gnuplot é um software pequeno e portável, o
+arquivo usado para gerar um gráfico pode ser usado posteriormente em uma nova
+	versão mantendo toda sua funcionalidade.</p>
+
+<span class="pagina">77</span>
+
+<p>Toda versão do Gnuplot, possui em sua página oficial <a target="blank" href="http://www.gnuplot.info/">http://www.gnuplot.info/</a>,
+um "link" chamado "demo gallery", que é uma galeria com uma demonstração das
+funcionalidades do Gnuplot, note que esta galeria é organizada por seções. Portanto,
+quando precisar de fazer um gráfico,  procure por um exemplo do gráfico desejado
+	nesse "link".</p>
+
+<p>O Gnuplot é um software com as seguintes funcionalidades:</p>
+
+	
+<ol>
+	
+	<li>Possuí um conjunto de funções matemáticas implementadas;</li>
+	<li>Faz gráfico de funções algébricas, sendo eles:
+
+		<ul><li>gráficos unidimensionais;</li>
+		<li>gráficos bidimensionais;</li>
+		<li>gráficos de funções paramétricas;</li>
+		<li>gráficos em coordenadas polares;</li>
+
+		</ul></li>
+	<li>Faz gráficos de um arquivo de dados, podendo ser:
+		<ul><li>gráficos unidimensionais;</li>
+		<li>gráficos bidimensionais;</li>
+		<li>gráficos em escalas logarítmicas;</li>
+
+
+		</ul></li>
+
+	<li>Faz ajuste de curvas;</li>
+	<li>Exporta o resultado final em mais de 50 formatos diferentes, os seus "Terminais";</li>
+	<li>Permite a construção de "scripts".</li>
+
+
+</ol>
+
+<h3>Funções Matemáticas</h3>
+
+<p>Aqui apresentamos uma lista parcial da funções matemáticas mais comuns disponibilizadas
+	pelo Gnuplot.</p>
+
+<p>$\func{abs}(x)$ Para $x$ qualquer, retorna o valor absoluto de $x$ com o mesmo tipo de $x$.</p>
+<p>$\func{abs}(x)$ Para $x$ qualquer, retorna $\sqrt{\Re(x)^2+\Im(x)^2}$ para $x$ complexo.</p>
+<p>$\func{acos}(x)$ Para $x$ qualquer, retorna um valor entre $-\pi \leq acos(x) \leq \pi$ se $-1\leq x \leq 1$.</p>
+<p>$\func{acosh}(x)$ Para $x$ qualquer, retorna um valor entre $-\pi \leq acos(x) \leq \pi$ se $ x \geq 1$.</p>
+<p>$arg(x)$ Para $x$ qualquer, retorna a fase de $x$.</p>
+	<p>$asin(x)$ Para $x$ qualquer, retorna o $\sen^{-1} x$ (inverso do seno).</p>
+	<p>$asinh(x)$ Para $x$ qualquer, retorna o $\senh^{-1} x$ (inverso do seno hiperbólico).</p>
+	<p>$atan(x)$ Para $x$ qualquer, retorna o $\tg^{-1} x$ (inverso da tangente).</p>
+	<p>$atan2(y,x)$ Para $x$ e $y$ inteiros ou reais, retorna  $\tg^{-1}(y/x)$ (inverso da tangente).</p>
+	<p>$atanh(x)$ Para $x$ qualquer, retorna o $tgh^{-1} x$ (inverso da tangente hiperbólica).</p>
+	<p>$cos(x)$]  Para $x$ qualquer, retorna o cosseno de $x$, $\cos x$.</p>
+	<p>$cosh(x)$ Para $x$ qualquer, retorna o cosseno hiperbólico de $x$, $\cosh x$, .</p>
+	<p>$exp(x)$ Para $x$ qualquer, retorna $e^{x}$.</p>
+	<p>$gamma(x)$ Para $x$ qualquer, retorna a função gama $\hbox{Gamma}(\hbox{real}(x))$, do real($x$).</p>
+	<p>$imag(x)$ Para $x$ complexo, retorna a parte imaginária $x$ como um número real.</p>
+	<p>$int(x)$ Para $x$ real, retorna a parte inteira de $x$, truncando a parte decimal.</p>
+	<p>$log(x)$ Para $x$ qualquer, retorna o logaritmo natural de $x$ (base $e$), $\ln x = \log_{e} x$.</p>
+	<p>$log10(x)$ Para $x$ qualquer, retorna o logartitmo de $x$ na base $10$, $\log_{10} x$.</p>
+	<p>$norm(x)$ Para $x$ qualquer, retorna a função distribuição normal (Gaussiana) do real($x$).</p>
+	<p>$rand(x)$ Para $x$ qualquer, retorna um número pseudo a</p>
+	<p>$sgn(x)$ Para $x$ qualquer, retorna $1$ se $x>0$, $-1$ se $x&lt;0$, $0$ se $x=0$. O imag($x$) é ignorado.</p>
+	<p>$sin(x)$ Para $x$ qualquer, retorna  $\sen x$.</p>
+	<p>$sinh(x)$ Para $x$ qualquer, retorna $\func{senh} x$.</p>
+	<p>$sqrt(x)$ Para $x$ qualquer, retorna $\sqrt{x}$.</p>
+	<p>$tan(x)$ Para $x$ qualquer, retorna $\tg x$, a tangente de $x$.</p>
+	<p>$tanh(x)$ Para $x$ qualquer, retorna $tgh x$, a tangente hiperbólica de $x$.</p>
+	<p>$tm\_hour(x)$ Retorna um inteiro para a hora.</p>
+	<p>$tm\_mday(x)$ Retorna um inteiro para o dia do mês.</p>
+	<p>$tm\_min(x)$ Retorna um inteiro para o minuto.</p>
+	<p>$tm\_mon(x)$ Retorna um inteiro para o mês.</p>
+	<p>$tm\_sec(x)$ Retorna um inteiro para o segundo.</p>
+	<p>$tm\_wday(x)$ Retorna um inteiro para o dia da semana.</p>
+	<p>$tm\_yday(x)$ Retorna um inteiro para o dia do ano.</p>
+	<p>$tm\_year(x)$ Retorna um inteiro para o ano.</p>
+	<p>$valid(x)$ Retorna um inteiro para o teste validade da $column(x)$ durante a manipulação de dados.</p>
+	<p>$rand(0)$ Retorna um número pseudo aleatório no intervalo $0\leq rand(0) \leq 1$ gerado a partir do valor corrente da semente interna de $32$-bits.</p>
+	<p>$rand(-1)$ Reinicializa ambas as sementes para um valor padrão.</p>
+<p>$rand(x)$ Para $x>0$ inicializa ambas as sementes para um valor baseado no
+	valor de $x$.</p>
+	<p>$rand({x,y})$ Para $x>0$ inicializa a semente $1$ (seed1) para $x$ e a semente $2$ (seed2) para $y$..</p>
+
+<span class="pagina">78</span>
+
+
+<p>A partir destas funções básicas, podemos criar uma função qualquer para
+fazermos um gráfico, conforme exemplo a seguir de uma distribuição gaussiana
+	centrada em zero, para isto, chame o <i>Gnuplot</i> e digite os seguintes comandos:</p>
+
+
+<pre><code>gnuplot&gt; g(x)= exp(-x**2)
+gnuplot&gt; plot g(x)</code></pre>
+
+
+<p>Podemos construir uma função um pouco mais elaborada, como</p>
+
+<pre><code>gnuplot&gt; f(x)=sin(2.0*x)/(2*x)
+gnuplot&gt; plot f(x)</code></pre>
+
+	<p>Podemos ter combinações de funções elementares como</p>
+
+<pre><code>gnuplot&gt; f(x)=sin (2.0* x )*log( abs(x) )
+gnuplot&gt; plot f(x)</code></pre>
+
+
+<p>ou combinações de funções definidas no próprio ambiente
+como no caso</p>
+
+<pre><code>gnuplot&gt; E(x)=exp(-abs(x/5))
+gnuplot&gt; h(x)=E(x)*cos(2*x)
+gnuplot&gt; plot h(x), E(x), -E(x)</code></pre>
+
+
+<h3>Expressões e Operadores</h3>
+
+
+<p>Quanto as expressões matemáticas, os parenteses podem ser usados para
+	alterar a ordem de cálculo de uma expressão. Os operadores no <i>Gnuplot</i>
+são os mesmos da linguagem de programação C, já o operador $**$ exponenciação
+é o mesmo da linguagem de programação FORTRAN. A seguir apresentamos algumas
+	tabelas com os operadores usados pelo gnuplot.</p>
+
+
+<table>
+<caption>Tabela 2.1 – Operadores Unitários</caption>
+
+  <tr><thead>
+    <th>Símbolo</th>
+    <th>Exemplo</th>
+    <th>Explicação</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>–</td>
+    <td>–a</td>
+    <td>menos unitário</td>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>+a</td>
+    <td>mais unitário</td>
+  </tr>
+  <tr>
+    <td>~</td>
+    <td>~a</td>
+    <td>complemento</td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>!a</td>
+    <td>Negação lógica</td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>!a</td>
+    <td>Fatorial</td>
+  </tr>
+  <tr>
+    <td>$</td>
+    <td>$3</td>
+    <td>chama argumento/ coluna durante uma manipulação</td>
+	</tr></tbody>
+</table>
+
+	<p>O operador ternário $f=a?b:c$, pode ser expresso matematicamente como:</p>
+
+<p class="formula"></p>\begin{equation}
+ f =
+\begin{cases}
+ b & \text{ Se } a = 0 \\
+ c & \text{ Se } a \neq 0
+\end{cases}
+	\end{equation}</p>
+
+
+<table>
+<caption>Tabela 2.2 – Operadores Matemáticos</caption>
+
+  <tr><thead>
+    <th>Símbolo</th>
+    <th>Exemplo</th>
+    <th>Explicação</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>**</td>
+    <td>a* *b</td>
+    <td>Exponenciação</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>a * b</td>
+    <td>Multiplicação</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>a / b</td>
+    <td>Divisão</td>
+  </tr>
+  <tr>
+    <td>%</td>
+    <td>a%b</td>
+    <td>Módulo*</td>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>a + b</td>
+    <td>Adição</td>
+  </tr>
+  <tr>
+    <td>–</td>
+    <td>a – b</td>
+    <td>Subtração</td>
+	</tr></tbody>
+</table>
+
+
+<table>
+<caption>Tabela 2.3 – Operador Ternário</caption>
+
+  <tr><thead>
+    <th>Símbolo</th>
+    <th>Exemplo</th>
+    <th>Explicação</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>?:</td>
+    <td>a?b : c</td>
+    <td>Operação Ternária</td>
+	</tr></tbody>
+</table>
+
+
+
+<p>Esse operador é proveniente da linguagem de programação C. A variável
+$a$ pode ser uma expressão inteira, então para avaliar o resultado
+desta expressão o primeiro argumento $a$, que deve ser um inteiro, é
+calculado. Se ele for verdade (diferente de zero), o segundo $b$ é
+calculado e retornado, de outro modo, o terceiro $c$ é calculado e
+	retornado.</p>
+
+<p>A seguir apresentamos a tabela dos operadores lógicos, para tomada
+	de decisão.</p>
+
+
+
+<caption>Tabela 2.4 – Operadores Lógicos</caption>
+
+<table>
+  <tr><thead>
+    <th>Símbolo</th>
+    <th>Exemplo</th>
+    <th>Explicação</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>==</td>
+    <td>a = = b</td>
+    <td>Igualdade</td>
+  </tr>
+  <tr>
+    <td>!=</td>
+    <td>a! = b</td>
+    <td>Desigualdade</td>
+  </tr>
+  <tr>
+    <td>&lt;</td>
+    <td>a &lt; b</td>
+    <td>Menor que</td>
+  </tr>
+  <tr>
+    <td>&lt;=</td>
+    <td>a &lt; = b</td>
+    <td>Menor ou igual a</td>
+  </tr>
+  <tr>
+    <td>&gt;</td>
+    <td>a &gt; b</td>
+    <td>Maior que</td>
+  </tr>
+  <tr>
+    <td>&gt;=</td>
+    <td>a &gt; = b</td>
+    <td>Maior ou igual a</td>
+  </tr>
+  <tr>
+    <td>&amp;</td>
+    <td>a &amp; b</td>
+    <td>Bits* E</td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>a ^ b</td>
+    <td>Bit* OU exclusivo</td>
+  </tr>
+  <tr>
+    <td>|</td>
+    <td>a|b</td>
+    <td>Bit* OU inclusivo</td>
+  </tr>
+  <tr>
+    <td>&amp;&amp;</td>
+    <td>a&amp;&amp;b</td>
+    <td>Lógico* E</td>
+  </tr>
+  <tr>
+    <td>||</td>
+    <td>a||</td>
+    <td>Lógico* OU</td>
+	</tr></tbody>
+</table>
+
+
+<p>Agora mostraremos algumas aplicações dos operadores, definidos
+	anteriormente. Por exemplo, para fazer um gráfico da função</p>
+
+
+<p class="formula">
+	\[
+	g(x) =
+	\begin{cases}
+	sen(x) &amp; \text{se} &amp; 0 \leq x < 1\\
+	1/x &amp; \text{se} &amp; 1 \leq x < 2 
+	\end{cases}
+	,
+	\]
+</p>
+
+<p>chamamos o Gnuplot, e em seu terminal definimos a função $g(x)$
+	digitando:</p>
+
+	<pre><code>gnuplot> g(x)= 0 <=x &amp;&amp; x&lt;1 ? sin(x) : 1<=x &amp;&amp; x&lt;2 ? 1/x : 1/0 </code></pre>
+
+
+<p>e o seu gráfico é obtido com o comando <code>plot</code> digitando-se,</p>
+
+<pre><code>gnuplot&amp;gt; plot g(x)</code></pre>
+
+
+	<p>A função passo de Heaviside é definida como</p>
+
+
+
+<p class="formula">
+\[
+\theta (x) =
+\begin{cases}
+0 &amp; \text{se} &amp; x < 0 \\
+1 &amp; \text{se} &amp; x > 0
+\end{cases}
+\]	
+</p>
+
+	<p>no Gnuplot definimos ela com</p>
+
+
+<pre><code>gnuplot> f(x) = x>lt;0 ? 0 : x>gt;0 ? 1 : 1/0
+gnuplot>gt; plot f(x)</code></pre>
+
+
+<p><b>Exemplo 1:</b> O gráfico da função abaixo</p>
+
+<p class="formula">
+\[
+H(x) =
+\begin{cases}
+f(x)=3x-40 > \text{se} > 2 \leq x < \leq 6 \\
+g(x)=-x^2+2x-8 > \text{se} > Outros casos
+\end{cases}
+\]
+</p>
+
+	<p>é obtido com o seguinte digitando-se.</p>
+
+
+<pre><code>reset
+set xtics 1
+set grid
+set xrange [0:10]
+f(x)=3*x-40
+g(x)=-x**2+2*x-8
+h(x)=(2&lt;=x &amp;amp;&amp;amp; x&lt;=8) ? f(x):g(x) 
+plot h(x) title &quot;Fun&ccedil;&atilde;o Composta&quot;</code></pre>
+
+
+<p>Para descobrir o significado dos comandos desconhecidos do exemplo anterior
+	basta digitar o comando  <code>help nome_do_comando</code>, por exemplo:</p>
+
+<pre><code>gnuplot&gt; help reset
+gnuplot&gt; help reset
+ The &#039;reset&#039; command causes all graph-related options that can be set with
+ the &#039;set&#039; command to take on their default values. This command is useful, 
+ e.g., to restore the default graph settings at the end of a command file, 
+ or to return to a defined state after lots of settings have been changed 
+ within a command file. Please refer to the &#039;set&#039; command to see the default 
+ values that the various options take.
+
+ The following are _not_ affected by &#039;reset&#039;.
+      &#039;set term&#039; &#039;set output&#039; &#039;set loadpath&#039; &#039;set fontpath&#039;
+      &#039;set encoding&#039; &#039;set decimalsign&#039; &#039;set locale&#039;
+
+ &#039;reset errors&#039; clears only the error state variables GPVAL_ERRNO and
+ GPVAL_ERRMSG.
+
+ &#039;reset bind&#039; restores all hotkey bindings to their default state.
+
+Subtopics available for reset:
+    bind              errors
+
+Subtopic of reset:</code></pre>
+
+<p>Caso haja ramificações do comando aparecerá, no fim da tela a expressão
+<code>Subtopic of nome_do_comando:</code>, conforme ilustra o exemplo
+	anterior.</p>
+
+<span class="pagina">79</span>
+
+<h3>Definindo Funções</h3>
+
+
+	<p>No ambiente do Gnuplot é muito fácil definir uma função,
+no exemplo abaixo definimos uma função quadrática, cujos
+parâetros também são variáveis.</p>
+
+<pre><code>gnuplot&gt; a=1
+gnuplot&gt; b=-2
+gnuplot&gt; c=3
+gnuplot&gt; f(x)=a*x**2+b*x+c
+gnuplot&gt; plot f(x)</code></pre>
+
+	<p>Ao redefinirmos o valor da variável <code>a</code>, obtemos um outro gráfico,
+para a mesma função.</p>
+
+<pre><code>gnuplot&gt; a=-1.0
+gnuplot&gt; plot f(x)</code></pre>
+
+<p>Uma outra forma de variarmos os parâmetros seria definirmos uma função de
+quatro variáveis, sendo três delas parâmetros de passagens para os gráficos,
+	como ilustrado abaixo:</p>
+
+<pre><code>gnuplot&gt; f(x,a,b,c)=a*x**2+b*x+c
+gnuplot&gt; plot f(x,1,-2,3), f(x,-1,-2,3)</code></pre>
+
+
+<p>Outras possibilidades de definirmos uma função no ambiente são
+mostradas no exemplo a seguir:</p>
+
+
+<pre><code>gnuplot&gt; w = 2
+gnuplot&gt; q = floor(tan(pi/2 - 0.1))
+gnuplot&gt; f(x) = sin(w*x)
+gnuplot&gt; sinc(x) = sin(pi*x)/(pi*x)
+gnuplot&gt; delta(t) = (t == 0)
+gnuplot&gt; ramp(t) = (t &gt; 0) ? t : 0
+gnuplot&gt; min(a,b) = (a &lt; b) ? a : b
+gnuplot&gt; comb(n,k) = n!/(k!*(n-k)!)
+gnuplot&gt; len3d(x,y,z) = sqrt(x*x+y*y+z*z)
+gnuplot&gt; plot f(x)=sin(x*a), a=0.2,f(x), a=0.4,f(x)</code></pre>
+
+
+
+<h3>Controle Sobre os Eixos e Escalas</h3>
+
+
+<p>Agora que vimos como fazer um gráfico, vamos obter
+um controle  sobre alguns aspectos do gráfico.
+Para isso, apresentaremos alguns comandos do Gnuplot
+e o seu significado.</p>
+
+
+	<p><code>set grid</code> Ativa a grade no gráfico.</p>
+
+	<p><code>set nogrid</code> ou <code>unset grid</code> desativa a grade no gráfico.</p>
+
+	<p><code>set xrange  [x0:xf]</code> Define o intervalo de variação do eixo $x$.</p>
+
+	<p><code>set yrange  [y0:yf]</code> Define o intervalo de variação do eixo$y$.</p>
+
+   <p><code>set zrange  [z0:zf]</code> Define o intervalo de variação do eixo$z$
+   	em graficos (3D).</p>
+
+   <p><code>set autoscale</code> Faz com que a escolha de variação dos eixos sejam
+   	feitas de forma automática.</p>
+
+   <p><code>set samples n</code> Define o número <code>n</code> de pontos usados para
+   	fazer o gráfico. O padrão é 100.</p>
+
+   <p><code>set key on</code> ou  <code>set key off</code> Habilita o desabilita a
+   	legenda do gráfico.</p>
+
+   	<p><code>plot f(x)</code> Faz o gráfico de $f(x)$.</p>
+
+   <p><code>replot f(x)</code> ou <code>rep f(x)</code> Adiciona o gráfico de $f(x)$
+   	ao anterior sem apagá-lo.</p>
+
+   	<p><code>test</code> Mostra as definições padrões.</p>
+
+   	<p><code>reset</code> Reinicializa as variáveis internas aos valores padrões.</p>
+
+   	<p><code>clear</code> limpa a tela.</p>
+
+
+
+<pre><code>Cria um t&iacute;tulo:                  	&gt; set title &quot;Trajet&oacute;ria da part&iacute;cula&quot;
+P&otilde;e uma legenda no eixo-x:       	&gt; set xlabel &quot;Posi&ccedil;&atilde;o (meters)&quot;
+P&otilde;e uma legenda no eixo-y:       	&gt; set ylabel &quot;Altura (m)&quot;
+Muda a varia&ccedil;&atilde;o do eixo-x:       	&gt; set xrange [0.0:5.0]
+Muda a varia&ccedil;&atilde;o do eixo-y:       	&gt; set yrange [0:100]
+Varia&ccedil;&atilde;o dos eixos &eacute; autom&aacute;tica: 	&gt; set autoscale
+Mova a legenda do gr&aacute;fico:       	&gt; set key 0.01,90
+Apague a legenda do gr&aacute;fico:     	&gt; unset key
+P&otilde;e uma legenda sobre a curva:   	&gt; set label &quot;Ponto escolhido&quot; at 1.0, 60
+Remove todas as legendas:        	&gt; unset label
+Gr&aacute;fico usando eixos-log:        	&gt; set logscale
+Gr&aacute;fico usando eixo-y log:       	&gt; unset logscale; set logscale y
+Muda as marcas do eixo-x:        	&gt; set xtics (1.0,2.0,3.0,4.0,5.0)
+Retorna as marcas padr&otilde;es:       	&gt; unset xtics; set xtics auto</code></pre>
+
+
+
+<pre><code>gnuplot &gt; plot sin(x/2) with points
+gnuplot &gt; plot sin(x/2) with lines
+gnuplot &gt; plot sin(x/2) with linespoints
+gnuplot &gt; plot sin(x/2) with dots
+gnuplot &gt; plot sin(x/2) with impulses</code></pre>
+
+
+<p>A seguir apresentamos alguns exemplos para testar e verificar
+	o que ocorre em cada caso:</p>
+
+
+<pre><code>gnuplot &gt; plot sin(x/2) with points lt 3
+gnuplot &gt; plot sin(x/2) with points pt 1 ps 1.8
+gnuplot &gt; plot sin(x/2) with lines lt 5 lw 2
+gnuplot &gt; plot sin(x/2) with linespoints lt 1 lw 1.5
+gnuplot &gt; plot sin(x/2) with impulses 9
+
+gnuplot &gt; plot [0:pi/2] sin(x/2) with points 10 6
+gnuplot &gt; rep cos(4*x) with impulses 3</code></pre>
+
+
+
+<pre><code>gnuplot &gt; set xrange [-2*pi: 2*pi]
+gnuplot &gt; f(x)=sin(x/2)
+gnuplot &gt; plot f(x)</code></pre>
+
+<pre><code>gnuplot &gt; f(x,b)=sin(x/b)
+gnuplot &gt; plot [-2*pi:2*pi] f(x,2)</code></pre>
+
+<pre><code>gnuplot &gt; g(x)=sin(x*a)
+gnuplot &gt; plot [-2*pi:2*pi] g(x); a=0.5
+gnuplot&gt; plot [-2*pi:2*pi] [-1.2:1.2] g(x); a=2.0</code></pre>
+
+<pre><code>gnuplot &gt; set xrange [-2*pi:2*pi]
+gnuplot &gt; f(x,a)=sin(a*x)
+gnuplot &gt; plot f(x,0.5)</code></pre>
+
+
+<p>Mostramos a seguir como preencher uma curva.</p>
+
+
+<pre><code>gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledcurves y1=0
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc y1=0
+# Abreviando o comando
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc y1=0 lc rgb &quot;cyan&quot;   #Cor
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc above y1=0
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc below y1=0
+
+gnuplot&gt; plot -cos(x)/(1+0.1*x**2) w filledc above y1=0.2
+
+gnuplot&gt; plot sin(x)/x w l, -cos(x)/(1+0.1*x**2) w filledc \
+ y1=0 lc rgb &quot;cyan&quot; t &#039;Azul&#039;, sin(2*x)/x w l</code></pre>
+
+<span class="pagina">80</span>
+
+ <p>Por exemplo, para preencher a curva entre vejamos o exemplo
+abaixo, inicialmente vejam a diferença entre as duas curvas,</p>
+
+
+<pre><code>reset
+set xr[-2.5:2.5]
+plot erf(x) w l lt 2 lw 1.5, tanh(x) w l lt 3 lw 1.5</code></pre>
+
+
+<p>Agora vamos preencher a região entre as duas curvas com
+	a cor amarela <code>#ffff00</code>, conforme o exemplo abaixo:</p>
+
+<pre><code>reset
+set xr[-2.5:2.5]
+plot erf(x) w filledcurves below lt 2 lc rgb &quot;#ffff00&quot; title &#039;&#039;, \
+  tanh(x) w filledcurves above lt 5 lc rgb &quot;#ffffff&quot; title &#039;&#039;
+replot erf(x) w l lt 2 lw 2, tanh(x) w l lt 5 lw 2</code></pre>
+
+<h3>Gráficos de um Arquivo de Dados</h3>
+
+<p>Considere como exemplo os dados apresentados no fim da seção 2.1
+para ilustrarmos a capacidade do Gnuplot em fazer gráficos. Copie os dados
+em um arquivo chamado <code>dados.dat</code> e refaça os exemplos a seguir:</p>
+
+
+<pre><code>gnuplot &gt; reset
+gnuplot &gt; plot &quot;dados.dat&quot; using 1:2
+gnuplot &gt; plot &quot;dados.dat&quot; using 1:2 with lines</code></pre>
+
+
+<pre><code>gnuplot &gt; reset
+gnuplot &gt; plot &quot;dados.dat&quot; using 1:2 with lines
+gnuplot &gt; replot &quot;dados.dat&quot; using 1:3 with lines
+gnuplot &gt; replot &quot;dados.dat&quot; u 1:4 w l</code></pre>
+
+<p>Note que na última linha abreviamos os comandos <code>using</code>,
+<code>with lines</code>. Este resultado também pode ser obtido com
+uma única linha de comando,</p>
+
+<pre><code>gnuplot &gt; reset
+gnuplot&gt; plot &quot;dados.dat&quot; u 1:2 w l, &quot;dados.dat&quot; u 1:3 w l, \
+&gt; &quot;dados.dat&quot; u 1:4 w l</code></pre>
+
+<p>Note que a barra invertida significa uma quebra de linha, ou seja,
+	que o comando irá continuar na linha seguinte.</p>
+
+	<p>Agora vamos alterar as cores e largura das linhas,</p>
+
+<pre><code>gnuplot &gt; reset
+gnuplot &gt; plot &quot;dados.dat&quot; using (&#65284;1):(&#65284;2) with lines linecolor 3 \ 
+ linewidth 1.5
+gnuplot &gt; plot &quot;dados.dat&quot; using (&#65284;1):(&#65284;3) with lines lc 5 lw 2</code></pre>
+
+
+<p>Ao fazermos o gráfico de um arquivo com muitas colunas, ou
+mesmo só com duas colunas, podemos realizar algumas operações
+	sobre as colunas, conforme o exemplo abaixo:</p>
+
+<pre><code>using (&#65284;1):(&#65284;2 +&#65284;3)
+using (&#65284;1):(&#65284;2 +3*(&#65284;3)) 
+using (&#65284;2):(&#65284;4)/100
+</code></pre>
+
+<p>Para um arquivo de dados, faça um gráfico da média dos
+valores das colunas $2$ e $3$ em função dos dados da coluna $1$,
+	mas somente se os dados da coluna $4$ forem não negativos.</p>
+
+	<pre><code>gnuplot&gt; plot &#039;dados.dat&#039; using 1:( &#65284 4&lt;0? 1/0: (&#65284 2 + &#65284 3)/2) w l</code></pre>
+
+<p>O gnuplot também possui algumas funções para realizar uma
+interpolação entre alguns pontos, suavizando a curva. Observer
+	o exemplo:</p>
+
+<pre><code>gnuplot&gt; plot &quot;dados.dat&quot; u 1:4 w l, &quot;dados.dat&quot; u 1:4 smooth bezier w l, \
+&gt;&quot;dados.dat&quot; u 1:4 smooth csplines w l</code></pre>
+
+<h3>Mais Controles Sobre os Eixos</h3>
+
+<p>Agora apresentaremos algums comandos para controlar
+algumas características dos eixos.</p>
+
+<p><code>set xtics $\Delta x$</code> Aqui $\Delta x$
+	é o valor do intervalo de pontos no eixo $x$.</p>
+
+ <p><code>set mxtics n</code> número de divisões no
+ 	intervalo de pontos $\Delta x$ do eixo $x$.</p>
+
+ <p><code>set ytics $\Delta y$</code> Valor do intervalo
+ 	de pontos no eixo $y$.</p>
+ <p><code>set mytics n</code> número de divisões no
+ 	intervalo de pontos $\Delta y$ do eixo $y$.</p>
+ 	<p><code>set xlabel "Nome do eixo x"</code></p>
+ 	<p><code>set ylabel "Nome do eixo y"</code></p>
+ 	<p><code>set title "Nome do gráfico"</code></p>
+
+
+ <pre><code>gnuplot &gt; reset
+gnuplot &gt; set grid
+gnuplot &gt; set xtics 2
+gnuplot &gt; set mxtics 2
+gnuplot &gt; set ytics 40
+gnuplot &gt; set mytics 2
+gnuplot &gt; set xrange [0:25]
+gnuplot &gt; set title &quot;Funcao Parabolica \n Teste 1&quot;
+gnuplot &gt; set xlabel &quot;X - Tempo (s)&quot;
+gnuplot &gt; set ylabel &quot;Y- Aceleracao (m/s2)&quot;
+gnuplot &gt; f(x,a,b,c)=a+b*x+c*x**2
+gnuplot &gt; plot f(x,120,-5,0.1) t &quot;funcao 1&quot; with points 3 5
+gnuplot &gt; rep f(x,80,+10,-0.15) t &quot;funcao 2&quot; with lines 8</code></pre>
+
+
+<p>No Gnuplot os carácteres especiais são obtidos somente para
+o terminal postscript, para os outros terminais algumas das
+características das fontes podem ou não estar disponíveis.
+Para o uso do modo postscript você deve consultar o arquivo
+	ps_guide.ps quem vem junto com a documentação do gnuplot.</p>
+
+<span class="pagina">81</span>
+
+<h3>Posicionamento das Legendas</h3>
+
+
+<p>O posicionamento das legendas podem ser controlados pelos
+	seguintes parâmetros:</p>
+
+
+<p><code>set key left bottom</code> Canto inferior
+   esquerdo.
+   <p><code>set key right bottom</code> Canto inferior
+   direito.
+   <p><code>set key left top</code> Canto superior
+   esquerdo.
+   <p><code>set key right top</code> Canto superior
+   direito.
+
+<h3>Gráficos de Superfícies</h3>
+
+<p>O camando <code>splot</code> é usado para fazer gráficos
+em três dimensões, conforme ilsutra os exemplos a seguir:</p>
+
+<pre><code>reset
+set grid
+set format z &quot;%4.2f&quot;
+f(x,y)=log(sqrt( x*x + y*y))
+splot f(x,y)</code></pre>
+
+<p>Note que ao posicionar o mouse sobre o gráfico e pressionar o botão da
+direita (dos destros), surge o um ícone indicando que o gráfico pode ser
+girado. Enquanto o botão estiver pressionado o gráfico irá acompanhar o
+	movimento do mouse.</p>
+
+	<p>Os comandos novos, possuem o seguinte significado:</p>
+
+
+	<p><code>set format</code> Formato dos valores numéricos</p>
+	<p><code>set hidden3D</code> No modo 3D, esconde o que fica atrás da superfície.</p>
+
+<pre><code>reset
+set grid
+set format z &quot;%4.2f&quot;
+f(x,y)=log(sqrt( x*x + y*y))
+splot f(x,y)</code></pre>
+
+<p>Note que ao posicionar o mouse sobre o gráfico e pressionar o botão da
+direita (dos destros), surge o um ícone indicando que o gráfico pode ser
+girado. Enquanto o botão estiver pressionado o gráfico irá acompanhar o
+	movimento do mouse.</p>
+
+	<p>Os comandos novos, possuem o seguinte significado:</p>
+
+<p><code>set format</code> Formato dos valores numéricos
+<p><code>set hidden3D</code> No modo 3D, esconde o que fica atrás da superfície.
+
+<pre><code>reset
+set grid
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
+set ztics 0.50
+set format z &quot;%4.2f&quot;
+f(x,y)=sin(y/7)*cos(x/5)
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+splot f(x,y) t &quot;Superf&iacute;cie&quot;</code></pre>
+
+<p>Agora vamos melhorar este gráfico, tente agora</p>
+
+<pre><code>reset
+set grid
+unset key
+set isosamples 50,50
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
+set ztics 0.50
+set format z &quot;%4.2f&quot;
+f(x,y)=sin(y/7)*cos(x/5)
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+set xr[-25:25]
+set yr[-25:25]
+splot f(x,y) t &quot;Superf&iacute;cie&quot;</code></pre>
+
+<p>Verifique o que cada comando introduz, simplesmente
+retirando o comando.</p>
+
+<h3>Múltiplos Gráficos Numa Página</h3>
+
+<p>Agora veremos como fazer múltiplos gráficos em uma só
+janela. Vamos começar introduzindo um gráfico dentro do
+outro, conforme o exemplo a seguir.</p>
+
+<pre><code>reset
+set multiplot
+plot sin(x)
+set origin 0.5,0.5 
+set size 0.4,0.4 
+clear
+plot cos(x)
+unset multiplot</code></pre>
+
+<p>Neste próximo exemplo dividi-se a janela em quatro
+	parte e fazemos os gráficos nestas.</p>
+
+
+<pre><code>reset
+set multiplot layout 2,2 title &quot;seno versus cossenos&quot;
+set size 0.45,0.45
+set origin 0.0, 0.0
+set xr[-4*pi:4*pi]
+set xtics (&quot;-4&quot; -4*pi, &quot;-3&quot; -3*pi, &quot;-2&quot; -2*pi, &quot;-1&quot; -pi, &quot;0&quot; 0 , \ &quot;1&quot; pi, &quot;2&quot; 2*pi, &quot;3&quot; 3*pi, &quot;4&quot; 4*pi)
+plot sin(x)
+set size 0.45,0.45
+set origin 0.0, 0.50
+set xr[-4*pi:4*pi]
+set xtics (&quot;-4&quot; -4*pi, &quot;-3&quot; -3*pi, &quot;-2&quot; -2*pi, &quot;-1&quot; -pi, &quot;0&quot; 0 , \ &quot;1&quot; pi, &quot;2&quot; 2*pi, &quot;3&quot; 3*pi, &quot;4&quot; 4*pi)
+plot cos(x)
+set size 0.45,0.45
+set origin 0.50, 0.0
+set xr[-4*pi:4*pi]
+set xtics (&quot;-4&quot; -4*pi, &quot;-3&quot; -3*pi, &quot;-2&quot; -2*pi, &quot;-1&quot; -pi, &quot;0&quot; 0 , \ &quot;1&quot; pi, &quot;2&quot; 2*pi, &quot;3&quot; 3*pi, &quot;4&quot; 4*pi)
+plot sin(2*x)/(2*x)
+set size 0.45,0.45
+set origin 0.50, 0.50
+set xtics (&quot;-4&quot; -4*pi, &quot;-3&quot; -3*pi, &quot;-2&quot; -2*pi, &quot;-1&quot; -pi, &quot;0&quot; 0 , \ &quot;1&quot; pi, &quot;2&quot; 2*pi, &quot;3&quot; 3*pi, &quot;4&quot; 4*pi)
+plot (cos(2*x)-1)/(2*x)
+unset multiplot</code></pre>
+
+
+<h3>Usando um Arquivo</h3>
+
+<p>Se você tem um arquivo chamado <code>sup.gp</code>
+	com o seguinte conteúdo:</p>
+
+<pre><code>reset
+set grid
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
+set ztics 0.50
+set isosamples 50, 50
+set format z &quot;%4.2f&quot;
+f(x,y)=sin(y/7)*cos(x/5)
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+splot f(x,y) t&quot;&quot;</code></pre>
+
+
+<p>Você pode chamá-lo no gnuplot com o seguinte comando:</p>
+
+<pre><code>gnuplot&gt; load &quot;sup.gp&quot;</code></pre>
+
+<h4>Rodando scripts</h4>
+
+<p>Se você tem um arquivo chamado <code>sup.gp</code> com o seguinte conteúdo:</p>
+
+<pre><code>reset
+set grid
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
+set ztics 0.50
+set isosamples 50, 50
+set format z &quot;%4.2f&quot;
+f(x,y)=sin(y/7)*cos(x/5)
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+splot f(x,y) t&quot;&quot;
+pause -1</code></pre>
+
+<p>no sistema operacional Linux, abra um terminal e digite:</p>
+
+<pre><code>&#65284; gnuplot sup.gp</code></pre>
+
+<span class="pagina">82</span>
+
+<p>Você terá um gráfico na tela e ao pressionar enter
+	ele será fechado.</p>
+
+<h4>Salvar gráfico</h4>	
+
+<p>Para gerar as figuras: sup.eps, sup.fig, sup.png e sup.svg
+use o exemplo a seguir:</p>
+
+<pre><code>reset
+set encoding iso_8859_1
+set grid
+set xlabel &quot;X&quot;
+set ylabel &quot;Y&quot;
+set zlabel &quot;Z&quot;
+set title &quot;Exemplo de Superficie&quot;
+set ztics 0.50
+set format z &quot;%4.2f&quot;
+f(x,y)=sin(y/7)*cos(x/5)
+set isosamples 50, 50
+set cntrparam levels incremental -1,0.25,1
+set contour base
+set hidden3d
+splot f(x,y) t&quot;&quot;
+# Aqui ser&aacute; gerado o grafico no formato EPS
+set terminal postscript landscape enhanced color lw 2 &quot;Helvetica&quot; 14
+set out &quot;sup.eps&quot;
+replot
+set output           # Volta a saida output para seu valor padrao
+# Aqui ser&aacute; gerado o grafico no formato FIG
+set term fig big color fontsize 14 thickness 2
+set out &quot;sup.fig&quot;
+replot
+set output           # Volta a saida output para seu valor padrao
+# Aqui ser&aacute; gerado o grafico no formato PNG
+set term png notransparent truecolor linewidth 2 fon &quot;Helvetica,14&quot; \
+enhanced size 1024,768
+set out &quot;sup.png&quot;
+replot
+set output           # Volta a saida output para seu valor padrao
+# Aqui ser&aacute; gerado o grafico no formato SVG
+set term svg size 1024,768 dynamic enhanced fname &quot;Helvetica&quot; \
+fsize 14 linewidth 2
+set out &quot;sup.svg&quot;
+replot
+set output
+set terminal wxt    # Retorna ao terminal padr&atilde;o do Linux</code></pre>
+
+<p>Ao carregar este arquivo no Gnuplot com o comando:</p>
+
+
+<pre><code>gnuplot&gt; load &quot;sup.gp&quot;</code></pre>
+
+<p>como resultado teremos o gráfico em quatro formato de arquivos
+diferentes, sendo os formatos vetoriais <code>.svg</code> e <code>.fig</code>
+	editáveis com o software para desenhar "inkscape".</p>
+
+<h3>Ajuste de Curvas "Fit"</h3>
+
+<p>Ajuste dos dado do arquivo dados.dat com uma função
+pré-definida qualquer, por exemplo:</p>
+
+<pre><code>gnuplot&gt; f1(x) = a1*exp(-B1*x**2)   # define a funcao para o ajuste
+gnuplot&gt; a1 = 10; b1 = 200;         # chute inicial para a1 e b1</code></pre>
+
+<p>Agora para ajustar a curva use o comando:</p>
+
+<pre><code>gnuplot&gt; fit f1(x) &#039;dados.dat&#039; using 1:2 via a1, b1
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a1              = 9.76472          +/- 0.01418      (0.1452%)
+b1              = 429.503          +/- 1.958        (0.4558%)</code></pre>
+
+<p>Já o comando:</p>
+
+<pre><code>gnuplot&gt; f2(x) = a2 *exp(-b2*x**2)   # define a funcao para o ajuste
+gnuplot&gt; a2 = 20; b2 = 100;         # chute inicial para a2 e b2
+gnuplot&gt; fit f2(x) &#039;dados.dat&#039; using 1:3 via a2, b2
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a2              = 38.1419          +/- 0.7631       (2.001%)
+b2              = 6802.34          +/- 314.3        (4.62%)</code></pre>
+
+
+<p>A curva ajustada e os dados, agora podem ser plotados com o comando:</p>
+
+<pre><code>gnuplot&gt; set key at 0.045,37 title &quot;F(x)=A*exp(-B*x**2)&quot; # Titulo do grafico!
+gnuplot&gt; set title &quot;Distribui&ccedil;&atilde;o Gaussiana ajustada&quot;       # Note a nova linha com o \n!
+gnuplot&gt; set pointsize 1.5                                 # Largura do ponto!
+gnuplot&gt; set xlabel &#039;Largura, {/Symbol D}x&#039;                # Simbolo Greek!
+gnuplot&gt; set ylabel &#039;Intensidade, {/Times-Italic I}_A, (A)&#039; # italicos!
+gnuplot&gt; plot &quot;dados.dat&quot; using 1:2 title &#039;Exp. 1&#039; with points lt 1,\
+      &quot;dados.dat&quot; using 1:3 title &#039;Exp. 2&#039; with points lt 3,\
+      f1(x) title &#039;Fit Exp. 1&#039; w l,\
+      f2(x) title &#039;Fit Exp. 2&#039; w l</code></pre>
+
+
+<h3>Referências</h3>
+
+	<p><b>Página oficial do Gunuplot –</b> <a target="blank" href="http://www.gnuplot.info/">http://www.gnuplot.info/</a>. Acessada em 10/01/2011.</p>
+
+	<p><b>Dicas e Truques do Gnuplot –</b><a target="blank" href="http://t16web.lanl.gov/Kawano/gnuplot/ index-e.html">http://t16web.lanl.gov/Kawano/gnuplot/ index-e.html</a>. Acessada em 10/01/2011.</p>
+
+	<p><b>Introdução ao Gnuplot –</b> <a target="blank" href="http://www4.fct.unesp.br/docentes/carto/galo/web/gnuplot/fct.htm">http://www4.fct.unesp.br/docentes/carto/galo/web/gnuplot/fct.htm</a>. Acessada em 10/01/2011.</p>
+
+	<p><b>Introdução ao Gnuplot –</b> <a target="blank" href="http://www.calculo-numerico.sobralmatematica.org/textos/gnuplot_introducao.pdf">http://www.calculo-numerico.sobralmatematica.org/textos/gnuplot_introducao.pdf</a>. Acessada em 10/01/2011.</p>
+
+	<p><b>Gnuplottricks –</b> Neste blog <a target="blank" href="http://gnuplot-tricks.blogspot.com/">http://gnuplot-tricks.blogspot.com/</a> há um grande número
+	de exemplos das possibilidades do Gnuplot. Acessado em 10/01/2011.</p>

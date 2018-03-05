@@ -1,16 +1,19 @@
 jQuery(document).ready(function($) {
 	if (window.MathJax) {
 		MathJax.Hub.signal.Interest(function (message) {
-			if (message[0] === 'Begin PreProcess') {
-				$('article').addClass('carregando');
-				$('#loader').addClass('visivel');
-			}
-			else if (message[0] === 'End Process') {
-				$('article').removeClass('carregando');
-				$('#loader').removeClass('visivel');
-
-			}
+			if (message[0] === 'TeX Jax - parse error') console.log(message[0]);
+			// if (message[0] === 'Begin PreProcess') {
+			// 	$('article').addClass('carregando');
+			// 	$('#loader').addClass('visivel');
+			// }
+			// else if (message[0] === 'End Process') {
+			// 	$('article').removeClass('carregando');
+			// 	$('#loader').removeClass('visivel');
+			// }
 		});
+		// MathJax.Hub.Register.MessageHook("Math Processing Error", function (message) {
+		// 	console.log(message[2]);
+		// });
 	} else{
 		// console.log('Essa página não tem Mathjax');
 	}

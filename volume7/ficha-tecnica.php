@@ -1,5 +1,8 @@
 <?php 
-	require_once 'includes/config.php';
+	$xmlcapitulos = new SimpleXMLElement(file_get_contents('relacao_capitulos.xml'));
+
+	$volume = $xmlcapitulos['volume'];
+
 	require_once 'includes/head.php';
  ?>
 
@@ -18,18 +21,21 @@
 
 	<nav id="navcapitulos">
 		<ol>
-			<?php for ($i=0; $i < count($nomes_capitulos); $i++) : ?>
-				<li><a href="capitulo.php?<?php print $nomes_capitulos[$i]['uri'] ?>">
+			<?php $i = 0;
+			foreach ($xmlcapitulos->cap as $bd_cap) : 
+			$i++;
+			?>
+				<li><a href="capitulo.php?cap=<?php print $bd_cap->uri ?>">
 					<div class="numero">
-						<p><?php print $i+1; ?></p>
+						<p><?php print $i; ?></p>
 					</div>
 					<div class="titulocap">
-						<p><?php print $nomes_capitulos[$i]['nome']; ?></p>
+						<p><?php print $bd_cap->nome; ?></p>
 					</div>
 				</a></li>
 	
 			
-			<?php endfor; ?>
+			<?php endforeach; ?>
 		</ol>
 	</nav>
 	

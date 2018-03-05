@@ -8,18 +8,23 @@
 
 		<div class="cont-caps">
 			<div class="bt-caps">
-				<?php for ($i=0; $i < count($nomes_capitulos); $i++):?>
+				<?php 
+				$i=0;
+				// foreach ($i=0; $i < count($nomes_capitulos); $i++):
+				foreach ($xmlcapitulos->cap as $bd_cap):?>
 					<a 
 						<?php if($n_cap === $i): ?>
 							class='atual'
 							disabled
 						<?php else: ?>
-						href="capitulo.php?cap=<?php print $nomes_capitulos[$i]['uri'] ?>"
-						title="<?php print $nomes_capitulos[$i]['nome'] ?>"
+						href="capitulo.php?cap=<?php print $xmlcapitulos->cap[$i]->uri ?>"
+						title="<?php print $xmlcapitulos->cap[$i]->nome ?>"
 
 						 <?php endif; ?>
 					>
-				<?php print $i+1; ?></a><?php endfor; ?>
+					<?php print $i+1; ?></a>
+					<?php $i++?>
+				<?php endforeach; ?>
 			</div>
 			<h1 class="titulo_capitulo"><?php print $nome_capitulo ?></h1>
 		</div>
@@ -27,7 +32,7 @@
 	</header>
 
 	<nav id="subcapitulos">
-		<?php foreach ($xmlsubs->subcap as $subcap): ?>
+		<?php foreach ($xml_dessecap->subcapitulos->subcap as $subcap): ?>
 			<a 
 			href="<?php echo 'capitulo.php?cap=' . $uri_capitulo . '&sub=' . $subcap->uri; ?>">
 				<?php echo $subcap->title; ?>

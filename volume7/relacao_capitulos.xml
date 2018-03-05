@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<capitulos volume='7'>
+
+    <cap>
+        <nome>Astrofísica e Cosmologia</nome>
+        <uri>1-astrofisica-e-cosmologia</uri>
+        <subcapitulos>
+            <subcap>
+                <title>Apresentação</title>
+                <uri>apresentacao</uri>
+            </subcap>
+            <subcap>
+                <title>As Estrelas</title>
+                <uri>as-estrelas</uri>
+                <subsubcaps>
+                    <item>Introdução</item>
+                    <item>Radiação de Corpo Negro e Atmosferas Estelares</item>
+                    <item>Parâmetros Estelares</item>
+                    <item>Distância das Estrelas Próximas</item>
+                    <item>Tipos de Espectros</item>
+                    <item>Diagrama de Hertzprung-Russel (H-R)</item>
+                    <item>Evolução Estelar: Nascimento, Vida e Morte</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>Cosmologia</title>
+                <uri>cosmologia</uri>
+                <subsubcaps>
+                    <item>O Nascimento da Cosmologia</item>
+                    <item>Geometria do Universo</item>
+                    <item>A Radiação Cósmica de Fundo</item>
+                    <item>Os Pilares do Universo</item>
+                    <item>A Teoria do Big Bang</item>
+                    <item>Inflação Cósmica</item>
+                    <item>A teoria do Estado Estacionário</item>
+                    <item>Energia e Matéria Escura</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>Referências</title>
+                <uri>referencias</uri>
+            </subcap>
+        </subcapitulos>
+    </cap>
+
+
+
+
+
+    <cap>
+        <nome>Física Moderna II</nome>
+        <uri>2-fisica-moderna-ii</uri>
+        <subcapitulos>                  
+            <subcap>
+                <title>Apresentação</title>
+                <uri>apresentacao</uri>
+            </subcap>
+            <subcap>
+                <title>Quantização da Radiação</title>
+                <uri>quantizacao-da-radiacao</uri>
+                <subsubcaps>
+                    <item>Quantização da Radiação Térmica</item>
+                    <item>Quantização da Radiação Eletromagnética</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>Propriedades Ondulatórias das Partículas</title>
+                <uri>propriedades-ondulatorias-das-particulas</uri>
+                <subsubcaps>
+                    <item>O Postulado de Broglie</item>
+                    <item>A experiência de Davison e Germer</item>
+                    <item>Princípios da Mecânica Quântica</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>Modelos Atômicos</title>
+                <uri>modelos-atomicos</uri>
+                <subsubcaps>
+                    <item>O Modelo de Thomson</item>
+                    <item>O Modelo de Rutherford</item>
+                    <item>O Modelo de Bohr do Átomo de Hidrogênio</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>A Teoria de Schrödinger da Mecânica Quântica</title>
+                <uri>a-teoria-de-schrodinger-da-mecanica-quantica</uri>
+                <subsubcaps>
+                    <item>A Equação de Schrödinger</item>
+                    <item>A Equação de Schrödinger Independente do Tempo</item>
+                    <item>A Função de Onda</item>
+                    <item>Valores Médios</item>
+                </subsubcaps>
+            </subcap>
+        </subcapitulos>
+    </cap>
+
+
+
+
+
+    <cap>
+        <nome>Estágio Supervisionado III</nome>
+        <uri>3-estagio-supervisionado-iii</uri>
+        <subcapitulos>
+            <subcap>
+                <title>Apresentação</title>
+                <uri>apresentacao</uri>
+            </subcap>
+            <subcap>
+                <title>Estágio Supervisionado III (Parte 1 e 2)</title>
+                <uri>estagio-supervisionado-iii-parte-1-e-2</uri>
+                <subsubcaps>
+                    <item>Parte 1. Semi-Regência</item>
+                    <item>Parte 2. Projeto de Ação e/ou Intervenção</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>Referências</title>
+                <uri>referencias</uri>
+            </subcap>
+        </subcapitulos>
+    </cap>
+
+
+
+
+
+    <cap>
+        <nome>Física Computacional I</nome>
+        <uri>4-fisica-computacional-i</uri>
+        <subcapitulos>
+            <subcap>
+                <title>Informática Básica</title>
+                <uri>informatica-basica</uri>
+                <subsubcaps>
+                    <item>Software Livre</item>
+                    <item>Softwares Acadêmicos Livres</item>
+                    <item>Editores e Processadores de Texto</item>
+                    <item>Pacotes para Escritório</item>
+                    <item>Imagens</item>
+                    <item>A internet</item>
+                    <item>O Sistema TeX/LaTeX</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>Ferramentas Gráficas: Gnuplot</title>
+                <uri>ferramentas-graficas-gnuplot</uri>
+                <subsubcaps>
+                    <item>Introdução</item>
+                    <item>Introdução ao Gnuplot</item>
+                    <item>Funções Matemáticas</item>
+                    <item>Expressões e Operadores</item>
+                    <item>Definindo Funções</item>
+                    <item>Controle Sobre os Eixos e Escalas</item>
+                    <item>Gráficos de um Arquivo de Dados</item>
+                    <item>Mais Controles Sobre os Eixos</item>
+                    <item>Posicionamento das Legendas</item>
+                    <item>Gráficos de Superfícies</item>
+                    <item>Múltiplos Gráficos Numa Página</item>
+                    <item>Usando um Arquivo</item>
+                    <item>Ajuste de Curvas "Fit</item>
+                    <item>Referências</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>Scilab</title>
+                <uri>scilab</uri>
+                <subsubcaps>
+                    <item>Introdução</item>
+                    <item>Comandos de Interação com o Shell</item>
+                    <item>Iniciando com o Scilab</item>
+                    <item>Números Complexos</item>
+                    <item>Constantes Especiais</item>
+                    <item>Polinômios</item>
+                    <item>Scilab: Vetores</item>
+                    <item>Matrizes e elementos de Matrizes</item>
+                    <item>Gráficos</item>
+                </subsubcaps>
+            </subcap>
+            <subcap>
+                <title>Maxima</title>
+                <uri>maxima</uri>
+                <subsubcaps>
+                    <item>Introdução</item>
+                    <item>Operações Básicas</item>
+                    <item>Funções</item>
+                    <item>Limites</item>
+                    <item>Derivadas</item>
+                    <item>Integrais</item>
+                    <item>Construção de Gráficos</item>
+                </subsubcaps>
+            </subcap>
+        </subcapitulos>
+    </cap>
+    
+
+
+
+</capitulos>

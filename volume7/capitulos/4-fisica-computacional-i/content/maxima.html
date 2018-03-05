@@ -1,0 +1,667 @@
+<h2>Maxima</h2>
+
+	<h3>Introdução</h3>
+
+<p>O software Maxima é um sistema para manipulação de expressões simbólicas e
+numéricas, incluindo diferenciação, integração, séries de Taylor,
+transformadas de Laplace, equações diferenciais ordinárias, sistemas de equações
+lineares, polinômios, conjuntos, listas, vetores, matrizes, e tensores.
+O Maxima produz resultados com alta precisão numérica por meio das frações
+exatas, inteiros com precisão arbitrária e números de ponto flutuante com
+precisão variável. O Maxima também pode fazer gráficos de funções e dados em
+	duas e três dimensões.</p>
+
+<p>O Maxima é um sistema de código aberto que pode ser compilado em muitos sistemas
+operacionias, incluindo Windows, Linux e MacOS X. Em sua página oficial,
+o código está disponibilizado, assim como os binários compilados para Windows e
+	Linux.</p>
+
+<span class="pagina">87</span>
+
+<p>Atual versão do Maxima é uma evolução do sistema de computação algébrica
+Macsyma desenvolvido no fim dos anos 1960 pelo ``Massachusetts Institute
+of Technology'' (MIT). Em 1982 o MIT forneceu uma cópia do Macsyma para o
+Departamento de Energia (DOE) e essa cópia, que passou a ser chamada de
+Macsyma DOE, foi mantida pelo professor William F. Schelter da Universidade
+do Texas no perído de 1982 à 2001, ano de sua morte. Além disso, em 1998,
+o professor Schelter obteve permissão do Departamento de Energia para liberar
+o código fonte do Macsyma DOE sob a Licença Pública GNU, e em 2000 ele iniciou
+o projeto Maxima no SourceForge para manter e desenvolver o Macsyma DOE, que desde
+	então passou a ser chamado Maxima.</p>
+
+<p>A versão do Maxima sobre a qual este trabalho irá tratar é a 5.21.1, a qual é
+a que está disponível na última versão do ubuntu 10.10. A versão
+	mais atual, entretanto é a 5.23.2.</p>
+
+<p>Pretendemos apresentar algumas noções básicas do Maxima, e para tal
+abordaremos os seguintes tópicos:</p>
+
+<ul>
+	<li>Operações básicas;</li>
+	<li>Construção de Gráficos;</li>
+	<li>Limites;</li>
+	<li>Diferenciação;</li>
+	<li>Integração;</li>
+	<li>Equações Diferenciais;</li>
+	<li>Matrizes e Álgebra linear;</li>
+</ul>
+
+<p>utras informações podem ser obtidas do manula do Maxima. Há uma versão em
+	português do mesmo em sua página oficial.</p>
+
+<p>Para o Linux há duas interfaces gráficas para o Maxima, o wxMaxima e Xmaxima,
+a diferença entre elas está na forma de interção com o usuário.</p>
+
+
+<h3>Operações Básicas</h3>
+
+
+<p>Ao iniciar o Maxima abre uma interface de terminal na qual aparece o
+	símbolo <code>(%i1)</code>representa a posição na memória de cada operação
+	a ser realizada.</p>
+
+<p>As operações serão digitadas na frente do símbolo (%i1), em que
+o "i" no meio significa entrada do inglês "INPUT", enquanto a saída
+do programa será representada pelo símbolo (%ox), com o "o" sendo
+	saída do inglês "OUTPUT".</p>
+
+<p>Toda expresão digitada deve terminar com um ";"" para indicar ao Maxima
+	que a expressão já pode ser avaliada, como no exemplo abaixo:</p>
+
+<pre><code>(%i1) 1 + 2; (ENTRADA - INPUT - representado pelo i no Maxima)
+(%o1) 3 (SA&Iacute;DA - OUTPUT - representada pelo o no Maxima)</code></pre>
+
+
+<p>Na tabela 4.1 abaixo listamos os operadores matemáticos básicos do Maxima.</p>
+
+
+
+<table>
+<caption>Tabela 4.1 – Operadores matemáticos básicos do Maxima.</caption>
+  <tr><thead> 
+    <th>Op.</th>
+    <th>Operação</th>
+    <th>Sintaxe/ Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>+</td>
+    <td>Adição</td>
+    <td>Ad = 423.31 + 221.07;</td>
+  </tr>
+  <tr>
+    <td>–</td>
+    <td>Subtração</td>
+    <td>Sub = 423.31 - 121.07;</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Multiplicação</td>
+    <td>Mult = Ad*3;</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Divisão</td>
+    <td>Div = Sub/3;</td>
+  </tr>
+  <tr>
+    <td>/\ ou **</td>
+    <td>Potenciação</td>
+    <td>Pot = Ad^3; ou Pot = Ad**3;</td>
+	</tr></tbody>
+</table>
+
+<p>Na tabela 4.2 listamos algumas constantes especiais do Maxima.</p>
+
+
+<p>Os espaços não são necessários, apenas auxiliam na leitura. O
+Maxima é sensível a maiúsculas e minúsculas assim como seus
+	parâmetros, por exemplo:</p>
+
+<pre><code>(%i1) cos (%pi); 
+(%o1) -1
+(%i2) COS(%PI); 
+%o2) COS(%PI)</code></pre>
+
+<table>
+
+<caption>Tabela 4.2 - Constantes especiais do Maxima.</caption>
+  <tr><thead>
+    <th>Constante</th>
+    <th>Valor/ Significado</th>
+    <th>Exemplo</th>
+	</tr></thead>
+	<tbody>
+  <tr>
+    <td>%e</td>
+    <td>Número de Euler: e = 2.7182818 . . .</td>
+    <td>x = %e^3;</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>Valor lógico Falso</td>
+    <td>Resp=7==3+2;</td>
+  </tr>
+  <tr>
+    <td>%i</td>
+    <td>Número imaginário: i =,√−1</td>
+    <td>z = 2-5*%i;</td>
+  </tr>
+  <tr>
+    <td>ind</td>
+    <td>Resultado de limite indefinido</td>
+    <td>limit (sin(1/x), x, 0);</td>
+  </tr>
+  <tr>
+    <td>inf</td>
+    <td>Real positivo infinito</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>infinity</td>
+    <td>Complexo infinito</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>minf</td>
+    <td>Real negativo infinito</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>%phi</td>
+    <td>Razão Dourada φ = 1.618033988749895</td>
+    <td>float((1 + sqrt(5))/2);</td>
+  </tr>
+  <tr>
+    <td>%pi</td>
+    <td>Número pi: π = 3.1415927 . . .</td>
+    <td>Area = %pi*R^2</td>
+  </tr>
+  <tr>
+    <td>true</td>
+    <td>Valor lógico Verdade</td>
+    <td>Resp=5&gt;3+1</td>
+  </tr>
+  <tr>
+    <td>und</td>
+    <td>Resultado indefinido</td>
+    <td>limit(1/x, x, 0);</td>
+  </tr>
+  <tr>
+    <td>zeroa</td>
+    <td>Infinitesimal maior que zero</td>
+    <td>limit(x+zeroa);</td>
+  </tr>
+  <tr>
+    <td>zerob</td>
+    <td>Infinitesimal menor que zero</td>
+    <td>limit(x+zerob);</td>
+	</tr></tbody>
+</table>
+
+<p>Para obter mais informações sobre determinados comandos, basta você
+	digitar:</p>
+
+<pre><code>(%i1) describe(termo buscado);
+(%i2) apropos(termo buscado);
+(%i3) help termo buscado;
+(%i4) ? termo buscado;
+(%i5) ?? termo buscado;</code></pre>
+
+<p>O Maxima tenta tornar os resultados mais exatos possíveis, entretanto
+em alguns casos desejamos um número de ponto flutuante como por
+	exemplo:</p>
+
+<pre><code>(%i1) 3*log(8);
+(%o1) 3 log(8)</code></pre>
+
+<span class="pagina">88</span>
+
+<p>nesse caso ele não retornou um número, então devemos dizer a ele
+	que desejamos um número de ponto flutuante, assim:</p>
+
+<pre><code>(%i1) float(3 * log(8));
+(%o1)   6.238324625039507
+(%i2) sin(%);
+(%o2)  - 0.17848127766415</code></pre>
+
+<p>O comando <code>%</code> é bastante usado, pois ele representa o último
+	resultado apresentado pelo Maxima, como no exemplo anterior.</p>
+
+<p>Em cálculo numérico, as vezes os resultados e os cálculos efetuados
+necessitam de ser expressos com um determinado número de casas decimais
+e/ou algarismos significativos. Podemos estabelecer essa precisão mediante
+a fixação de um valor à variável interna global <code>fpprec</code>
+"float point precision", que por padrão no Máxima é 16. Para isso, fazemos</p>
+
+<pre><code>(%i1) fpprec : 30;
+(%o1) 30
+(%i2) bfloat(3*log(8));
+(%o2) 6.23832462503950778475508909313b0</code></pre>
+
+<p>Para atribuir valores a variáveis, basta apenas declarar da seguinte
+	forma:</p>
+
+<pre><code>(%i1) g : 9.8;
+(%o1)  9.8
+(%i2) e : 1.602e-19;
+(%o2)  1.602E-19
+(%i3) e*g;
+(%o3)  1.56996E-18</code></pre>
+
+<p>Para resolver equações algébricas usa-se a função <code>solve</code>, da
+seguinte maneira:</p>
+
+<pre><code>(%i1) solve (3*x^2-6*x-9=0);
+(%o1) [x = 3, x = - 1]</code></pre>
+
+<p>Esta função é bastante útil e pode ser usada de várias modos,
+como, por exemplo, para resolver uma equação de duas incógnitas
+	e deixar o resultado em função de uma delas, como no exemplo:</p>
+
+
+<pre><code>(%i1) solve(log(x^2+y^2)-1=0, y);
+(%o1) [ y = &minus; (%e &minus; x2), y = sqrt(%e &minus; x2)]</code></pre>
+
+<p>Nos casos em que o número de equações é igual ao número de
+incógnitas, a função <code>solve</code> tentará dar uma solução
+para o sistema quando houver, como por exemplo:</p>
+
+
+
+<pre><code>(%i1) solve([x+y+4*z=0, y-z+2*x=8, z+3*x-2*y=4]);
+
+(%o1)  $[[z=-\frac{18}{17},y=\frac{26}{17},x=\frac{46}{17}]]$</code></pre>
+<p>O Maxima possui algumas funções para trabalhar com funções
+	algébricas, como no exemplo abaixo</p>
+
+
+
+<pre><code>(%i1) expand ((x + y)^6);
+(%o1) $\quad{y}^{6}+6\,x\,{y}^{5}+15\,{x}^{2}\,{y}^{4}+20\,{x}^{3}\,{y}^{3}+15\,{x}^{4}\,{y}^{2}+6\,{x}^{5}\,y+{x}^{6}$
+(%i2) factor(x^6 - 1);
+(%o2) (x&minus;1) (x+1)  x2 &minus;x+1   x2 +x+1 </code></pre>
+
+
+<p>Para usar o último resultado de um cálculo, você pode atribuir a ele uma variável
+ou referir a ele por seu rótulo atribuído automaticamente. O comando % refere-se
+	somente ao último resultado. Vejamos</p>
+
+
+
+<pre><code>(%i3) u: expand((x-y)^4);
+
+(%o3) $\quad{y}^{4}-4\,x\,{y}^{3}+6\,{x}^{2}\,{y}^{2}-4\,{x}^{3}\,y+{x}^{4}$
+
+(%i4) diff(u,x);
+
+(%o4) $\quad-4\,{y}^{3}+12\,x\,{y}^{2}-12\,{x}^{2}\,y+4\,{x}^{3}$
+
+(%i5) factor(%o4);
+
+(%o5) $\quad-4\,{\left( y-x\right) }^{3}$</code></pre>
+
+<p>O Maxima também reconhece os números complexos</p>
+
+<pre><code>(%i1) cos(%pi);
+(%o1)                          - 1
+(%i2) exp(%i*%pi);
+(%o2)                          - 1</code></pre>
+
+<p>Para resolver sistemas lineares e equações cúbicas, usamos:</p>
+
+<pre><code>(%i1) linsolve ([3* x + 4* y = 7 , 2* x + a * y = 13] , [x , y ]);
+
+(%o2) $\quad[x=\frac{7\,a-52}{3\,a-8},y=\frac{25}{3\,a-8}]$
+
+(%i2) solve (x^3 - 3*x^2 + 5*x = 15, x);
+
+(%o2) $\quad[x=-\sqrt{5}\,i,x=\sqrt{5}\,i,x=3]$</code></pre>
+
+
+<p>O Maxima pode resolver sistemas de equações não-lineares,
+	como por exemplo:</p>
+
+<pre><code>(%i1) eq_1: x^2 + 3*x*y + y^2 = 0&#65284;
+
+(%i2) eq_2: 3*x + y = 1}&#65284;
+
+(%i3) solve([eq_1, eq_2]);
+
+(%o3) $\quad[[y=-\frac{3\,\sqrt{5}+7}{2},x=\frac{\sqrt{5}+3}{2}],[y=\frac{3\,\sqrt{5}-7}{2},x=-\frac{\sqrt{5}-3}{2}]]$</code></pre>
+
+
+<p>Note que para eliminar a impressão do resultado de um cálculo
+ou expressão, basta terminar o comando com o símbolo $ em vezes
+	do símbolo ;.</p>
+
+<p>Maxima pode gerar gráficos de uma ou mais funções:</p>
+
+<pre><code>(%i1) eq_1: x^2 + 3*x*y + y^2 = 0&#65284;
+
+(%i2) eq_2: 3*x + y = 1&#65284;
+
+(%i3) solve ([eq_1, eq_2]);
+
+(%o3) $\quad[[y=-\frac{3\,\sqrt{5}+7}{2},x=\frac{\sqrt{5}+3}{2}],[y=\frac{3\,\sqrt{5}-7}{2},x=-\frac{\sqrt{5}-3}{2}]]$
+
+(%i4) kill(labels);
+
+(%o0)   done
+
+(%i1) plot2d (sin(x)/x, [x, -20, 20]);
+
+(%o1)
+
+(%i2) plot2d ([atan(x), erf(x), tanh(x)], [x, -5, 5]);
+
+(%o2)
+
+(%i3) plot3d (sin(sqrt(x^2 + y^2))/sqrt(x^2 + y^2), [x, -12, 12],[y, -12, 12]);
+
+(%o3)</code></pre>
+
+
+<p>Acima foram descritos os principais comandos para a manipulação
+dados no Maxima, assim sendo a partir daqui abordaremos assuntos
+	mais específicos.</p>
+
+<h3>Funções</h3>
+
+<p>É muito simples definir funções no Maxima, é muito parecido com o
+modo normal de se escrever, mudando somente o símbolo de atribuição
+	que no caso é <code>:=</code>, como pode se observar o exemplo:</p>
+
+<pre><code>(%i1) f(x):=x+2;
+(%o1) f(x) := x + 2
+(%i2) f(5);
+(%o2) 7</code></pre>
+
+<p>Pode-se definir também funções de n variáveis, respeitando a mesma
+sintaxe da anterior, somente colocando as variáveis entre vírgulas,
+	do seguinte modo:</p>
+
+<pre><code>(%i1) g(x,y,z) := x * y + 2 * z;
+(%o1) g(x, y, z) := x y + 2 z
+(%i2) g(1,2,3);
+(%o2) 8</code></pre>
+
+<h3>Limites</h3>
+
+
+<p>Limites são facilmente interpretados pelo Maxima, e possui uma
+sintaxe bastante simples, <code>limit(função, variável,
+	valor que tende a variável);</code>. Por exemplo:</p>
+
+<pre><code>(%i1) limit( (2*x+1)/(3*x+2), x,inf );
+
+(%o1) $ \frac{2}{3} $
+
+(%i1) limit(((z^(2/3))/(z - sqrt(2 * z))), z, 8);
+
+(%o1)  1
+
+(%i2) limit((t^2 + 6*t + 9)/(9 - t^2), t, -3);
+
+(%o2) 0
+	</code></pre>
+
+
+<p>Alguns exemplos para funções trigonométricas:</p>
+
+<pre><code>(%i1) limit(sin(x)/x, x, 0);
+
+(%o1)  1
+
+(%i2) limit((1 - cos(3*x))/(2*x^2), x, 0);
+
+(%o2)  $\frac{9}{4}$
+
+(%i3) limit((1 - cos(3*x))/(3*x), x, 0);
+
+(%o3)  0</code></pre>
+
+<p>Agora vamos tratar com os limites laterais. Para obter os
+limites de uma função quando seu argumento tende a um dado
+valor pela  esquerda, basta adicionar um quarto parâmetro, o
+	<code>minus</code>:</p>
+
+<span class="pagina">89</span>
+
+<pre><code>(%i1) limit(sqrt(x * (5-x)), x , 5, minus);
+(%o1) 0
+(%i1) limit(1/x, x, 0, minus) ;
+(%o1) minf</code></pre>
+
+
+<p>Já ao tomar o limite pela direita, basta adicionar o quarto
+	parâmetro <code>plus</code>:</p>
+
+
+<pre><code>(%i1) limit(sqrt((4*x)/(x-4)), x, 4, plus);
+(%o1) inf
+(%i2) limit(1/x, x, 0, plus);
+(%o2) inf</code></pre>
+
+
+<p>Como a derivada de uma função $f(x)$ é definida pelo seguinte limite,</p>
+
+<p class="formula">
+\begin{equation}
+ f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x) )}{\Delta x}
+\end{equation}
+<span class="numero_formula">4.3</span>	
+</p>
+
+
+<p>então, pode-se obter a derivada de uma função, utilizando apenas
+limites. Considere por exemplo o caso em que $ g(x) = f '(x) $,
+	e $f(x)=2x^2 + 3x$ conforme mostrado abaixo:</p>
+
+
+<pre><code>(%i1) f(x):= 2 * x^2 + 3 * x;
+
+(%o1) f(x) := 2 x^2 + 3 x
+
+(%i2) g(x) = limit((f(x + h)- f(x)) / h, h, 0);
+
+(%o2) g(x) = 4 x + 3</code></pre>
+
+
+<p>Um outro exemplo:</p>
+
+<pre><code>(%i1) f(x):=x - 1/x;
+
+(%o1) $f(x) = x - \frac{1}{x}$
+
+(%i2) g(x) = limit((f(x + h)- f(x)) / h, h, 0);
+
+(%o2) $g(x) = \frac{{x}^{2}+1}{{x}^{2}}$</code></pre>
+
+
+<p>Para o cálculo de um limite, o Maxima possui uma variável nomeada de
+	<i>lhospitallim</i>, a qual designa o número máximo de vezes que a regra
+L'Hospital é usada em um cálculo de limite. Isso evita ciclos infinitos em
+	casos como <code>limit(cot(x)/csc(x), x, 0);</code>. O valor padrão no Maxima é 4.</p>
+
+<p>Assim, visto como implementar limites no Maxima, passaremos então as
+	derivadas.</p>
+
+<h3>Derivadas</h3>
+
+<p>A diferenciação de uma função pode ser rapidamente obtida pela
+função <code>diff</code>, cuja sintaxe é a seguinte
+	<code>diff(função, variável);</code>. No exemplo</p>
+
+	<p>Aplicação:</p>
+
+
+<pre><code>(%i1) diff((2*x^2+3*x), x);
+
+(%o1) $ 4 x + 3 $
+
+(%i2) diff((x - 1/x), x);
+
+(%o2) $\frac{1}{x^2} + 1$
+
+(%i3) diff(sin(x), x);
+
+(%o3) $cos(x)$</code></pre>
+
+
+<p>Para obter a segunda derivada, ou a n-ésima derivada basta
+adicionar um terceiro parâmetro na função indicando quantas
+vezes a função deve ser diferenciada e sua sintaxe é
+<code>diff(função, variável, n);</code>. Por exemplo, para
+	determinar a primeira e a quarta derivada da função</p>
+
+<p class="formula">
+\begin{equation}
+ f(x) = 2cos(x^3) + \dfrac{sin(3x^2)}{x^2} + 4 \ln(x^{7/2})
+\end{equation}
+	<span class="numero_formula">4.4</span>
+</p>
+
+<pre><code>(%i1) f(x) := 2*cos(x^3)+sin(3*x^2)/(x^2)+4*log(x^(7/2));
+
+(%o1) $f(x) :=2\,\cos\left( {x}^{3}\right) +\frac{\sin\left( 3\,{x}^{2}\right) }{{x}^{2}}
+       +4\,\mathrm{log}\left( {x}^{\frac{7}{2}}\right)$
+
+(%i2) diff (f(x), x); /* Esta &eacute; uma derivada primeira */
+
+(%o2) $-6\,{x}^{2}\,\mathrm{sin}\left( {x}^{3}\right) -\frac{2\,\mathrm{sin}\left( 3\,{x}^{2}\right) }{{x}^{3}}+\frac{6\,\mathrm{cos}\left( 3\,{x}^{2}\right) }{x}+\frac{14}{x}$
+
+(%i3) diff(f(x), x, 4); /* Esta &eacute; uma derivada de quarta ordem */
+
+(%o3) $648\,{x}^{5}\,\sin({x}^{3}) + 162\,{x}^{8}\cos({x}^{3}) -360\,{x}^{2}\cos({x}^{3}) + 1296\,{x}^{2}\sin( 3\,{x}^{2})-$
+
+$\frac{540\sin(3\,{x}^{2})}{{x}^{2}}+\frac{120\sin(3\,{x}^{2})}{{x}^{6}}-\frac{360\cos(3\,{x}^{2})}{{x}^{4}}+432\cos(3\,{x}^{2})-\frac{84}{{x}^{4}}$</code></pre>
+
+<p>Note que todo o texto entre <code>/* ...*/</code> é considerado pelo Maxima
+como um comentário.</p>
+
+
+<h3>Integrais</h3>
+
+<p>Para integrar uma função usa-se a função <code>integrate</code>,
+cuja sintaxe para integrais indefinidas é
+<code>integrate(função, variável);</code> enquanto para para integrais
+com limites definidos a sintaxe é
+	<code>integrate(função, variável, limite_inferior, limite_superior);</code>.</p>
+
+<p>Considere os seguintes exemplos de integrais indefinidas:</p>
+
+<pre><code>(%i1) integrate(x^3*((1 + x^4)^5), x);
+
+(%o1) $\frac{{\left( {x}^{4}+1\right) }^{6}}{24}$
+
+(%i2) integrate(x^2*cos(4*x^3), x);
+
+(%o2) $\frac{\sin\left( 4\,{x}^{3}\right) }{12}$
+
+(%i3) integrate(1/(x^2+a^2), x);
+
+(%o3) $\frac{\mathrm{atan}\left( \frac{x}{a}\right) }{a}$</code></pre>
+
+<p>Considere os seguintes exemplos de integrais definidas:</p>
+
+<pre><code>(%i1) integrate((1+sqrt(t))^2/sqrt(t), t, 1, 4);
+
+(%o1) $\quad \frac{38}{3} $
+
+(%i2) integrate(6 - x^2 -x, x, -3, 2);
+
+(%o2) $\quad \frac{125}{6} $
+
+(%i3) assume(a&gt;0);  /* Dizemos que a&gt;0 */
+
+(%o3) $\quad [a&gt;0]$
+
+(%i4) integrate(1/(x^2+a^2), x, 0, inf);
+
+(%o4) $\quad \frac{\pi}{2\,a}$
+
+(%i5) integrate(sin(2*x)*tan(2*x), x,0,%pi/8);
+
+(%o5) $\quad \frac{\frac{\mathrm{log}\left( \frac{\sqrt{2}+2}{2}\right) }{2}-\frac{\mathrm{log}\left( -\frac{\sqrt{2}-2}{2}\right) }{2}-\frac{1}{\sqrt{2}}}{2}$
+
+(%i6) ratsimp(%);} /* Ir&aacute; simplificar o resultado anterior */
+
+(%o6) $\quad \frac{\sqrt{2}\,\mathrm{log}\left( \frac{\sqrt{2}+2}{2}\right) -\sqrt{2}\,\mathrm{log}\left( -\frac{\sqrt{2}-2}{2}\right) -2}{{2}^{\frac{5}{2}}}$</code></pre>
+
+<p>No caso de funções descontínuas no intervalo dado, o programa
+acusará o seguinte erro:</p>
+
+<pre><code>(%i1) integrate(1/x,x,-1,0);
+defint: integral is divergent.
+- an error. To debug this try: debugmode(true);</code></pre>
+
+<p>Nesse caso utilize os recursos de limites para verificar a condiçãos;
+de continuidade da função.</p>
+
+
+<h3>Construção de Gráficos</h3>
+
+<p>A seguir serão apresentadas as funções mais usadas para a
+	construção de gráficos com um exemplo de sua utilização.</p>
+
+<p>O comando <code>plot2d(expressão, x_range, …, opções, …);</code> faz o gráfico
+da <code>expressão</code> como uma função da variável nomeada em <code>x_range</code>, sobre o
+intervalo especificado em <code>x_range</code>. Se a amplitude vertical não for
+	alternativamente especificada por <i>set_plot_option</i>, essa é escolhida
+automaticamente. Todas as opções possuem um valor padrão a menos que sejam
+alternativamente especificadas pelo comando
+	<code>set_plot_option</code>. Vejamos por exemplo,</p>
+
+<pre><code>(%i1)  plot2d(cos(x), [x, -4, 4])&#65284;</code></pre>
+
+
+<p>Agora vamos interpretar este comando. A função cujo gráfico será feito é o
+<code>cos(x)</code>. O primeiro parâmetro do termo <code>[x, -4, 4]</code>, significa
+que a variável do gráfico unidimensional é o <code>x</code>, e os outros dois
+valores  representam o valor mínimo e máximo que a variável <code>x</code> irá
+assumir no gráfico. Já no próximo exemplo, adicionamos os limites de variação
+do eixo das ordenadas, o eixo $y$.</p>
+
+<pre><code>(%i1)  plot2d (sec(x), [x, -2, 2], [y, -20, 20])&#65284;</code></pre>
+
+<p>ou ainda</p>
+
+<pre><code>(%i1) plot2d(tan(x), [x, -2, 2], [y, -18, 18]);</code></pre>
+
+<span class="pagina">90</span>
+
+<p>Podemos ainda fazer o gráfico de duas ou mais funções juntas,
+em um mesmo intervalo de variação, conforme ilustra o exemplo
+a seguir.</p>
+
+<pre><code>(%i1) h(x) := if x = 0.0 then 1 else sin(x)/x&#65284;
+(%i2) f(x) := sin(x)/x&#65284;
+(%i3) g(x) :=  exp(-0.5*x^2)&#65284;
+(%i4) plot2d([h,g], [x, -20, 20])&#65284;
+(%i5) plot2d([sin(x)/x, g], [x, -20, 20])&#65284;
+plot2d: expression evaluates to non-numeric value somewhere in plotting range.
+(%i6) plot2d([f,g], [x, -20, 20])&#65284;
+Division by 0
+#0: f(x=0.0)
+-- an error. To debug this try: debugmode(true);</code></pre>
+
+<p>Aqui definimos uma função co o uso das expressões relacionais, a condição
+	de igualdade do comando <code>if ... then ... else ....</code></p>
+
+<p>O comando <code>plot3d (expressão, x_range, y_range, ..., opções, ...);</code>
+faz um gráfico em três dimensões de uma função de duas variáveis, como
+mostrado no exemplo abaixo.</p>
+
+<pre><code>(%i1) plot3d(x^3+sin(x), [x,-2,2], [y,-4,4])&#65284;
+(%i2) plot3d(sin(sqrt(x^2+y^2))/sqrt(x^2+y^2), [x,-10,10], [y,-10,10])&#65284;
+(%i3) plot3d(sin(sqrt(x^2+y^2))/sqrt(x^2+y^2), [x,-20,20], [y,-20,20],
+ [plot_format,gnuplot], [grid,50,50], [gnuplot_pm3d,true],
+ [gnuplot_preamble, &quot;set pm3d at bs&quot;])&#65284;</code></pre>
+
+ <p>Um outro exemplo,</p>
+
+ <pre><code>(%i1) plot3d([cos(x*y)*(3 + y*cos(x/2)), sin(x)*(3 + y*cos(x/2)),y*sin(x/2)],
+  [x, -%pi, %pi], [y, -1, 1]);</code></pre>
+
+ <p>Para maiores detalhes consulte o manual.</p>

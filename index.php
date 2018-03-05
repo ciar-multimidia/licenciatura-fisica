@@ -73,12 +73,12 @@
 		<div class='btvolumes'>
 			<?php 
 
+				$numero_volumes = array(7);
 
-				// $numero_volumes = array(6, 7, 8);
-				$numero_volumes = array(7, 8);
-
-				for ($i=0; $i < count($numero_volumes); $i++) :
-			 ?>
+				for ($i=0; $i < count($numero_volumes); $i++) : 
+					$xmlvolume = new SimpleXMLElement(file_get_contents('volume' . $numero_volumes[$i] . '/relacao_capitulos.xml'));
+				?>
+				
 				<a href="<?php print 'volume'. $numero_volumes[$i] .'/index.php' ?>" class="volume">
 					<div class="titulo">
 						<h2>Vol<span><?php print $numero_volumes[$i] ?></span></h2>
@@ -86,11 +86,10 @@
 					<div class="sumario">
 						<ol>
 							<?php 
-								require_once('volume'. $numero_volumes[$i] .'/includes/config.php');
-								for ($ii=0; $ii < count($nomes_capitulos); $ii++) :
-							 ?>
-								<li><?php print $nomes_capitulos[$ii]['nome']; ?></li>
-							<?php endfor; ?>
+								
+								foreach ($xmlvolume->cap as $capitulo) :?>
+								<li><?php print $capitulo->nome; ?></li>
+								<?php endforeach; ?>
 						</ol>
 					</div>
 				</a>
