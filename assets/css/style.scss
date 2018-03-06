@@ -14,12 +14,13 @@ $largura-sumario: 360px;
 $padding-sumario-h: 15px;
 
 #nav{
+
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: $largura-sumario;
 	height: 100vh;
-	background-color: hsla(190, 20%, 96%, 1);
+	background-color: hsla(190, 10%, 80%, 1);
 	overflow: scroll;
 	// opacity: 0.2;
 	// @include transition(opacity 0.1s linear);
@@ -308,6 +309,8 @@ nav#navcapitulos{
 
 
 #subcapitulos{
+	$ciano-sub-atual:#025f79;	
+	
 	padding: $padding-sumario-h 0 $padding-sumario-h*2; 
 	line-height: 1.4;
 
@@ -337,6 +340,11 @@ nav#navcapitulos{
 			display: inline;
 		}
 
+		&.subatual{
+			background-color: hsla(190, 15%, 90%, 1);
+			color: $ciano-sub-atual;
+		}
+
 		&.atual:after{
 			font-size: 0.6em;
 			line-height: 1;
@@ -351,11 +359,17 @@ nav#navcapitulos{
 	}
 
 	ol{
+		background-color: hsla(190, 15%, 90%, 1);
 		font-size: 0.9em;
-		padding: 0;
+		padding:0 0 1em;
 		margin: 0;
 		& + a{
 			margin-top: 1em;
+		}
+		li > a{
+			&, &:link, &:visited, &:hover, &:focus, &:active{
+				color: $ciano-sub-atual;
+			}
 		}
 	}
 
@@ -368,6 +382,7 @@ nav#navcapitulos{
 			display: block;
 			padding-left: calc( 1em + #{$padding-sumario-h} );
 			padding-right: $padding-sumario-h*2;
+			color: $ciano-sub-atual;
 			&:before{
 				content: counter(subcaps) '.' counter(subsubcaps) '. ';
 				font-weight: bold;
@@ -493,6 +508,12 @@ main{
 	@media print {
 		width: 100%;
 		margin-left: 0;
+	}
+
+	@for $i from 1 to 20{
+		&.numero-cap#{$i}{
+			counter-reset: heading_dois $i;
+		}
 	}
 }
 
@@ -811,6 +832,8 @@ article{
 		margin-top: 3em;
 		background-color: white;
 		z-index: 2;
+		display: block;
+		
 		&:after {
 		    content: "";
 		    width: 100%;
@@ -823,11 +846,11 @@ article{
 		    z-index: -1;
 		}
 
-		
-		display: none;
+		&:first-child{
+			display: none;
+		}
 
 		& ~ span.pagina{
-			display: block;
 			& + *{
 				margin-top: 0em;
 			}
@@ -1031,7 +1054,6 @@ article{
 		h2{
 			font-size: 2.5em;
 			color: map-get($cores, ciano);
-			counter-increment: heading_dois;
 			&:before{
 				font-size: 0.7em;
 				content: counter(heading_dois)'. ';
@@ -1130,8 +1152,6 @@ article{
 					height: 35px;
 				}
 
-
-
 				svg{
 					display: block;
 					width: auto;
@@ -1142,8 +1162,6 @@ article{
 				}
 			}
 		}
-
-
 	}
 }
 

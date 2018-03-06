@@ -34,6 +34,10 @@
 	<nav id="subcapitulos">
 		<?php foreach ($xml_dessecap->subcapitulos->subcap as $subcap): ?>
 			<a 
+			<?php if($subcap->uri == $uri_subcap): ?>
+					class="subatual" 
+			<?php endif; ?>
+			
 			href="<?php echo 'capitulo.php?cap=' . $uri_capitulo . '&sub=' . $subcap->uri; ?>">
 				<?php echo $subcap->title; ?>
 			</a>

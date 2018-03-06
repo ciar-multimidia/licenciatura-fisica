@@ -1,30 +1,32 @@
 jQuery(document).ready(function($) {
 	if (window.MathJax) {
-		MathJax.Hub.signal.Interest(function (message) {
-			if (message[0] === 'TeX Jax - parse error') console.log(message[0]);
-			// if (message[0] === 'Begin PreProcess') {
-			// 	$('article').addClass('carregando');
-			// 	$('#loader').addClass('visivel');
-			// }
-			// else if (message[0] === 'End Process') {
-			// 	$('article').removeClass('carregando');
-			// 	$('#loader').removeClass('visivel');
-			// }
+		MathJax.Hub.signal.Interest(function (message) { 
+			if (message[0] === 'TeX Jax - parse error') console.log(message[0]); // Se der erro, avisa
+			if (message[0] === 'Begin PreProcess') { // Quando começar a carregar, anim de load
+				$('article').addClass('carregando');
+				$('#loader').addClass('visivel');
+			}
+			else if (message[0] === 'End Process') { // Terminou de carregar, volta ao normal
+				$('article').removeClass('carregando');
+				$('#loader').removeClass('visivel');
+			}
 		});
-		// MathJax.Hub.Register.MessageHook("Math Processing Error", function (message) {
-		// 	console.log(message[2]);
-		// });
+		
 	} else{
 		// console.log('Essa página não tem Mathjax');
 	}
 
 
 	var corpo = $('body');
-	var artigo = $('article');
+	var artigo = $('article.capitulo');
 	var btRodape = $('button.botao-rodape');
 	var notasRodape = $('.nota-rodape');
 
 	var transitionendPrefixed = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
+
+
+	/* NOTAS DE RODAPÉ */
+
 
 	notasRodape.each(function(index, el) {
 		$(el).prepend('\
@@ -104,6 +106,8 @@ jQuery(document).ready(function($) {
 
 	});
 
+	/* FIGURAS AMPLIÁVEIS */
+
 	var figuras = $('article figure');
 
 	figuras.on('click', function(event) {
@@ -111,24 +115,34 @@ jQuery(document).ready(function($) {
 	});
 
 	var contSubcaps = $('#subcapitulos');
-	var btSubcaps = contSubcaps.find('a');
+	var btSubcaps = contSubcaps.find('a.subatual, ol > li > a');
+	console.log(btSubcaps);
 	var headings = $('article h2, article h3');
 	var asideNav = $('#nav');
 
 	if (contSubcaps.length > 0) {
 		btSubcaps.each(function(index, el) {
 			$(el).on('click', function(event) {
-				// event.preventDefault();
-				// $('html, body').scrollTop(headings.eq(index).offset().top);
+				event.preventDefault();
+				$('html, body').scrollTop(headings.eq(index).offset().top);
 			});	
 		});
 	}
+
+	// SISTEMA DE PAGINAÇÃO E NAVEGAÇÃO LATERAL
 	
 
 	var paginas = $('span.pagina');
 	var pagFixa = $('#pag-fixa');
 
 	if (paginas.length > 0) {
+		
+		if (!artigo.children().first().is( paginas.eq(0) ) ) {
+			var novaPrimeiraPagina = $('<span class="pagina"></span>').text((parseInt(paginas.eq(0).text())-1))
+			artigo.prepend(novaPrimeiraPagina);
+			paginas = $('span.pagina');
+		} 
+
 		pagFixa.text(paginas.eq(0).text());
 
 		var pagAtual = 0;

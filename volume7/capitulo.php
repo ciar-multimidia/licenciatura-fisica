@@ -71,7 +71,7 @@
 
 
 
- <main>
+ <main class='numero-cap<?php echo $n_sub+1 ?>'>
  	<article class="capitulo">
 		 <?php 
 		 	// Pegando o conteudo: Primeiro procura o devido content. Dps, corrige o caminho dos arquivos, e depois joga no html.
