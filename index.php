@@ -20,7 +20,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body id='introportal'>
+<body id='introportal'>		
 	<div class="container">
 
 		<div class="logos">
@@ -85,7 +85,7 @@
 		<div class='btvolumes'>
 			<?php 
 
-				$numero_volumes = array(7);
+				$numero_volumes = array(7,8);
 
 				for ($i=0; $i < count($numero_volumes); $i++) : 
 					$xmlvolume = new SimpleXMLElement(file_get_contents('volume' . $numero_volumes[$i] . '/relacao_capitulos.xml'));

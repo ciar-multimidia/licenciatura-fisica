@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<capitulos volume='8'>
+
+    <cap>
+        <nome>O Estágio Supervisionado IV (Parte 1 e 2)</nome>
+        <uri>1-o-estagio-supervisionado-iv-parte-1-e-2</uri>
+        <subcapitulos>
+            <subcap>
+                <title>Apresentação</title>
+                <uri>apresentacao</uri>
+            </subcap>
+
+            <subcap>
+                <title>O Estágio Supervisionado IV (Parte 1 e 2)</title>
+                <uri>o-estagio-supervisionado-iv-parte-1-e-2</uri>
+            </subcap>
+
+            <subcap>
+                <title>Preparação para a Prática</title>
+                <uri>preparacao-para-a-pratica</uri>
+                <subsubcaps>
+                    <item>Planejamento</item>
+                    <item>Algumas Observações para o Desenvolvimento da Prática ou da Aula</item>
+                    <item>Algumas Observações Sobre a  Gestão da Sala de  Aula</item>
+                    <item>Avaliação da Aprendizagem</item>
+                </subsubcaps>
+            </subcap>
+
+            <subcap>
+                <title>Avaliação do Projeto / A Análise dos Dados</title>
+                <uri>avaliacao-do-projeto-a-analise-dos-dados</uri>
+                <subsubcaps>
+                    <item>Unidades de Estudo</item>
+                    <item>Como o Dado se Apresenta</item>
+                    <item>Representação dos Dados</item>
+                    <item>Descrição dos Dados Representados</item>
+                    <item>Interpretação dos Dados</item>
+                </subsubcaps>
+            </subcap>
+                
+            <subcap>
+                <title>Conclusões</title>
+                <uri>conclusoes</uri>
+            </subcap>
+
+            <subcap>
+                <title>Referências</title>
+                <uri>referencias</uri>
+            </subcap>
+        </subcapitulos>
+    </cap>
+
+
+
+
+
+    <cap>
+        <nome>Física da Matéria Condensada</nome>
+        <uri>2-fisica-da-materia-condensada</uri>
+        <subcapitulos>
+            <subcap>
+                <title>Introdução</title>
+                <uri>introducao</uri>
+            </subcap>
+
+            <subcap>
+                <title>Redes Cristalinas</title>
+                <uri>redes-cristalinas</uri>
+                <subsubcaps>
+                    <item>Rede de Bravais</item>
+                    <item>Rede Recíproca</item>
+                </subsubcaps>
+            </subcap>
+
+            <subcap>
+                <title>A Condutividade em Metais</title>
+                <uri>a-condutividade-em-metais</uri>
+                <subsubcaps>
+                    <item>Modelo de Drude</item>
+                    <item>Modelo de Sommerfeld</item>
+                </subsubcaps>
+            </subcap>
+
+            <subcap>
+                <title>Bandas de Energia</title>
+                <uri>bandas-de-energia</uri>
+                <subsubcaps>
+                    <item>Teorema de Bloch</item>
+                    <item>Condutores, Isolantes e Semicondutores</item>
+                </subsubcaps>
+            </subcap>
+
+            <subcap>
+                <title>Dinâmica da Rede Cristalina</title>
+                <uri>dinamica-da-rede-cristalina</uri>
+                <subsubcaps>
+                    <item>Modos Normais de Vibração</item>
+                    <item>Fônons</item>
+                </subsubcaps>
+            </subcap>
+
+            <subcap>
+                <title>O Calor Específico de Sólidos</title>
+                <uri>o-calor-especifico-de-solidos</uri>
+                <subsubcaps>
+                    <item>Modelo de Dulong-Petit</item>
+                    <item>Modelo de Einstein</item>
+                    <item>Modelo de Debye</item>
+                    <item>O Calor Específico de Metais</item>
+                </subsubcaps>
+            </subcap>
+
+            <subcap>
+                <title>Referências</title>
+                <uri>referencias</uri>
+            </subcap>
+        </subcapitulos>
+    </cap>
+
+
+
+    <cap>
+        <nome>Laboratório Especial</nome>
+        <uri>3-laboratorio-especial</uri>
+
+        <subcapitulos>
+            <subcap>
+                <title>Apresentação</title>
+                <uri>apresentacao</uri>
+            </subcap>
+
+
+            <subcap>
+                <title>Carga específica do elétron</title>
+                <uri>carga-especifica-do-eletron</uri>
+                <subsubcaps>
+                    <item>Introdução</item>
+                    <item>Movimento de partículas carregadas em campos elétricos</item>
+                    <item>Movimento de partículas carregadas em campos magnéticos</item>
+                    <item>Equipamento</item>
+                    <item>Aquisição de dados</item>
+                    <item>Simulação</item>
+                    <item>Análise de dados</item>
+                    <item>Análise das incertezas</item>
+                </subsubcaps>
+            </subcap>
+
+            <subcap>
+                <title>Carga elementar pelo método de Millikan</title>
+                <uri>carga-elementar-pelo-metodo-de-millikan</uri>
+                <subsubcaps>
+                    <item>Introdução</item>
+                    <item>Jogo de Forças</item>
+                    <item>Equipamento</item>
+                    <item>Equipamento de Millikan</item>
+                    <item>Aquisição de dados</item>
+                    <item>Simulação</item>
+                    <item>Cálculos</item>
+                    <item>Análise de dados</item>
+                    <item>Análise das incertezas</item>
+                </subsubcaps>
+            </subcap>
+
+
+
+            <subcap>
+                <title>Espectros do Hidrogênio e do Hélio</title>
+                <uri>espectros-do-hidrogenio-e-do-helio</uri>
+                <subsubcaps>
+                    <item>Introdução</item>
+                    <item>Fórmulas de Balmer e Rydberg-Ritz</item>
+                    <item>Modelo de Bohr</item>
+                    <item>Equação de Schröedinger</item>
+                    <item>Espectro do hélio</item>
+                    <item>Níveis de energia do hélio</item>
+                    <item>Aquisição e análise de dados</item>
+                    <item>Simulação</item>
+                </subsubcaps>
+            </subcap>
+
+
+            <subcap>
+                <title>Interação da radiação com a matéria</title>
+                <uri>interacao-da-radiacao-com-a-materia</uri>
+                <subsubcaps>
+                    <item>Introdução</item>
+                    <item>O núcleo atômico</item>
+                    <item>Decaimento radioativo</item>
+                    <item>Atenuação da radiação pela matéria</item>
+                    <item>Detetor Geiger-Müller</item>
+                    <item>Espectrômetro de fótons</item>
+                    <item>Exeperimento 1: Atividade de uma fonte radioativa</item>
+                    <item>Experimento 2: Coeficiente de atenuação da radiação</item>
+                    <item>Experimento 3: Calibração e resolução de um espectrômetro</item>
+                    <item>Análise de dados</item>
+                </subsubcaps>
+            </subcap>
+
+
+            <subcap>
+                <title>Referências</title>
+                <uri>referencias</uri>
+            </subcap>
+
+
+        </subcapitulos>
+    </cap>
+
+
+    
+
+
+    <cap>
+        <nome>Física Nuclear e de Partículas</nome>
+        <uri>4-fisica-nuclear-e-de-particulas</uri>
+
+        <subcapitulos>
+            <subcap>
+                <title>Conceitos Básicos</title>
+                <uri>conceitos-basicos</uri>
+                <subsubcaps>
+                    <item>Introdução e Revisão Histórica</item>
+                    <item>A Descoberta do Núcleo Atômico</item>
+                    <item>Propriedades do Núcleo Atômico</item>
+                    <item>Carta de Nuclídeos</item>
+                    <item>Raio do Núcleo</item>
+                    <item>Massa do Núcleo</item>
+                    <item>Níveis de Energia Nuclear</item>
+                    <item>Spin Nuclear e Magnetismo</item>
+                    <item>Partículas Elementares e Interações Fundamentais</item>
+                </subsubcaps>
+            </subcap>
+
+
+
+            <subcap>
+                <title>Física Nuclear</title>
+                <uri>fisica-nuclear</uri>
+                <subsubcaps>
+                    <item>Energia de Ligação dos Núcleos</item>
+                    <item>Decaimento Radioativo</item>
+                    <item>Reações Nucleares</item>
+                    <item>Datação Radioativa</item>
+                    <item>Penetração na Matéria e Dose Radioativa</item>
+                    <item>Fissão Nuclear</item>
+                    <item>Fusão Nuclear</item>
+                </subsubcaps>
+            </subcap>
+
+
+
+            <subcap>
+                <title>Física de Partículas</title>
+                <uri>fisica-de-particulas</uri>
+                <subsubcaps>
+                    <item>Férmions e bósons</item>
+                    <item>Matéria e antimatéria</item>
+                    <item>Léptons e hádrons</item>
+                    <item>Conservação do número de lépton</item>
+                    <item>Conservação do número de bárion</item>
+                    <item>Aceleradores de partículas</item>
+                    <item>Mistérios não resolvidos: além do Modelo Padrão</item>
+                </subsubcaps>
+            </subcap>
+
+
+
+            <subcap>
+                <title>Referências</title>
+                <uri>referencias</uri>
+            </subcap>
+        </subcapitulos>
+    </cap>
+    
+
+
+
+
+    <cap>
+        <nome>Estratégias de Ensino de Física e Produção de Materiais Didáticos</nome>
+        <uri>5-estrategias-de-ensino-de-fisica-e-producao-de-materiais-didaticos</uri>
+        <subcapitulos>
+            <subcap>
+                <title>Apresentação</title>
+                <uri>apresentacao</uri>
+            </subcap>
+
+
+
+            <subcap>
+                <title>Possibilidades para o Ensino de Física</title>
+                <uri>possibilidades-para-o-ensino-de-fisica</uri>
+                <subsubcaps>
+                    <item>Haste Metálica com Rosca</item>
+                    <item>Pêndulo Simples</item>
+                    <item>Bate-Bate</item>
+                    <item>Régua Equilibrista</item>
+                    <item>Elevador Hidráulico</item>
+                    <item>Submarino na Garrafa</item>
+                    <item>A Lei de Boyle Mariote e o Balão</item>
+                    <item>Máquina de Ondas</item>
+                    <item>Replicando Imagens</item>
+                    <item>Periscópio</item>
+                    <item>Lápis Quebrado e o Frasco que Desaparece</item>
+                    <item>Espiral de Convecção</item>
+                    <item>A Chave Errada</item>
+                    <item>Associações de Resistores</item>
+                    <item>Balão Eletrizado</item>
+                    <item>Bússola Simples</item>
+                    <item>Eletroímã</item>
+                    <item>Mapeamento de Campo Magnético</item>
+                    <item>Consumo de Energia Elétrica</item>
+                    <item>Livros e Sites Relacionados à Experimentação</item>
+                </subsubcaps>
+            </subcap>
+
+
+
+            <subcap>
+                <title>Alguns Experimentos Simples</title>
+                <uri>alguns-experimentos-simples</uri>
+            </subcap>
+
+
+
+            <subcap>
+                <title>Recursos para o Ensino de Física</title>
+                <uri>recursos-para-o-ensino-de-fisica</uri>
+            </subcap>
+
+
+
+            <subcap>
+                <title>Expectativas para o Ensino de Física</title>
+                <uri>expectativas-para-o-ensino-de-fisica</uri>
+            </subcap>
+
+
+            <subcap>
+                <title>Referências</title>
+                <uri>referencias</uri>
+            </subcap>
+
+        </subcapitulos>
+    </cap>
+
+</capitulos>

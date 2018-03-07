@@ -245,11 +245,6 @@ jQuery(document).ready(function($) {
 		console.warn('A numeração das páginas não coincide com o número de tags de paginação.');
 	}
 
-
-	if (!artigo.children().eq(0).is('span.pagina')) {
-		console.warn('O primeiro elemento do capítulo deve ser uma tag de paginação.');
-	}
-
 	var pags_jaTeveUmErro = false;
 	paginas.each(function(index, el) {
 		if (!$(el).parent().is('article')) {
