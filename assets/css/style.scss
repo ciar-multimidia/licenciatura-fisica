@@ -314,8 +314,6 @@ nav#navcapitulos{
 	padding: $padding-sumario-h 0 $padding-sumario-h*2; 
 	line-height: 1.4;
 
-
-
 	a{
 		&, &:link, &:visited, &:hover, &:focus, &:active{
 			text-decoration: none;
@@ -350,10 +348,15 @@ nav#navcapitulos{
 			line-height: 1;
 			color: map-get($cores, ciano);
 			content: '◀';
+			@include transition(color 0.1s linear);
 			position: absolute;
 			right: $padding-sumario-h;
 			top: 50%;
 			@include transform(translateY(-50%));
+		}
+
+		&.atual:hover:after{
+			color: white;
 		}
 		
 	}
@@ -367,7 +370,8 @@ nav#navcapitulos{
 			margin-top: 1em;
 		}
 		li > a{
-			&, &:link, &:visited, &:hover, &:focus, &:active{
+			@include transition(color 0.1s linear);			
+			&, &:link, &:visited, &:focus, &:active{
 				color: $ciano-sub-atual;
 			}
 		}
@@ -376,13 +380,23 @@ nav#navcapitulos{
 	li{
 		list-style-type: none;
 		counter-increment: subsubcaps;
+		color: $ciano-sub-atual;
+
+		&:hover{
+			a{
+				&, &:link, &:visited, &:focus, &:active{
+					color: white;
+				}
+				
+			}
+		}
+		
 		& > a{
 			position: relative;
 			padding: 0.3em 0;
 			display: block;
 			padding-left: calc( 1em + #{$padding-sumario-h} );
 			padding-right: $padding-sumario-h*2;
-			color: $ciano-sub-atual;
 			&:before{
 				content: counter(subcaps) '.' counter(subsubcaps) '. ';
 				font-weight: bold;
@@ -392,22 +406,28 @@ nav#navcapitulos{
 				font-size: 0.6em;
 				line-height: 1;
 				color: map-get($cores, ciano);
+				@include transition(color 0.1s linear);				
 				content: '◀';
 				position: absolute;
 				right: $padding-sumario-h;
 				top: 50%;
 				@include transform(translateY(-50%));
 			}
+
+			&.atual:hover:after{
+				color: white;
+			}
 		}
 	}
 
-	& > a, li{
+	& > a, & > ol li{
 		@include transition(all 0.1s linear);
-		@include transition-property(background-color);
+		@include transition-property(background-color, color);
 		background-color: transparent;
 		&:hover{
 			cursor: pointer;
-			background-color: transparentize( map-get($cores, verdeclaro), 0.4 );
+			color: white;
+			background-color: transparentize( map-get($cores, azulmarinho), 0.5 );
 		}
 	}
 }

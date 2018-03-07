@@ -116,7 +116,6 @@ jQuery(document).ready(function($) {
 
 	var contSubcaps = $('#subcapitulos');
 	var btSubcaps = contSubcaps.find('a.subatual, ol > li > a');
-	console.log(btSubcaps);
 	var headings = $('article h2, article h3');
 	var asideNav = $('#nav');
 

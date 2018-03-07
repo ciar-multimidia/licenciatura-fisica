@@ -1165,6 +1165,9 @@ nav#navcapitulos ol li a:hover div.numero, nav#navcapitulos ol li a:hover div.ti
   line-height: 1;
   color: #0090A7;
   content: '◀';
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
   position: absolute;
   right: 15px;
   top: 50%;
@@ -1173,6 +1176,10 @@ nav#navcapitulos ol li a:hover div.numero, nav#navcapitulos ol li a:hover div.ti
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+#subcapitulos > a.atual:hover:after {
+  color: white;
 }
 
 #subcapitulos ol {
@@ -1186,13 +1193,24 @@ nav#navcapitulos ol li a:hover div.numero, nav#navcapitulos ol li a:hover div.ti
   margin-top: 1em;
 }
 
-#subcapitulos ol li > a, #subcapitulos ol li > a:link, #subcapitulos ol li > a:visited, #subcapitulos ol li > a:hover, #subcapitulos ol li > a:focus, #subcapitulos ol li > a:active {
+#subcapitulos ol li > a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+
+#subcapitulos ol li > a, #subcapitulos ol li > a:link, #subcapitulos ol li > a:visited, #subcapitulos ol li > a:focus, #subcapitulos ol li > a:active {
   color: #025f79;
 }
 
 #subcapitulos li {
   list-style-type: none;
   counter-increment: subsubcaps;
+  color: #025f79;
+}
+
+#subcapitulos li:hover a, #subcapitulos li:hover a:link, #subcapitulos li:hover a:visited, #subcapitulos li:hover a:focus, #subcapitulos li:hover a:active {
+  color: white;
 }
 
 #subcapitulos li > a {
@@ -1201,7 +1219,6 @@ nav#navcapitulos ol li a:hover div.numero, nav#navcapitulos ol li a:hover div.ti
   display: block;
   padding-left: calc( 1em + 15px);
   padding-right: 30px;
-  color: #025f79;
 }
 
 #subcapitulos li > a:before {
@@ -1214,6 +1231,9 @@ nav#navcapitulos ol li a:hover div.numero, nav#navcapitulos ol li a:hover div.ti
   font-size: 0.6em;
   line-height: 1;
   color: #0090A7;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
   content: '◀';
   position: absolute;
   right: 15px;
@@ -1225,19 +1245,24 @@ nav#navcapitulos ol li a:hover div.numero, nav#navcapitulos ol li a:hover div.ti
   transform: translateY(-50%);
 }
 
-#subcapitulos > a, #subcapitulos li {
+#subcapitulos li > a.atual:hover:after {
+  color: white;
+}
+
+#subcapitulos > a, #subcapitulos > ol li {
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   transition: all 0.1s linear;
-  -webkit-transition-property: background-color;
-  -moz-transition-property: background-color;
-  transition-property: background-color;
+  -webkit-transition-property: background-color, color;
+  -moz-transition-property: background-color, color;
+  transition-property: background-color, color;
   background-color: transparent;
 }
 
-#subcapitulos > a:hover, #subcapitulos li:hover {
+#subcapitulos > a:hover, #subcapitulos > ol li:hover {
   cursor: pointer;
-  background-color: rgba(166, 216, 190, 0.6);
+  color: white;
+  background-color: rgba(0, 31, 60, 0.5);
 }
 
 #loader {
