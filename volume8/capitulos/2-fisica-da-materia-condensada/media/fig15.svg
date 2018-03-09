@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="311.81px" height="214.667px" viewBox="0 0 311.81 214.667" enable-background="new 0 0 311.81 214.667"
+	 xml:space="preserve">
+<g id="retas">
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="3.417" y1="177" x2="268.78" y2="177"/>
+			<g>
+				<polygon points="265.972,180.703 267.545,177 265.972,173.296 274.75,177 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="140.083" y1="10.636" x2="140.083" y2="177"/>
+			<g>
+				<polygon points="136.38,13.445 140.083,11.872 143.786,13.445 140.083,4.667 				"/>
+			</g>
+		</g>
+	</g>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="137.083" y1="33" x2="143.75" y2="33"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="137.083" y1="61.167" x2="143.75" y2="61.167"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="137.083" y1="90.833" x2="143.75" y2="90.833"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="136" y1="119.167" x2="143.75" y2="119.167"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="137.083" y1="149.167" x2="143.75" y2="149.167"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="22" y1="201.417" x2="34.75" y2="201.417"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="58.625" y1="201.417" x2="71.375" y2="201.417"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="99.25" y1="201.417" x2="106" y2="201.417"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="175.25" y1="201.417" x2="182" y2="201.417"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="207.625" y1="201.417" x2="220.375" y2="201.417"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="244" y1="201.417" x2="256.75" y2="201.417"/>
+	<text transform="matrix(1 0 0 1 91.7495 204.4165)" font-family="'MyriadPro-Regular'" font-size="12">-</text>
+	<text transform="matrix(1 0 0 1 52.7495 204.4165)" font-family="'MyriadPro-Regular'" font-size="12">-</text>
+	<text transform="matrix(1 0 0 1 15.4995 204.4165)" font-family="'MyriadPro-Regular'" font-size="12">-</text>
+</g>
+<g id="tracejado">
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="4" x1="28.5" y1="14.917" x2="28.5" y2="177"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="4" x1="65.75" y1="14.917" x2="65.75" y2="175.917"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="4" x1="101.75" y1="14.917" x2="101.75" y2="177"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="4" x1="177.25" y1="14.917" x2="177.25" y2="177"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="4" x1="214" y1="14.917" x2="214" y2="177"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="4" x1="251.5" y1="14.917" x2="251.5" y2="175.917"/>
+</g>
+<g id="linha_de_dentro">
+	<path fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M126.5,31.667l-24.75,47.5c0,0,49.75,75.5,75.5,85.75c0,0-30.5,25.75-75.5,0c0,0,47.5-29.75,75.5-87.25l-25-46"/>
+</g>
+<g id="texto">
+	<text transform="matrix(1 0 0 1 22.8667 196.9165)" font-family="'MyriadPro-Regular'" font-size="10">3π</text>
+	<text transform="matrix(1 0 0 1 59.4292 196.9165)" font-family="'MyriadPro-Regular'" font-size="10">2π</text>
+	<text transform="matrix(1 0 0 1 100.0308 196.9165)" font-family="'MyriadPro-Regular'" font-size="10">π</text>
+	<text transform="matrix(1 0 0 1 176.0312 196.9165)" font-family="'MyriadPro-Regular'" font-size="10">π</text>
+	<text transform="matrix(1 0 0 1 208.8672 196.9165)" font-family="'MyriadPro-Regular'" font-size="10">2π</text>
+	<text transform="matrix(1 0 0 1 245.3672 196.9165)" font-family="'MyriadPro-Regular'" font-size="10">3π</text>
+	<text transform="matrix(1 0 0 1 279 182.6665)" font-family="'MyriadPro-Semibold'" font-size="10">k</text>
+	<text transform="matrix(1 0 0 1 285 186.6665)" font-family="'MyriadPro-Semibold'" font-size="10">x</text>
+	<text transform="matrix(1 0 0 1 26.3823 211.6665)" font-family="'MyriadPro-Regular'" font-size="10">a</text>
+	<text transform="matrix(0.9568 0 0 1 63.0698 211.6665)" font-family="'MyriadPro-Regular'" font-size="10">a</text>
+	<text transform="matrix(1 0 0 1 100.4683 211.6665)" font-family="'MyriadPro-Regular'" font-size="10">a</text>
+	<text transform="matrix(1 0 0 1 176.4688 211.6665)" font-family="'MyriadPro-Regular'" font-size="10">a</text>
+	<text transform="matrix(1 0 0 1 212.3828 211.6665)" font-family="'MyriadPro-Regular'" font-size="10">a</text>
+	<text transform="matrix(1 0 0 1 248.8828 211.6665)" font-family="'MyriadPro-Regular'" font-size="10">a</text>
+	<text transform="matrix(1 0 0 1 127.3208 11.3135)" font-family="'MyriadPro-Semibold'" font-size="10">E</text>
+	<rect x="0" fill="none" width="311.809" height="214.667"/>
+</g>
+</svg>

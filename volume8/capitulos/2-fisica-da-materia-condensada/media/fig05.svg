@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="204.414px" height="142.5px" viewBox="0 0 204.414 142.5" enable-background="new 0 0 204.414 142.5" xml:space="preserve">
+<g id="linhas">
+</g>
+<g id="figura">
+	<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M89.716,112.297"/>
+	<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" points="141.741,112.297 
+		89.716,112.297 89.716,28.806 115.729,10.034 170.529,10.034 198.243,28.27 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" points="115.729,10.034 
+		143.976,28.091 170.529,10.034 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" points="115.729,49.544 
+		89.716,28.806 143.976,28.806 173.568,48.114 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" points="198.243,112.297 
+		171.602,92.988 143.976,112.297 115.729,92.988 89.716,112.297 115.729,132.678 	"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" x1="143.976" y1="112.297" x2="173.568" y2="132.678"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" x1="115.729" y1="92.988" x2="171.602" y2="92.988"/>
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M115.729,133.394"/>
+	
+		<rect x="115.647" y="48.196" fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" width="57.839" height="85.994"/>
+	<polyline fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" points="116.647,48.196 
+		144.045,29.604 199.162,29.604 199.162,112.916 144.045,112.379 144.045,29.604 	"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" x1="115.647" y1="134.19" x2="143.045" y2="112.379"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" x1="173.486" y1="134.19" x2="198.161" y2="112.916"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="2" x1="173.568" y1="48.114" x2="198.243" y2="29.521"/>
+	<radialGradient id="SVGID_1_" cx="115.729" cy="9.1294" r="6.168" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_1_)" cx="115.729" cy="9.129" r="6.168"/>
+	<radialGradient id="SVGID_2_" cx="169.3672" cy="9.1294" r="6.168" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_2_)" cx="169.367" cy="9.129" r="6.168"/>
+	<radialGradient id="SVGID_3_" cx="172.8535" cy="49.5449" r="6.1677" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_3_)" cx="172.854" cy="49.544" r="6.168"/>
+	<radialGradient id="SVGID_4_" cx="198.2432" cy="28.3296" r="6.1694" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_4_)" cx="198.243" cy="28.33" r="6.171"/>
+	<radialGradient id="SVGID_5_" cx="143.9761" cy="28.3296" r="6.168" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_5_)" cx="143.976" cy="28.33" r="6.168"/>
+	<radialGradient id="SVGID_6_" cx="115.729" cy="49.5449" r="6.1677" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_6_)" cx="115.729" cy="49.544" r="6.168"/>
+	<radialGradient id="SVGID_7_" cx="90.7896" cy="28.3296" r="6.168" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_7_)" cx="90.79" cy="28.33" r="6.168"/>
+	<radialGradient id="SVGID_8_" cx="116.522" cy="92.5737" r="6.1682" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_8_)" cx="116.522" cy="92.573" r="6.168"/>
+	<radialGradient id="SVGID_9_" cx="170.5293" cy="92.5737" r="6.1682" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_9_)" cx="170.529" cy="92.573" r="6.168"/>
+	<radialGradient id="SVGID_10_" cx="143.9761" cy="112.2969" r="6.168" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_10_)" cx="143.976" cy="112.297" r="6.168"/>
+	<radialGradient id="SVGID_11_" cx="198.2432" cy="112.2969" r="6.1694" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_11_)" cx="198.243" cy="112.297" r="6.171"/>
+	<radialGradient id="SVGID_12_" cx="89.7168" cy="112.2969" r="6.1677" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_12_)" cx="89.717" cy="112.297" r="6.167"/>
+	<radialGradient id="SVGID_13_" cx="116.522" cy="133.3926" r="6.168" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_13_)" cx="116.522" cy="133.394" r="6.168"/>
+	<radialGradient id="SVGID_14_" cx="173.5684" cy="133.3926" r="6.168" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E5E2DF"/>
+		<stop  offset="0" style="stop-color:#F7F6F5"/>
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0945" style="stop-color:#EBF3FA"/>
+		<stop  offset="0.276" style="stop-color:#C1DDF1"/>
+		<stop  offset="0.5259" style="stop-color:#7DBFE6"/>
+		<stop  offset="0.8268" style="stop-color:#009FD8"/>
+		<stop  offset="0.8642" style="stop-color:#009BD2"/>
+		<stop  offset="0.9272" style="stop-color:#008FC1"/>
+		<stop  offset="1" style="stop-color:#007CA8"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_14_)" cx="173.568" cy="133.394" r="6.168"/>
+	<rect fill="none" width="204.414" height="142.5"/>
+</g>
+<g id="setas">
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="143.976" y1="39.208" x2="143.976" y2="106.129"/>
+			<g>
+				<polygon points="141.014,41.455 143.976,40.197 146.938,41.455 143.976,34.433 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="187.296" y1="112.891" x2="150.143" y2="112.782"/>
+			<g>
+				<polygon points="185.058,109.921 186.308,112.888 185.041,115.847 192.072,112.904 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="149.028" y1="108.766" x2="162.169" y2="99.581"/>
+			<g>
+				<polygon points="162.024,103.297 161.359,100.147 158.628,98.44 166.085,96.845 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="texto">
+	<text transform="matrix(1 0 0 1 146.3691 92.9883)" font-family="'MyriadPro-Light'" font-size="18">a</text>
+	<text transform="matrix(1 0 0 1 146.3691 62.6494)" font-family="'MyriadPro-Light'" font-size="18">a</text>
+	<text transform="matrix(1 0 0 1 179.0215 98.7422)" font-family="'MyriadPro-Light'" font-size="18">a</text>
+	<text transform="matrix(1 0 0 1 153.7046 97.8047)" font-family="'MyriadPro-Light'" font-size="14">2</text>
+	<text transform="matrix(1 0 0 1 185.8242 102.8057)" font-family="'MyriadPro-Light'" font-size="14">1</text>
+	<text transform="matrix(1 0 0 1 153.7046 68.3994)" font-family="'MyriadPro-Light'" font-size="14">3</text>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" x1="12.592" y1="40.782" x2="12.592" y2="87.003"/>
+			<g>
+				<polygon points="10.741,42.187 12.592,41.4 14.444,42.187 12.592,37.797 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" x1="36.458" y1="64.453" x2="12.623" y2="87.024"/>
+			<g>
+				<polygon points="34.166,64.074 36.01,64.878 36.711,66.763 38.625,62.401 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" x1="58.433" y1="87.003" x2="12.592" y2="87.003"/>
+			<g>
+				<polygon points="57.029,85.151 57.815,87.003 57.029,88.854 61.418,87.003 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 26.4341 64.6284)" font-family="'MyriadPro-Light'" font-size="18">y</text>
+	<text transform="matrix(1 0 0 1 1.6401 43.4434)" font-family="'MyriadPro-Light'" font-size="18">z</text>
+	<text transform="matrix(1 0 0 1 55.6792 99.8262)" font-family="'MyriadPro-Light'" font-size="18">x</text>
+</g>
+</svg>

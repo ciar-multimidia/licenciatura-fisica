@@ -1,0 +1,391 @@
+<h2>A condutividade em metais</h2>
+
+<p>Um problema bastante importante em matéria condensada é o estudo da conduti- vidade elétrica em metais. Em geral, os átomos que formam um metal possuem elétrons que se ligam fracamente com o núcleo atômico, de forma que é possível estabelecer um modelo onde temos os elétrons que podem se mover através de uma rede de íons positivos. O primeiro a utilizar esta ideia com um relativo sucesso foi Drude no início do século XX, como vamos verificar na próxima seção.</p>
+<p>O modelo de Drude trata os elétrons como um gás de partículas clássicas que se mo- vem através da rede e, eventualmente, podem sofrer colisões com os íons. Uma melhoria neste modelo foi proposta por Sommerfeld considerando os elétrons como um gás ideal quântico de férmions. Esta segunda proposta consegue explicar uma série de proprieda- des que o modelo de Drude não consegue explicar, como, por exemplo, o calor específico de um gás de elétrons que é diretamente proporcional a temperatura.</p>
+
+<h3>Modelo de Drude</h3>
+
+<p>Conforme mencionamos anteriormente, o modelo de Drude considera um metal constituído de um gás de elétrons que se movimenta de acordo com a teoria cinética dos gases sobre um fundo constituído de cargas positivas. As cargas positivas permanecem imóveis no metal, enquanto assumimos que os elétrons de valência estão livres e podem se mover através do sistema. Ao observarmos um átomo isolado temos uma carga nuclear $eZ_a$, onde $Z_a$ é o número atômico e $e=1,6\times10^{-19} \rm C$. Temos também uma carga de $-eZ_a$ elétrons que estão em volta do núcleo e, vamos considerar que alguns deles ($Z$) estão ligados fracamente ao núcleo, enquanto que os demais estão fortemente ligados. Consequentemente, temos ($Z_a - Z$) elétrons ligados fortemente, compondo uma carga positiva que fica imóvel e $Z$ elétrons de valência que podem se mover.</p>
+
+<p>O próximo passo nesse modelo é admitir uma densidade de elétrons $n$ dada por $n = \frac{N}{V}$, onde $N$ é o número total de elétrons de condução e $V$ é o volume do material. Vamos considerar que a densidade $n$ é uniforme ao longo de todo o volume.</p>
+
+<p>No movimento dos elétrons através do metal vamos considerar que podem ocorrer
+colisões com as cargas positivas imóveis e, não vamos considerar a possibilidade de
+colisões, ou mesmo interações, entre os elétrons. A Fig. (2.11) ilustra o movimento
+dos elétrons em uma rede de íons positivos fixos, onde temos colisões entre os elétrons
+e os íons. Uma das hipóteses básicas do modelo de Drude é admitir que as colisões são
+instantâneas e alteram abruptamente as velocidades dos elétrons. Além disso, assumimos que os elétrons sofrem as colisões com uma probabilidade $\frac{1}{\tau}$ por unidade de tempo, onde $\tau$ é o tempo de relaxação. Isto significa que a probabilidade de um elétron colidir em um intervalo de tempo infinitesimal $dt$ é $\frac{dt}{\tau}$. Interpretamos $\tau$ como sendo o tempo médio entre duas sucessivas colisões de um elétron, que tipicamente é da ordem de $10^{-15} \rm s$.</p>
+
+<figure>
+  <img src="[[caminho]]/media/fig11.svg">
+  <figcaption>Figura 2.11: Movimento dos elétrons no modelo de Drude.</figcaption>
+</figure>
+
+<p>Podemos então aplicar um campo elétrico uniforme (E) na direção do eixo x do material e resolver a segunda lei de Newton para cada elétron. Se não tivéssemos a existência de colisões, a equação a ser resolvida seria:</p>
+
+<p class="formula">
+\begin{equation}
+ \frac{dp_x}{dt} = -eE\;\;, \label{eq:px_Drude}
+\end{equation}
+<span class="numero_formula">2.22</span></p>
+
+  
+<p>onde $p_x$ é o momento linear do elétron. O resultado da Eq. (2.22) é dado por:</p>
+
+<p class="formula">
+\begin{equation}
+ p_x = -eEt\;\;,
+\end{equation}
+<span class="numero_formula">2.23</span></p>
+
+<p>indicando que o momento aumenta linearmente com o tempo. Esse resultado leva a uma situação fisicamente incorreta quando usamos para escrever a corrente elétrica que passa pelo material. Quando temos $n$ elétrons por unidade de volume deslocando-se através do material com momento linear $p_x$, a corrente elétrica $j_x = -nep_x/m$ ASHCROFT; MERMIN, 2011; OLIVEIRA; JESUS, 2005). Sendo assim,</p>
+
+<p class="formula">
+  \begin{equation}
+ j_x = \frac{ne^2 E}{m}t\;\;.\label{eq:jx_drude}
+\end{equation}
+<span class="numero_formula">2.24</span></p>
+
+<p>O resultado da Eq. (2.24) indica que, ao aplicar o campo elétrico $E$ no material, a corrente elétrica aumenta indefinidamente a medida que aumenta $t$. Esse fato obviamente não é observado experimentalmente, pois a aplicação do campo induz uma corrente elétrica estacionária que não aumenta com o tempo. O resultado errado aparece justamente pelo fato de ignorar as colisões dos elétrons mencionadas anteriormente. Para introduzir as colisões, Drude acrescenta um termo de relaxação na Eq. (2.22) de maneira que temos:</p>
+
+<p class="formula">
+\begin{equation}
+  \frac{dp_x}{dt} =-\frac{p_x}{\tau} -eE\;\;, \label{eq:px_relaxacao}
+\end{equation}
+<span class="numero_formula">2.25</span></p>
+
+
+<p>que pode ser resolvida (verifique o Exercício 6) e encontramos: </p>
+
+<p class="formula">
+\begin{equation}
+ j_x = \frac{ne^2\tau}{m} E \left(1 - e^{-t/\tau} \right) \label{eq:jx_relaxacao}\;\;.
+\end{equation}
+<span class="numero_formula">2.26</span></p>
+
+
+<p>O resultado encontrado por Drude é particularmente interessante quando analisamos o limite em que $t\rightarrow \infty$. Nesse caso, temos que:</p>
+
+<p class="formula">
+\begin{equation}
+ j_x (t\rightarrow\infty) = \underbrace{\frac{ne^2\tau}{m}}_{\sigma_0} E \label{eq:ohm}
+\end{equation}
+<span class="numero_formula">2.27</span></p>
+
+<p>onde $\sigma_0$ é a condutividade elétrica do material. A expressão escrita na \eq{ohm} é a lei de Ohm, que é de fato observada experimentalmente. A previsão correta da lei de Ohm é uma das mais importantes contribuições de Drude com o seu modelo, onde a condutividade elétrica (uma grandeza macroscópica) é prevista em termos de grandezas microscópicas. Sendo assim, podemos estimar o tempo de relaxação ao medir experimentalmente $\sigma_0$:</p>
+
+
+<p class="formula">
+\begin{equation}
+\tau = \frac{\sigma_0 m}{ne^2}\;\;,
+\end{equation}
+\vspace*{-5pt}
+<span class="numero_formula">2.28</span></p>
+
+<p>que é, conforme mencionado anteriormente, tipicamente da ordem de $10^{-15} \rm s$. Com o tempo de relaxação previsto nesse modelo, podemos determinar o livre caminho médio, ou seja, a distância média percorrida por um determinado elétron no intervalo entre duas sucessivas colisões. Para fazer isto devemos considerar a velocidade média do elétron que, neste caso, é uma partícula que compõe um gás ideal clássico (Verifique o exercício 7).</p>
+
+<p>Um outro aspecto do modelo de Drude é admitir que os elétrons livres têm um papel fundamental na condução de calor através do material. Para estimar esta propriedade, podemos recortar uma barra desse material e colocar cada extremidade em contato com diferentes reservatórios térmicos, com temperaturas diferentes. Dessa forma, surge através do material um gradiente de temperaturas ${\bf \nabla} T$. Para pequenos gradientes de temperatura, podemos definir a densidade de corrente térmica através da barra como:</p>
+
+<p class="formula">
+  \begin{equation}
+ {\bf j}_q = -\kappa {\bf \nabla} T\;\;, \label{eq:j_q}
+\end{equation}
+<span class="numero_formula">2.29</span></p>
+
+<p>em que $\kappa$ é a condutividade térmica; uma propriedade que depende das características do material. O sinal negativo na Eq. (2.29) indica que a corrente deve fluir do ponto que tem temperatura mais alta para aquele com temperatura mais baixa.</p>
+
+<p>Vamos então analisar o caso particular onde a corrente térmica é unidimensional, ou seja, o gradiente de temperatura $\nabla T \rightarrow \frac{dT}{dx}\hat{x}$. Nesse caso, os elétrons podem movimentar-se apenas ao longo da direção do eixo $x$ do material. Temos que em uma determinada posição $x$ na barra, metade dos elétrons que chegam neste ponto devem ser oriundos do lado de mais alta temperatura e a outra metade do lado de mais baixa temperatura. Considerando então que a energia térmica deste elétron depende da temperatura, que por sua vez depende da posição $x$, podemos expressar esta energia como $\varepsilon(T[x])$. Nesse contexto, vamos admitir que os elétron que chegam ao ponto $x$, pelo lado de temperatura mais alta, colidiram pela última vez em um ponto $x' = x - v_{mx}\tau$, onde este último termo é justamente o livre caminho médio de cada elétron, sendo $v_{mx}$ a componente $x$ da velocidade média do elétron. Por outro lado, os elétrons que chegam nesta mesma posição pelo lado de temperatura mais baixa tiveram a sua última colisão na posição $x' = x + v_{mx}\tau$. Consequentemente, podemos escrever a densidade de corrente térmica como:</p>
+
+<p class="formula">
+\begin{equation}
+ j_q = \frac{1}{2}n v_{mx} \left( \varepsilon(T[x - v_{mx}\tau ]) - \varepsilon(T[x + v_{mx}\tau ]) \right)\;\;,
+\end{equation}
+<span class="numero_formula">2.30</span></p>
+
+
+<p>que para variações pequenas de temperatura podemos expandir em torno do ponto $x$ usando uma série de Taylor para escrever:</p>
+
+<p class="formula">
+\begin{equation}
+ j_q = nv_{mx}^2\tau \frac{d\varepsilon}{dT} \left( - \frac{dT}{dx} \right)\;\;.
+\end{equation}
+<span class="numero_formula">2.31</span></p>
+
+<p>Não é complicado generalizar o resultado encontrado para o caso tridimensional. Para isso, o modelo de Drude leva em conta a equiparti\c{c}ão da energia térmica no gás de elétron, que supõe que $v_{mx}^2 = v_{my}^2 = v_{mz}^2 = \frac{1}{3}v^2$. Além disso, $n d\varepsilon/dT = (dE/dT)/V = c_V$, de forma que podemos escrever a densidade de corrente térmica para o caso o caso tridimensional como:</p>
+
+<p class="formula">
+\begin{equation}
+ {\bf j}_q = - \frac{1}{3}v^2\tau c_V {\bf \nabla} T \;\;, \label{eq:j_q2}
+\end{equation}
+<span class="numero_formula">2.32</span></p>
+
+<p>onde $v^2$ é a velocidade quadrática média do elétron e $c_V$ é o calor específico eletrônico. Comparando as Eq. (2.29) e Eq. (2.32), podemos observar que o modelo de Drude prevê uma condutividade térmica do material constante dada por:</p>
+
+<p class="formula">
+\begin{equation}
+ \kappa = \frac{1}{3}v^2 \tau c_V \;\;, \label{eq:kappa}
+\end{equation}
+<span class="numero_formula">2.33</span></p>
+
+<p>que depende do valor do tempo de relaxação do elétron. Podemos finalmente definir uma grandeza que não depende do tempo de relaxação do elétron, dividindo condutividade térmica da Eq. (2.33) pela condutividade elétrica definida na Eq. (2.27). Sendo assim,</p>
+
+<p class="formula">
+\begin{equation}
+ \frac{\kappa}{\sigma_0} = \frac{1}{3} \frac{c_V mv^2}{ne^2}\;\;. \label{eq:razao}
+\end{equation}
+<span class="numero_formula">2.34</span></p>
+
+<p>Uma vez que estamos considerando os elétrons como um gás clássico ideal, podemos determinar o calor específico eletrônico, que para um gás ideal é $c_V = \frac{3}{2}nk_B$, onde $k_B = 8,617\times 10^{-5} \rm eV\cdot K^{-1}$ é a constante de Boltzmann (CALLEN, 1985; ASHCROFT; MERMIN, 2011). A velocidade quadrática média pode também ser obtida neste caso clássico considerando que a energia cinética translacional do elétron deve ser $\frac{3}{2}k_B T$. Consequentemente, a razão definida na \eq{razao} pode ser escrita como:</p> 
+
+<p class="formula">
+\begin{equation}
+ \frac{\kappa}{\sigma_0} = \frac{3}{2}\left( \frac{k_B}{e}\right)^2T \;\;,
+\end{equation}
+<span class="numero_formula">2.35</span></p>
+
+
+<p>que não depende do tempo de relaxação. Portanto, o modelo de Drude prevê que a razão entre as condutividades térmica e elétrica deve ser diretamente proporcional à temperatura e a constante de proporcionalidade não depende da natureza do material. Este resultado está de acordo com a lei de Wiedemann e Franz enunciada em 1853.
+A Tabela 2.3 apresenta alguns valores experimentais da razão $\frac{\kappa}{\sigma_0 T}$ para diferentes materiais. Vale notar que os valores são muito próximos uns dos outros. Apesar disso, o valor previsto teoricamente pelo modelo de Drude é $\frac{\kappa}{\sigma_0 T} = 1,11\times 10^{-8} \rm W\Omega/K^2$, uma falha da abordagem teórica feita pelo modelo.</p>
+
+<table>
+<caption>Tabela 2.3: Condutividade elétrica e condutividade térmica para diferentes materiais na temperatura T = 373K (ASHCROFT; MERMIN, 2011).</caption>
+  <tr>
+    <th>Elemento</th>
+    <th>$\sigma_0 \times 10^{6}$ $\left( \frac{1}{\Omega\cdot cm}\right)$</th>
+    <th>$\kappa$ $\left( \frac{W}{cm\cdot K}\right)$</th>
+    <th>$\frac{\kappa}{\sigma_0 T} \times 10^{-8}$ $\left( \frac{W\Omega}{K^2}\right)$</th>
+  </tr>
+  <tr>
+    <td>Cu</td>
+    <td>0,446</td>
+    <td>3,82</td>
+    <td>2,29</td>
+  </tr>
+  <tr>
+    <td>Fe</td>
+    <td>0,068</td>
+    <td>0,73</td>
+    <td>2,88</td>
+  </tr>
+  <tr>
+    <td>Al</td>
+    <td>0,282</td>
+    <td>2,30</td>
+    <td>2,19</td>
+  </tr>
+</table>
+
+<p>Estudos mais detalhados sobre o modelo de Drude podem ser encontrados nas referências Ashcroft e Mermin (2011), Oliveira e Jesus (2005) e Pérez (2000). Algumas limitações no modelo ficam evidentes quando estima-se outras propriedades do material, como, por exemplo, o coeficiente Hall. Além disso, o modelo não consegue estabelecer uma distinção entre condutores, isolantes e semicondutores, que deve ser ex- plicada com a introdução do conceito de bandas de energia, na seção (4). As deficiências encontradas pelo modelo de Drude surgem pelo fato de se utilizar a mecânica estatítica clássica para modelar o comportamento do gás de elétrons. Em verdade, os elétrons não obedecem uma distribuição de Maxwell-Boltzmann clássica conforme sugerido no modelo. Para contornar esse problema devemos levar em conta o comportamento quân- tico dos elétrons e o chamado princípio de exclusão de Pauli, como vamos ver na seção seguinte. Como vamos observar os elétrons obedecem à distribuição de Fermi-Dirac.</p>
+
+
+<h3>Modelo de Sommerfeld</h3>
+
+<p>No modelo de Sommerfeld, os elétrons são considerados como partículas livres dentro de uma caixa de volume $V$. Sendo assim, cada elétron de massa $m$ pode ser descrito por uma função de onda $\psi(\mathbf{r})$ que deve satisfazer a equação de Schrödinger para uma partícula:</p>
+
+<p class="formula">
+\begin{equation}
+ -\frac{\hbar}{2m} \left( \frac{\partial^2 }{\partial x^2}+ \frac{\partial^2 }{\partial y^2} + \frac{\partial^2 }{\partial z^2}\right)\psi(\mathbf{r}) = E \psi(\mathbf{r})\;\;,
+\end{equation}
+<span class="numero_formula">2.36</span></p>
+
+<p>onde $\hbar = 1,05457168\times 10^{-34} \rm J.s$ é a constante de Planck dividida por $2\pi$ e $E$ é a energia do elétron no metal. Este gás de férmions formado pelos $N$ elétrons é então confinado em uma caixa cúbica de lado $L$, tal que $V = L^3$. Além disso, a função de onda que descreve o elétron deve se anular nas bordas da caixa. Este modelo foi o primeiro a considerar as características quânticas dos elétrons, tratando-os como um gás ideal quântico de férmions.</p>
+
+<p>Uma outra importante consideração no tratamento de um sistema macroscópico é eliminar os efeitos da superfície do volume. Introduzindo condições periódicas de contorno estes efeitos podem ser eliminados. Para isso, redefinimos a função de onda de forma que ela obedeça a chamada condição de Born-von-Karman que pode ser verificada fazendo:</p>
+
+<p class="formula">
+\begin{eqnarray}
+ \psi(x,y,z) &=& \psi(x+L,y,z) \\
+ \end{eqnarray}
+ <span class="numero_formula">2.37</span></p>
+
+<p class="formula">
+\begin{eqnarray}
+ \psi(x,y,z) &=& \psi(x,y+L,z) \\
+ \end{eqnarray}
+ <span class="numero_formula">2.38</span></p>
+
+<p class="formula"> 
+\begin{eqnarray}
+ \psi(x,y,z) &=& \psi(x,y,z+L)
+\end{eqnarray}
+<span class="numero_formula">2.39</span></p>
+
+<p>De maneira análoga ao que estudamos na seção 2.2 uma possível solução para a função de onda do elétron, que guarde a propriedade de periodicidade, pode ser dada por:</p>
+
+<p class="formula"> 
+\begin{eqnarray}
+ \psi(x,y,z) = \frac{1}{\sqrt{V}}e^{i\mathbf{k}\cdot\mathbf{r}}= \frac{1}{\sqrt{V}}exp \left[ i \left(k_x x + k_y y + k_z z\right) \right]\;\;,
+\label{eq:psi_e_peri}
+\end{eqnarray}
+<span class="numero_formula">2.40</span></p>
+
+<p>que substituindo na equação de Schrödinger (verifique o Exercício 9) resulta em autova- lores de energia iguais a:</p>
+
+<p class="formula"> 
+\begin{equation}
+ E(k) = \frac{\hbar^2k^2}{2m}\;\;\;\;,
+\label{eq:autoe_e}
+\end{equation}
+<span class="numero_formula">2.41</span></p>
+
+<p>tal que a energia do elétron é uma função do segundo grau em $k$. Além disso, impondo a condição de Born-von-Karman na solução proposta para a função de onda, podemos obter (verifique o Exercício 10) as condições de contorno para as componentes do vetor de onda $\mathbf{k}$, que são tais que:</p>
+
+<p class="formula"> 
+\begin{equation}
+ e^{k_x L} = e^{k_y L} = e^{k_z L} = 1\;\;,
+\label{eq:pbc_k}
+\end{equation}
+<span class="numero_formula">2.42</span></p>
+
+<p>onde</p>
+
+<p class="formula"> 
+\begin{eqnarray}
+ k_x = \frac{2\pi n_x}{L}\;\;, \hspace{0.5cm}  k_y = \frac{2\pi n_y}{L}\;\;, \hspace{0.5cm} k_z = \frac{2\pi n_z}{L}\;\;,
+\label{eq:k_n}
+\end{eqnarray}
+<span class="numero_formula">2.43</span></p>
+
+<p>com $n_x$, $n_y$ e $n_z$ sendo números inteiros.</p>
+
+<p>Uma vez que as componentes do vetor de onda $\mathbf{k}$ podem assumir apenas valores discretos, podemos definir um espaço tridimensional com os possíveis valores de $k_x$, $k_y$ e $k_z$. O chamado espaço dos momentos $\mathbf{k}$, representado na \fig{kspace}, apresenta valores quantizados para as componentes de $\mathbf{k}$ com valores mínimos não nulos iguais a $\frac{2\pi}{L}$ que correspondem a $n_x$, $n_y$ e $n_z$ iguais a $1$. Consequentemente, o número de estados eletrônicos $\mathbf{k}$ possíveis dentro de uma região qualquer do espaço com volume $\Omega_k$, equivale a:</p>
+
+<p class="formula"> 
+\begin{equation}
+ \frac{\Omega_k}{\left( \frac{2\pi}{L}\right)^3} = \frac{\Omega_k V }{8\pi^3} \;\;,
+\end{equation}
+<span class="numero_formula">2.44</span></p>
+
+
+<p>o que resulta em uma densidade de estados (número de pontos por volume) igual a $\frac{V}{8\pi^3}$. Este resultado para a densidade de estados $\mathbf{k}$ é bastante útil no estudo de muitas propriedades eletrônicas em materiais. Como vamos observar mais adiante, esse valor aparece frequentemente em muitas situações.</p>
+
+<figure>
+  <img src="[[caminho]]/media/fig12.svg">
+  <figcaption>Figura 2.12: O espaço dos momentos k.</figcaption>
+</figure>
+
+
+<p>Um detalhe importante que temos considerado até este momento é o fato de que os elétrons não interagem entre si. Dessa forma, para construirmos um estado fundamental que comporte os $N$ elétrons dentro dos níveis de energia permitidos, devemos levar em conta o princípio de exclusão de Pauli. De acordo com este princípio, um estado caracterizado por um conjunto de componentes ($k_x$, $k_y$, $k_z$) pode abrigar no máximo 2 elétrons, sendo um deles com spin para cima (<i>spin up</i>) e o outro com spin para baixo (<i>spin down</i>). Nesse sentido, o estado fundamental do gás de férmions é construído colocando-se dois elétrons em cada estado de momento $\mathbf{k}$ de forma que a distribuição é feita primeiro para os estados de mais baixa energia. Para um sistema contendo $N$ elétrons, devemos inicialmente colocar dois no estado de momento zero ($\mathbf{k} = \mathbf{0}$) que possui energia nula de acordo com a \eq{autoe_e}. Em seguida, devemos preencher os estados de momento com energia $E(\mathbf{k}) = \frac{\hbar^2}{2m}\left(\frac{2\pi}{L} \right)^2$, que é a mais baixa não nula. Vale notar aqui que para essa energia podemos ter até seis estados diferentes, que são aqueles que correspondem a ($n_x$, $n_y$, $n_z$) = ($\pm1$, $0$, $0$), ($0$, $\pm1$, $0$) e ($0$, $0$, $\pm1$). Podemos acomodar $12$ elétrons nestes estados mencionados, sendo seis com <i>spin up</i> e seis com <i>spin down</i>. O preenchimento dos demais estados deve seguir este mesmo raciocínio até que tenhamos distribuído todos os N elétrons do material.</p>
+
+<p>Quando o número de elétrons do material é muito grande (tipicamente $N\sim10^{23}$), o volume ocupado pelos elétrons no espaço $\mathbf{k}$ é justamente o volume de uma esfera. Isto ocorre porque, de acordo com a Eq. (2.41), a energia é diretamente proporcional a $k^2$. O último estado de momento preenchido corresponde ao mais alto valor de energia e é chamado de vetor de onda de Fermi $\mathbf{k}_F$. Logo, a esfera de raio $k_F$ limita os estados ocupados pelos elétrons ($k&lt;k_F$) dos estados desocupados ($k>k_F$), esta é a chamada esfera de Fermi, cujo volume é dado por:</p>
+
+<p class="formula">
+\begin{equation}
+ \frac{4}{3} \pi k_F^3\;\;.
+\label{eq:V_fermi}
+\end{equation}
+<span class="numero_formula">2.45</span></p>
+
+<p>Para determinarmos o número de estados $\mathbf{k}$ permitidos dentro da esfera de Fermi, basta multiplicar o volume dado na Eq. (2.45) pela densidade de estados encontrada anteriormente:</p>
+
+<p class="formula">
+\begin{equation}
+  N_k =  \frac{4}{3} \pi k_F^3 \times \frac{V}{8\pi^3} = \frac{k_F^3}{6\pi^2}V\;\;.
+\end{equation}
+<span class="numero_formula">2.46</span></p>
+
+<p>Uma vez que podemos distribuir dois elétrons em cada estado, o número total de elétrons $N=2N_k$ e, podemos escrever o vetor de onda de Fermi como:</p>
+
+<p class="formula">
+\begin{equation}
+ k_F = \left( 3\pi^2\frac{N}{V}\right)^{1/3}\;\;,
+\label{eq:k_F}
+\end{equation}
+<span class="numero_formula">2.47</span></p>
+
+<p>onde $\frac{N}{V} = n$ é a densidade eletrônica. É interessante obervar que, de acordo com o modelo de Sommerfeld, o raio da esfera de Fermi depende apenas da densidade de elétrons que possui o material, na Tabela 2.4 temos os valores de kF para alguns metais.</p>
+
+
+<p>A partir da definição do vetor de onda de Fermi, podemos definir outras grandezas importantes no estudo da dinâmica dos elétrons em metais. O momento de Fermi $p_F= \hbar k_F$ é o momento do elétron que ocupa o nível com energia mais alta $E_F = \frac{\hbar^2 k_F^2}{2m}$, conhecida como energia de Fermi. Definido o momento desse elétron, podemos definir também a velocidade de Fermi</p>
+
+<p class="formula">
+\begin{equation}
+ v_F = \frac{p_F}{m} = \frac{\hbar k_F}{m}\;\;,
+\end{equation}
+<span class="numero_formula">2.48</span></p>
+
+<p>que podemos comparar com a velocidade obtida em um gás ideal clássico $v=\sqrt{ \frac{3k_BT}{m}}$. Note que o modelo clássico prevê uma velocidade nula para $T=0$, bem diferente da previsão do modelo quântico de Sommerfeld. Além das grandezas definidas anteriormente, podemos ainda definir a temperatura de Fermi a partir da energia do último estado ocupado:</p>
+
+<p class="formula">
+\begin{equation}
+ T_F = \frac{E_F}{k_B}\;\;.
+\end{equation}
+<span class="numero_formula">2.49</span></p>
+
+<p>Na Tabela 2.4 temos valores das velocidades e das temperaturas de Fermi para alguns metais.</p>
+
+
+Tabela 2.4: Para diferentes metais, valores do vetor de onda, da velocidade, da energia e da temperatura de Fermi. Todos os valores são extraídos da referência Ashcroft e Mermin (2011).
+
+
+Metal kF (×108cm−1) vF (×108cm/s) EF (eV) TF (×104K) Cu 1,36 1,57 7,00 8,16
+Fe 1,71 1,98 11,1 13,0
+Al 1,75 2,03 11,7 13,6
+Ga 1,66 1,92 10,4 12,1 Mn 1,70 1,96 10,9 12,7
+
+
+Definidas todas essas grandezas de interesse, podemos agora determinar a energia do estado fundamental do gás de elétrons para um determinado metal. Para isto, vamos somar as energias de todos os N elétrons que ocupam desde o estado k = 0 até kF , ou seja,
+
+U = 2 ·   E(k) , (2.50) k&lt;kF
+
+                         
+onde a energia de cada elétron é dada pela Eq. (2.41) e devemos multiplicar a soma por 2, que é o número de elétron que podemos colocar em cada nível de energia. Com isso,
+   2k2
+U= m. (2.51)
+k&lt;kF
+Como estamos tratando um sistema com um número muito grande de elétrons (N ∼ 1023), portanto, ocupando um volume macroscópico, o somatório anterior pode ser escrito como uma integral, onde:
+ → V   d3k . (2.52)
+  8π3
+k
+Mais detalhes sobre este procedimento podem ser consultados nas referências Ashcroft e Mermin (2011), Kittel (2006) e Oliveira e Jesus (2005). Sendo assim, a Eq. (2.51) pode ser reescrita como:
+U= V  kF  2k24πk2dk, (2.53) 8π30 m
+onde o elemento de volume d3k = k2senθdkdθdφ em coordenadas esféricas. Segue que,
+V 2 kF 4
+U = 2π2m kdk (2.54)
+acima pode ser escrito como:
+U = 3   2 k F2 = 3 E F . ( 2 . 5 6 ) N 10m 5
+O resultado escrito na Eq. (2.56) merece ser analisado com atenção. Observamos que, o modelo quântico para o gás de elétrons no metal prevê uma energia total no estado fundamental que é uma fração da energia de Fermi, mesmo para T = 0. Isto contraria a previsão clássica para o gás ideal, onde a energia por partícula
+48 Licenciatura em Física
+    0
+U  2kF53 2kF2kF3
+V = 2π2m5=10m3π2 , (2.55) da Eq. (2.47) podemos observar que N/V = n = kF3 /(3π2) de tal maneira que o resultado
+          
+U = 3 kB T , indicando que a energia se anula para T = 0. Em outras palavras, a teoria N2
+clássica afirma que as partículas estariam em repouso em uma temperatura igual ao zero absoluto, enquanto que a teoria quântica afirma o contrário.
+Uma outra maneira bastante útil de se estudar a soma dos estados da Eq. (2.51) é fazer diretamente o somatório nas energias E(k) e não nos vetores de onda k. Fazer isto é o mesmo que realizar uma mudança de variáveis de k para E(k) nas integrais efetuadas anteriormente. A partir da Eq. (2.41) podemos observar que:
+ m1
+dk = 2 2 √E dE , (2.57)
+de forma que, uma integração de uma função qualquer da energia f(E(k)) em relação a k, pode ser transformada de acordo com:
+        d3kf(E(k) =   π   2π   ∞ 1 f(E(k)k2senθdkdθdφ 4π3 0 0 0 4π3
+(2.58) (2.59)
+(2.60)
+  =
+  ∞ k2dk   ∞ π2 f(E(k)) =
+0 −∞
+g(E) = m  2mE  2π2  2
+dEg(E)f(E) ,
+ em que:
+   é a chamada densidade de estados para o gás de elétrons livres. Isso significa que o valor g(E)dE é simplesmente o número de níveis eletrônicos no intervalo de energia entre E e E + dE, dividido pelo volume. Verifique o Exercício 12. Sendo assim, a densidade de estados indica o quão denso é o empacotamento dos estados quânticos de um determinado sistema, consequentemente ela está associada com várias propriedades importantes de um determinado material. Vale mencionar que a densidade de estados apresentada na Eq. (2.60) é válida para um gás de elétrons livres e tridimensional. Para um gás de elétron com interação e na presença de uma rede cristalina, a expressão para g(E) não é tão simples.
+Todo o tratamento feito até agora para os elétrons no modelo de Sommerfeld é válido para T = 0. Para temperaturas não nulas a probabilidade f(E) de se encontrar um determinado estado com energia E é diferente daquela com T = 0. A determinação da função de distribuição de probabilidades é um problema bastante explorado em Física Estatística (HUANG, 1987; CALLEN, 1985; PATHRIA, 1996) e não vamos discutir com
+Física da Matéria Condensada 49
+ 
+detalhes neste texto. Uma vez que os elétrons possuem spin semi-inteiro (±1) a função 2
+de distribuição para estas partículas deve ser (OLIVEIRA; JESUS, 2005; HARALD; LÜTH, 2003; ASHCROFT; MERMIN, 2011):
+1
+f(E)=exp E−EF +1 , (2.61)
+kBT
+conhecida como função de distribuição de Fermi-Dirac, válida para qualquer conjunto de férmions (partículas com spin semi-inteiro). A probabilidade de se encontrar um estado eletrônico ocupado, em T ̸= 0, com energia E é dada pela Eq. (2.61) que podemos mostrar que, no limite em que T → 0:
+f(E) → 0,E>EF (2.62) f(E) → 1,E EF (2.63)
+A demonstração dessa característica da função de distribuição é sugerida no Exercício 13. A Fig. (2.13) mostra a função de distribuição de Fermi-Dirac para diferentes temperaturas e, podemos observar que à medida que a temperatura aumenta o formato da função torna-se mais suave e arredondado. Um interessante applet pode ser encontrado na internet4 e mostra o comportamento da função de distribuição da Eq. (2.61) com o aumento gradual da temperatura.
+                  1,0 0,8 0,6 0,4 0,2
+0,0
+Energia
+EF
+        0 300 1200
+k k k
+                  Figura 2.13: Função de distribuição de Fermi-Dirac em função da energia para diferentes temperaturas.
+4. Disponível em: <http://astro.if.ufrgs.br/evol/FermiD.htm>. Acessado em: 21 de Março de 2013.
+50 Licenciatura em Física
+  f (E)
+O comportamento da função de distribuição de Fermi-Dirac ilustrado na Fig. (2.13) indica que, para T ̸= 0, estados de energia abaixo de EF apresentam uma probabilidade finita de estarem desocupados. Por outro lado, estados imediatamente acima de EF possuem uma probabilidade não nula de estarem ocupados. A largura da região que a função de distribuição se desvia daquela para T = 0 é da ordem de kB T .
+A inclusão da estatística de Fermi-Dirac é um detalhe importante no estudo do gás de elétrons. O cálculo do calor específico a volume constante deste sistema difere drasticamente do resultado encontrado para o gás ideal clássico (ASHCROFT; MERMIN, 2011; OLIVEIRA; JESUS, 2005). Como vamos estudar mais adiante na Seção 6.1, o modelo clássico prevê que o calor específico é uma constante que independente da temperatura. Por outro lado, é possível mostrar5 que nesse outro modelo o calor específico é proporcional ao produto kBTg(EF), ou seja, varia linearmente com a temperatura. Esse resultado desempenha um papel importante no entendimento da propriedades térmicas de metais.

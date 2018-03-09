@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="311.81px" height="172px" viewBox="0 0 311.81 172" enable-background="new 0 0 311.81 172" xml:space="preserve">
+<g id="retangulos">
+	
+		<rect x="18.236" y="138.123" fill="#9195C9" stroke="#262262" stroke-width="2" stroke-miterlimit="10" width="69.56" height="22.333"/>
+	<rect x="16.756" y="138.123" fill="#8BB1DE" width="72.52" height="22.333"/>
+	
+		<rect x="18.236" y="100.17" fill="#E79E95" stroke="#ED1C24" stroke-width="2" stroke-miterlimit="10" width="69.56" height="22.333"/>
+	<rect x="16.756" y="100.17" fill="#E9B39F" width="72.52" height="22.333"/>
+	
+		<rect x="114.265" y="100.17" fill="#E79E95" stroke="#ED1C24" stroke-width="2" stroke-miterlimit="10" width="69.561" height="22.333"/>
+	<rect x="112.679" y="100.17" fill="#E9B39F" width="72.521" height="22.333"/>
+	
+		<rect x="114.265" y="138.123" fill="#9195C9" stroke="#262262" stroke-width="2" stroke-miterlimit="10" width="69.56" height="22.333"/>
+	<rect x="112.679" y="138.123" fill="#8BB1DE" width="72.52" height="22.333"/>
+	
+		<rect x="208.782" y="138.123" fill="#9195C9" stroke="#262262" stroke-width="2" stroke-miterlimit="10" width="69.56" height="22.333"/>
+	<rect x="207.746" y="138.123" fill="#8BB1DE" width="72.52" height="22.333"/>
+	
+		<rect x="208.782" y="78.373" fill="#E79E95" stroke="#ED1C24" stroke-width="2" stroke-miterlimit="10" width="69.56" height="22.333"/>
+	<rect x="207.197" y="78.373" fill="#E9B39F" width="72.52" height="22.333"/>
+	<rect x="114.265" y="56.166" fill="#00A550" width="69.56" height="22.333"/>
+	<rect x="112.785" y="57.334" fill="#FFFFFF" width="72.52" height="20"/>
+	
+		<rect x="18.236" y="13.668" fill="none" stroke="#00A651" stroke-width="2" stroke-miterlimit="10" width="69.56" height="22.333"/>
+	<rect x="16.756" y="13.668" fill="#FFFFFF" width="72.52" height="22.333"/>
+</g>
+<g id="texto">
+	<text transform="matrix(1 0 0 1 19.4531 27.668)" font-family="'MyriadPro-Regular'" font-size="8">Banda de condução</text>
+	<text transform="matrix(1 0 0 1 238.7979 113.9995)" font-family="'MyriadPro-Regular'" font-size="8">Banda de valência</text>
+	<text transform="matrix(1 0 0 1 233.0049 50.3345)" font-family="'MyriadPro-Regular'" font-size="8">Banda de condução</text>
+	<text transform="matrix(1 0 0 1 228.3477 170.6631)" font-family="'MyriadPro-Regular'" font-size="8">Condutor</text>
+	<text transform="matrix(1 0 0 1 127.0059 170.6631)" font-family="'MyriadPro-Regular'" font-size="8">Semicondutor</text>
+	<text transform="matrix(1 0 0 1 38.6729 170.6631)" font-family="'MyriadPro-Regular'" font-size="8">Isolante</text>
+	<text transform="matrix(0 -1 1 0 7.2256 95.189)" font-family="'MyriadPro-Semibold'" font-size="8">Energia</text>
+	<text transform="matrix(1 0 0 1 22.2134 151.998)" font-family="'MyriadPro-Regular'" font-size="8">Banda preenchida</text>
+	<text transform="matrix(1 0 0 1 118.1011 151.998)" font-family="'MyriadPro-Regular'" font-size="8">Banda preenchida</text>
+	<text transform="matrix(1 0 0 1 213.3379 151.998)" font-family="'MyriadPro-Regular'" font-size="8">Banda preenchida</text>
+	<text transform="matrix(1 0 0 1 51.0063 70.334)" font-family="'MyriadPro-Regular'" font-size="8">E</text>
+	<text transform="matrix(1 0 0 1 89.0044 54.334)" font-family="'MyriadPro-Regular'" font-size="8">E</text>
+	<text transform="matrix(1 0 0 1 149.6729 92.0015)" font-family="'MyriadPro-Regular'" font-size="8">E</text>
+	<text transform="matrix(1 0 0 1 115.3408 69.832)" font-family="'MyriadPro-Regular'" font-size="8">Banda de condução</text>
+	<text transform="matrix(1 0 0 1 91.6152 149.9966)" font-family="'MyriadPro-Semibold'" font-size="8">A</text>
+	<text transform="matrix(1 0 0 1 188.2822 149.9966)" font-family="'MyriadPro-Semibold'" font-size="8">B</text>
+	<text transform="matrix(1 0 0 1 282.9473 149.9966)" font-family="'MyriadPro-Semibold'" font-size="8">C</text>
+	<text transform="matrix(1 0 0 1 42.0049 54.334)" font-family="'MyriadPro-Regular'" font-size="8">Gap</text>
+	<text transform="matrix(1 0 0 1 94.2549 56.1655)" font-family="'MyriadPro-Regular'" font-size="6">gap</text>
+	<text transform="matrix(1 0 0 1 186.8389 122.5029)" font-family="'MyriadPro-Regular'" font-size="8">KT =</text>
+	<text transform="matrix(1 0 0 1 197.8555 124.0029)" font-family="'MyriadPro-Regular'" font-size="10">˜</text>
+	<text transform="matrix(1 0 0 1 205.8359 122.5029)" font-family="'MyriadPro-Regular'" font-size="8">E</text>
+	<text transform="matrix(1 0 0 1 211.3477 124.9199)" font-family="'MyriadPro-Regular'" font-size="6">gap</text>
+	<text transform="matrix(1 0 0 1 118.2368 114)" font-family="'MyriadPro-Regular'" font-size="8">Banda de valência</text>
+	<text transform="matrix(1 0 0 1 22.3496 114)" font-family="'MyriadPro-Regular'" font-size="8">Banda de valência</text>
+</g>
+<g id="traços">
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" x1="16.651" y1="69.001" x2="17.651" y2="69.001"/>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" stroke-dasharray="2.0528,2.0528" x1="19.704" y1="69.001" x2="43.311" y2="69.001"/>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" x1="44.337" y1="69.001" x2="45.337" y2="69.001"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" x1="59.671" y1="69.001" x2="60.671" y2="69.001"/>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" stroke-dasharray="2.1026,2.1026" x1="62.773" y1="69.001" x2="86.953" y2="69.001"/>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" x1="88.004" y1="69.001" x2="89.004" y2="69.001"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" x1="112.68" y1="90.001" x2="113.68" y2="90.001"/>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" stroke-dasharray="1.9771,1.9771" x1="115.657" y1="90.001" x2="142.348" y2="90.001"/>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" x1="143.336" y1="90.001" x2="144.336" y2="90.001"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" x1="158.671" y1="90.001" x2="159.671" y2="90.001"/>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" stroke-dasharray="2.1517,2.1517" x1="161.822" y1="90.001" x2="182.264" y2="90.001"/>
+			
+				<line fill="none" stroke="#ED1C24" stroke-width="1.5" stroke-miterlimit="10" x1="183.34" y1="90.001" x2="184.34" y2="90.001"/>
+		</g>
+	</g>
+	
+		<line fill="none" stroke="#009444" stroke-width="1.5" stroke-miterlimit="10" stroke-dasharray="2" x1="208.84" y1="85.334" x2="279.173" y2="85.334"/>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="91.615" y1="96.983" x2="91.615" y2="59.446"/>
+			<g>
+				<polygon points="93.004,95.93 91.615,96.52 90.227,95.93 91.615,99.222 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="91.615" y1="39.198" x2="91.615" y2="47.292"/>
+			<g>
+				<polygon points="90.227,40.251 91.615,39.661 93.004,40.251 91.615,36.959 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="193.006" y1="102.406" x2="193.006" y2="113.667"/>
+			<g>
+				<polygon points="191.617,103.459 193.006,102.869 194.395,103.459 193.006,100.167 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="193.006" y1="76.927" x2="193.006" y2="68.832"/>
+			<g>
+				<polygon points="194.395,75.874 193.006,76.463 191.617,75.874 193.006,79.166 				"/>
+			</g>
+		</g>
+	</g>
+	<line fill="none" stroke="#00A651" stroke-width="2" stroke-miterlimit="10" x1="207.197" y1="66.334" x2="279.173" y2="66.334"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="89.616" y1="36.959" x2="102.006" y2="36.959"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="89.616" y1="99.584" x2="102.006" y2="99.584"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="186.092" y1="99.584" x2="198.481" y2="99.584"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="186.092" y1="79.334" x2="198.48" y2="79.334"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="280.241" y1="105.396" x2="282.004" y2="100.706"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="280.743" y1="52.334" x2="287.911" y2="59.667"/>
+	<text transform="matrix(1 0 0 1 288.2754 76.6074)" font-family="'MyriadPro-Regular'" font-size="21.7895">}</text>
+	<text transform="matrix(1 0 0 1 282.0039 98.124)" font-family="'MyriadPro-Regular'" font-size="26.6259">}</text>
+	<g>
+		<g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="11.334" y1="3.582" x2="11.334" y2="172"/>
+				<g>
+					<polygon points="9.112,5.267 11.334,4.323 13.556,5.267 11.334,0 					"/>
+				</g>
+			</g>
+		</g>
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="6.183" y1="172" x2="16.484" y2="172"/>
+	</g>
+	<rect fill="none" width="311.81" height="172"/>
+</g>
+</svg>

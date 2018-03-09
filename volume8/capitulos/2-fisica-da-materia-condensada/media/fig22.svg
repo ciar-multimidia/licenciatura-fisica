@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="157px"
+	 height="110px" viewBox="0 0 157 110" enable-background="new 0 0 157 110" xml:space="preserve">
+<g id="retas">
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="151.718" y1="101.768" x2="0" y2="101.768"/>
+			<g>
+				<polygon points="154.365,101.768 150.635,100.243 151.52,101.768 150.635,103.292 				"/>
+			</g>
+		</g>
+	</g>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="1" x1="4.708" y1="10.566" x2="4.708" y2="101.768"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="1" x1="142.938" y1="10.566" x2="142.938" y2="101.768"/>
+	<g>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="75.032" y1="11.896" x2="75.032" y2="101.768"/>
+			<g>
+				<polygon points="75.032,9.248 73.508,12.979 75.032,12.093 76.557,12.979 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="arcos">
+	<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M4.708,23.532c0,0,15.823,1.319,29.229,0
+		c0,0,39.776-4.688,81.312,0.293c0,0,23.295,2.637,27.689,0.293"/>
+	<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M4.708,31.224c0,0,16.263-0.439,23.954-1.978
+		c0,0,49.007-8.131,89.223,0c0,0,19.998,3.956,25.053,1.978"/>
+	<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M4.708,37.157c0,0,7.252,0.22,20.218,1.978
+		c0,0,59.116,7.033,95.157,0c0,0,7.691-2.197,22.854-1.978"/>
+	<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M4.708,72.73c0,0,37.579,3.327,70.324,29.038
+		c0,0-47.689-43.293-70.324-38.459"/>
+	<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M4.708,44.849c0,0,22.416-3.077,70.324,56.918"/>
+	<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M142.938,72.824c0,0-36.403,3.326-68.125,29.037
+		c0,0,46.198-43.293,68.125-38.458"/>
+	<path fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M142.938,44.943c0,0-21.714-3.076-68.125,56.918"
+		/>
+</g>
+<g id="texto">
+	<text transform="matrix(1 0 0 1 73.1084 108.6348)" font-family="'MyriadPro-Regular'" font-size="8">0</text>
+	<text transform="matrix(1 0 0 1 67.835 6.9404)" font-family="'MyriadPro-Regular'" font-size="8">ω</text>
+	<text transform="matrix(1 0 0 1 74.1523 6.9404)" font-family="'MyriadPro-Regular'" font-size="8">(k)</text>
+	<text transform="matrix(1 0 0 1 152.0576 99.4043)" font-family="'MyriadPro-Regular'" font-size="8">k</text>
+	<rect fill="none" width="157" height="110"/>
+</g>
+</svg>

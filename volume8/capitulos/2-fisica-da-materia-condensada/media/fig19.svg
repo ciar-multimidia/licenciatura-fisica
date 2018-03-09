@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="234.25px" height="157px" viewBox="0 0 234.25 157" enable-background="new 0 0 234.25 157" xml:space="preserve">
+<g id="retas">
+	<g>
+		<g>
+			<polyline fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="4,4" points="
+				17.133,17.232 17.133,133.408 222.947,133.408 			"/>
+			<g>
+				<polygon points="221.453,134.68 222.726,133.408 221.453,132.137 222.533,132.137 223.805,133.408 222.533,134.68 				"/>
+			</g>
+		</g>
+	</g>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="4" x1="66.661" y1="17.232" x2="66.661" y2="133.408"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="4" x1="163.271" y1="17.232" x2="163.271" y2="133.408"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="4" x1="211.27" y1="17.232" x2="211.27" y2="133.408"/>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="114.966" y1="10.121" x2="114.966" y2="133.408"/>
+			<g>
+				<polygon points="113.271,12.113 114.966,10.417 116.662,12.113 116.662,10.673 114.966,8.978 113.271,10.673 				"/>
+			</g>
+		</g>
+	</g>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="4" x1="66.661" y1="25.792" x2="161.436" y2="25.792"/>
+</g>
+<g id="arcos">
+	<path fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="4" d="M17.133,133.408
+		c0,0,26.904-106.392,49.528-107.004"/>
+	<path fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" stroke-dasharray="4" d="M211.27,133.408
+		c0,0-25.398-105.8-47.998-107.004"/>
+	<path fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" d="M114.966,133.408
+		c0,0-24.305-105.781-47.541-107.004"/>
+	<path fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" d="M114.966,133.408c0,0,24-105.781,47.235-107.004
+		"/>
+</g>
+<g id="textos">
+	<text transform="matrix(1 0 0 1 15.0356 143.7236)" font-family="'MyriadPro-Regular'" font-size="8">2π</text>
+	<text transform="matrix(1 0 0 1 16.4121 153.6992)" font-family="'MyriadPro-Regular'" font-size="8">a</text>
+	<text transform="matrix(1 0 0 1 63.7163 153.6992)" font-family="'MyriadPro-Regular'" font-size="8">a</text>
+	<text transform="matrix(1 0 0 1 159.7148 153.6992)" font-family="'MyriadPro-Regular'" font-size="8">a</text>
+	<text transform="matrix(1 0 0 1 207.8242 153.5039)" font-family="'MyriadPro-Regular'" font-size="8">a</text>
+	<text transform="matrix(1 0 0 1 206.7256 143.7236)" font-family="'MyriadPro-Regular'" font-size="8">2π</text>
+	<text transform="matrix(1 0 0 1 64.7158 143.7236)" font-family="'MyriadPro-Regular'" font-size="8">π</text>
+	<text transform="matrix(1 0 0 1 160.7139 143.7236)" font-family="'MyriadPro-Regular'" font-size="8">π</text>
+	<text transform="matrix(1 0 0 1 113.1743 143.7236)" font-family="'MyriadPro-Regular'" font-size="8">0</text>
+	<text transform="matrix(1 0 0 1 107.8838 5.8931)" font-family="'MyriadPro-Regular'" font-size="8">ω</text>
+	<text transform="matrix(1 0 0 1 113.7993 5.8931)" font-family="'MyriadPro-Regular'" font-size="8">(k)</text>
+	<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="3.223" y1="145.79" x2="7.503" y2="145.79"/>
+	<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="11.172" y1="145.79" x2="26.611" y2="145.79"/>
+	<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="50.152" y1="145.79" x2="54.432" y2="145.79"/>
+	<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="58.101" y1="145.79" x2="73.54" y2="145.79"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="154.481" y1="145.79" x2="169.921" y2="145.79"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="202.174" y1="145.79" x2="217.614" y2="145.79"/>
+	<text transform="matrix(1 0 0 1 228.3896 135.3945)" font-family="'MyriadPro-Regular'" font-size="8">K</text>
+	<rect fill="none" width="234.25" height="157"/>
+	
+		<rect x="82.627" y="11.153" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.75" stroke-miterlimit="10" width="30.5" height="24.5"/>
+	<text transform="matrix(1 0 0 1 97.1265 23.6406)" font-family="'MyriadPro-Regular'" font-size="8">4k</text>
+	<text transform="matrix(1 0 0 1 97.8779 32.1162)" font-family="'MyriadPro-Regular'" font-size="8">m</text>
+	<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="93.458" y1="25.903" x2="108.897" y2="25.903"/>
+	<polyline fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" points="83.702,25.903 85.62,24.989 
+		88.452,32.989 93.458,13.864 110.827,13.864 	"/>
+</g>
+<g id="Layer_5">
+	
+		<line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" x1="17.133" y1="133.408" x2="222.5" y2="133.408"/>
+</g>
+</svg>

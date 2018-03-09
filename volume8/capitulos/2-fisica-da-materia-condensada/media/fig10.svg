@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Camada_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="311.81px" height="136.667px" viewBox="0 0 311.81 136.667" enable-background="new 0 0 311.81 136.667"
+	 xml:space="preserve">
+<g id="XMLID_1_">
+	<g>
+		<polygon fill="#808285" points="49.466,116.115 61.529,134.077 12.553,99.136 1.236,80.185 1.31,79.911 1.561,79.978 
+			1.568,79.978 		"/>
+		<polygon fill="#BCBEC0" points="49.466,49.672 1.568,79.978 1.561,79.978 1.31,79.911 13.542,32.936 59.802,2.918 		"/>
+		<polygon fill="#BCBEC0" points="95.733,84.37 49.466,116.115 1.568,79.978 49.466,49.672 		"/>
+		<polygon fill="#808285" points="109.516,38.104 120.339,57.549 108.778,104.06 95.733,84.37 		"/>
+		<polygon fill="#BCBEC0" points="109.516,38.104 95.733,84.37 49.466,49.672 59.802,2.918 		"/>
+		<polygon fill="#808285" points="95.733,84.37 108.778,104.06 61.529,134.077 49.466,116.115 		"/>
+	</g>
+	<g>
+		<polygon fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" points="1.31,79.911 1.236,80.185 
+			12.553,99.136 61.529,134.077 108.778,104.06 120.339,57.549 109.516,38.104 59.802,2.918 13.542,32.936 		"/>
+		<polyline fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" points="59.802,2.918 49.466,49.672 
+			95.733,84.37 108.778,104.06 		"/>
+		<polyline fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" points="49.466,49.672 1.568,79.978 
+			49.466,116.115 61.529,134.077 		"/>
+		<polyline fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" points="109.516,38.104 95.733,84.37 
+			49.466,116.115 		"/>
+	</g>
+</g>
+<g id="XMLID_2_">
+	<g>
+		<polygon fill="#808285" points="304.904,49.672 310.81,68.498 303.184,99.136 297.034,80.679 		"/>
+		<polygon fill="#BCBEC0" points="279.064,22.356 304.904,49.672 297.034,80.679 265.038,86.342 239.199,59.513 245.843,28.019 		
+			"/>
+		<polygon fill="#808285" points="297.034,80.679 303.184,99.136 278.326,121.283 246.581,126.451 239.199,109.966 265.038,86.342 
+					"/>
+		<polygon fill="#BCBEC0" points="279.064,22.356 245.843,28.019 227.387,19.647 259.383,13.992 		"/>
+		<polygon fill="#BCBEC0" points="239.199,59.513 265.038,86.342 239.199,109.966 214.098,83.138 		"/>
+		<polygon fill="#808285" points="239.199,109.966 246.581,126.451 229.114,118.087 203.763,93.229 195.642,75.755 214.098,83.138 
+					"/>
+		<polygon fill="#BCBEC0" points="245.843,28.019 239.199,59.513 214.098,83.138 195.642,75.755 202.537,43.522 227.387,19.647 		
+			"/>
+	</g>
+	<g>
+		<polygon fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" points="195.642,75.755 203.763,93.229 
+			229.114,118.087 246.581,126.451 278.326,121.283 303.184,99.136 310.81,68.498 304.904,49.672 279.064,22.356 259.383,13.992 
+			227.387,19.647 202.537,43.522 		"/>
+		<polyline fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" points="279.064,22.356 245.843,28.019 
+			239.199,59.513 265.038,86.342 297.034,80.679 304.904,49.672 		"/>
+		<polyline fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" points="195.642,75.755 214.098,83.138 
+			239.199,109.966 246.581,126.451 		"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="265.038" y1="86.342" x2="239.199" y2="109.966"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="214.098" y1="83.138" x2="239.199" y2="59.513"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="227.387" y1="19.647" x2="245.843" y2="28.019"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="10" x1="297.034" y1="80.679" x2="303.184" y2="99.136"/>
+	</g>
+</g>
+<rect fill="none" width="311.81" height="136.667"/>
+</svg>
