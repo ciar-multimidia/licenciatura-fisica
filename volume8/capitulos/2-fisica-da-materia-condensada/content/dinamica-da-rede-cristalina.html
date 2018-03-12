@@ -1,0 +1,230 @@
+<h2>Dinâmica da rede cristalina</h2>
+
+
+<p>Todo o estudo da matéria condensada até esse ponto considerou sempre um rede formada por átomos, moléculas ou íons estáticos em suas respectivas posições de equi- líbrio. Em verdade, existe sempre algum tipo de vibração dos átomos, moléculas ou íons em torno do sítio da rede, provocadas por efeitos térmicos ou mesmo por efeitos quânticos. O estudo da dinâmica vibracional da rede cristalina de um sólido é extrema- mente importante em muitos problemas, como, por exemplo, a supercondutividade, a temperatura de fusão ou a expansão térmica de um sólido. Nesta seção, vamos estudar a teoria clássica de um cristal onde os íons podem vibrar em torno de seu sítio de rede na chamada aproximação harmônica. Este estudo é importante na determinação do calor específico de um sólido, como vamos ver na seção seguinte.</p>
+
+<h3>Modos Normais de Vibração</h3>
+
+
+<p>O modelo mais simples de uma rede cristalina cujos íons podem vibrar em torno de suas posições de equilíbrio é uma cadeia linear monoatômica onde os átomos estão acoplados através de molas idênticas com constante elástica $K$. A Fig. (2.18) ilustra uma cadeia linear onde a distância entre as posições de equilíbrio de dois átomos vizinhos é igual a $a$. Neste modelo, vamos considerar que um átomo na posição xn pode interagir apenas com os primeiros vizinhos de maneira que a sua energia potencial pode ser escrita como:</p>
+
+<p class="formula">
+\begin{equation}
+ U = \frac{1}{2}K \left[ \left( x_{n+1} - x_n\right)^2 + \left( x_{n} - x_{n-1}\right)^2 \right]\;\;,
+\end{equation}
+<span class="numero_formula">2.77</span></p>
+
+<p>que é o potencial harmônico relacionado com as duas molas acopladas ao átomo. Note que x$x_{n+1}$ e $x_{n-1}$ são as respectivas posições dos átomos vizinhos ao átomo localizado por $x_{n}$. Dessa maneira, a força sofrida por esse átomo é justamente:</p>
+
+<p class="formula">
+\begin{eqnarray}
+  F = m\frac{d^2x_n}{dt^2} &amp;=&amp; -\frac{\partial U}{\partial x_n} \\[10pt]
+
+  \end{eqnarray}
+<span class="numero_formula">2.78</span></p>
+
+<p class="formula">
+\begin{eqnarray}
+&amp;=&amp; K \left( x_{n+1} - x_n \right) - K \left( x_{n} - x_{n-1}\right)
+\end{eqnarray}
+<span class="numero_formula">2.79</span></p>
+
+<p>e temos para resolver a equação diferencial:</p>
+
+<p class="formula">
+\begin{eqnarray}
+ m\frac{d^2x_n}{dt^2} +  K \left( 2x_n - x_{n+1} - x_{n-1}\right) = 0 \label{eq:diff}\;\;.
+\end{eqnarray}
+<span class="numero_formula">2.80</span></p>
+
+<p>A Eq. (2.80) pode ser resolvida e a solução que procuramos é (Verifique no Exercício 15 que a solução sugerida de fato é válida para a equação diferencial que estamos resolvendo)</p>
+
+<p class="formula">
+\begin{equation}
+ x_n = x_n^0 \exp\left[ i \left(kna - \omega t \right) \right]\;\;,\label{eq:x_n_mono}
+\end{equation} 
+<span class="numero_formula">2.81</span></p>
+
+<p>onde $x_n^0$ é uma constante e $k$ é o vetor de onda. Sendo assim, estamos particularmente interessados em valores de $k$ variando dentro do intervalo que vai de $-\frac{\pi}{2}$ até $\frac{\pi}{2}$, correspondente à primeira zona de Brillouin. Substituindo a Eq. (2.81) solução na Eq. (2.80) encontramos:</p>
+
+
+<p class="formula">
+\begin{eqnarray}
+-m \omega^2 + K \left( 2 - e^{ika} - e^{-ika}\right) = 0\\[10pt]
+\end{eqnarray}
+<span class="numero_formula">2.82</span></p>
+
+<p class="formula">
+\begin{eqnarray}
+\omega = \sqrt{\frac{2K}{m} \left[ 1 - cos (ka) \right]}
+\end{eqnarray}
+<span class="numero_formula">2.83</span></p>
+
+<p>que podemos escrever como:</p>
+
+<p class="formula">
+\begin{equation}
+\omega(k) = \sqrt{\frac{4 K}{m}} \left| sen \frac{1}{2} ka \right|\;\;. \label{eq:omega_k}
+\end{equation}
+<span class="numero_formula">2.84</span></p>
+
+
+<figure>
+	<img src="[[caminho]]/media/fig18.svg">
+	<figcaption>Figura 2.18: Cadeia linear monoatômica com átomos de massa $m$ acoplados com molas de constante elástica $K$. A distância entre as posições de equilíbrio de dois átomos vizinhos é igual ao parâmetro de rede $a$.</figcaption>
+</figure>
+
+
+<p>A relação entre $\omega$ e $k$ é a chamada relação de dispersão que pode ser melhor verificada através do gráfico da \fig{dispersao}, também conhecido como ramo acústico de vibração. Vale notar que no limite de longos comprimentos de onda, onde $ka\ll 1$, temos que $sen\left( \frac{ka}{a}\right)\rightarrow \frac{ka}{a}$ e  a \eq{omega_k} reduz-se a:</p>
+
+<p class="formula">
+\begin{equation}
+ \omega(k) = ka \sqrt{\frac{K}{m}}\;\;.
+\end{equation}
+<span class="numero_formula">2.85</span></p>
+
+<figure>
+	<img src="[[caminho]]/media/fig19.svg">
+	<figcaption>Figura 2.19: Curva de dispersão para uma cadeia linear monoatômica.</figcaption>
+</figure>
+
+
+<p>O comportamento de $\omega(k)$ para $ka\ll 1$ está associado com a propagação de ondas pelo meio com longos comprimentos de onda. A chamada velocidade de grupo da onda pode ser calculada a partir de sua definição $v_g=\frac{d\omega}{dk}$, resultando:</p>
+
+<p class="formula">
+\begin{equation}
+ v_g = a \sqrt{\frac{K}{m}} = \frac{\omega}{k}\;\;. \label{eq:v_linear}
+\end{equation}
+<span class="numero_formula">2.86</span></p>
+
+<p>Sendo assim, nesse limite temos uma relação de linearidade $\omega = v_g k$, onde a velocidade de grupo da onda que se propaga independente da frequência. Os resultados encontrados são válidos quando consideramos apenas as interações entre primeiros vizinhos. A relação entre $\omega$ e $k$  torna-se mais complexa quando acrescentamos também as interações com os outros vizinhos. Uma abordagem mais detalhada não é objetivo deste texto e pode ser encontrada na referência Ashcroft e Mermin (2011), no entanto, mesmo nessas situações mais complicadas, a frequência angular $\omega(k)$ permanece linear com $k$ para o limite de grandes comprimentos de onda.</p>
+
+<p>Podemos estender a nossa análise considerando agora uma cadeia linear com dois átomos diferentes, sendo um deles de massa $m_1$ e o outro de massa $m_2$. No entanto, vamos manter ainda a mesma constante elástica $K$ para todos os átomos e a distância entre as posições de equilíbrio de dois vizinhos de mesma massa igual a $a$. A Fig. (2.20) ilustra a cadeia diatômica que estamos considerando.</p>
+
+<p>De maneira análoga a que fizemos anteriormente, teremos agora duas equações acopladas para resolver</p>
+
+<figure>
+	<img src="[[caminho]]/media/fig20.svg">
+	<figcaption>Figura 2.20: Cadeia linear diatômica com átomos de massas $m_1$ e $m_2$ acoplados com molas de constante elástica $k$.</figcaption>
+</figure>
+
+
+<p class="formula">
+\begin{eqnarray}
+ m_1\frac{d^2u_n}{dt^2} &amp;=&amp; K\left( v_n + v_{n-1} -2u_n\right) \label{eq:u_n_dia} \\ [10pt]
+\end{eqnarray}
+<span class="numero_formula">2.87</span></p>
+ 
+<p class="formula">
+ \begin{eqnarray}
+ m_2\frac{d^2v_n}{dt^2} &amp;=&amp; K\left( u_{n+1} + u_n -2v_n \right) \label{eq:v_n_dia}
+\end{eqnarray}
+<span class="numero_formula">2.88</span></p>
+
+<p>onde $u_n$ e $v_n$ são os deslocamentos dos átomos de massa $m_1$ e $m_2$, respectivamente. Nessa situação é bastante conveniente sugerirmos soluções para as equações anteriores análogas aquela sugerida na Eq. (2.81)</p>
+
+<p class="formula">
+ \begin{eqnarray}
+ u_n &amp;=&amp; u_n^0 e^{i \left(kna-\omega t \right)} \;\;\; ,\\[5pt]
+ \end{eqnarray}
+<span class="numero_formula">2.89</span></p>
+
+ <p class="formula">
+ \begin{eqnarray}
+ v_n &amp;=&amp; v_n^0 e^{i \left(kna-\omega t \right)}\;\;\; .
+\end{eqnarray}
+<span class="numero_formula">2.90</span></p>
+
+<p>Substituindo nas Eq. (2.87) e Eq. (2.88) cada uma das soluções sugeridas anteri- ormente encontramos:</p>
+
+ <p class="formula">
+ \begin{eqnarray}
+ \left( - m_1 \omega^2 + 2K \right) u_n - K\left( 1 +e^{-ika} \right)v_n = 0 \\[10pt]
+\end{eqnarray}
+<span class="numero_formula">2.91</span></p>
+
+  <p class="formula">
+ \begin{eqnarray}
+ - K\left( 1 +e^{ika} \right)u_n + \left( - m_2 \omega^2 + 2K \right) v_n = 0
+\end{eqnarray}
+<span class="numero_formula">2.92</span></p>
+
+<p>que podemos escrever na forma matricial como:</p>
+
+<p class="formula">
+\begin{equation}
+ \left( \begin{array}{cc}
+ - m_1 \omega^2 + 2K  &amp; - K\left( 1 +e^{-ika} \right)  \\
+ - K\left( 1 +e^{ika} \right) &amp; - m_2 \omega^2 + 2K  
+ \end{array} \right)
+\left( \begin{array}{c}
+        u_n \\
+        v_n
+       \end{array}\right) = 0 \;\; . \label{eq:matriz_dia}
+\end{equation}
+<span class="numero_formula">2.93</span></p>
+
+<p>A solução não trivial para a Eq. (2.93) é obtida fazendo igual a zero o determinante da
+primeira matriz, levando a uma equação de quarto grau:</p>
+
+<p class="formula">
+\begin{equation}
+m_1m_2\omega^4 - 2m_1K\omega^2 - 2m_2K\omega^2 + 4 K^2 - K^2 \left(2 + e^{-ika} + e^{ika} \right) &amp;=&amp; 0 \\[5pt]
+\end{equation}
+<span class="numero_formula">2.94</span></p>
+
+<p class="formula">
+\begin{equation}
+m_1m_2\omega^4 - 2K\omega^2 \left( m_1 + m_2 \right) + 2 K^2 \left(1 - \cos(ka) \right) &amp;=&amp; 0\;\;. \label{eq:omega4}
+\end{equation}
+<span class="numero_formula">2.95</span></p>
+
+<p>No limite de comprimentos de onda longos temos que $ka \ll 1 \Rightarrow \cos(ka)\rightarrow 1$. Nesse regime, as raízes da Eq. (2.95) são:</p>
+
+<p class="formula">
+\begin{equation}
+ \omega^2 &amp;=&amp; 2K \left( \frac{1}{m_1} + \frac{1}{m_2} \right)\;\; ; \label{eq:dia_opt}\\[10pt]
+ \end{equation}
+<span class="numero_formula">2.96</span></p>
+
+ <p class="formula">
+\begin{equation}
+ \omega^2 &amp;=&amp; \frac{K}{m_1 + m_2} k^2 a^2 \label{eq:dia_acus}\;\;.
+\end{equation}
+<span class="numero_formula">2.97</span></p>
+
+
+<p>Vale destacar que a relação de dispersão encontrada é periódica em $k$ com o período dado por $k = \frac{2\pi}{a}$. O período de repeti\c cão de $k$ corresponte justamente ao vetor da rede recíproca. A solução escrita na Eq.  representa o ramo acústico da relação de dispersão, pois temos exatamente $\omega \propto k$. A outra solução, escrita na Eq. (2.96), tem um comportamento bastante diferente da primeira, pois não se anula em $k=0$ e é chamado de ramo óptico.. A Fig. (2.21) ilustra os modos óptico e acústico de uma cadeia linear diatômica que representam os dois possíveis tipos de oscilação da rede.</p>(2.97)
+
+<figure>
+	<img src="[[caminho]]/media/fig21.svg">
+	<figcaption>Figura 2.21: Curva de dipersão para uma cadeia linear diatômica.</figcaption>
+</figure>
+
+ 
+<p>Muito embora os modelos discutidos nessa seção sejam bastante simplificados, a cadeia linear diatômica é uma ferramenta para a descrição da vibração de diversos cristais iônicos, onde os sítios vizinhos na rede são ocupados por íons de cargas opostas. Nessas situações, os modos acústico e óptico representam as frequências de oscilação dos modos vibracionais do cristal. Para um sólido tridimensional, com dois átomos na base, podemos ter até três ramos ópticos e mais três acústicos, conforme ilustrado na Fig. (2.22). Para leituras mais aprofundadas sobre a estrutura de bandas de sólidos mais complicados sugerimos os textos apresentados nas referências Ashcroft e Mermin (2011), Kittel (2006) e Harald e Lüth (2003).</p>
+
+<figure>
+	<img src="[[caminho]]/media/fig22.svg">
+	<figcaption>Figura 2.22: Curvas de dipersão para um sólido tridimensional com dois átomos na base..</figcaption>
+</figure>
+
+<h3>Fônons</h3>
+
+<p>As vibrações coletivas de uma rede periódica podem ser quantizadas para auxiliar no entendimento de muitas propriedades dos sólidos, como, por exemplo o calor específico que vamos discutir na seção seguinte. Denominamos um fônon como sendo um $quantum$ de um modo normal de vibração da rede cistalina. A energia de um fônon deve ser $\hbar \omega(\textbf{k})$ para um determinado modo normal com frequência $\omega(\textbf{k})$. Para um sólido com um número $n_{\textbf{k}}$ de fônons, temos que a energia total pode ser escrita como:</p>
+
+<p class="formula">
+\begin{equation}
+ E = \sum_{\textbf{k}}\hbar \omega(\textbf{k})\left( n_{\textbf{k}} + \frac{1}{2} \right)\;\;, \label{eq:E_fonon}
+\end{equation}
+<span class="numero_formula">2.98</span></p>
+
+<p>onde temos um somatório de termos análogos aos autovalores de energia do oscilador harmônico obtido resolvendo a equação de Schrödinger (COHEN-TANNOUDJI; DIU; LALOË, 1977; OLIVEIRA; JESUS, 2005; ASHCROFT; MERMIN, 2011).</p>
+
+
+
+
+
+
+
+

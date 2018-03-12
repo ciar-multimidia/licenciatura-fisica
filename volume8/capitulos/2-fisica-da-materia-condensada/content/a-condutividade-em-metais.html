@@ -315,77 +315,198 @@ A Tabela 2.3 apresenta alguns valores experimentais da razão $\frac{\kappa}{\si
 <p>Na Tabela 2.4 temos valores das velocidades e das temperaturas de Fermi para alguns metais.</p>
 
 
-Tabela 2.4: Para diferentes metais, valores do vetor de onda, da velocidade, da energia e da temperatura de Fermi. Todos os valores são extraídos da referência Ashcroft e Mermin (2011).
+
+<table>
+  <caption>Tabela 2.4: Para diferentes metais, valores do vetor de onda, da velocidade, da energia e da temperatura de Fermi. Todos os valores são extraídos da referência Ashcroft e Mermin (2011).</caption>
+  <tr>
+    <th>Metal</th>
+    <th>$k_F$ ($\times 10^8 \rm cm^{-1}$)</th>
+    <th>$v_F$ ($\times 10^8 \rm cm/s$)</th> 
+    <th>$E_F$ (eV)</th>
+    <th>$T_F$ ($\times 10^4 \rm K$)</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Cu</td>
+    <td>1,36</td>
+    <td>1,57</td>
+    <td>7,00</td>
+    <td>8,16</td>
+  </tr>
+  <tr>
+    <td>Fe</td>
+    <td>1,71</td>
+    <td>1,98</td>
+    <td>11,1</td>
+    <td>13,0</td>
+  </tr>
+  <tr>
+    <td>Al</td>
+    <td>1,75</td>
+    <td>2,03</td>
+    <td>11,7</td>
+    <td>13,6</td>
+  </tr>
+  <tr>
+    <td>Ga</td>
+    <td>1,66</td>
+    <td>1,92</td>
+    <td>10,4</td>
+    <td>12,1</td>
+  </tr>
+  <tr>
+    <td>Mn</td>
+    <td>1,70</td>
+    <td>1,96</td>
+    <td>10,9</td>
+    <td>12,7</td>
+  </tr>
+</table>
 
 
-Metal kF (×108cm−1) vF (×108cm/s) EF (eV) TF (×104K) Cu 1,36 1,57 7,00 8,16
-Fe 1,71 1,98 11,1 13,0
-Al 1,75 2,03 11,7 13,6
-Ga 1,66 1,92 10,4 12,1 Mn 1,70 1,96 10,9 12,7
+<p>Definidas todas essas grandezas de interesse, podemos agora determinar a energia do estado fundamental do gás de elétrons para um determinado metal. Para isto, vamos somar as energias de todos os N elétrons que ocupam desde o estado k = 0 até $k_F$, ou seja,</p>
 
-
-Definidas todas essas grandezas de interesse, podemos agora determinar a energia do estado fundamental do gás de elétrons para um determinado metal. Para isto, vamos somar as energias de todos os N elétrons que ocupam desde o estado k = 0 até kF , ou seja,
-
-U = 2 ·   E(k) , (2.50) k&lt;kF
-
+<p class="formula">
+\begin{equation}
+ U = 2 \cdot \sum_{k&lt;k_F} E(k)\;\;,
+\end{equation}
+<span class="numero_formula">2.50</span></p>
                          
-onde a energia de cada elétron é dada pela Eq. (2.41) e devemos multiplicar a soma por 2, que é o número de elétron que podemos colocar em cada nível de energia. Com isso,
-   2k2
-U= m. (2.51)
-k&lt;kF
-Como estamos tratando um sistema com um número muito grande de elétrons (N ∼ 1023), portanto, ocupando um volume macroscópico, o somatório anterior pode ser escrito como uma integral, onde:
- → V   d3k . (2.52)
-  8π3
-k
-Mais detalhes sobre este procedimento podem ser consultados nas referências Ashcroft e Mermin (2011), Kittel (2006) e Oliveira e Jesus (2005). Sendo assim, a Eq. (2.51) pode ser reescrita como:
-U= V  kF  2k24πk2dk, (2.53) 8π30 m
-onde o elemento de volume d3k = k2senθdkdθdφ em coordenadas esféricas. Segue que,
-V 2 kF 4
-U = 2π2m kdk (2.54)
-acima pode ser escrito como:
-U = 3   2 k F2 = 3 E F . ( 2 . 5 6 ) N 10m 5
-O resultado escrito na Eq. (2.56) merece ser analisado com atenção. Observamos que, o modelo quântico para o gás de elétrons no metal prevê uma energia total no estado fundamental que é uma fração da energia de Fermi, mesmo para T = 0. Isto contraria a previsão clássica para o gás ideal, onde a energia por partícula
-48 Licenciatura em Física
-    0
-U  2kF53 2kF2kF3
-V = 2π2m5=10m3π2 , (2.55) da Eq. (2.47) podemos observar que N/V = n = kF3 /(3π2) de tal maneira que o resultado
-          
-U = 3 kB T , indicando que a energia se anula para T = 0. Em outras palavras, a teoria N2
-clássica afirma que as partículas estariam em repouso em uma temperatura igual ao zero absoluto, enquanto que a teoria quântica afirma o contrário.
-Uma outra maneira bastante útil de se estudar a soma dos estados da Eq. (2.51) é fazer diretamente o somatório nas energias E(k) e não nos vetores de onda k. Fazer isto é o mesmo que realizar uma mudança de variáveis de k para E(k) nas integrais efetuadas anteriormente. A partir da Eq. (2.41) podemos observar que:
- m1
-dk = 2 2 √E dE , (2.57)
-de forma que, uma integração de uma função qualquer da energia f(E(k)) em relação a k, pode ser transformada de acordo com:
-        d3kf(E(k) =   π   2π   ∞ 1 f(E(k)k2senθdkdθdφ 4π3 0 0 0 4π3
-(2.58) (2.59)
-(2.60)
-  =
-  ∞ k2dk   ∞ π2 f(E(k)) =
-0 −∞
-g(E) = m  2mE  2π2  2
-dEg(E)f(E) ,
- em que:
-   é a chamada densidade de estados para o gás de elétrons livres. Isso significa que o valor g(E)dE é simplesmente o número de níveis eletrônicos no intervalo de energia entre E e E + dE, dividido pelo volume. Verifique o Exercício 12. Sendo assim, a densidade de estados indica o quão denso é o empacotamento dos estados quânticos de um determinado sistema, consequentemente ela está associada com várias propriedades importantes de um determinado material. Vale mencionar que a densidade de estados apresentada na Eq. (2.60) é válida para um gás de elétrons livres e tridimensional. Para um gás de elétron com interação e na presença de uma rede cristalina, a expressão para g(E) não é tão simples.
-Todo o tratamento feito até agora para os elétrons no modelo de Sommerfeld é válido para T = 0. Para temperaturas não nulas a probabilidade f(E) de se encontrar um determinado estado com energia E é diferente daquela com T = 0. A determinação da função de distribuição de probabilidades é um problema bastante explorado em Física Estatística (HUANG, 1987; CALLEN, 1985; PATHRIA, 1996) e não vamos discutir com
-Física da Matéria Condensada 49
- 
-detalhes neste texto. Uma vez que os elétrons possuem spin semi-inteiro (±1) a função 2
-de distribuição para estas partículas deve ser (OLIVEIRA; JESUS, 2005; HARALD; LÜTH, 2003; ASHCROFT; MERMIN, 2011):
-1
-f(E)=exp E−EF +1 , (2.61)
-kBT
-conhecida como função de distribuição de Fermi-Dirac, válida para qualquer conjunto de férmions (partículas com spin semi-inteiro). A probabilidade de se encontrar um estado eletrônico ocupado, em T ̸= 0, com energia E é dada pela Eq. (2.61) que podemos mostrar que, no limite em que T → 0:
-f(E) → 0,E>EF (2.62) f(E) → 1,E EF (2.63)
-A demonstração dessa característica da função de distribuição é sugerida no Exercício 13. A Fig. (2.13) mostra a função de distribuição de Fermi-Dirac para diferentes temperaturas e, podemos observar que à medida que a temperatura aumenta o formato da função torna-se mais suave e arredondado. Um interessante applet pode ser encontrado na internet4 e mostra o comportamento da função de distribuição da Eq. (2.61) com o aumento gradual da temperatura.
-                  1,0 0,8 0,6 0,4 0,2
-0,0
-Energia
-EF
-        0 300 1200
-k k k
-                  Figura 2.13: Função de distribuição de Fermi-Dirac em função da energia para diferentes temperaturas.
-4. Disponível em: <http://astro.if.ufrgs.br/evol/FermiD.htm>. Acessado em: 21 de Março de 2013.
-50 Licenciatura em Física
-  f (E)
-O comportamento da função de distribuição de Fermi-Dirac ilustrado na Fig. (2.13) indica que, para T ̸= 0, estados de energia abaixo de EF apresentam uma probabilidade finita de estarem desocupados. Por outro lado, estados imediatamente acima de EF possuem uma probabilidade não nula de estarem ocupados. A largura da região que a função de distribuição se desvia daquela para T = 0 é da ordem de kB T .
-A inclusão da estatística de Fermi-Dirac é um detalhe importante no estudo do gás de elétrons. O cálculo do calor específico a volume constante deste sistema difere drasticamente do resultado encontrado para o gás ideal clássico (ASHCROFT; MERMIN, 2011; OLIVEIRA; JESUS, 2005). Como vamos estudar mais adiante na Seção 6.1, o modelo clássico prevê que o calor específico é uma constante que independente da temperatura. Por outro lado, é possível mostrar5 que nesse outro modelo o calor específico é proporcional ao produto kBTg(EF), ou seja, varia linearmente com a temperatura. Esse resultado desempenha um papel importante no entendimento da propriedades térmicas de metais.
+<p>onde a energia de cada elétron é dada pela Eq. (2.41) e devemos multiplicar a soma por 2, que é o número de elétron que podemos colocar em cada nível de energia. Com isso,</p>
+
+<p class="formula">
+\begin{equation}
+  U = \sum_{k&lt;k_F} \frac{\hbar^2 k^2}{m}\;\;.
+\label{eq:U_sum}
+\end{equation}
+<span class="numero_formula">2.51</span></p>
+
+<p>Como estamos tratando um sistema com um número muito grande de elétrons ($N\sim10^{23}$), portanto, ocupando um volume macroscópico, o somatório anterior pode ser escrito como uma integral, onde:</p>
+
+<p class="formula">
+\begin{equation}
+ \sum_{k} \rightarrow \frac{V}{8\pi^3}\int d^3 k\;\;.
+\end{equation}
+<span class="numero_formula">2.52</span></p>
+
+<p>Mais detalhes sobre este procedimento podem ser consultados nas referências Ashcroft e Mermin (2011), Kittel (2006) e Oliveira e Jesus (2005). Sendo assim, a Eq. (2.51) pode ser reescrita como:</p>
+
+<p class="formula">
+\begin{equation}
+   U =  \frac{V}{8\pi^3}\int_{0}^{k_F} \frac{\hbar^2 k^2}{m} 4\pi k^2 dk\;\;,
+\end{equation}
+<span class="numero_formula">2.53</span></p>
+
+<p>onde o elemento de volume $d^3k = k^2 sen\theta dk d\theta d\phi$ em coordenadas esféricas. Segue que,</p>
+
+<p class="formula">
+\begin{eqnarray}
+  U &amp;=&amp; \frac{V}{2\pi^2}\frac{\hbar^2 }{m}\int_{0}^{k_F} k^4 dk \\[10pt]
+\end{eqnarray}
+<span class="numero_formula">2.54</span></p>
+
+<p class="formula">
+\begin{eqnarray}
+ \frac{U}{V} &amp;=&amp; \frac{\hbar^2}{2\pi^2 m} \frac{k_F^5}{5} =\frac{3 \hbar^2k_F^2} {10 m} \frac{k_F^3}{3\pi^2}\;\;,
+\end{eqnarray}
+<span class="numero_formula">2.55</span></p>
+
+<p>da Eq. (2.47) podemos observar que $N / V = n = k_F^3 / (3\pi^2) $ de tal maneira que o resultado acima pode ser escrito como:</p>
+
+<p class="formula">
+\begin{eqnarray}
+ \frac{U}{N} &amp;=&amp; \frac{3}{10}\frac{\hbar^2k_F^2}{m} = \frac{3}{5} E_F\;\;.
+\label{eq:UN_somm}
+\end{eqnarray}
+<span class="numero_formula">2.56</span></p>
+
+<p>O resultado escrito na Eq. (2.56) merece ser analisado com atenção. Observamos que, o modelo quântico para o gás de elétrons no metal prevê uma energia total no estado fundamental que é uma fração da energia de Fermi, mesmo para  $T=0$. Isto contraria a previsão clássica para o gás ideal, onde a energia por partícula $\frac{U}{N} = \frac{3}{2}k_BT$, indicando que a energia se anula para $T=0$. Em outras palavras, a teoria clássica afirma que as partículas estariam em repouso em uma temperatura igual ao zero absoluto, enquanto que a teoria quântica afirma o contrário.</p>
+
+<p>Uma outra maneira bastante útil de se estudar a soma dos estados da Eq. (2.51) é fazer diretamente o somatório nas energias $E(k)$ e não nos vetores de onda $k$. Fazer isto é o mesmo que realizar uma mudança de variáveis de $k$ para $E(k)$ nas integrais efetuadas anteriormente. A partir da Eq. (2.41) podemos observar que:</p>
+
+<p class="formula">
+\begin{equation}
+ dk = \sqrt{\frac{m}{2\hbar^2}} \frac{1}{\sqrt{E}}dE\;\;,
+\end{equation}
+<span class="numero_formula">2.57</span></p>
+
+<p>de forma que, uma integração de uma função qualquer da energia $f(E(k))$ em relação a $k$, pode ser transformada de acordo com:</p>
+
+<p class="formula">
+\begin{eqnarray}
+ \int \frac{d^3k}{4\pi^3} f(E(k) &amp;=&amp; \int_0^\pi \int_0^{2\pi} \int_0^\infty \frac{1}{4\pi^3}f(E(k) k^2 sen \theta dk d\theta d\phi \\[10pt]
+\end{eqnarray}
+ <span class="numero_formula">2.58</span></p>
+
+<p class="formula">
+ \begin{eqnarray}
+ &amp;=&amp;\int_{0}^\infty \frac{k^2 dk}{\pi^2} f(E(k)) = \int_{-\infty}^{\infty} dE g(E)f(E)\;\;,
+\end{eqnarray}
+<span class="numero_formula">2.59</span></p>
+
+<p>em que:</p>
+
+<p class="formula">
+\begin{equation}
+ g(E) = \frac{m}{\hbar^2\pi^2}\sqrt{\frac{2mE}{\hbar^2}} \label{eq:gE}
+\end{equation}
+<span class="numero_formula">2.60</span></p>
+
+<p>é a chamada densidade de estados para o gás de elétrons livres. Isso significa que o valor $g(E) dE$ é simplesmente o número de níveis eletrônicos no intervalo de energia entre $E$ e $E+dE$, dividido pelo volume. Verifique o Exercício 12. Sendo assim, a densidade de estados indica o quão denso é o empacotamento dos estados quânticos de um determinado sistema, consequentemente ela está associada com várias propriedades importantes de um determinado material. Vale mencionar que a densidade de estados apresentada na Eq. (2.60) é válida para um gás de elétrons livres e tridimensional. Para um gás de elétron com interação e na presença de uma rede cristalina, a expressão para $g(E)$ não é tão simples.</p>
+
+
+<p>Todo o tratamento feito até agora para os elétrons no modelo de Sommerfeld é válido para $T=0$. Para temperaturas não nulas a probabilidade $f(E)$ de se encontrar um determinado estado com energia $E$ é diferente daquela com $T=0$. A determinação da função de distribuição de probabilidades é um problema bastante explorado em Física Estatística (HUANG, 1987; CALLEN, 1985; PATHRIA, 1996) e não vamos discutir com detalhes neste texto. Uma vez que os elétrons possuem <i>spin</i> semi-inteiro ($\pm\frac{1}{2}$) a função de distribuição para estas partículas deve ser (OLIVEIRA; JESUS, 2005; HARALD; LÜTH, 2003; ASHCROFT; MERMIN, 2011):</p>
+
+<p class="formula">
+\begin{equation}
+ f(E) = \frac{1}{\exp \left(\frac{E - E_F}{k_BT} \right) + 1}\;\;, \label{eq:F_D}
+\end{equation}
+<span class="numero_formula">2.61</span></p>
+
+<p>conhecida como função de distribuição de Fermi-Dirac, válida para qualquer conjunto de férmions (partículas com <i>spin</i> semi-inteiro). A probabilidade de se encontrar um estado eletrônico ocupado, em $T\neq 0$, com energia $E$ é dada pela Eq. (2.61) que podemos mostrar que, no limite em que $T\rightarrow 0$:</p>
+
+<p class="formula">
+\begin{eqnarray}
+ f(E) &amp;\rightarrow&amp; 0 \;\;,\;\; E&gt;E_{F} \\
+\end{eqnarray} 
+ <span class="numero_formula">2.62</span></p>
+
+ \begin{eqnarray}
+ f(E) &amp;\rightarrow&amp; 1 \;\;,\;\; E\leqslant E_{F}
+\end{eqnarray} 
+<span class="numero_formula">2.63</span></p>
+
+<p>A demonstração dessa característica da função de distribuição é sugerida no Exercício 13. A Fig. (2.13) mostra a função de distribuição de Fermi-Dirac para diferentes temperaturas e, podemos observar que à medida que a temperatura aumenta o formato da função torna-se mais suave e arredondado. Um interessante <i>applet </i>pode ser encontrado na internet <button class="botao-rodape" data-numero='4'></button> e mostra o comportamento da função de distribuição da Eq. (2.61) com o aumento gradual da temperatura.</p>
+
+  <div class="nota-rodape" data-numero='4'>
+    <p>Disponível em: &lt;<a href="http://astro.if.ufrgs.br/evol/FermiD.htm" target="blank">http://astro.if.ufrgs.br/evol/FermiD.htm</a>&gt;. Acessado em: 21 de Março de 2013.</p>
+
+  </div>
+
+<figure>
+  <img src="[[caminho]]/media/fig13.svg">
+  <figcaption>Figura 2.13: Função de distribuição de Fermi-Dirac em função da energia para diferentes temperaturas.</figcaption>
+</figure>
+
+
+<p>O comportamento da função de distribuição de Fermi-Dirac ilustrado na Fig. (2.13) indica que, para $T\neq 0$, estados de energia abaixo de $E_F$ apresentam uma probabilidade finita de estarem desocupados. Por outro lado, estados imediatamente acima de $E_F$ possuem uma probabilidade não nula de estarem ocupados. A largura da região que a fun\c{c}ão de distribuição se desvia daquela para $T=0$ é da ordem de $k_BT$.</p>
+
+
+
+<p>A inclusão da estatística de Fermi-Dirac é um detalhe importante no estudo do gás de elétrons. O cálculo do calor específico a volume constante deste sistema difere drasticamente do resultado encontrado para o gás ideal clássico (ASHCROFT; MERMIN, 2011; OLIVEIRA; JESUS, 2005). Como vamos estudar mais adiante na Seção 6.1, o modelo clássico prevê que o calor específico é uma constante que independente da temperatura. Por outro lado, é possível mostrar  <button class="botao-rodape" data-numero='5'></button> que nesse outro modelo o calor específico é proporcional ao produto $k_BT g(E_F)$, ou seja, varia linearmente com a temperatura. Esse resultado desempenha um papel importante no entendimento da propriedades térmicas de metais.</p>
+
+
+<div class="nota-rodape" data-numero='5'>
+  <p>Os detalhes dessa demostração podem ser encontrados nas referências e fogem do objetivo de nosso texto.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
