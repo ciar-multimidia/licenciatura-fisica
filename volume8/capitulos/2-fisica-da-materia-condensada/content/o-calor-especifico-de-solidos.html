@@ -46,17 +46,16 @@
 <p>É interessante observar que, com a função de partição definida conforme a Eq. (2.102) e fazendo $\beta=\frac{1}{k_B T}$, temos que: </p>
 
 <p class="formula">
-\begin{equation}
+\begin{eqnarray}
  \frac{\partial \ln Z}{\partial \beta} &amp;=&amp; \frac{1}{Z} \frac{\partial Z}{\partial \beta} \\[10pt]
- \end{equation}
+\end{eqnarray}
 <span class="numero_formula">2.103</span></p>
 
 
 <p class="formula">
-\begin{equation}
+\begin{eqnarray}
  &amp;=&amp; \frac{1}{Z} \int \left( -H \right)  e^{-\frac{H}{k_B T}}d \mathbf{r} d \mathbf{p}\;\;,
 \end{eqnarray}
- \end{equation}
 <span class="numero_formula">2.104</span></p>
 
 
@@ -86,7 +85,7 @@
 \begin{eqnarray}
  Z &amp;=&amp; \int_{-\infty}^{+\infty} dp_{x_1} e^{-\frac{\beta p^2_{x_1}}{2m}} \times \int_{-\infty}^{+\infty} dp_{y_1} e^{-\frac{\beta p^2_{y_1}}{2m}} \times \int_{-\infty}^{+\infty} dp_{z_1} e^{-\frac{\beta p^2_{z_1}}{2m}} \times \cdots \nonumber \\[10pt]
  &amp;\times&amp; \int_{-\infty}^{+\infty} dx_1 e^{-\frac{\beta k x_1^2}{2}} \times \int_{-\infty}^{+\infty} dy_1 e^{-\frac{\beta k y_1^2}{2}} \times \int_{-\infty}^{+\infty} dz_1 e^{-\frac{\beta k z_1^2}{2}} \times \cdots \label{eq:Zosc}
-\end{eqnarray}&infin;
+\end{eqnarray}
 <span class="numero_formula">2.107</span></p>
 
 
@@ -185,13 +184,13 @@
 <p class="formula">
 \begin{eqnarray}
  Z_1 &amp;=&amp; \sum_{n=0}^{\infty} e^{-\beta \hbar\omega \left( n + \frac{1}{2}\right)} \\
-\end{equation}
+\end{eqnarray}
 <span class="numero_formula">2.117</span></p>
 
 <p class="formula">
 \begin{eqnarray}
 &amp;=&amp; e^{- \frac{\beta\hbar\omega}{2}}\sum_{n=0}^{\infty} e^{-\beta \hbar\omega n} = e^{- \frac{\beta\hbar\omega}{2}}\sum_{n=0}^{\infty} \left( e^{-\beta \hbar\omega }\right)^n\;\;. \label{eq:Z_1b}
-\end{equation}
+\end{eqnarray}
 <span class="numero_formula">2.118</span></p>
 
 
@@ -248,175 +247,383 @@
 
 <p class="formula">
 \begin{eqnarray} 
- &=& 3N\hbar\omega \left[ \frac{1}{2} + \frac{1}{e^{\beta\hbar\omega} - 1}\right] \;\;,  \label{eq:U_einstein} 
+ &amp;=&amp; 3N\hbar\omega \left[ \frac{1}{2} + \frac{1}{e^{\beta\hbar\omega} - 1}\right] \;\;,  \label{eq:U_einstein} 
 \end{eqnarray}
 <span class="numero_formula">2.126</span></p>
 
 <p>onde multiplicamos e dividimos o segundo termo dentro do colchete por $e^{\beta\hbar\omega}$. Podemos então analisar a Eq. (2.126) no limite em que $T\rightarrow 0\,\,\mathrm{K}$. Neste caso, temos que {\large $e^{\frac{\hbar\omega}{k_B T}} - 1 \rightarrow e^{\frac{\hbar\omega}{k_B T}}$} e a a Eq. (2.126) se reduz a:</p>
 
-   
-U = 3N ω 1+e−β ω  . (2.127) 2
+<p class="formula">   
+\begin{eqnarray}
+ U &amp;=&amp; 3N\hbar\omega \left[ \frac{1}{2} + e^{- \beta\hbar\omega}\right] \label{eq:U_einst}\;\;.
+\end{eqnarray}
+<span class="numero_formula">2.127</span></p>
+
+<p>O calor específico pode ser encontrado derivando a Eq. (2.127) em função da temperatura. Dessa forma, o modelo de Einstein resulta em um calor específico igual a:</p>
+
+<p class="formula">   
+\begin{eqnarray}
+ c_V &amp;=&amp; \left( \frac{\partial U}{\partial T}\right)_V \\[10pt]
+\end{eqnarray}
+<span class="numero_formula">2.128</span></p>
+
+<p class="formula">   
+\begin{eqnarray}
+&amp;=&amp; 3N\hbar\omega \frac{\partial}{\partial T} \left[ \frac{1}{2} + e^{- \beta\hbar\omega}\right] = 3N\hbar\omega \frac{\partial}{\partial T}  e^{- \frac{\hbar\omega}{k_B T}} \\[10pt]
+\end{eqnarray}
+<span class="numero_formula">2.129</span></p>
+
+<p class="formula">   
+\begin{eqnarray}
+&amp;=&amp; 3N\hbar\omega e^{- \frac{\hbar\omega}{k_B T}} \left( \frac{\hbar\omega}{k_BT^2}\right)\;\;,
+\end{eqnarray}
+<span class="numero_formula">2.130</span></p>
 
 
-O calor específico pode ser encontrado derivando a Eq. (2.127) em função da temperatura. Dessa forma, o modelo de Einstein resulta em um calor específico igual a:
- cV =  ∂U  ∂T V
-∂ 1 −β ω  =3N ω +e
-∂− ω =3N ω ekBT
-(2.128) (2.129) (2.130)
-(2.131)
-(2.132) (2.133)
-     = 3N ωe kBT
-,
-que é válido apenas no limite em que T → 0 K. Sendo assim,
-∂T 2
-− ω   ω 
-∂T
-  kBT2
-− ω   ω  cV = lim3N ωe kBT
-   ω que ekBT
-≈ 1 +
- ω kBT
-, de maneira que:
-U = 3N ω=3NkBT ,
- ω kBT
-T→0 kBT2 −  ω
-cV = 3N ( ω)2 lim e kBT kB T→0 T2
-   cV → 0
-pois o termo exponencial vai a zero mais rapidamente do que o termo T 2. Este resultado está em acordo com a terceira Lei da Termodinâmica que indica que o calor específico a volume constante deve ir a zero para T → 0 K. Sendo assim, o modelo de Einstein corrige uma das falhas contidas no modelo de Dulong-Petit, indicando que a mecânica quântica desempenha um papel fundamental no cálculo de cV de um sólido. Além disso, os dois modelos concordam no limite de altas temperatura, como vamos mostrar mais adiante.
-No limite de temperaturas altas (T → ∞), analisamos a Eq. (2.126) e observamos
-  (2.134)
-   Física da Matéria Condensada 69
-e o calor específico fica:
-cV =3NkB , (2.135)
-que é justamente o resultado encontrado no modelo de Dulong-Petit, que concorda com o resultado experimental para altas temperaturas. Além de corrigir uma das falhas do modelo clásico, o modelo de Einstein concorda com o anterior dentro de seus limites de validade.
-Muito embora tenhamos solucionado o problema de Dulong-Petit para tempera- turas tendendo a zero, o modelo de Einstein não fornece a dependência correta do calor específico em função da temperatura. O resultados experimentais indicam que cV ∝ T3, que também vai a zero para T → 0 K, mas não exponencialmente. Também em virtude disso, o modelo é falho para temperaturas intermediárias e a correção dessas limitações surgem com o modelo de Debye, que vamos discutir na próxima seção. Conforme vamos observar adiante, as vibrações coletivas do sólido e a quantização desses modos desem- penham um papel fundamental na modelagem da condutividade térmica em um sólido.
-6.3. Modelo de Debye
-A falha existente no modelo de Einstein decorre do fato de se considerar os átomos como osciladores harmônicos independentes, ou seja, que não interagem entre si. Na realidade, os átomos podem estar fortemente acoplados entre si e esta característica precisa ser levada em conta em um modelo que descreve o calor específico de um sólido em função da temperatura. Peter Debye, de uma forma relativamente simples e geral, desenvolveu uma abordagem teórica que explicou com sucesso os resultados experimentais. Debye considerou, não osciladores individuais, mas os modos normais de oscilação do cristal. Entretanto, os modos normais são quantizados em fônons, cuja energia é  ω(q), como vimos anteriormente. Lembrando que q é o vetor de onda e ω(q) é a frequência do modo coletivo de vibração.
-A energia total de vibração é igual à soma das energias dos fônons da rede,
-E =   ω(q) nq + 1  (2.136)
-onde cada modo normal se comporta como um oscilador independente, o que significa que o conjunto dos modos normais pode ser representado como um gás de fônons. Este gás tem uma função de distribuição estatística dada por:
-70 Licenciatura em Física
- q2
- 
-p(E) =
-1 , (2.137) ekBT −1
- que é ligeiramente diferente da distribuição estatística de Fermi-Dirac da Eq. (2.61) respeitada pelos elétrons discutidos no modelo de Sommerfeld, pois os fônons não têm spin semi-inteiro sendo portanto bósons. Para leituras mais aprofundadas sobre as funções de distribuição estatística sugerimos os textos citados nas referências Callen (1985), Huang (1987) e Pathria (1996). Sendo assim, a energia interna deste gás de fônons fica escrita como:
-q ekBT −1 fator 1 , porque ela não depende da temperatura.
-2
-A hipótese de Debye para resolver a Eq. (2.138) foi considerar uma dependência linear para a relação de dispersão, justamente como sugerido na Eq. (2.86) que é válida no limite de longos comprimentos de onda:
-ω(q) = vq , (2.139)
-onde v é a velocidade de uma onda mecânica através do sólido. Além disso, Debye postulou a existência de uma frequência máxima de oscilação ωD, chamada comumente de frequência de Debye. A energia de um fônon com esta frequência é ED =  ωD, que nos permite definir a temperatura de Debye:
-ΘD ≡  ωD . (2.140) kB
-Esta temperatura ΘD pode ser obtida de medidas de calor específico e, juntamente com ωD, apresenta uma informação sobre a rigidez do sólido.
-Para efetuar a soma escrita na Eq. (2.138), podemos observar que os valores de q variam desde zero até qD = ωD , que é o chamado comprimento de onda de Debye.
-v
-Além disso, podemos converter o somatório em uma integral fazendo:
- → V   d3q . (2.141)
-U =    ω(q)  ω(q)
-, (2.138) onde omitimos a contribuição de ponto zero na energia, representada na Eq. (2.136) pelo
-E
-       q
-8π3
- Física da Matéria Condensada 71
-Sendo assim,
-Além disso, temos que a vibração ocorre de tal maneira que a sua direção (x, y, z) não depende do vetor q e, precisamos multiplicar por 3 a integral acima para considerar as três direções possíveis de vibração. Fazendo uma mudança de variáveis tal que
- vq =x⇒dq=kBTdxeaindad3q=4πq2dq,temos: kBT  v
-U=V qD  vq d3q. (2.142) 8π3  vq
-  0 ekBT −1
-   U 3   qD  vkBT x·4π kBT  2 x2 =u=  v  v dq
-     V 8π30 ex−1 1 (kBT)3   qD x3
-u = 38π34π ( v)2 0 ex −1dq . (2.143) Observe que, quando fazemos a mudança de variáveis sugerida anteriormente, dq =
-   kBT dx, os limites inferior e superior da integral na Eq. (2.143) devem ser 0 e ΘD/T,  v
-respectivamente. Com isso,
-3  kBT 4  ΘD/T x3
-u=2π2 v  v 0 ex−1dx . (2.144) O resultado da integral escrita na Eq. (2.144) depende do valor de T, para
-T → 0 por exemplo, temos ΘD → ∞ e a integral torna-se um número puro igual a T
-π4 independente da temperatura. Dessa forma, no limite de baixas temperaturas temos 15
-que a energia interna por partícula do sólido u ∝ T4, levando a um calor específico do sólido cV ∝ T 3, que está em acordo com o que é observado no experimento. Observe que o modelo de Debye apresenta um calor específico que vai a zero com a temperatura com a dependência correta e observada experimentalmente, diferente do que ocorre no modelo de Einstein, onde a propriedade vai a zero exponencialmente.
-Para temperaturas altas temos que x ≪ 1 na Eq. (2.144) e podemos expandir o termo exponencial da equação até a primeira ordem ex ≈ 1 + x, de maneira que neste limite:
-      3
-u = 2π2  v
-72 Licenciatura em Física
- kBT 4 ΘD/T x3
- v 0 x dx ,
-      
-Θ3
-D 3T3
-(2.145)
+<p>que é válido apenas no limite em que $T\rightarrow 0\,\,\mathrm{K}$. Sendo assim,</p>
+
+
+<p class="formula">   
+\begin{eqnarray}
+ c_V &amp;=&amp; \lim_{T\rightarrow 0} 3N\hbar\omega e^{- \frac{\hbar\omega}{k_B T}} \left( \frac{\hbar\omega}{k_BT^2}\right) \\[10pt]
+ \end{eqnarray}
+<span class="numero_formula">2.131</span></p>
+
+<p class="formula">   
+\begin{eqnarray}
+ c_V &amp;=&amp; \frac{3N}{k_B}\left( \hbar\omega \right)^2 \lim_{T\rightarrow 0} \frac{e^{- \frac{\hbar\omega}{k_B T}}}{T^2} \\[10pt]
+ \end{eqnarray}
+<span class="numero_formula">2.132</span></p>
+
+
+<p class="formula">   
+\begin{eqnarray}
+c_V &amp;\rightarrow&amp; 0
+\end{eqnarray}
+<span class="numero_formula">2.133</span></p>
+
+
+<p>pois o termo exponencial vai a zero mais rapidamente do que o termo $T^2$. Este resultado está em acordo com a terceira Lei da Termodinâmica que indica que o calor específico a volume constante deve ir a zero para $T\rightarrow 0\,\,\mathrm{K}$. Sendo assim, o modelo de Einstein corrige uma das falhas contidas no modelo de Dulong-Petit, indicando que a mecânica quântica desempenha um papel fundamental no cálculo de $c_V$ de um sólido. Além disso, os dois modelos concordam no limite de altas temperatura, como vamos mostrar mais adiante.</p>
+
+<p>No limite de temperaturas altas ($T\rightarrow \infty$), analisamos a \eq{U_einstein} e observamos que $\displaystyle e^{\frac{\hbar\omega}{k_B T}} \approx 1 +\frac{\hbar\omega}{k_B T}$, de maneira que:</p>
+
+<p class="formula"> 
+\begin{eqnarray}
+ U &amp;=&amp; \frac{3N\hbar\omega}{\frac{\hbar\omega}{k_B T}} =3N k_BT\;\;, 
+\end{eqnarray}
+<span class="numero_formula">2.134</span></p>
+
+<p>e o calor específico fica:</p>
+
+<p class="formula"> 
+\begin{eqnarray}
+ c_V = 3Nk_B \;\;,
+\end{eqnarray}
+<span class="numero_formula">2.135</span></p>
+
+<p>que é justamente o resultado encontrado no modelo de Dulong-Petit, que concorda com o resultado experimental para altas temperaturas. Além de corrigir uma das falhas do modelo clásico, o modelo de Einstein concorda com o anterior dentro de seus limites de validade.</p>
+
+<p>Muito embora tenhamos solucionado o problema de Dulong-Petit para temperaturas tendendo a zero, o modelo de Einstein não fornece a dependência correta do calor específico em função da temperatura. O resultados experimentais indicam que $c_V\propto T^3$, que também vai a zero para $T\rightarrow 0\,\,\mathrm{K}$, mas não exponencialmente. Também em virtude disso, o modelo é falho para temperaturas intermediárias e a correção dessas limitações surgem com o modelo de Debye, que vamos discutir na próxima seção. Conforme vamos observar adiante, as vibrações coletivas do sólido e a quantização desses modos desem- penham um papel fundamental na modelagem da condutividade térmica em um sólido.</p>
+
+
+<h3>Modelo de Debye</h3>
+
+
+<p>A falha existente no modelo de Einstein decorre do fato de se considerar os átomos como osciladores harmônicos independentes, ou seja, que não interagem entre si. Na realidade, os átomos podem estar fortemente acoplados entre si e esta característica precisa ser levada em conta em um modelo que descreve o calor específico de um sólido em função da temperatura. Peter Debye, de uma forma relativamente simples e geral, desenvolveu uma abordagem teórica que explicou com sucesso os resultados experimentais. Debye considerou, não osciladores individuais, mas os modos normais de oscilação do cristal. Entretanto, os modos normais são quantizados em fônons, cuja energia é $\hbar \omega(\mathbf{q})$, como vimos anteriormente. Lembrando que $\mathbf{q}$ é o vetor de onda e $\omega(\mathbf{q})$ é a frequência do modo coletivo de vibração.</p>
+
+<p>A energia total de vibração é igual à soma das energias dos fônons da rede,</p>
+
+<p class="formula"> 
+\begin{equation}
+E = \sum_{\mathbf{q}} \hbar \omega(\mathbf{q}) \left( n_{\mathbf{q}} + \frac{1}{2} \right) \label{eq:E_fon}
+\end{equation}
+<span class="numero_formula">2.136</span></p>
+
+
+<p>onde cada modo normal se comporta como um oscilador independente, o que significa que o conjunto dos modos normais pode ser representado como um gás de fônons. Este gás tem uma função de distribuição estatística dada por:</p>
+
+<p class="formula"> 
+\begin{equation}
+ p(E) = \frac{1}{e^{\frac{E}{k_B T}} - 1}\;\;,
+\end{equation}
+<span class="numero_formula">2.137</span></p>
+
+
+<p>que é ligeiramente diferente da distribuição estatística de Fermi-Dirac da Eq. (2.61) respeitada pelos elétrons discutidos no modelo de Sommerfeld, pois os fônons não têm <i>spin </i>semi-inteiro sendo portanto bósons. Para leituras mais aprofundadas sobre as funções de distribuição estatística sugerimos os textos citados nas referências Callen (1985), Huang (1987) e Pathria (1996). Sendo assim, a energia interna deste gás de fônons fica escrita como:</p>
+
+<p class="formula"> 
+\begin{equation}
+ U = \sum_{\mathbf{q}} \frac{\hbar \omega(\mathbf{q})}{e^{\frac{\hbar \omega(\mathbf{q})}{k_B T}} - 1}\;\;, \label{eq:U_DW}
+\end{equation}
+<span class="numero_formula">2.138</span></p>
+
+<p>onde omitimos a contribuição de ponto zero na energia, representada na Eq. (2.136) pelo fator $\frac{1}{2}$, porque ela não depende da temperatura.</p>
+
+<p>A hipótese de Debye para resolver a Eq. (2.138) foi considerar uma dependência linear para a relação de dispersão, justamente como sugerido na Eq. (2.86) que é válida no limite de longos comprimentos de onda:</p>
+
+<p class="formula">
+\begin{equation}
+ \omega(\mathbf{q}) = v \mathbf{q} \;\;,
+\end{equation}
+<span class="numero_formula">2.139</span></p>
+
+<p>onde v é a velocidade de uma onda mecânica onde $v$ é a velocidade de uma onda mecânica através do sólido. Além disso, Debye postulou a existência de uma frequência máxima de oscilação  $\omega_D$, chamada comumente de frequência de Debye. A energia de um fônon com esta frequência é $E_D = \hbar\omega_D$, que nos permite definir a temperatura de Debye:</p>
+
+<p class="formula">
+\begin{equation}
+ \Theta_D \equiv \frac{\hbar \omega_D}{k_B} \;\;.
+\end{equation}
+<span class="numero_formula">2.140</span></p>
+
+<p>Esta temperatura $\Theta_D$ pode ser obtida de medidas de calor específico e, juntamente com $\omega_D$, apresenta uma informação sobre a rigidez do sólido.</p>
+
+<p>Para efetuar a soma escrita na \eq{U_DW}, podemos observar que os valores de $\mathbf{q}$ variam desde zero até $\mathbf{q}_D=\frac{\omega_D}{v}$, que é o chamado comprimento de onda de Debye. Além disso, podemos converter o somatório em uma integral fazendo:</p>
+
+<p class="formula">
+\begin{equation}
+ \sum_{\mathbf{q}} \rightarrow \frac{V}{8\pi^3}\int d^3 q\;\;.
+\end{equation}
+<span class="numero_formula">2.141</span></p>
+
+<p>Sendo assim,</p>
+
+<p class="formula">
+\begin{equation}
+ U = \frac{V}{8\pi^3}\int_0^{q_D} \frac{\hbar vq }{e^{\frac{\hbar v q}{k_BT}} - 1}d^3 q \;\;.
+\end{equation}
+<span class="numero_formula">2.142</span></p>
+
+<p>Além disso, temos que a vibração ocorre de tal maneira que a sua direção ($x$, $y$, $z$) não depende do vetor $\mathbf{q}$ e, precisamos multiplicar por 3 a integral acima para considerar as três direções possíveis de vibração. Fazendo uma mudança de variáveis tal que $\frac{\hbar v q}{k_BT} = x \Rightarrow dq = \frac{k_BT}{\hbar v} dx$ e ainda $d^3q = 4\pi q^2 dq$, temos:</p>
+
+<p class="formula">
+\begin{eqnarray}
+ \frac{U}{V} = u &amp;=&amp; \frac{3}{8\pi^3}\int_0^{q_D} \frac{\hbar v \frac{k_BT}{\hbar v} x \cdot 4\pi \left(\frac{k_BT}{\hbar v}\right)^2 x^2 }{e^x - 1} dq \nonumber \\[10pt]
+u &amp;=&amp; 3 \frac{1}{8\pi^3} 4 \pi \frac{(k_BT)^3}{(\hbar v)^2}\int_0^{q_D}\frac{x^3}{e^x - 1} dq \;\;. \label{eq:u1}
+\end{eqnarray}
+<span class="numero_formula">2.143</span></p>
+
+<p>Observe que, quando fazemos a mudança de variáveis sugerida anteriormente, $dq = \frac{k_BT}{\hbar v} dx$, os limites inferior e superior da integral na \eq{u1} devem ser $0$ e $\Theta_D/T$, respectivamente. Com isso,</p>
+
+<p class="formula">
+\begin{equation}
+ u = \frac{3}{2\pi^2} \hbar v \left( \frac{k_BT}{\hbar v}\right)^4 \int_0^{\Theta_D/T} \frac{x^3}{e^x - 1} dx\;\;.
+\label{eq:u_debye}
+\end{equation}
+<span class="numero_formula">2.144</span></p>
+
+<p>O resultado da integral escrita na \eq{u_debye} depende do valor de $T$, para $T\rightarrow 0$ por exemplo, temos $\frac{\Theta_D}{T}\rightarrow \infty$ e a integral torna-se um número puro igual a $\frac{\pi^4}{15}$ independente da temperatura. Dessa forma, no limite de baixas temperaturas temos que a energia interna por partícula do sólido $u\propto T^4$, levando a um calor específico do sólido $c_V\propto T^3$, que está em acordo com o que é observado no experimento. \mbox{Observe que} o modelo de Debye apresenta um calor específico que vai a zero com a temperatura com a dependência correta e observada experimentalmente, diferente do que ocorre no modelo de Einstein, onde a propriedade vai a zero exponencialmente.</p>
+
+
+<p>Para temperaturas altas temos que $x\ll 1$ na Eq. (2.144) e podemos expandir o termo exponencial da equação até a primeira ordem $e^x\approx 1+ x$, de maneira que neste limite:</p>
+
+<p class="formula">
+\begin{equation}
+ u = \frac{3}{2\pi^2} \hbar v \left( \frac{k_BT}{\hbar v}\right)^4  \underbrace{\int_0^{\Theta_D/T} \frac{x^3}{x} dx}_{\frac{\Theta_D^3}{3T^3}}\;\;,
+\end{equation}
+<span class="numero_formula">2.145</span></p>
        
-e a energia fica:
-U = u V = 3   v   k B T   4 Θ 3D 2π2  v 3T3
-V  Θ  3
-U= D kB4T,
-( 2 . 1 4 6 ) (2.147)
-(2.148)
-(2.149)
-     2π2  v lembrando que ΘD =  ωD , com isso:
- kB
-U=2π2 v kBT=2π2 v kBT.
-V  ωD 3 V  vkD 3
-    N kD3
-Uma vez que n = V = 6π2 , podemos escrever a energia como:
-U=3NkBT ,
-  de modo que o calor específico neste regime de altas temperaturas é o mesmo encontrado no modelo de Dulong-Petit: cV = 3NkB; que é constante e concorda razoavelmente bem com os resultados experimentais. A concordância com o modelo de Einstein ocorre nesse regime de temperaturas.
-Para temperaturas intermediárias, a curva de cV em função de T é ajustada para obter o melhor parâmetro ΘD. O gráfico da Fig. (2.23) mostra uma representação do calor específico (dividido por 3R, onde R = kB NA é a constante universal dos gases) como função da temperatura (dividida por q) para os três modelos discutidos anteriormente. Vale observar que o modelo de Debye é aquele que apresenta a melhor concordância com os resultados experimentais em todos os regimes de temperatura, indicando que a contribuição dos fônons desempenha um papel fundamental na determinação do calor específico de um sólido.
-6.4. O Calor Específico de Metais
-Na seção 3.2 vimos que o calor específico de um sólido tem uma contribuição dos elétrons de condução que varia linearmente com a temperatura. Este é um resultado do modelo de Sommerfeld, que utiliza a mecânica quântica na descrição dos elétrons como um gás de férmions. Por outro lado, o modelo de Debye introduz a contribuição dos fônons na determinação do calor específico, que depende de T 3. Com isso, podemos escrever uma
-Física da Matéria Condensada 73
- 
-CV 3R
-1 0,8 0,6 0,4 0,2
-0
-012
-T q
-                         Figura 2.23: Calor específico de um sólido para os diferentes modelos em comparação com resultados experimentais obtidos para o Al (cír- culos) e o Cu (triângulos) (OLIVEIRA; JESUS, 2005).
-expressão para cV levando em conta as duas contribuições mencionadas anteriormente: cV =AT+BT3 , (2.150)
-onde os termos A e B são constantes que representam as contribuições dos elétrons de con- dução e dos fônons, respectivamente. A Eq. (2.150) apresenta o correto comportamento de cV em função da temperatura, que é observado experimentalmente para um conjunto bastante grande de diferentes materiais (ASHCROFT; MERMIN, 2011; KITTEL, 2006).
-EXERCÍCIOS PROPOSTOS
-1.
-2. 3. 4. 5.
-Dados os vetores de base da rede cúbica simples escritos nas Eq. (2.2)-Eq. (2.4), calcule os vetores de base da rede recíproca correspondente. Determine os limites da primeira e da segunda zona de Brillouin.
-Mostre que a rede recíproca de uma rede hexagonal também é uma rede hexagonal. Determine os fatores de empacotamento das redes cristalinas fcc, bcc e hcp. Prove que, a partir da definição dos vetores da rede recíproca, bi · ai = 2πδij. Mostre que a rede recíproca de uma estrutura bcc é uma fcc.
-Licenciatura em Física
- 74
-6. A partir da Eq. (2.25), mostre que a corrente elétrica no modelo de Drude é
-dada por:
-7. O modelo de Drude considera os elétrons como um gás ideal clássico, de forma que
-jx = ne2τE 1−e−t/τ  . (2.151) m
- temos válida a equipartição da energia cinética de uma partícula: 1 mv2 = 3 kB T . 22
-Sendo assim, determine o livre caminho médio de um determinado elétron na temperatura T = 300 K. Considere a massa do elétron m = 9, 11 × 10−31kg e a constante de Boltzmann kB = 8, 617 × 10−5 eV · K−1.
-8. Uma função matemática bem comportada pode ser expandida em um conjunto de ondas planas eik·r, como é frequentemente utilizado para a função de onda de um elétron em um potencial periódico. Sendo assim, mostre que para uma função:
-f (r) =   g(k)eik·r , (2.152) k
-que obedece a periodicidade da rede de Bravais f (r) = f (r+R), temos que somente os vetores da rede recíproca K contribuirão para a expansão. Os termos g(k) são coeficientes da expansão.
-9. A partir da solução proposta para a função de onda do elétron da Eq. (2.40), mostre que as autoenergias da equação de Schrödinger são dadas pela Eq. (2.41).
-10. Utilize a condição de Born-von-Karman para mostrar as condições de contorno periódicas das componentes do vetor de onda k na Eq. (2.42)
-11. Calcule a magnitude do vetor de onda de Fermi para 8, 4 × 1021 elétrons dentro de uma caixa de volume igual a 2 cm3. Qual é a energia de Fermi? Quais os valores de kF e EF se os elétrons forem substituídos por prótons?
-12. A partir da densidade de estados para o gás de elétrons livres da Eq. (2.60),
-  mostre que: para T = 0.
-  ∞
-n = g(E)dE (2.153)
-−∞
-13. Mostre que a função de distribuição de Fermi-Dirac Eq. (2.61), no limite em que T →0,tendea1seE EF etendea0seE>EF.
-Física da Matéria Condensada 75
- 
-14. A função de onda do elétron em um cristal, na aproximação forte, pode ser escrita como: 1   ik·R
-ψk(r)=√N e φ(r−R) . (2.154) R
-Mostre que a função de onda é normalizada, ou seja,   ψk(r)∗ψk(r)d3r = 1. Mostre que ψk(r) satisfaz o teorema de Bloch.
-15. Verifique que a Eq. (2.81) é uma possível solução para a Eq. (2.80).
-16. Um cadeia linear diatômica é formada por íons de massa m1 e m2 que intera- gem apenas com os vizinhos mais próximos através de um potencial harmônico caracterizado pela mesma constante elática K. Sendo assim,
-  a) mostre que a relação de dispersão pode ser escrita como:
-ω2(k) = K  m1 + m2 ±  m21 + m2 + 2m1m2 cos(ka)  ; (2.155)
-  m1 m2
-b) Verifique o resultado anterior para a situação onde m1 ≫ m2;
-c) Analise o resultado para o caso onde m1 ≈ m2 e compare com a relação de dispersão da cadeia monoatômica linear.
-17. Dado um sistema formado por N partículas não interagentes, cuja função de partição é ZN , mostre que ZN = Z1N ; onde Z1 é a função de partição de uma única partícula.
-18. Um sólido bidimensional é formado por N osciladores harmônicos clássicos com constantes elásticas k. Determine a energia interna e o calor específico a volume constante deste sólido.
-19. Mostre que o calor específico de um sólido de Einstein pode ser escrito como:
-3NkB  ω 2 4 kBT
-   ω  
-cosech2 . (2.156)
-cV =
-Verifique os comportamentos de cV nos limites de T → 0 e T → ∞.
-   2kBT
-20. Um sistema é composto por três osciladores harmônicos quânticos. Determine a
-sua energia interna e o seu calor específico a volume constante.
+<p>e a energia fica:</p>
+
+<p class="formula">
+\begin{eqnarray}
+ U &amp;=&amp; uV =  \frac{3}{2\pi^2} \hbar v \left( \frac{k_BT}{\hbar v}\right)^4 \frac{\Theta_D^3}{3T^3} \\[10pt]
+ \end{eqnarray}
+<span class="numero_formula">2.146</span></p>
+
+ <p class="formula">
+\begin{eqnarray}
+ U &amp;=&amp; \frac{V}{2\pi^2} \left( \frac{\Theta_D}{\hbar v}\right)^3 k_B^4 T\;\;,
+\end{eqnarray}
+<span class="numero_formula">2.147</span></p>
+
+<p>lembrando que $\Theta_D = \dfrac{\hbar \omega_D}{k_B}$, com isso:</p>
+
+ <p class="formula">
+\begin{eqnarray}
+ U &amp;=&amp; \frac{V}{2\pi^2} \left(\frac{\omega_D}{v}\right)^3 k_BT = \frac{V}{2\pi^2} \left(\frac{v k_D}{v}\right)^3 k_BT\;\; .
+\end{eqnarray}
+<span class="numero_formula">2.148</span></p>
+
+<p>Uma vez que n = V = 6π2 , podemos escrever a energia como:</p>
+
+ <p class="formula">
+\begin{eqnarray}
+ U = 3 Nk_BT\;\;,
+\end{eqnarray}
+<span class="numero_formula">2.149</span></p>
+
+<p>de modo que o calor específico neste regime de altas temperaturas é o mesmo encontrado no modelo de Dulong-Petit: $c_V = 3Nk_B$; que é constante e concorda razoavelmente bem com os resultados experimentais. A concordância com o modelo de Einstein ocorre nesse regime de temperaturas.</p>
+
+
+<p>Para temperaturas intermediárias, a curva de $c_V$ em função de $T$ é ajustada para obter o melhor parâmetro $\Theta_D$. O gráfico da Fig. (2.23) mostra uma representação do calor específico (dividido por $3R$, onde $R=k_BN_A$ é a constante universal dos gases) como função da temperatura (dividida por $q$) para os três modelos discutidos anteriormente. Vale observar que o modelo de Debye é aquele que apresenta a melhor concordância com os resultados experimentais em todos os regimes de temperatura, indicando que a contribuição dos fônons desempenha um papel fundamental na determinação do calor específico de um sólido.</p>
+
+<h3>O Calor Específico de Metais</h3>
+
+
+<figure>
+  <img src="[[caminho]]/media/fig23.svg">
+  <figcaption>Figura 2.23: Calor específico de um sólido para os diferentes modelos em comparação com resultados experimentais obtidos para o Al (cír- culos) e o Cu (triângulos) (OLIVEIRA; JESUS, 2005).</figcaption>
+</figure>
+
+
+<p>Na seção 3.2 vimos que o calor específico de um sólido tem uma contribuição dos elétrons de condução que varia linearmente com a temperatura. Este é um resultado do modelo de Sommerfeld, que utiliza a mecânica quântica na descrição dos elétrons como um gás de férmions. Por outro lado, o modelo de Debye introduz a contribuição dos fônons na determinação do calor específico, que depende de $T^3$. Com isso, podemos escrever uma expressão para $c_V$ levando em conta as duas contribuições mencionadas anteriormente:</p>
+
+<p class="formula"> 
+\begin{eqnarray}\
+ c_V = A T + B T^3\;\;, \label{eq:cv_final}
+\end{eqnarray}
+<span class="numero_formula">2.150</span></p>
+
+<p>onde os termos $A$ e $B$ são constantes que representam as contribuições dos elétrons de condução e dos fônons, respectivamente. A Eq. (2.150) apresenta o correto comportamento de $c_V$ em função da temperatura, que é observado experimentalmente para um conjunto bastante grande de diferentes materiais (ASHCROFT; MERMIN, 2011; KITTEL, 2006).</p>
+
+<h5>Exercícios Propostos</h5>
+
+
+<div class="exercicio">
+    <h5>Questão 1</h5>
+    <p>Dados os vetores de base da rede cúbica simples escritos nas Eq. (2.2)-Eq. (2.4), calcule os vetores de base da rede recíproca correspondente. Determine os limites da primeira e da segunda zona de Brillouin.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 2</h5>
+    <p>Mostre que a rede recíproca de uma rede hexagonal também é uma rede hexagonal.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 3</h5>
+    <p>Determine os fatores de empacotamento das redes cristalinas fcc, bcc e hcp.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 4</h5>
+    <p>Prove que, a partir da definição dos vetores da rede recíproca,  $\mathbf{b}_i \,\,\mathbf{\cdot}\,\, \mathbf{a}_i = 2\pi \delta_{ij}$.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 5</h5>
+    <p>Mostre que a rede recíproca de uma estrutura bcc é uma fcc.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 6</h5>
+    <p>A partir da Eq. (2.25), mostre que a corrente elétrica no modelo de Drude é dada por:</p>
+
+<p class="formula">   
+\begin{equation}
+j_x = \frac{ne^2\tau}{m} E \left(1 - e^{-t/\tau} \right)\;\;.
+\end{equation}
+<span class="numero_formula">2.151</span></p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 7</h5>
+    <p>O modelo de Drude considera os elétrons como um gás ideal clássico, de forma que temos válida a equiparti\c cão da energia cinética de uma partícula: $\frac{1}{2}mv^2 = \frac{3}{2}k_BT$. Sendo assim, determine o livre caminho médio de um determinado elétron na temperatura $T=300\,\,K$. Considere a massa do elétron $m=9,11\times10^{-31}\rm kg$ e a constante de Boltzmann $k_B = 8,617\times 10^{-5}\,\,\rm eV\cdot K^{-1}$.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 8</h5>
+    <p>Uma função matemática bem comportada pode ser expandida em um conjunto de ondas planas $e^{i\textbf{k}\cdot\textbf{r}}$, como é frequentemente utilizado para a função de onda de um elétron em um potencial periódico. Sendo assim, mostre que para uma função:</p>
+<p class="formula">  
+\begin{equation}
+f(\textbf{r}) = \sum_{\textbf{k}}g(\textbf{k})e^{i\textbf{k}\cdot\textbf{r}} \;\;,
+\end{equation}
+<span class="numero_formula">2.152</span></p>
+<p>que obedece a periodicidade da rede de Bravais $f(\textbf{r})=f(\textbf{r+R})$, temos que somente os vetores da rede recíproca $\textbf{K}$ contribuirão para a expansão. Os termos $g(\textbf{k})$ são coeficientes da expansão.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 9</h5>
+    <p>A partir da solução proposta para a função de onda do elétron da Eq. (2.40), mostre que as autoenergias da equação de Schrödinger são dadas pela Eq. (2.41).</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 10</h5>
+    <p>Utilize a condição de Born-von-Karman para mostrar as condições de contorno periódicas das componentes do vetor de onda $\mathbf{k}$ na Eq. (2.42)</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 11</h5>
+    <p>Calcule a magnitude do vetor de onda de Fermi para $8,4\times10^{21}$ elétrons dentro de uma caixa de volume igual a $2\,\,\rm cm^3$. Qual é a energia de Fermi? Quais os valores de $k_F$ e $E_F$ se os elétrons forem substituídos por prótons?</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 12</h5>
+    <p>A partir da densidade de estados para o gás de elétrons livres da Eq. (2.60), mostre que:</p>
+<p class="formula">
+\begin{equation}
+n = \int_{-\infty}^{\infty}g(E)dE
+\end{equation}
+<span class="numero_formula">2.153</span></p>
+<p>para $T=0$.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 13</h5>
+    <p>Mostre que a função de distribuição de Fermi-Dirac \eq{F_D}, no limite em que $T\rightarrow 0$, tende a $1$ se $E\leqslant E_{F}$ e tende a $0$ se $E>E_{F}$.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 14</h5>
+    <p>A função de onda do elétron em um cristal, na aproximação forte, pode ser escrita como:</p>
+
+<p class="formula">
+\begin{equation}
+\psi_k(\textbf{r})= \frac{1}{\sqrt{N}}\sum_{\textbf{R}} e^{i\textbf{k}\cdot\textbf{R}} \phi(\textbf{r} - \textbf{R})\;\;.
+\end{equation}
+<span class="numero_formula">2.154</span></p>
+<p>Mostre que a função de onda é normalizada, ou seja, $\int\psi_k(\textbf{r})^* \psi_k(\textbf{r})d^3r=1$. Mostre que $\psi_k(\textbf{r})$ satisfaz o teorema de Bloch.</p>
+
+</div>
+
+<div class="exercicio">
+    <h5>Questão 15</h5>
+    <p>Verifique que a Eq. (2.81) é uma possível solução para a Eq. (2.80).</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 16</h5>
+    <p>Um cadeia linear diatômica é formada por íons de massa $m_1$ e $m_2$ que interagem apenas com os vizinhos mais próximos através de um potencial harmônico caracterizado pela mesma constante elática $K$. Sendo assim,</p>
+    <ol>
+     <li>mostre que a relação de dispersão pode ser escrita como:
+<p class="formula">
+\begin{equation}
+\omega^2(k) = \frac{K}{m_1m_2} \left[ m_1 + m_2 \pm \sqrt{m_1^2 + m_2^2 + 2m_1m_2 \cos(ka)} \right]\;\;;
+\end{equation}
+
+<span class="numero_formula">2.155</span></p></li>
+     <li>Verifique o resultado anterior para a situação onde $m_1\gg m_2$;</li>
+     <li>Analise o resultado para o caso onde $m_1\approx m_2$ e compare com a relação de dispersão da cadeia monoatômica linear.</li> 
+
+    </ol>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 17</h5>
+    <p>Dado um sistema formado por $N$ partículas não interagentes, cuja função de partição é $Z_N$, mostre que $Z_N = Z_1^N$; onde $Z_1$ é a função de partição de uma única partícula.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 18</h5>
+    <p>Um sólido bidimensional é formado por $N$ osciladores harmônicos clássicos com constantes elásticas $k$. Determine a energia interna e o calor específico a volume constante deste sólido.</p></div>
+
+<div class="exercicio">
+    <h5>Questão 19</h5>
+    <p>Mostre que o calor específico de um sólido de Einstein pode ser escrito como:</p>
+<p class="formula">
+\begin{eqnarray}
+c_V = \frac{3N k_B}{4} \left( \frac{\hbar\omega}{k_B T}\right)^2 cosech^2 \left( \frac{\hbar\omega}{2k_B T}\right)\;\;.
+\end{eqnarray}
+<span class="numero_formula">2.156</span></p>
+<p>Verifique os comportamentos de $c_V$ nos limites de $T\rightarrow 0$ e $T\rightarrow \infty$.</p>
+</div>
+
+<div class="exercicio">
+    <h5>Questão 20</h5>
+    <p>Um sistema é composto por três osciladores harmônicos quânticos. Determine a sua energia interna e o seu calor específico a volume constante.</p></div>
+
+
+
+
+
+
+
