@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="322.496px" height="336px" viewBox="0 0 322.496 336" enable-background="new 0 0 322.496 336" xml:space="preserve">
+<rect x="102.122" y="303.661" fill="#B3B3B3" stroke="#FFFFFF" width="125.751" height="18.276"/>
+<rect x="35.138" y="0.5" fill="none" stroke="#333333" width="255.912" height="255.424"/>
+<ellipse fill="none" stroke="#000000" stroke-width="2" cx="163.643" cy="128.333" rx="92.853" ry="93.036"/>
+<line fill="none" stroke="#333333" stroke-width="2" x1="98.261" y1="240.6" x2="227.927" y2="240.6"/>
+<text transform="matrix(1 0 0 1 67.3335 275.5)" font-family="'TimesNewRomanPSMT'" font-size="12">Escala: a linha sob o círculo tem 7,5 cm</text>
+<rect x="35.138" y="0.5" fill="none" stroke="#333333" width="255.056" height="255.668"/>
+<text transform="matrix(1 0 0 1 0 306.2314)"><tspan x="0" y="0" font-family="'TimesNewRomanPSMT'" font-size="12"> </tspan><tspan x="3" y="0" font-family="'TimesNewRomanPS-ItalicMT'" font-size="12">V =</tspan></text>
+<text transform="matrix(1 0 0 1 256.999 306.2314)" font-family="'TimesNewRomanPS-ItalicMT'" font-size="12">I=</text>
+<text transform="matrix(1 0 0 1 128.5522 316.5107)" font-family="'TimesNewRomanPSMT'" font-size="12">TRAJETÓRIAS</text>
+<text transform="matrix(1 0 0 1 64.6782 306.0889)" font-family="'TimesNewRomanPSMT'" font-size="12">V</text>
+<text transform="matrix(1 0 0 1 313.9668 306.9443)" font-family="'TimesNewRomanPSMT'" font-size="12">A</text>
+<rect x="11.278" y="315.797" fill="#B3B3B3" stroke="#FFFFFF" width="26.344" height="18.847"/>
+<rect x="41.405" y="315.654" fill="#B3B3B3" stroke="#FFFFFF" width="26.058" height="18.847"/>
+<polygon fill="none" stroke="#BFBFBF" stroke-width="0.5" points="59.538,294.666 59.538,309.229 26.557,309.229 26.557,292.524 
+	59.538,292.524 "/>
+<path stroke="#BFBFBF" stroke-width="0.5" d="M227.694,304.982"/>
+<path stroke="#BFBFBF" stroke-width="0.5" d="M227.801,321.829"/>
+<polyline fill="none" stroke="#000000" stroke-width="0.5" points="102.657,321.368 227.123,321.544 227.123,304.196 "/>
+<polyline fill="none" stroke="#000000" stroke-width="0.5" points="41.939,333.858 67.248,333.858 67.248,316.083 "/>
+<polyline fill="none" stroke="#000000" stroke-width="0.5" points="11.742,333.966 37.051,333.966 37.051,316.19 "/>
+<polyline fill="none" stroke="#000000" stroke-width="0.5" points="59.538,292.524 26.557,292.524 26.546,309.157 "/>
+<text transform="matrix(1 0 0 1 31.6963 304.9463)" font-family="'TimesNewRomanPSMT'" font-size="12">90</text>
+<polyline fill="none" stroke="#000000" points="24.486,327.22 20.917,324.578 24.344,322.009 "/>
+<polyline fill="none" stroke="#000000" points="51.849,321.588 55.255,324.436 51.682,326.798 "/>
+<text transform="matrix(1 0 0 1 279.272 304.9463)" font-family="'TimesNewRomanPSMT'" font-size="12">0.75</text>
+<rect x="262.709" y="316.653" fill="#B3B3B3" stroke="#FFFFFF" width="26.343" height="18.847"/>
+<rect x="292.835" y="316.511" fill="#B3B3B3" stroke="#FFFFFF" width="26.058" height="18.847"/>
+<polyline fill="none" stroke="#000000" stroke-width="0.5" points="293.37,334.715 318.679,334.715 318.679,316.939 "/>
+<polyline fill="none" stroke="#000000" stroke-width="0.5" points="263.173,334.822 288.481,334.822 288.481,317.047 "/>
+<polyline fill="none" stroke="#000000" points="275.917,328.076 272.348,325.435 275.774,322.865 "/>
+<polyline fill="none" stroke="#000000" points="303.279,322.444 306.686,325.292 303.113,327.654 "/>
+<polygon fill="none" stroke="#BFBFBF" stroke-width="0.5" points="307.97,293.81 307.97,308.373 274.989,308.373 274.989,291.668 
+	307.97,291.668 "/>
+<polyline fill="none" stroke="#000000" stroke-width="0.5" points="307.97,291.668 274.989,291.668 274.979,308.3 "/>
+</svg>

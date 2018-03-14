@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="396.667px" height="315px" viewBox="0 0 396.667 315" enable-background="new 0 0 396.667 315" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#BCBEC0" stroke-width="2" width="394.667" height="313"/>
+<text transform="matrix(1 0 0 1 24.5 32)" font-family="'MyriadPro-Bold'" font-size="12">Simulador de sistema de contagem de radiação</text>
+<text transform="matrix(1 0 0 1 24.5 43)" font-family="'MyriadPro-Bold'" font-size="12">(c) 2005 Nelson Canzian da Silva - Depto de Física UFSC</text>
+<text transform="matrix(1 0 0 1 22 67.5)" font-family="'MyriadPro-Bold'" font-size="12">Fontes:</text>
+<text transform="matrix(1 0 0 1 30.2261 104.4043)" font-family="'MyriadPro-Bold'" font-size="12">[.A.]</text>
+<text transform="matrix(1 0 0 1 34.2222 117.2793)" font-family="'MyriadPro-Bold'" font-size="12">.B.</text>
+<text transform="matrix(1 0 0 1 34.2222 129.375)" font-family="'MyriadPro-Bold'" font-size="12">.C.</text>
+<text transform="matrix(1 0 0 1 34.2222 142.6543)" font-family="'MyriadPro-Bold'" font-size="12">.D.</text>
+<text transform="matrix(1 0 0 1 34.5532 154.9775)" font-family="'MyriadPro-Bold'" font-size="12">.E.</text>
+<text transform="matrix(1 0 0 1 35.5552 168.125)" font-family="'MyriadPro-Bold'" font-size="12">.F.</text>
+<text transform="matrix(1 0 0 1 70 92.2051)" font-family="'MyriadPro-Bold'" font-size="12">Energia (keV)</text>
+<text transform="matrix(1 0 0 1 162.2109 92.2051)" font-family="'MyriadPro-Bold'" font-size="12">Ativ (kBq em 25/01/02)</text>
+<text transform="matrix(1 0 0 1 311 92.2051)" font-family="'MyriadPro-Bold'" font-size="12">T (1/2) (anos)</text>
+<text transform="matrix(1 0 0 1 22 188.5)" font-family="'MyriadPro-Bold'" font-size="12">Aquisição de dados:</text>
+<text transform="matrix(1 0 0 1 37 208)"><tspan x="0" y="0" font-family="'MyriadPro-Bold'" font-size="12">S. Área do detetor......................................................... 1 cm2</tspan><tspan x="0" y="14.4" font-family="'MyriadPro-Bold'" font-size="12">L. Distância detetor-fonte............................................. 10 cm</tspan><tspan x="0" y="28.8" font-family="'MyriadPro-Bold'" font-size="12">T. Tempo de aquisição.................................................. 60 s</tspan><tspan x="0" y="43.2" font-family="'MyriadPro-Bold'" font-size="12">X. Executa simulação</tspan><tspan x="0" y="57.6" font-family="'MyriadPro-Bold'" font-size="12">Q. Sair</tspan></text>
+<text transform="matrix(1 0 0 1 22 284.4648)" font-family="'MyriadPro-Bold'" font-size="12">Comando:</text>
+<text transform="matrix(1 0 0 1 98.6738 104.4043)" font-family="'MyriadPro-Bold'" font-size="12">146</text>
+<text transform="matrix(1 0 0 1 98.6738 117.2793)" font-family="'MyriadPro-Bold'" font-size="12">662</text>
+<text transform="matrix(1 0 0 1 98.6738 129.375)" font-family="'MyriadPro-Bold'" font-size="12">835</text>
+<text transform="matrix(1 0 0 1 92 142.6543)" font-family="'MyriadPro-Bold'" font-size="12">1250</text>
+<text transform="matrix(1 0 0 1 92 154.9775)" font-family="'MyriadPro-Bold'" font-size="12">2045</text>
+<text transform="matrix(1 0 0 1 98.6738 168.125)" font-family="'MyriadPro-Bold'" font-size="12">514</text>
+<text transform="matrix(1 0 0 1 194.8027 104.4043)" font-family="'MyriadPro-Bold'" font-size="12">8.70E+002</text>
+<text transform="matrix(1 0 0 1 194.8027 117.2793)" font-family="'MyriadPro-Bold'" font-size="12">1.35E+002</text>
+<text transform="matrix(1 0 0 1 194.8027 129.375)" font-family="'MyriadPro-Bold'" font-size="12">2.00E+002</text>
+<text transform="matrix(1 0 0 1 194.8027 142.6543)" font-family="'MyriadPro-Bold'" font-size="12">1.20E+002</text>
+<text transform="matrix(1 0 0 1 194.8027 154.9775)" font-family="'MyriadPro-Bold'" font-size="12">4.90E+001</text>
+<text transform="matrix(1 0 0 1 179.9873 168.125)" font-family="'MyriadPro-Bold'" font-size="12">[desconhecida]</text>
+<text transform="matrix(1 0 0 1 320.5 104.4043)" font-family="'MyriadPro-Bold'" font-size="12">6.90E-001</text>
+<text transform="matrix(1 0 0 1 320.5 117.2793)" font-family="'MyriadPro-Bold'" font-size="12">3.00E+001</text>
+<text transform="matrix(1 0 0 1 320.5 129.375)" font-family="'MyriadPro-Bold'" font-size="12">8.56E-001</text>
+<text transform="matrix(1 0 0 1 320.5 142.6543)" font-family="'MyriadPro-Bold'" font-size="12">5.00E+000</text>
+<text transform="matrix(1 0 0 1 320.5 154.9775)" font-family="'MyriadPro-Bold'" font-size="12">5.80E+009</text>
+<text transform="matrix(1 0 0 1 320.5 168.125)" font-family="'MyriadPro-Bold'" font-size="12">2.57E+000</text>
+</svg>
