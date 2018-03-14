@@ -1028,6 +1028,12 @@ article{
 		border-bottom-left-radius: 10px;
 		border-top: 1px solid map-get($cores, ciano);
 		border-bottom: 3px solid map-get($cores, ciano);
+
+		p.formula{
+			width: 100%;
+			min-width: 0;
+		}
+
 		code{
 			background-color: white;
 			border: 1px solid hsla(0,0,0%,0.2);
@@ -1052,6 +1058,11 @@ article{
 					margin-top: 0.6em;
 				}
 			}
+		}
+
+		p.formula{
+			width: 100%;
+			min-width: 0;
 		}
 
 		& + .exercicio{
