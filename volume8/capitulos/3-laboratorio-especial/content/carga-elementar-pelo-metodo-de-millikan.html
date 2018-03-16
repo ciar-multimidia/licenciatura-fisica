@@ -483,43 +483,98 @@ q = \frac{3\pi Rd}{V} \frac{\eta}{1 + \dfrac{b}{\rho R}}(v'' - v'),
 
 <p>Note que, de fato, todos os valores de $q/q_{min}$ são próximos de valores inteiros. O gráfico do valor de $q$ em função de $q/q_{min}$ deixa este fato mais contundente:</p>
 
+<figure>
+  <img src="[[caminho]]/media/fig2-9.svg">
+  <figcaption>Figura 2.9: Gráfico do valor das cargas medidas em função da sua razão para a menor
+carga encontrada.</figcaption>
+</figure>
 
-Figura 2.9: Gráfico do valor das cargas medidas em função da sua razão para a menor
-carga encontrada.
-Assumindo que as cargas são múltiplos de uma carga elementar, podemos calcular o valor médio desta carga para cada gota e, a partir destes valores, o valor médio da carga elementar:
-114 Licenciatura em Física
- q (10-19 C)
-            Gota 1 2 3 4 5 6 7 8 9 10 n2132412124
-e 1,629 1,624 1,520 1,549 1,556 1,645 1,561 1,563 1,592 1,542
-eméd = (1,578±0,04)×10−19 C.
-O valor tabelado para a carga elementar é 1, 60217733 × 10−19 C. O resul-
-tado de nosso experimento tem, portanto, um desvio de 1,602−1,578×100% = 1,5%
-1,602
-do valor tabelado.
-A figura 2.10 mostra a distribuição das cargas de 313 gotas medidas ao longo
-de vários anos pelos alunos do Curso de Graduação em Física do Instituto de Física da USP. É possível ver claramente que há uma concentração de cargas (picos) em múltiplos da carga elementar. A medição de centenas de gotas e técnicas estatísticas sofisticadas permitem um ajuste simultâneo da distribuição para todos os picos, levando a um resultado de menor incerteza.
-60 50
-40 30
-20 10
-0
-0 2 4 6 8 10 12 14
-Carga (10-19 C)
-Figura 2.10: Distribuição das cargas de 313 gotas medidas ao longo de vários anos pelos alunos do curso de graduação em Física do Instituto de Física da USP.
-Laboratório Especial 115
-                                                                      Nro. de gotas
-2.9. Análise das incertezas
-Algumas grandezas podem flutuar ao longo das medidas, tais como a temperatura da câmara, o valor da diferença de potencial aplicada entre as placas e o tempo de resposta do observador ao registrar o tempo. Como os dados são afetados por essas flutuações?
-Uma análise rigorosa dos erros envolvidos no experimento pode ser feita utilizando os preceitos da teoria dos erros. Como você deve ter visto nos cursos básicos de laboratório, o erro ∆y associado a uma grandeza y = f(x1,x2,..) que depende de outras grandezas x1, x2, ... que, por sua vez, têm erros ∆x1, ∆x2, ... é dado por:
-1
-     ∂f  2   ∂f  2 2
-∆y = ∂x ∆x12 + ∂x ∆x22 +... . (2.11) 12
-É possível, no entanto, estimar grosseiramente as influências dos parâmetros mais importantes utilizando o aplicativo de cálculos para simular uma flutuação de seus valores em torno dos valores encontrados no experimento. Para isso, faça o seguinte procedimento:
-1. Escolha uma gota com características médias, por exemplo, a gota número 1, que tem raio R = 0, 4792 μm e carga ∼ 2e. Preencha os campos do aplicativo com os tempos médios encontrados (ts = 13, 87 s e td = 7, 96 s). Só para conferir, pressione OK e verifique se o valor da carga é igual ao da tabela (q = 3, 258 × 10−19 C).
-2. Varie a temperatura — e somente a temperatura — em um grau centígrado, primeiro para mais e depois para menos; em ambos os casos, pressione OK e registre os valores calculados da carga nessas circunstâncias.
-3. Retorne para o valor original da temperatura e modifique o valor da diferença de potencial entre as placas, em, digamos, 1% para mais ou para menos (3 V ). Em ambos os casos, pressione OK e registre os valores calculados da carga nessas circunstâncias.
-4. Retorne para o valor original a diferença de potencial e, a seguir, modifique o valor dos tempos de descida e de subida. A incerteza no tempo de reflexo humano é da ordem de 0,2 segundos, para mais ou para menos. Aumente e diminua esta quantia dos valores dos tempos médios, pressione OK e registre os resultados.
-116 Licenciatura em Física
+<p>Assumindo que as cargas são múltiplos de uma carga elementar, podemos calcular o valor médio desta carga para cada gota e, a partir destes valores, o valor médio da carga elementar:</p>
+
+<table>
+  <tr>
+    <th>Gotas</th>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <th>$n$</th>
+    <td>2</td>
+    <td>1</td>
+    <td>3</td>
+    <td>2</td>
+    <td>4</td>
+    <td>1</td>
+    <td>2</td>
+    <td>1</td>
+    <td>2</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th>$e$</th>
+    <td>1,629</td>
+    <td>1,624</td>
+    <td>1,520</td>
+    <td>1,549</td>
+    <td>1,556</td>
+    <td>1,645</td>
+    <td>1,561</td>
+    <td>1,563</td>
+    <td>1,592</td>
+    <td>1,542</td>
+  </tr>
+</table>
+
+
+<p>O valor tabelado para a carga elementar é $1,60217733\times 10^{-19}\,C$. O resultado de nosso experimento tem, portanto, um desvio de {\large$\frac{1,602-1,578}{1,602}$}$\times 100\% = 1,5\%$ do valor tabelado.</p>
+
+<p>A figura 2.10 mostra a distribuição das cargas de 313 gotas medidas ao longo de vários anos pelos alunos do Curso de Graduação em Física do Instituto de Física da USP. É possível ver claramente que há uma concentração de cargas (picos) em múltiplos da carga elementar. A medição de centenas de gotas e técnicas estatísticas sofisticadas permitem um ajuste simultâneo da distribuição para todos os picos, levando a um resultado de menor incerteza.</p>
+
+
+<figure>
+  <img src="[[caminho]]/media/fig2-10.svg">
+  <figcaption>Figura 2.10: Distribuição das cargas de 313 gotas medidas ao longo de vários anos pelos alunos do curso de graduação em Física do Instituto de Física da USP.</figcaption>
+</figure>
+
+
+<h3>Análise das incertezas</h3>
+
+<p>Algumas grandezas podem flutuar ao longo das medidas, tais como a temperatura da câmara, o valor da diferença de potencial aplicada entre as placas e o tempo de resposta do observador ao registrar o tempo. Como os dados são afetados por essas flutuações?</p>
+
+<p>Uma análise rigorosa dos erros envolvidos no experimento pode ser feita utilizando os preceitos da teoria dos erros. Como você deve ter visto nos cursos básicos de laboratório, o erro $\Delta y$ associado a uma grandeza $y=f(x_{1},x_{2},..)$ que depende de outras grandezas $x_{1},x_{2},...$ que, por sua vez, têm erros $\Delta x_{1},\Delta x_{2},...$ é dado por:</p>
+
+<p class="formula">
+\begin{equation}
+\Delta y = \left[ \left( \dfrac{\partial f}{\partial x_{1}} \right)^2 {\Delta x_{1}}^2 + \left(\dfrac{\partial f}{\partial x_{2}}\right)^2 {\Delta x_{2}}^2  + \ldots \right]^{\frac{1}{2}}.
+\end{equation}
+<span class="numero_formula">2.11</span></p>
+
+
+<p>É possível, no entanto, estimar <i>grosseiramente</i> as influências dos parâmetros mais importantes utilizando o aplicativo de cálculos para simular uma flutuação de seus valores em torno dos valores encontrados no experimento. Para isso, faça o seguinte procedimento:</p>
+
+  <ol>
     
-Agora avalie os resultados. Qual é o erro percentual proveniente da variação de 1◦C na temperatura? Qual é o erro percentual proveniente da variação de 1% na diferença de potencial entre as placas? Qual é o erro percentual proveniente da flutuação no tempo de reflexo humano na medida de tempo? Qual dos três fatores é mais relevante?
-RESUMO
-Neste experimento você viu como R. A. Millikan utilizou a força elétrica entre dois eletrodos planos horizontais e a força gravitacional da Terra sobre gotícula de óleo eletricamente carregada para determinar a carga do elétron. Você viu como é possível relacionar o raio e a carga da gota às suas velocidades de subida e de descida nessa combinação de campo elétrico e gravitacional. Você determinou o raio da gota levando em conta a viscosidade do ar e sua dependência com a temperatura. Finalmente, você verificou que os valores das cargas das gotas estão em excelente acordo com a hipótese de que a carga é quantizada, isto é, que é sempre um múltiplo inteiro da carga elementar e.
+    <li> Escolha uma gota com características médias, por exemplo, a gota número 1, que tem raio $R = 0,4792\,\mu m$ e carga $\sim 2e$. Preencha os campos do aplicativo com os tempos médios encontrados ($t_{s} = 13,87\,s$ e $t_{d} = 7,96\,s$). Só para conferir, pressione OK e verifique se o valor da carga é igual ao da tabela ($q = 3,258 \times 10^{-19}\,C$).</li>
+
+    <li> Varie a temperatura — e somente a temperatura — em um grau centígrado, primeiro para mais e depois para menos; em ambos os casos, pressione OK e registre os valores calculados da carga nessas circunstâncias.</li>
+
+    <li> Retorne para o valor original da temperatura e modifique o valor da diferença de potencial entre as placas, em, digamos, $1\%$ para mais ou para menos ($3\,V$). Em ambos os casos, pressione OK e registre os valores calculados da carga nessas circunstâncias.</li>
+
+    <li> Retorne para o valor original a diferença de potencial e, a seguir, modifique o valor dos tempos de descida e de subida. A incerteza no tempo de reflexo humano é da ordem de 0,2 segundos, para mais ou para menos. Aumente e diminua esta quantia dos valores dos tempos médios, pressione OK e registre os resultados.</li>
+
+  </ol>
+
+    
+<p>Agora avalie os resultados. Qual é o erro percentual proveniente da variação de 1◦C na temperatura? Qual é o erro percentual proveniente da variação de 1% na diferença de potencial entre as placas? Qual é o erro percentual proveniente da flutuação no tempo de reflexo humano na medida de tempo? Qual dos três fatores é mais relevante?</p>
+
+<h5>Resumo</h5>
+
+<p>Neste experimento você viu como R. A. Millikan utilizou a força elétrica entre dois eletrodos planos horizontais e a força gravitacional da Terra sobre gotícula de óleo eletricamente carregada para determinar a carga do elétron. Você viu como é possível relacionar o raio e a carga da gota às suas velocidades de subida e de descida nessa combinação de campo elétrico e gravitacional. Você determinou o raio da gota levando em conta a viscosidade do ar e sua dependência com a temperatura. Finalmente, você verificou que os valores das cargas das gotas estão em excelente acordo com a hipótese de que a carga é quantizada, isto é, que é sempre um múltiplo inteiro da carga elementar $e$.</p>

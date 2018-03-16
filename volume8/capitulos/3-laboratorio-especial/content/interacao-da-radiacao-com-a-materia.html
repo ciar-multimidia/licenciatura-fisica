@@ -1,0 +1,877 @@
+<h2>Interação da radiação com a matéria</h2>
+
+<blockquote><p>Este capítulo tem como objetivos: introduzir conceitos básicos sobre a constituição e a estrutura nuclear; apresentar a lei de decaimento radioativo, as definições de atividade, meia-vida e vida média, bem como algumas características dos decaimen- tos alfa, beta e gama; dar a conhecer as principais caracte- rísticas de um detetor Geiger-Müller e de um espectrômetro de fótons; determinar os coeficientes de absorção para alguns materiais e energias da radiação, relacionando-os com o efeito fotoelétrico e o espalhamento Compton; determinar a ativi- dade de uma fonte radioativa e entender os efeitos da vari- ação dos parâmetros de aquisição de dados na qualidade do espectro de energia.</p></blockquote>
+
+
+<h3>Introdução</h3>
+
+<p>Este capítulo traz um roteiro de estudos e atividades sobre a interação da radiação com a matéria, com foco nos equipamentos e metodologias de aquisição e análise de dados com um detetor Geiger-Müller e um espectrômetro de fótons.</p>
+
+<p>No AVEA da disciplina também encontra-se um conjunto de programas que simulam os principais aspectos dos experimentos e dos detetores. Os programas geram informações semelhantes às que seriam obtidas com o equipamento de laboratório e podem ser utilizados para o treinamento preliminar para alguns dos procedimentos da aquisição e da análise de dados.</p>
+
+<p>O texto está dividido em duas partes: na primeira, é feita uma introdução sobre os principais temas abordados; na segunda, são propostas algumas atividades experimentais.</p>
+
+<h3>O núcleo atômico</h3>
+
+<p>Em 1895, Wilhelm Röentgen, da Universidade de Würzburg, na Alemanha, descobriu os raios X enquanto realizava experimentos que envolviam descargas elétricas em gases, estudando os então pouco compreendidos raios catódicos. Esse assunto despertava grande interesse no final do século dezenove e estava sendo investigado por vários pesquisadores. Röentgen observou que, durante as descargas nos tubos, ocorria fluorescência em uma substância que ele guardava em seu laboratório (platinocianteto de bário). A fluorescência ocorria somente quando o tubo era ligado, e era visível mesmo quando este era coberto com papel cartão preto e quando a substância fluorescente era colocada a metros de distância. Em poucas semanas já haviam sido encontradas várias aplicações para os raios X, inclusive para diagnóstico médico.</p>
+
+
+<p>Um ano depois, o francês Henri Becquerel, professor na Escola Politécnica em Paris, na França, instigado pela conexão entre os raios X e a fluorescência, passou a estudar materiais conhecidos por exibirem fluorescência, inclusive certos sais de urânio. Depois de vários experimentos e de uma circunstância fortuita causada pelo mau tempo <button class="botao-rodape" data-numero='1'></button>, Becquerel concluiu que os compostos de urânio por ele investigados emitiam uma radiação que podia atravessar camadas de matéria. Inicialmente, considerou que poderia se tratar de uma forma de raio X, por causa do poder de penetração da radiação, do fato de que podia velar chapas fotográficas e pela capacidade de ionizar o ar, que proporcionava ao pesquisador um meio de detectar e medir a radiação. Logo após as observações iniciais de Becquerel, descobriu-se que o tório tinha propriedades semelhantes, e vários anos depois, enquanto faziam uma busca sistemática desses efeitos em outras substâncias, Pierre e Marie Curie descobriram o rádio.</p>
+
+<div class="nota-rodape" data-numero='1'>
+	<p>No final de fevereiro de 1896, Becquerel esperava por tempo bom para expor uma amostra de sais de urânio à luz solar e estudar a sua fluorescência. Como o tempo estava encoberto, guardou a sua amostra juntamente com um filme fotográfico. Assim que o sol voltou a aparecer, dias depois, Henri observou que o filme fotográfico estava escurecido nas proximidades onde a amostra estava.</p></div>
+
+	<p>Três anos depois, o neo-zelandês Ernst Rutherford, trabalhando na Universidade McGill, em Montreal, no Canadá, identificou a radiação. Ele descobriu que esta era constituída de duas partes: uma facilmente absorvida por pequenas espessuras de material e outra mais penetrante. A essas manifestações ele deu o nome de raios \<i>alfa</i> ($\alpha$) e $beta$ ($\beta$), respectivamente. Mais tarde, foi descoberta a radiação <i>gama</i> ($\gamma$), que era muito mais penetrante e geralmente acompanhava os raios alfa e beta. Logo, Becquerel mostrou que os raios beta podiam ser facilmente defletidos por campos magnéticos, e não muito mais tarde foi verificado que eles eram idênticos aos raios catódicos. A descoberta de elementos naturalmente instáveis que decaíam em uma forma estável através da emissão de uma ou mais formas de radiação foi de inestimável valor para o subsequente desenvolvimento da física nuclear. Forneceu não só pistas sobre a estrutura do núcleo, mas também uma importante sonda (a partícula alfa) para os primeiros experimentos sobre o átomo nucleado.</p>
+
+
+<p>Um programa intenso de investigações em física nuclear levou à descoberta do nêu- tron, em 1932, completando o quebra-cabeças da composição do núcleo. Posteriormente, o que se viu foi um fabuloso desenvolvimento que gerou inúmeras aplicações: armas e usinas nucleares, radioisótopos para diagnóstico e tratamento médico, traçadores para estudos ambientais, dispositivos de esterilização de alimentos etc.</p>
+  
+<h4>Composição do núcleo</h4>
+
+<p>Núcleos são compostos por prótons e nêutrons, genericamente chamados <i>nucleons</i>. O próton tem carga positiva $e=1,6\times 10^{-19}\,C$, massa $m_{p} = 1,6726 \times 10^{-27}\,kg$, <i>spin</i> $\frac{1}{2}$ e momento magnético $\mu_{p} = 14,09 \times 10^{-27}\,J/T$. O nêutron não tem carga, tem massa $m_{n} = 1,6750 \times 10^{-27}\, kg$ (maior, portanto, que a do próton), <i>spin</i> $\frac{1}{2}$ e momento magnético $\mu_{n} = -9,65\times 10^{-27}\,J/T$. Prótons e nêutrons, por sua vez, são estruturas compostas por três <i>quarks</i> (que não serão abordados neste texto).</p>
+
+<p>Em determinadas circunstâncias, é conveniente expressar as massas dos nucleons em termos de seu equivalente em energia, obtido com a relação de Einstein $E = mc^{2}$. Desse modo, $m_{p} = 938,28\,MeV/c^{2}$ e $m_{n} = 939,57\,MeV/c^{2}$. Uma <i>unidade de massa atômica u</i> é definida como $\frac{1}{12}$ da massa do átomo neutro de $^{12}C$ e corresponde a $1,6606\times 10^{-27}\,kg$, ou $931,50\,MeV/c^2$.</p>
+
+<p>Excluindo-se o núcleo do átomo de hidrogênio, pode-se dizer que todos os outros núcleos contêm um ou mais prótons e um ou mais nêutrons. O número de prótons no núcleo define o seu <i>número atômico Z</i>. O <i>número de nêutrons</i> é usualmente representado por $N$. O <i>número de massa atômica</i> $A$ é o número total de nucleons no núcleo, $A = Z+N$.</p>
+
+<p>Um <i>nuclídeo</i> é um espécime nuclear completamente identificado por dois dos três números $A,Z$ e $N$. O símbolo usual para um nuclídeo é $^{A}N$, onde $X$ é o símbolo do elemento químico, diretamente associado ao número atômico $Z$. Exemplos de nuclídeos são $^{12}C$ (carbono-12), $^{14}C$ (carbono-14) e $^{235}U$ (ur\^anio-235).</p>
+
+<p>Nuclídeos com o mesmo número atômico $Z$ ($^{16}O,^{17}O, ^{18}O$, por exemplo) são <i>isótopos</i> de um elemento (oxigênio, no caso). A maioria dos elementos possui dois ou mais isótopos estáveis, e muitos possuem isótopos radioativos naturais. Reações nucleares em laboratórios, aceleradores de partículas e reatores nucleares podem produzir um grande número de isótopos radioativos de meia-vida <button class="botao-rodape" data-numero='2'></button> curta.
+</p>
+
+
+<div class="nota-rodape" data-numero='2'>
+<p>Meia-vida é o tempo necessário para que metade da quantidade de átomos existentes em uma amostra sofra decaimento radioativo.</p>
+	</div>
+
+<p>No caso do chumbo, por exemplo, foram identificados $23$ isótopos, com números de massa variando de $182$ a $214$. Destes, $3$ são estáveis ($^{206}Pb, ^{207}Pb$ e $^{208}Pb$, compondo $24,1\%$, $22,1\%$ e $52,4\%$ do chumbo natural). Os demais são instáveis, com meias-vidas que variam de 55 milésimos de um segundo ($^{182}Pb$) a $1,4\times 10^{17}$ anos ($^{204}Pb$).</p>
+
+<h5>Exercícios</h5>
+
+<div class="exercicio">
+	<h5>Questão 1</h5>
+	<p>O $^{204}Pb$, instável, compõe $1,4\%$ do chumbo natural. Sendo instável, por que hoje, bilhões de anos depois da formação da Terra, ainda pode ser encontrado?</p>
+</div>
+
+<div class="exercicio">
+	<h5>Questão 2</h5>
+	<p>A partir das massas atômicas dos isótopos do chumbo ($^{204}Pb: 203,97; ^{206}Pb: 205,97; ^{207}Pb: 206,98; ^{208}Pb: 207,98$) e da abundância isotópica mencionada no texto, determine a massa atômica média para o chumbo natural. Confira seu resultado com o valor encontrado em uma tabela periódica de boa qualidade. <i>Resposta:</i> $207,2185\,u$.</p>
+</div>
+
+<h4>Força nuclear</h4>
+
+<p>A análise cuidadosa de um enorme número de experimentos revelou muitos detalhes sobre a força nuclear. Entretanto, não é possível expressá-la em um formalismo simples nem em uma forma analítica fechada, como a que existe para a força eletromagnética. As propriedades nucleares são descritas a partir de vários modelos, e não há um único modelo completamente adequado para reproduzir todos os dados experimentais.</p>
+
+<p>A força nuclear tem grande intensidade e curtíssimo alcance. A intensidade pode ser avaliada considerando a força de repulsão coulombiana entre dois prótons no núcleo, que deve ser sobrepujada pela força nuclear. Utilizando as cargas dos prótons e uma distância de separação de $2,4\times 10^{-15}\,m$ na lei de Coulomb, estima-se uma força da ordem de $40\,N$, equivalente ao peso de um objeto de aproximadamente $4\,kg$ (lembre-se que não se trata da força sobre uma mão, mas sobre objetos com tamanhos da ordem de $10^{-15}\,m$!).</p>
+
+<h5>Exercício</h5>
+
+<div class="exercicio">
+	<h5>Questão 1</h5>
+	<p>Calcule a força coulombiana entre dois prótons no núcleo, sabendo que a distância entre nucleons é de aproximadamente $2,4\times 10^{-15}\,m$. <i>Resposta:</i> $39,7\,N$.</p>
+</div>
+
+<p>Experimentos de espalhamento elaborados para investigar o raio nuclear mostraram que o alcance da força nuclear é tão pequeno que um dado nucleon em um núcleo grande interage somente com seus vizinhos imediatos. Tal característica manifesta-se no fato de que a energia média com a qual um nucleon fica ligado a um núcleo de tamanho médio ou grande é aproximadamente independente do número total de nucleons no núcleo.</p>
+
+<p>Experimentos também demonstraram que a força nuclear entre prótons e nêutrons depende da orientação relativa dos spins. A força é independente da carga elétrica, ou seja, é a mesma para as interações entre prótons e prótons ($p-p$), nêutrons e nêutrons ($n-n$) e prótons e nêutrons ($p-n$).</p>
+
+<h4>Energia de ligação e estabilidade do núcleo</h4>
+
+<p>A força nuclear mantém os nucleons de um núcleo unidos. Para separá-los é necessário realizar trabalho sobre o sistema. Inversamente, energia é liberada quando nucleons são unidos para formar um núcleo estável. A diferença de energia entre o estado fundamental do núcleo estável e aquela dos seus nucleons constituintes isolados é a <i>energia de ligação</i> $E_{L}$ do núcleo.</p>
+
+<p>A conservação da massa e da energia implica que a massa total do núcleo estável deve ser menor que a soma das massas dos nucleons constituintes:</p>
+
+<p class="formula">
+\begin{equation}
+Mc^{2} +E_{L} = (Zm_{p}+Nm_{n})c^2.
+\end{equation}
+<span class="numero_formula">4.1</span></p>
+
+<p>O lado esquerdo da equação 4.1 é a soma da energia de repouso do núcleo de massa M e a energia que deve ser fornecida para separar o núcleo em prótons e nêutrons livres, cujas massas de repouso estão representadas no lado direito da equação. Rearranjando os termos, a energia de ligação é expressa como:</p>
+
+<p class="formula">
+\begin{equation}
+E_{L} = [(Zm_{H} + Nm_{n}) - ^{A}M]c^2
+\end{equation}
+<span class="numero_formula">4.2</span></p>
+
+<p>Note que, na equação 4.2 a massa do próton $m_{p}$ foi substituída pela massa do átomo de hidrogênio $m_{H}$ (incluindo seu elétron), e a massa do núcleo $M$ foi substituída pela massa atômica do nuclídeo $^{A}M$ (incluindo seus elétrons), que são os valores usualmente tabelados.</p>
+
+<h5>Exercício</h5>
+
+<div class="exercicio">
+	<h5>Questão 4</h5>
+	<p>Calcule a força coulombiana entre dois prótons no núcleo, sabendo que a distância entre nucleons é de aproximadamente $2,4\times 10^{-15}\,m$. Calcule a energia de ligação para os isótopos $^{5}Li$ e $^{6}Li$. Compare a massa de repouso do $^{5}Li$ com a de um átomo de hidrogênio ($^{1}H$) mais um de hélio ($^{6}He$). Compare a massa de repouso do $^{6}Li$ com a de um átomo de deutério ($^{4}H$) mais um de hélio ($^{4}He$). Como você relaciona as diferenças encontradas com o fato de que o $^{5}Li$ decai em um próton mais uma partícula alfa (núcleo de $^{4}He$) e o $^{6}Li$ é estável? Massas atômicas: $^{1}H: 1,007825\,u;\, ^{2}H: 2,014102\,u;\, ^{4}He: 4,002603\,u;\, ^{5}Li: 5,012539\,u;\, ^{6}Li: 6,015121\,u$.</p>
+</div>
+
+<h4>Modelo de camadas para o núcleo</h4>
+
+<p>Quando $N$ ou $Z$ são próximos de 20, 28, 50, 82 e 126, a energia de ligação do último nucleon é anormalmente elevada. Elementos com $Z$ igual a um destes <i>números mágicos</i> têm vários isótopos estáveis.</p>
+
+<p>A elevada energia de ligação dos nucleons próximo aos números mágicos apresenta semelhanças com a grande estabilidade dos gases nobres, sugerindo que também exista no núcleo uma estrutura de camadas.</p>
+
+<figure>
+	<img src="[[caminho]]/media/fig4-1.svg">
+	<figcaption>Figura 4.1: Níveis de energia para o último nucleon em um núcleo. Note a grande sepa-
+ração entre os níveis de energia associados aos números mágicos 8, 20, 28, 50, 82 e 126.
+Laboratório Especial 139</figcaption>
+</figure>
+
+
+<p>Assim como para os elétrons no átomo, cada estado do nucleon é designado pelas letras $s,p,d$ etc., correspondendo a valores do momento angular orbital $l=0,1,2$ etc., e um subscrito, correspondendo ao valor do momento angular total $j$. Os níveis de energia para o último nucleon são apresentados esquematicamente na figura 4.1. Note que a interação <i>spin-órbita</i> no núcleo é muito forte, provocando uma grande separação entre os sub-níveis de energia, diferentemente do que acontece com os sub-níveis de energia do elétron no átomo.</p>
+
+<h5>Exercício</h5>
+
+<div class="exercicio">
+	<h5>Questão 5</h5>
+	<p>Os níveis de energia para prótons e nêutrons são semelhantes e independentes (a pequena diferença deve-se à interação coulombiana entre os prótons). Assim, há um nível $1s_{1/2}$ para prótons, onde cabem 2 prótons ($m_{j} = -\frac{1}{2}$ e $m_{j} = +\frac{1}{2}$), e um n\'ivel $1s_{1/2}$ para nêutrons, onde cabem 2 nêutrons (também com $m_{j} = -\frac{1}{2}$ e $+\frac{1}{2}$). No n\'ivel $1p_{3/2}$ para prótons cabem 4 prótons ($m_{j} = -\frac{3}{2},-\frac{1}{2},+\frac{1}{2}$ e $+\frac{3}{2}$) e no n\'ivel $1p_{1/2}$ cabem 2 pr\'otons ($m_{j} = -\frac{1}{2}$ e $+\frac{1}{2}$). O mesmo acontece para os nêutrons. Levando isso em conta, explique por que o $^{4}He$, o $^{12}C$ e o $^{16}O$ têm elevada energia de ligação, implicando em elevada estabilidade.</p>
+</div>
+
+<h3>Decaimento radioativo</h3>
+
+<p>Reações e desintegrações nucleares são importantes fontes de informações sobre a estrutura nuclear, pois são processos nos quais há um rearranjo da configuração dos nucleons no núcleo. Muitos destes processos ocorrem naturalmente, enquanto outros são produzidos artificialmente em laboratórios, aceleradores e reatores.</p>
+
+<p>Alguns núcleos têm uma combinação de prótons e nêutrons que não leva a uma configuração estável. Estes núcleos são, portanto, instáveis ou radioativos. Núcleos instáveis tendem a aproximar-se de uma configuração estável pela emissão de certas partículas, descobertas no final do século 19 e denominadas alfa ($\alpha$) e beta ($\beta$). Em todos os decaimentos por emissão de partículas, os núcleos residuais podem encontrar-se em um estado excitado. Na transição para o seu estado fundamental, esses núcleos emitem radiação gama ($\gamma$).</p>
+
+<h4>Esquemas de decaimento</h4>
+
+<p>A figura 4.2 mostra o esquema de decaimento do $^{137}Cs$ e do $^{137}La$ para estados excitados do $^{137}Ba$. O $^{137}Cs$, com meia-vida de 30 anos, apresenta decaimento $\beta^{-}$ para dois estados do $^{137}Ba$: o fundamental, com probabilidade de $6,5\%$, e um estado excitado, de $661,6\,keV$, com probabilidade de $93,5\%$. Este estado excitado do $^{137}Ba$, com meia-vida de 2,55 minutos, decai por emissão gama (transição interna) para o estado fundamental. O $^{137}La$, com uma meia-vida de $6\times 10^{4}$ anos, decai para o estado fundamental do $^{137}Ba$ capturando um elétron da eletrosfera (<i>captura eletrônica</i>).</p>
+
+
+<figure>
+	<img src="[[caminho]]/media/fig4-2.svg">
+	<figcaption>Figura 4.2: Esquema de decaimento do $^{137}Cs$ e do $^{137}La$ para o $^{137}Ba$.</figcaption>
+</figure>
+
+
+<h4>Lei do decaimento radioativo</h4>
+
+<p>A <i>lei do decaimento radioativo</i> é uma função que descreve quantos núcleos radioativos existem em uma amostra a partir do conhecimento do número inicial de núcleos radioativos e da taxa de decaimento. Tal lei é obtida a partir da hipótese de que o número $dN$ de núcleos que decaem em um intervalo de tempo $dt$ é proporcional ao número de núcleos radioativos existentes e ao próprio intervalo de tempo $dt$:</p>
+
+<p class="formula">
+\begin{equation}
+dN = -\lambda Ndt,
+\end{equation}
+<span class="numero_formula">4.3</span></p>
+
+onde λ é a constante de decaimento do material. O sinal negativo indica que há uma diminuição no número de nucleons. A integração da equação leva à lei do decaimento radioativo:
+N(t) = N0e−λt, (4.4) Laboratório Especial 141
+ 
+onde N(t) é o número de átomos radioativos no instante t e N0 é o número de átomos radioativos no instante t = 0.
+EXERCÍCIO
+6) Que fração (percentual) dos átomos de 60Co (λ = 0, 1315 ano−1) em uma fonte terá decaído em 10 anos? Resposta: 63%.
+4.3.3. Atividade
+A atividade A(t) de uma fonte é a taxa de decaimento, ou seja, a razão do número de desintegrações nucleares dN em um intervalo de tempo dt:
+A(t) = dN(t). dt
+Substituindo a expressão para N(t) e fazendo a derivada, obtém-se: A(t) = A0e−λt,
+(4.5)
+(4.6)
+ onde A0 = λN0 é a atividade da fonte no instante t = 0.
+Em 1977, a Comissão Internacional de Proteção Radiológica (ICRP) estabeleceu o
+becquerel (Bq) como a unidade padrão de atividade, que corresponde a uma desintegração por segundo (1 Bq = 1 s−1). Uma unidade ainda muito utilizada é o curie (Ci), definido originalmente como a atividade de um grama de rádio e depois padronizada como 3, 7 × 1010 desintegrações por segundo (exatamente).
+EXERCÍCIO
+7) Supondo que a fonte do exercício anterior possuía 6mg de 60Co no dia em que foi produzida, qual será a sua atividade depois de passados 10 anos? Resposta: 2, 13 × 1018 Bq.
+8) Considere uma fonte calibrada em 25 de setembro de 1966, quando foi medida uma atividade absoluta de 54, 0 kBq. A meia-vida da fonte é de 30, 2 anos. Qual foi a atividade da fonte em 15 de julho de 2005? Resposta: 22, 1 kBq.
+142 Licenciatura em Física
+ 
+4.3.4. Meia-vida e vida média
+A meia-vida é definida como o tempo necessário para que metade dos átomos instá- veis de uma amostra decaiam. A meia-vida não sofre interferências de alterações químicas ou físicas da amostra e está relacionada à constante de decaimento radioativo através de:
+T1/2 = ln2. (4.7) λ
+A vida média tm de um nuclídeo radioativo, por sua vez, é avaliada como sendo a soma das idades de todos os átomos dividida pelo número total de átomos. Relaciona-se à constante de decaimento por:
+tm = 1. (4.8) λ
+EXERCÍCIO
+9) Quais são os valores da meia-vida e vida média do 60Co? Resposta: 5,3 anos e 7,6 anos. 4.3.5. Decaimento alfa
+Partículas alfa são núcleos de hélio, compostas por dois prótons e dois nêutrons. Quando um núcleo emite uma partícula alfa, seu número atômico Z diminui duas unidades, e seu número de massa A diminui quatro unidades. No decaimento alfa há uma transmutação nuclear, sendo o núcleo resultante um novo elemento químico. Por exemplo, quando o núcleo radioativo do 238U emite uma partícula alfa, o núcleo residual é o 234Th.
+O urânio-238 (238U), o polônio-210 (210Po) e o plutônio-239 (239Pu) são exemplos de emissores alfa. O 238U emite partículas alfa de 4,18 e 4,13MeV, correspondentes a decaimentos para o estado fundamental e ao primeiro estado excitado do 234Th, respectivamente. O decaimento alfa é usualmente representado segundo o esquema:
+X → Y + a. (4.9)
+No decaimento alfa, a meia-vida e a energia da partícula emitida estão relacionadas por:
+lnT1/2 = AE1/2 + B, (4.10)
+Laboratório Especial 143
+   
+onde A e B são constantes ajustadas a partir dos dados experimentais. A dependência com a energia deve-se ao fato de, no decaimento, a partícula realizar um tunelamento quântico através de uma barreira de potencial. A probabilidade de o tunelamento acontecer, relacionada à meia-vida, depende da diferença entre a energia da partícula e a altura da barreira que a prende ao núcleo.
+4.3.6. Decaimento beta
+Partículas beta são elétrons (β− lê-se “beta-menos”) ou suas anti-partículas, os pósitrons (β+ lê-se “beta-mais”), partículas idênticas a elétrons, mas com carga positiva. Quando um núcleo emite um elétron, o número atômico aumenta uma unidade, e o número de massa não muda. Por exemplo, quando o 234Th(Z = 90) emite um elétron, o núcleo residual é o 234Pa(Z = 91). Alguns núcleos emitem pósitrons, produzindo um núcleo residual com número atômico uma unidade menor. Por exemplo, quando o 13N (Z = 7) emite um pósitron, o núcleo residual é o 13C (Z = 6).
+A radiação beta é sempre acompanhada de outra partícula, o neutrino (ν). Por não possuir carga e ter massa extremamente pequena, o neutrino praticamente não interage com a matéria sendo, portanto, de difícil detecção. Estrôncio-90 (90Sr), o tecnécio-99 (99Tc) e o cálcio-45 (45Ca) são exemplos de fontes de radiação beta.
+O decaimento beta é usualmente representado segundo o esquema:
+X → Y + β+ + ν e X → Y + b− + ν (4.11)
+que indica que o elemento X decai no elemento Y , além de uma partícula β− e um anti-neutrino ν, no caso do β−, ou um neutrino ν, no caso do β+.
+4.3.7. Decaimento gama
+Radiação gama, de natureza eletromagnética, é emitida em transições do núcleo atômico e não provoca transmutação nuclear (mudança no número de prótons ou nêutrons). A radiação gama pode ser produzida em decaimentos radioativos e em reações nucleares, onde é emitida para retirar o excesso de energia dos núcleos, geralmente após algum outro tipo de decaimento.
+O cobalto-60 (60Co), o césio-137 (137Cs) e o sódio-22 (22Na) são exemplos de elemntos que emitem raios gama (além de outros tipos de radiação).
+As probabilidades para as transições por emissão gama dependem da diferença de energia entre os dois estados envolvidos, do número de massa dos núcleos e da mudança no spin.
+144 Licenciatura em Física
+   
+Não é possível distinguir raios gama de raios X com a mesma energia. A diferença na denominação está associada à origem: raios gama são emitidos do núcleo, e raios X são emitidos da eletrosfera e em outros processos de aceleração e desaceleração eletrônica (bremsstrahlung).
+EXERCÍCIO
+10) Identifique o nuclídeo faltante (X) em cada uma das seguintes reações:
+a) X → 65Ni+γ;
+b) 215Po→X+a;
+c) X → 55Fe+β+ +ν;
+d) 109Cd + X → 109Ag + ν.
+  Fonte
+Bário – 133 Cádmio – 109 Césio – 137 Cobalto – 57 Cobalto – 60 Manganês – 54 Zinco – 65 Sódio – 22
+Meia-vida
+10,5 anos 462 dias 30,2 anos 272 dias 5,27 anos 313 dias 244 dias 2,5 anos
+Energia da radiação (MeV)
+0,081 0,276 0,303 0,356 0,384 0,088
+0,662
+0,122 0,136
+1,173 1,333
+0,835
+0,511 1,115
+0,511 1,275 1,786
+Isótopos Radioativos
+             4.4. Atenuação da radiação pela matéria
+A radiação nuclear comporta-se, em certa medida, como se fosse composta de pequenos projéteis. Assim, faz sentido pensar que diferentes materiais absorvem a energia da radiação nuclear de modos diferentes. Ou seja, tanto a energia da radiação quanto a natureza dos materiais que ela atravessa influenciam na determinação da quantidade de energia absorvida.
+Laboratório Especial 145
+ 
+4.4.1. Lei exponencial da atenuação
+A intensidade de um feixe de raios gama, ao atravessar um material, diminui exponencialmente com a espessura do material atravessado:
+I(E) = I0(E)e−μ(E)x, (4.12)
+onde I(E) é a intensidade da radiação com energia E após uma espessura x,I0(E) é a intensidade inicial da radiação com energia E, e μ é o coeficiente de absorção do material, que também depende do material e da energia da radiação.
+EXERCÍCIO
+11) Uma vez que a energia da radiação é absorvida pela blindagem, que efeito a energia absorvida tem sobre a blindagem?
+4.4.2. Dependência da atenuação com a energia
+A atenuação da radiação pelos materiais depende da energia da radiação, e cada material tem um padrão diferente de atenuação da radiação, que depende da energia da radiação.
+O gráfico da figura 4.3 ilustra tal fato. No gráfico é mostrado o coeficiente de absorção de massa da radiação (eixo vertical) em função da energia da radiação (eixo horizontal). Note que os dois eixos são apresentados em escala logarítmica, o que enfatiza a grande intensidade desta dependência. Por exemplo, para energias da ordem das utilizadas em mamografia (0, 03 M eV ou 30 keV ), o coeficiente de absorção de massa da água é de 0, 3 g/cm−3, enquanto para as energias utilizadas em radioterapia (3 M eV , ou 3000 keV ), o coeficiente é da ordem de 0, 03 g/cm−3, ou seja, 10 vezes menor. Note que para o chumbo e para o iodeto de sódio (NaI), o coeficiente de absorção de massa para baixas energias (mamografia, 30 keV ) é muito maior (10 g/cm−3) do que no regime de altas energias.
+EXERCÍCIOS
+12) Uma camada de 11cm de ferro atenua de um fator 100 a radiação gama de 500 keV . Qual será o coeficiente de atenuação do ferro para radiação gama de 500 keV ? Resposta: 0,42cm−1.
+13) Qual será a atenuação proporcionada por uma camada de 18 cm de ferro para uma radiação gama de 500 keV ? Resposta: um fator 2000, aproximadamente.
+146 Licenciatura em Física
+ 
+104 103 102
+10
+1
+alumínio
+10-1
+10-2
+10-3 10-2 10-1
+chumbo Nal
+1 10
+                                                                                                                                                     água
+                                                       Energia do fóton (MeV)
+Figura 4.3: Coeficiente de atenuação de massa de diferentes materiais (água, alumínio, chumbo, cristal de iodeto de sódio (um importante detetor de radiação) em função da energia da radiação incidente. Note que as escalas de ambos os eixos são logarítmicas, revelando a intensa dependência do coeficiente de absorção com a energia.
+14) Uma camada de 25cm de ferro atenua de um fator 100 radiação gama de 6MeV. Qual será o coeficiente de atenuação do ferro para radiação gama de 6MeV? Resposta: 0,18cm−1.
+15) Qual será a atenuação proporcionada por uma camada de 47 cm de ferro para uma radiação gama de 6 M eV ? Resposta: um fator 6000, aproximadamente.
+A física básica por trás desta fenomenologia está relacionada com os três principais modos de interação da radiação eletromagnética com a matéria: o efeito fotoelétrico, o espalhamento Compton e a produção de pares.
+O efeito fotoelétrico acontece quando um fóton incide em um átomo transferindo sua energia a um único elétron orbital, fazendo com que ele seja ejetado do átomo. A energia Ee do elétron ejetado é a diferença entre a energia Eλ do fóton incidente e a energia de ligação EL do elétron orbital: Ee = Eλ − EL. O efeito fotoelétrico é predominante para baixas energias e para elementos de elevado número atômico Z, sendo
+Laboratório Especial 147
+ μ/ρ (g/cm3)
+proporcional a Z3. Devido à alta probabilidade de interação fotoelétrica com elementos de número atômico elevado, utilizam-se elementos tais como o chumbo como blindagem para raios X e para radiação gama de baixas energias.
+O espalhamento Compton ocorre quando um fóton incide sobre um elétron peri- férico dos átomos do absorvedor. O fóton e o elétron são espalhados. O elétron recebe apenas parte da energia da radiação incidente, e o fóton emergente terá energia menor que a do fóton incidente e outra direção de propagação. O espalhamento Compton é pre- dominante para radiações de energias intermediárias, de modo que o elétron de valência pareça “livre” devido à sua baixa energia de ligação com o átomo frente à energia da radiação incidente. Este efeito depende também da densidade do elemento, e decresce com a energia dos fótons incidentes. O efeito Compton é inversamente proporcional à energia do fóton e proporcional ao número atômico do átomo absorvedor.
+A energia dos fótons espalhados após a colisão é dada por:
+E′ = E , (4.13)
+onde E é a energia do fóton incidente, E′ é a energia do fóton espalhado e mc2, a energia de repouso do elétron.
+A produção de pares ocorre quando fótons com energia maior ou igual a 1, 02 M eV passam próximos a núcleos de número atômico elevado. A radiação incidente interage com o núcleo transformando-se em duas partículas: o par elétron-pósitron: γ → e− + e+ (+ energia cinética). O pósitron (anti-partícula do elétron), após ser criado, perde sua energia no meio e, finalmente, interage com algum elétron no momento em que ocorre a aniquilação de ambos, originando radiação gama. A criação de pares ocorre para altas energias e para elementos de grande número atômico, sendo proporcional a Z2.
+As radiações eletromagnéticas são as mais penetrantes, e quanto maior for a sua energia, maior será o seu alcance na matéria. Partículas carregadas, devido à sua massa e carga, interagem muito intensamente com a matéria, tornando o seu alcance pequeno quando comparado ao da radiação eletromagnética. Entretanto, para partículas idênticas, quanto maior for a energia, maior será o seu alcance.
+Diferentemente do que o senso comum poderia levar a crer, a intensidade da interação com a matéria (e o "estrago"causado por ela) não cresce com a sua energia. Radiações com energias altíssimas podem passar praticamente desapercebidas pela matéria, enquanto radiações com energias mais baixas (da ordem das diferenças de energias dos níveis atômicos) são altamente absorvidas pela matéria.
+148 Licenciatura em Física
+ 1+ E (1−cosθ) mc2
+  
+120
+100
+80
+60
+40
+20
+             Efeito fotoelétrico dominante
+Produção de pares dominante
+     Espalhamento Compton dominante
+                                           0
+10-2 10-1 1
+10 102 Energia do fóton incidente (MeV)
+Figura 4.4: Probabilidade de ocorrência de efeito fotoelétrico, espalhamento Compton e produção de pares em função da energia da radiação eletromagnética incidente e do número atômico Z do absorvedor. Para fótons de baixa energia, o efeito fotoelétrico é dominante. A produção de pares pode ocorrer apenas com fótons com energia superior a 1,02MeV.
+4.5. Detetor Geiger-Müller
+O detetor ou contador Geiger-Müller (GM) é um dos tipos mais antigos de detetor, tendo sido proposto por Geiger e Müller em 1928. A simplicidade, o baixo custo e a facilidade de operação deste tipo de detetor o fazem continuar sendo muito utilizado ainda hoje.
+O funcionamento de um detetor Geiger-Müller, esquematizado na figura 4.5, baseia-se na coleta de íons produzidos pela passagem da radiação ionizante em um gás que constitui o elemento sensível do detetor. Entretanto, o número de íons produzidos por uma só partícula é em geral muito pequeno para dar origem a um sinal elétrico facilmente detetável. Campos elétricos intensos são utilizados para acelerar os elétrons formados ao longo do caminho da radiação até que adquiram energia suficiente para provocar novas ionizações. Os elétrons liberados nas ionizações secundárias também são acelerados, provocando novas ionizações, em um fenômeno conhecido como avalanche.
+Laboratório Especial 149
+ Z do absorvedor
+A recombinação dos átomos próxima a uma avalanche emite raios ultra-violeta que podem iniciar uma segunda avalanche em outro ponto do tubo, criando uma cadeia auto-alimentada de avalanches. Tal processo é limitado pela presença de um gás que absorve parte dos fótons ultravioleta e pelo fato de que quando a soma das cargas geradas atinge um certo valor ocorre um efeito de blindagem elétrica do campo que as provoca. Como este ponto limite é atingido sempre após aproximadamente o mesmo número de avalanches, todos os pulsos de um contador Geiger são da mesma amplitude, independentemente do número de pares de íons que iniciaram o processo (íons primários). Como consequência, ele é muito eficiente para a deteção de radiação – um excelente contador de eventos – mas incapaz de fornecer informações sobre sua energia, não podendo ser aplicado para espectroscopia (medida da energia) porque toda a informação sobre a energia depositada pelo evento inicial é perdida no processo de multiplicação.
+  janela  na
+partícula ionizante
+E
+gás
+isolante
+                                                                  partícula ionizante
+    1000 V
+  EXERCÍCIO
+Figura 4.5: Esquema de um detetor tipo Geiger-Müller
+16) São necessários aproximadamente 30 eV para que uma partícula produza um par de íons em um gás utilizado no detetor Geiger-Müller. Quantos pares de íons primários um elétron de 1MeV pode produzir? Resposta: 3,3×104.
+150 Licenciatura em Física
+sinal
+ 
+Um pulso típico produzido em um contador Geiger-Müller resulta da coleção de uma quantidade relativamente grande de cargas (106 pares de íons), fornecendo um sinal de saída que pode chegar a alguns volts. Este tipo de sinal possibilita uma grande simplificação da eletrônica do sistema de detecção.
+EXERCÍCIO
+17) Qual é a comparação do número total de íons coletados com o número de íons primários (isto é, qual o fator de multiplicação)? Resposta: de 10 e 100 mil vezes maior.
+O detetor Geiger-Müller tem um tempo morto (tempo necessário para que o detetor possa recuperar-se de uma descarga a ponto de detectar uma nova radiação incidente) relativamente grande, o que limita a sua capacidade de detecção a algumas centenas de pulsos por segundo.
+O elemento sensor do detetor Geiger-Müller utilizado na montagem do experimento consiste em um tubo de aço inoxidável hermeticamente fechado em uma das extremidades por uma fina folha de mica com 0,001 a 0, 002 g de massa. O interior do tubo tem um fio de anodo esticado ao longo do seu eixo de simetria. O tubo contém gás nobre com traços de um gás halogênio, responsável pela interrupção da avalanche. Uma diferença de potencial de aproximadamente 500 V é aplicada entre o fio e a carcaça do detetor.
+EXERCÍCIO
+18) Qual é a espessura de uma janela de mica (ρ = 2, 8 g/cm3) de 0, 5 cm de diâmetro e 1mg de massa? Compare-a com o diâmetro de um fio de cabelo (50 a 80μm). Resposta: 18μm.
+4.5.1. Eficiência do detetor
+Como todo sistema de deteção, o detetor Geiger-Müller também possui uma eficiência de deteção ε, definida como a razão entre o número ND de partículas registradas pelo detetor e o número total ND0 de partículas que incidem sobre ele:
+ε = ND . (4.14) ND0
+A eficiência de um detetor é em geral função da energia da radiação incidente, ou seja, ε = ε(E). A curva de eficiência ou de calibração de um detetor é em geral fornecida
+Laboratório Especial 151
+  
+pelo seu fabricante, como ilustrado na figura 4.6. Em muitas situações, entretanto, o levantamento periódico da curva de eficiência é parte dos procedimentos de controle de qualidade laboratoriais (em Física Médica, por exemplo).
+                                 (a)
+(b) 5 4.5 4 3.5
+3 2.5
+2 1.5 1 0.5
+0
+10 100
+         Figura 4.6: (a) Detetor Geiger-Müller tipo panqueca modelo 489-110FS da Victoreen. (b) Curva de eficiência do detetor. Fonte: catálago eletrônico Inovision. Disponível em: <www.inovision.com>. Acessado em julho de 2005.
+EXERCÍCIO
+19) Cerca de 250 ótons emitidos por segundo de uma fonte radioativa atingem a superfície de um detetor, que deteta cerca de 40 fótons por segundo. Qual é a eficiência do detetor? Resposta: 0, 16 ou 16%.
+4.6. Espectrômetro de fótons
+Um espectrômetro de fótons é um sistema de deteção utilizado para obter-se a distribuição da radiação emitida por uma fonte. Isto é, um espectrômetro fótons, além de contar a quantidade de fótons emitidos por uma fonte, também é capaz de medir a energia de cada fóton detetado (o que um detetor Geiger-Müller não faz).
+Os espectrômetros consistem essencialmente em três componentes: (i) um cintila- dor, que absorve os fótons de alta energia e emite fótons de baixa energia, mais facilmente detetáveis; (ii) um fototubo, que converte os fótons de baixa energia emitidos pelo cinti- lador em um fluxo intenso de elétrons proporcional à energia dos fótons incidentes; (iii) um analisador de altura de pulso, que mede e registra o fluxo de elétrons proveniente do fototubo, e em geral está integrado a um computador. A figura 4.7 ilustra, esquema- ticamente, estes diferentes componentes, e a figura 4.8 é uma fotografia de um sistema comercialmente disponível.
+152 Licenciatura em Física
+Energia (keV)
+1000 10000
+ Indicada/Real
+Cristal de Nal
+Dinodos
+Analisador de altura de pulso
+0 200 400
+Energia (keV)
+              ++
+e-
+++
+++
+Placa
+              93keV 185 keV 296 keV
+67 Ga
+Sinal
+            Fotocátodo
+Figura 4.7: Esquema geral de um espectrômetro de fótons. Os fótons incidentes são absorvidos pelo cristal, produzindo cintilações (luz), que são convertidas em fotoelétrons no fotocatodo. Estes são acelerados e multiplicados à medida que se movem entre os dinodos no fotomultiplicador, em diração à placa onde são coletados. O analisador de altura de pulso determina a intensidade do sinal em função da energia, registrando a informação no computador. Adaptado de Huda e Slone (1995).
+4.6.1. Cintiladores
+O uso da cintilação luminosa produzida em certos materiais é uma das técnicas mais antigas e mais práticas para a detecção e espectroscopia (medida da energia) da radiação. Na espectroscopia da radiação, materiais cintiladores, como o NaI(Tl) (iodeto de sódio ativado com tálio) são associados a detetores de luz, tais como tubos fotomultiplicadores ou fotodiodos, que convertem o sinal luminoso em sinal elétrico.
+A interação gama com a matéria produz elétrons com energia cinética cuja soma é igual à energia do gama original. As interações incluem o efeito fotoelétrico, o espalhamento Compton e a produção de pares.
+O NaI(Tl) é um cristal não-condutor, o que significa que possui uma grande separação em energia entre a banda de valência, preenchida, e a banda de condução, vazia. Os elétrons produzidos pela radiação gama dissiparão sua energia cinética na produção de pares de elétrons-buracos por meio de colisões com os elétrons da rede cristalina. A recombinação dos pares elétron-buraco pode resultar na emissão de luz por transições radiativas ou por aquecimento do cristal (vibrações da rede cristalina). A presença de tálio em uma fração molar de 10−3 aumenta significativamente a emissão de luz pelo cristal. Por causa disso, o tálio é chamado de ativador do cristal.
+O resultado da ativação do NaI pelo tálio é um cristal que converte aproximada- mente 11% da energia dos fótons incidentes em fótons com uma energia média de 3, 0 eV .
+Laboratório Especial 153
+ 185
+93
+296
+ Figura 4.8: Detetor de um espectrômetro de fótons. O conjunto cristal+fototubo fica dentro do invólucro de alumínio. Na parte superior encontram-se os conectores para o cabo de alta tensão e para o cabo de dados. O conjunto está sobre um suporte com prateleiras para o posicionamento das fontes radioativas (Fonte: catálogo da Pasco, Inc.,2008).
+A emissão de fótons tem um máximo de emissão a 415nm. Um fóton de 1MeV pro- duz, em média, 43000 fótons. A variação estatística na produção destes fótons é um dos fatores que contribuem para a resolução em energia.
+EXERCÍCIOS
+20) Supondo que um fóton de 1MeV produz 43000 fótons de 415nm (o que não é verdade, mas é uma boa aproximação), qual seria a energia detetada como energia luminosa? Para onde foi o resto da energia? Resposta: 128 keV .
+21) Em eventos desse tipo, a flutuação estatística ∆N é dada pela raiz quadrada do
+número N de fótons. Qual é a incerteza ∆N × 100% na energia da partícula detetada? N
+Resposta: 0,5%.
+154 Licenciatura em Física
+  
+4.6.2. Fototubos
+Fototubos, ou tubos fotomultiplicadores, são dispositivos que convertem luz em uma corrente elétrica e amplificam o sinal em várias ordens de magnitude.
+O fototubo tem um catodo semitransparente na sua superfície de detecção, que produz, com boa probabilidade, um elétron para cada evento fotoelétrico (para fótons com comprimento de onda dentro do intervalo para o qual o fototubo foi projetado para ter maior eficiência). Para cintilações do NaI(Tl), o intervalo de comprimentos de onda está centrado em 415 nm (visível). O elétron gerado no fotocatodo é acelerado em uma sequência de eletrodos chamados dinodos, revestidos com um material que emite vários elétrons para cada elétron incidente, sendo que o número de elétrons emitidos é proporcional à energia do elétron incidente. A multiplicação eletrônica pode exceder um fator de 109. Em geral, o fator de multiplicação cresce com a magnitude da diferença de potencial aplicada.
+A capacidade de discriminação de alturas de pulso (resolução) do sistema de detecção depende da coleção do maior número possível de fótons criado pela radiação gama incidente. O tálio emite fótons em todas as direções, por isso, materiais altamente refletores são utilizados para revestir as paredes externas do cristal de modo a refletir de volta o máximo possível de luz. O espaço entre o cristal e o tubo é preenchido por graxa de silicone com índice de refração intermediário entre o do cristal e o do fototubo, de modo a minimizar reflexões a ângulos não normais à superfície.
+4.6.3. Aquisição de dados
+A figura 4.9 mostra um diagrama do fluxo de sinais no espectrômetro nuclear. A carga coletada no anodo é relativamente pequena. Um pré-amplificador, em geral na base do fototubo, é utilizado para converter o pulso de corrente em um pulso de tensão proporcional à carga transferida do anodo para o pré-amplificador.
+NaI( Tl) PMT Pré -Amp Amp ADC Comp MCA
+Figura 4.9: Diagrama do fluxo de sinais no espectrômetro nuclear. NaI(Tl): cristal cintilador; PMT: fototubo (de photomultiplier tube); Pré-Amp: pré-amplificador; Amp: amplificador; ADC/MCA: conversor analógico-digital/analisador multicanal (de analog- to-digital converter e multichannel analyser); Comp: computador.
+Laboratório Especial 155
+      
+O pulso do pré-amplificador, por sua vez, é de poucas dezenas de milivolts, necessitando maior amplificação para aproveitar melhor os recursos do sistema de aquisição de dados.
+A aquisição de dados é feita por um cartão especial instalado no microcomputador (como uma placa de vídeo ou de som). Um dispositivo eletrônico no cartão, o conversor analógico-digital, converte o sinal já amplificado em um número correspondente a alturas de pulso que em geral variam de 0 a 8 ou 10 volts. O software que gerencia o conjunto permite várias configurações de aquisição de dados, tais como ajuste da voltagem do fototubo e do ganho do amplificador, ajuste do ganho de conversão do conversor analógico-digital, ajuste dos níveis inferior e superior de discriminação (eliminação de sinais abaixo e/ou acima de determinado valor), ajuste do tempo de aquisição, definição de regiões de interesse do espectro, calibração em energia, subtração da radiação de fundo, estatísticas etc.
+EXERCÍCIO
+22) Um conversor analógico-digital típico tem 10bits, correspondentes a 210 = 1024 canais, associando um número inteiro entre 0 e 1023 a pulsos entre 0 a 8 V .
+a) Qual é a largura, em volts, de cada canal? Resposta: 7, 8125 mV .
+b) A que canais estariam associados pulsos de 2 V e 6 V ? Resposta: canais 256 e 768,
+respectivamente.
+4.7. Exeperimento 1: Atividade de uma fonte radioativa
+Um arranjo experimental simplificado para a determinação da atividade de uma
+fonte radioativa está esquematizado na figura 4.10: uma fonte pontual F emite radiação isotropicamente (isto é, com igual intensidade em todas as direções), e um detetor D, posicionado a uma distância d da fonte, é atingido por uma fração da radiação emitida. A radiação efetivamente registrada pelo detetor depende de uma série de fatores. Os mais importantes são: (a) a intensidade da fonte; (b) a distância entre a fonte e o detetor; (c) a área do detetor; (d) a eficiência do detetor.
+4.7.1. Lei do inverso do quadrado da distância
+Uma das leis mais comuns da natureza é a lei do inverso do quadrado da distância, obedecida por o que quer que seja emitido de uma fonte pontual e viaje em linha reta sem desaparecer. Em primeira aproximação (isto é, sem considerar a atenuação ao longo da trajetória), as intensidades da luz e do som obedecem a esta lei. É fácil perceber que, à
+156 Licenciatura em Física
+ 
+  FD
+d
+Figura 4.10: A fonte F está a uma distância d de um detetor D. A quantidade de radiação detetada depende da atividade da fonte, da distância entre a fonte e o detetor, da eficiência do detetor para a radiação incidente e da área do detetor.
+medida que nos afastamos de uma fonte de luz semelhante a uma lâmpada, a intensidade da luz fica cada vez menor. Isto também é verdade com respeito ao som, conforme nos afastamos de um pequeno alto-falante.
+A relação matemática entre a distância em relação à fonte e a intensidade detetada da grandeza é simples: se a distância até a fonte é dobrada, a intensidade diminui para um quarto da original; se a distância é triplicada, a intensidade diminui nove vezes, e assim por diante.
+A figura 4.11 pode auxiliar em uma demonstração geométrica desta lei. Nela são mostradas duas esferas, uma com o dobro do raio da outra. As duas superfícies contêm o mesmo número N de pontos aleatoreamente distribuídos. Note que o número de pontos dentro do “detetor” da esfera menor é muito maior que no caso da esfera maior.
+                                                                                                                                                                                                                                                                                 Figura 4.11: Ilustração para o efeito da lei do inverso do quadrado da distância na intensidade da radiação. Nos dois casos, o mesmo número N de partículas (os pontos na superfície das esferas) está sendo emitido pela fonte no centro das esferas. A pequena elipse representa um detetor, que registra um menor número de partículas à medida que a distância em relação à fonte aumenta.
+Laboratório Especial 157
+ 
+As esferas têm raios R1 e R2, que definem superfícies de área A1 = 4πR12 e
+A2 = 4πR22, respectivamente. Assim, a razão entre as áreas das esferas é dada por 2
+A1 =R2 ,demodoque,seR =2·R,entãoA =4·A;seR =3·R,então A2 R12 2 1 2 1 2 1
+  A2 = 9 · A1, e assim por diante.
+Uma vez que o número N0 de partículas distribuídas nas superfícies das esferas é o
+mesmo, temos N0 partículas por unidade de área (partículas/cm2, por exemplo) no pri- A1
+meiro caso e N0 no segundo, ou seja, um número quatro vezes menor por unidade de área. A2
+Imagine que o pequeno disco na superfície das esferas é a borda de um detetor circular de área SD, visto em perspectiva. O número ND0 atingindo o detetor a uma distância d é:
+N =N SD . (4.15) D0 0 4πd2
+EXEMPLO
+1) Uma fonte emite isotropicamente 5000 partículas por segundo. (a) Quantas partículas por segundo atingem um detetor de área de 5 cm2 a 10 cm de distância da fonte? (b) Qual será o tempo de aquisição necessário para que 500 partículas atinjam o mesmo detetor se ele for posicionado a 20 cm de distância da fonte?
+   a) A 10cm da fonte, o número de partículas por cm2 é 5000 = 4. Como o 4π102
+ detetor tem 5 cm2, o número total de partículas que o atingem é de 4 × 5 = 20 partículas por segundo.
+b) Um detetor posicionado a 10 cm da fonte levaria 25 segundos (20part/s×25s = 500
+partículas). Um detetor posicionado a uma distância duas vezes maior seria
+atingido por 1 das partículas a cada segundo. Portanto, seriam necessários 4
+25 × 4 = 100 segundos.
+EXERCÍCIO
+23) Um detetor de 2 cm2 a 15 cm de uma fonte é atingido por 100 partículas por segundo.
+a) Qual é a taxa de emissão de partículas da fonte? Resposta: 141370 part/s.
+b) A que distância o detetor deveria ser posicionado para ser atingido pelo dobro de partículas a cada segundo? Resposta: 10, 6 cm.
+158 Licenciatura em Física
+  
+Como o detetor Geiger-Müller, o espectrômetro de fótons também tem uma eficiência ε, de modo que, levando-se em conta também a lei do inverso do quadrado da distância, o número de partículas efetivamente registrados é dado por:
+ND =ND0ε=N0ε SD . (4.16) 4πd2
+4.7.2. Aquisição de dados
+1. Posicione uma fonte radioativa a aproximadamente 4cm da janela do detetor Geiger-Müller. Meça cuidadosamente a distância entre eles e registre-a na folha de dados.
+2. Adquira dados por tempo suficiente para acumular cerca de 100 contagens (o que corresponde a uma incerteza estatística da ordem de 10%). Registre o número de contagens e o tempo de contagem.
+3. Aumente aproximadamente 2, 0 cm da distância entre o detetor e a fonte. Uti- lizando a lei do inverso do quadrado da distância, estime o tempo de aquisição necessário para obter contagens da ordem de 100. Adquira novos dados durante o intervalo de tempo calculado.
+4. Aumente novamente a distância entre o detetor e a fonte para aproximadamente mais 2, 0 cm. Utilizando a lei do inverso do quadrado da distância, calcule o tempo necessário para adquirir cerca de 100 contagens e faça a aquisição.
+5. Repita o procedimento até completar pelo menos 5 distâncias.
+6. Faça um gráfico do número de contagens por segundo em função da distância entre
+a fonte e o detetor.
+7. Faça um gráfico do número de contagens por segundo em função do inverso da distância ao quadrado entre a fonte e o detetor.
+8. Faça um gráfico log-log do número de contagens em função da distância entre a fonte e o detetor.
+9. Para os gráficos, utilize papel milimetrado, log-log ou o aplicativo computacional de sua preferência.
+Laboratório Especial 159
+  
+4.7.3. Simulação
+O programa CONTADOR simula um sistema simples de deteção da radiação. Tal sistema seria composto por um detetor Geiger-Müller e fontes radioativas, algumas com atividade conhecida e outras com atividade desconhecida. O sistema permite definir a área sensível do detetor e a distância deste à fonte. O programa supõe uma eficiência intrínseca do sistema dependente da energia da radiação incidente e desconhecida do usuário. Ao ser inicializado, o programa exibe a seguinte tela:
+ Simulador de sistema de contagem de radiação
+(c) 2005 Nelson Canzian da Silva - Depto de Física UFSC
+Fontes:
+Energia (keV) [.A.] 146
+.B. 662 .C. 835 .D. 1250 .E. 2045 .F. 514
+Aquisição de dados:
+Ativ (kBq em 25/01/02) 8.70E+002 1.35E+002 2.00E+002 1.20E+002 4.90E+001
+[desconhecida]
+T
+(1/2) (anos) 6.90E-001 3.00E+001 8.56E-001 5.00E+000 5.80E+009 2.57E+000
+S. Área do detetor......................................................... 1 cm2 L. Distância detetor-fonte............................................. 10 cm T. Tempo de aquisição.................................................. 60 s
+X. Executa simulação
+Q. Sair Comando:
+Figura 4.12: Tela do programa CONTADOR. O programa oferece as seguintes opções:
+A | B | C | D | E | F - Escolha da fonte radioativa. São seis fontes disponíveis, todas com emissões de energias e meias-vidas conhecidas, cinco delas com atividade conhecida em uma data de referência e uma com atividade desconhecida.
+S - Definição da área do detetor, levada em consideração no cálculo do número de contagens registradas pelo sistema.
+L - Distância detetor-fonte. A lei do inverso do quadrado da distância é levada em 160 Licenciatura em Física
+ 
+consideração no cálculo do número de contagens registradas pelo sistema.
+T - Tempo de aquisição. O programa leva em conta flutuações estatísticas no número de contagens. Tais flutuações estão relacionadas ao tempo de aquisição.
+X - Executa simulação. Ao pressionar esta tecla, o programa retorna ao número de contagens estimado para a configuração escolhida.
+Q - Sair. Encerra o programa.
+Ao realizar o cálculo, o programa leva em conta também a eficiência do detetor, desconhecida pelo usuário. Por diversas razões, um detetor em geral não registra toda a radiação que incide sobre ele. E mais, a eficiência de um detetor é função da energia da radiação. A curva de eficiência do detetor é fornecida pelo fabricante e, em muitas situações (em Física Médica, por exemplo), essa curva deve ser reavaliada periodicamente utilizando-se fontes de atividade conhecida.
+4.7.4. Análise de dados
+A atividade N0 de uma fonte pode ser determinada pela equação 4.14 medindo-se a taxa de contagens registrada ND por um detetor de área SD e eficiência ε posicionado a uma distância conhecida d:
+4πd2
+N0 = ND εS . (4.17)
+D
+Em princípio, bastaria uma única medida de ND para a determinação da atividade
+da fonte, uma vez conhecidos os outros parâmetros. Entretanto, as incertezas no resultado
+podem ser drasticamente reduzidas utilizando-se um conjunto de medidas feitas em
+condições diferentes. A opção usual é a construção de um gráfico da atividade registrada
+ ND em função do inverso do quadrado da distância: 1 .
+ se fizermos:
+Observe que a equação:
+d2
+N
+D
+= N εSD 0 4πd2
+(4.18)
+ pode ser escrita como a equação de uma reta:
+y=A+B·x, (4.19)
+ Laboratório Especial 161
+y = ND A = 0
+B = N0εSD 4π
+x= 1 . d2
+(4.20) (4.21)
+(4.22)
+(4.23)
+  Assim, mede-se a taxa de contagem para diferentes distâncias, ajusta-se a reta definida acima aos dados com o método dos mínimos quadrados e determina-se a atividade da fonte a partir do coeficiente angular B:
+N0 =B·  4π  . (4.24) εSD
+EXEMPLO
+2) A tabela abaixo mostra o número de contagens registradas por um detetor de área SD = 1 cm2 e eficiência ε = 0, 23 para emissões de uma fonte a diferentes distâncias do detetor. Determine a atividade da fonte.
+Medida 12345
+        Distância fonte-detetor (cm): Tempo de aquisição (s): Total de contagens:
+Taxa de contagem (c/s):
+5 10 10 30 732 549 73,2 18,3
+15 20 25 60 100 200 488 458 587 8,13 4,58 2,94
+             O tempo de aquisição para cada distância foi escolhido de modo a manter o número total de aquisições na mesma ordem de grandeza em todos os casos, fazendo com que a incerteza estatística das medidas seja menor que 5%.
+A figura abaixo mostra o gráfico da taxa de contagem em função do inverso do quadrado da distância.
+162 Licenciatura em Física
+ 
+100 80 60 40 20
+0
+0 5 10 15 20 25 30 35 40
+2-3 -2 1/d (10 cm )
+Gráfico da taxa de contagem em função do inverso do quadrado da distância para os dados da tabela acima.
+EXERCÍCIO
+24) A tabela abaixo mostra o número de contagens registradas por um detetor de área SD = 3, 14 cm2 e eficiência ε = 0, 20 para emissões de uma fonte a diferentes distâncias do detetor. Determine a atividade da fonte.
+Medida 12345
+                                                                      Distância fonte-detetor (cm): Tempo de aquisição (s): Total de contagens:
+Taxa de contagem (c/s):
+4 8
+5 20 577 578
+12 16 20 40 60 100 513 433 462
+             Resposta: 37,0kBq.
+4.8. Experimento 2: Coeficiente de atenuação da radiação
+Um arranjo experimental simplificado para a determinação do coeficiente de absorção de um um material está esquematizado na figura 4.13: uma fonte pontual F está posicionada dentro de um colimador C, a uma distância d de um detetor D. Entre a fonte e o detetor está uma placa de material absorvedor A, com espessura x.
+Laboratório Especial 163
+ Taxa de contagem (part/s)
+É importante que o feixe definido pelo arranjo experimental seja muito fino, de modo que partículas espalhadas pelo absorvedor não atinjam o detetor, contaminando as contagens. Isto pode ser conseguido utilizando-se um colimador de abertura estreita e uma distância fonte-detetor grande comparada ao diâmetro do detetor.
+FAD
+        C
+ x
+d
+ Figura 4.13: Uma fonte pontual F está posicionada dentro de um colimador C, que delimita um feixe estreito. A distância da fonte ao detetor D é d. Entre a fonte e o detetor está uma placa de material absorvedor A, com espessura x.
+Para a determinação do coeficiente de absorção em função da energia, é importante utilizar fontes com apenas uma linha bem intensa.
+4.8.1. Aquisição de dados
+1. Meça e registre o nível da radiação de fundo. Para isso, coloque todas as fontes radioativas a no mínimo 3 metros do detetor, ligue-o e inicialize o sistema de aquisição. Adquira dados até completar cerca de 1000 contagens (correspondente a uma incerteza estatística da ordem de 10%).
+2. Sem qualquer blindagem, meça e registre, na folha de dados, o número de emissões da fonte detectadas pelo sistema. Posicione uma fonte radioativa a aproximadamente 2 cm da janela do detetor. Adquira dados até completar cerca de 1000 contagens.
+3. Meça e registre, na folha de dados, o número de emissões detectadas com sucessivas adições de blindagem (material entre a fonte e o detetor). Para isso, você tem
+164 Licenciatura em Física
+ 
+disponíveis pequenos pedaços de plástico (que possuem coeficiente de atenuação aproximadamente equivalente à água), alumínio e chumbo.
+4. Repita o procedimento com outras fontes radioativas que tenham emissões gama com diferentes energias.
+5. Para cada material e cada fonte faça um gráfico log-linear do número de contagens em função da espessura de material entre a fonte e o detetor, ou um gráfico linear- linear do logaritmo do número de contagens em função da espessura do material.
+6. Obtenha o coeficiente de atenuação linear de cada material para as energias investigadas.
+4.8.2. Simulação
+O ABSORCAO simula um sistema simples de deteção da radiação. Este sistema
+seria composto por um detetor Geiger-Müller e fontes radioativas, algumas com ativida- des conhecidas e outras com atividades desconhecidas. O sistema permite definir a área sensível do detetor e a distância deste à fonte. O programa supõe uma eficiência intrín- seca do sistema dependente da energia da radiação incidente e desconhecida do usuário. Ao ser inicializado, o programa exibe a seguinte tela:
+ Simulador da absorção da radiação gama pela matéria (c) 2005 Nelson Canzian da Silva - Depto de Física UFSC
+Materiais: .A. .B. [.C.] .D.
+I. Intensidade incidente (Io):................................... 1000 E. Energia do fóton (keV):...................................... 100.0 T. Espessura do material (cm):.............................. 0.100 X. Calcula I(x)
+Q. Sair. Comando:
+Fótons remanescentes: 376 Pressione ENTER para continuar...
+Figura 4.14: Tela do programa ABSORCAO.
+Laboratório Especial 165
+ 
+O programa oferece as seguintes opções:
+A | B | C | D - Escolha do material absorvedor. São quatro materiais disponíveis.
+I - Intensidade da radiação incidente. Número total de fótons incidente sobre a amostra do material escolhido.
+E - Energia dos fótons incidentes, em keV . O coeficiente de absorção da radiação, além de depender do material, depende também da energia da radiação incidente.
+T - Espessura da amostra. O cálculo do número de fótons que atravessam a amostra leva em conta a sua espessura. A atenuação obedece à lei exponencial, mas é considerada uma flutuação estatística.
+X - Executa a simulação. Ao pressionar esta tecla, o programa retorna ao número de fótons que atravessam o material.
+Q - Sair. Encerra o programa.
+4.8.3. Análise de dados EXEMPLO
+3) A tabela a seguir mostra os resultados de um "experimento"realizado com o programa ABSORCAO em que foi registrada a intensidade transmitida por uma amostra de diferentes espessuras para um feixe de fótons de 100 keV .
+          Espessura (cm)
+Medida
+Média (erro)
+0,1 0,2
+3647 3574 3705 3676 3715 3546 3655 3608 3690 3626 3682 3606 (60) (60)
+0,5 1,0 2,0
+3507 3215 2636 3369 3088 2697 3300 3140 2619 3471 3196 2606 3558 3108 2682 3441 3149 2648 (57) (56) (51)
+5,0 10,0 20,0
+1627 664 141 1546 669 132 1620 618 124 1584 699 121 1627 652 135 1601 660 131 (40) (26) (11)
+                    166 Licenciatura em Física
+10 4
+103
+10 2
+Gráfico da intensidade transmitida em função da espessura da amostra.
+A linearização da função IT (x) = I0exp(−μx) leva a ln(IT (x)) = ln(I0) − μx. Os coeficientes da reta obtidos pelo ajuste dos dados com o método dos mínimos quadra- dos são A = ln(I0) = (8, 226 ± 0, 008), que corresponde a I0 = exp(8, 226) = 3737 fótons detetados na ausência de qualquer absorvedor, e B = −μ = −(0, 171 ± 0, 003) cm−1.
+EXERCÍCIO
+25) No programa ABSORÇÃO, escolha um material e uma energia e obtenha os valores da intensidade do feixe após a passagem por lâminas de diferentes espessuras do material. Escolha um tempo de aquisição tal que a incerteza estatística dos dados correspondentes à maior espessura do material absorvedor seja da ordem de 10%.
+4.8.4. Dependência da absorção com a energia EXEMPLO
+4) A tabela abaixo mostra as taxas de contagem (em contagens por segundo) obtidas para energias entre 10 keV e 10 M eV , utilizando o programa ABSORCAO, considerando 1 cm do material “A” inserido entre a fonte e o detetor. Os valores mostrados correspondem às médias de 5 medidas. O tempo de aquisição foi ajustado de modo a manter a incerteza estatística inferior a 1%, ou seja, um total de contagens da ordem de 10000. Note que isto corresponde a um tempo de cerca de 1 hora e meia para fótons de 10 keV e cerca de 30 segundos para fótons de 10 M eV .
+Laboratório Especial 167
+                                            0 5 10 15 20 Espessura (cm)
+ Transmissão de (fótons)
+       Energia (keV )
+Taxa de Energia Taxa de contagem (keV ) contagem (s−1 ) (s−1 )
+Energia (keV )
+200
+  500
+ 1000
+ 5000
+ 10000
+Taxa de contagem
+(s−1 ) 328
+   343
+   347
+   362
+   368
+10 20 30 40 50
+1,82 60 300 168 70 302 258 80 309 283 90 314 300 100 313
+             400 350
+300
+250
+200 150 100
+50 0
+                                          10 102
+Energia de fóton (keV)
+104
+Gráfico do número de contagens detetado em função da energia da radiação incidente para o material “A”.
+EXERCÍCIO
+26) Levante a curva de absorção em função da energia para os outros materiais. Compare as curvas entre elas e com as curvas do gráfico do coeficiente de absorção em função da energia (figura 4.3). É possível fazer uma correspondência entre os materiais na simulação e os materiais indicados no gráfico? Não se esqueça de converter as informações dos seus gráficos em coeficientes de absorção!
+168 Licenciatura em Física
+103
+ Contagens por segundo
+4.9. Experimento 3: Calibração e resolução de um espectrômetro
+Os dados obtidos com um espectrômetro consistem em uma lista de números que correspondem às contagens em cada canal. A correspondência entre o número do canal e a energia da radiação é definida pela escolha do ganho do amplificador e do ganho de conversão. Para a interpretação dos dados em termos físicos, é preciso calibrar a escala de canais para a energia. Isto é feito utilizando-se valores de energia associados a estruturas conhecidas de um espectro de referência e ajustando a eles uma função apropriada.
+Processos estatísticos no sistema de detecção estão diretamente associados à largura dos picos do espectro. A conversão dos raios gama em luz e a coleta e conversão da luz em eletricidade envolvem processos que flutuam estatisticamente. Dois raios gama totalmente absorvidos no cristal podem não produzir exatamente o mesmo número de fótons detectados pelo fototubo. Quantidades e energias idênticas de fótons não produzirão o mesmo número de elétrons na saída. Estes pulsos têm diferentes alturas de pulso (amplitudes), mesmo que representem a mesma energia do gama. O resultado desses processos estatísticos é uma distribuição de alturas de pulso, que pode ser representada por uma distribuição normal ou gaussiana.
+A qualidade de um sistema de detecção está intimamente associada à largura deste pico relativamente à sua posição no espectro. A resolução fracional ∆E do sistema, uma
+E
+medida desta qualidade, é usualmente definida como a razão da largura à meia altura (FWHM, do inglês full width at half maximum) do pico dividida pelo valor da posição da centróide. A partir de argumentos puramente estatísticos, pode-se mostrar que, para uma distribuição gaussiana, a largura à meia altura corresponde a 2,35 vezes o desvio padrão da média (FWHM = 2,35σ), e que a resolução melhora com o inverso da raiz quadrada da energia:
+1
+A resolução fracional revela-nos essencialmente qual é a capacidade do sistema para “resolver”, ou separar, duas estruturas distintas. Por exemplo, para um pico centrado em 1000 keV , uma resolução fracional de 5% representa 50 keV . Isso significa que fica muito difícil dizer se o pico representa as contagens de apenas uma linha de emissão da fonte ou se esse pico é a soma de dois ou mais picos separados em energia por menos de 50 keV (na verdade, existem técnicas de análise da forma do pico que permitem ir um pouco mais longe neste aspecto).
+Laboratório Especial 169
+ ∆E=αE2 = 1 . (4.25) 1
+    EEE2
+  
+4.9.1. Aquisição de dados
+1. Explore algumas combinações de fontes radioativas, ganhos do amplificador e ganhos de conversão para a aquisição de espectros de energia. A finalidade desta etapa é adquirir sensibilidade com relação aos efeitos que cada parâmetro tem no espectro.
+2. Ajuste os ganhos do amplificador e de conversão de tal modo que o sistema possa adquirir o espectro completo de pelo menos três fontes radioativas sem alterações posteriores nos ganhos.
+3. Faça a calibração dos espectros e determine a resolução fracional em energia para cada pico encontrado. Utiliza uma ferramenta de geração e manipulação de gráficos (OpenOffice SpreadSheet, Microsoft Excel, Microcal Origin, ROOT etc.) para auxílio na análise.
+4.9.2. Simulação
+ Simulador de espectrômetro de Nal(Tl)
+(c) 2005 Nelson Canzian da Silva - Depto de Física UFSC
+Fontes: [.1.]
+.2. .3. .4. .5.
+146 keV
+835 keV
+1170 keV 1330 keV 2167 keV Desconhecida
+Sistema de aquisição:
+A. Número de canais: .............................................. 512 B. Tensão no fototubo: ............................................ 1500 C. Ganho do amplificador: ...................................... 4 D. Tempo de aquisição: ........................................... 60 X. Gera espectro
+S. Superpõe espectro
+Q. Sair
+Comando:
+Arquivo ESPECTRO.DAT gerado com 78408 contagens. Pressione ENTER para continuar...
+Figura 4.15: Tela do programa MULTICAN.
+O MULTICAN simula o funcionamento de um espectrômetro de fótons associado a um analisador multicanal, ou seja, um sistema que permite discriminar em energia e contar os raios gama que atingem o detetor. Trata-se de uma ferramenta de simulação muito básica, que simula apenas os aspectos mais relevantes deste tipo de sistema, e não
+170 Licenciatura em Física
+ 
+leva em conta vários detalhes das emissões de uma fonte radioativa nem do processo de deteção da radiação. Ao ser inicializado, o programa exibe a seguinte tela:
+O programa oferece as seguintes opções:
+1 | 2 | 3 | 4 | 5 - Escolha da fonte. São cinco fontes disponíveis, quatro delas com as principais linhas de emissão identificadas, e uma com energia desconhecida.
+A - Ganho de conversão, ou número de canais do espectro. Número de canais em que será divido o intervalo dinâmico de tensões geradas pelo amplificador (0 a 8 volts).
+B - Tensão de operação do fototubo. Define o fator de multiplicação do sistema.
+C - Ganho do amplificador. Pode ser regulado para adequar a altura do sinal de interesse ao intervalo dinâmico do espectrômetro.
+D - Tempo de aquisição. Define o tempo (simulado) de contagem.
+X - Gera espectro. Quando esta tecla é pressionada, o programa gera um arquivo, chamado ESPECTRO.DAT, com as contagens obtidas para cada energia. Caso já exista um arquivo com este nome, ele será apagado, e um novo arquivo será gerado.
+S - Superpõe espectro. Procura um arquivo chamado ESPECTRO.DAT na pasta atual e superpõe (soma) a ele o novo espectro solicitado. Mudanças no número de canais e no ganho do amplificador não são recomendadas, pois são de difícil interpretação.
+Q - Sair. Encerra o programa.
+A seguir estão algumas explicações adicionais sobre o significado dos parâmetros de aquisição.
+GANHO DE CONVERSÃO
+   6000
+4000
+2000
+0
+10 20 30 40 50 60 canal
+Laboratório Especial 171
+                                     contagens
+               800
+             600
+             400
+             200
+0 100 200
+Os espectros acima foram gerados com os mesmos parâmetros, exceto pelo ganho de conversão (número de canais). Em cima, o ganho de conversão é de 64; em baixo, é de 512. Note que um maior ganho de conversão é necessário quando se está interessado em detalhes da estrutura do espectro.
+                        TENSÃO NO FOTOTUBO
+canal
+300 400 500
+       1000
+500
+0
+100 200
+300 400 500
+                           canal
+ 172 Licenciatura em Física
+contagens
+contagens
+       1000
+500
+0 100 200
+Os espectros foram gerados com os mesmos parâmetros, exceto pela tensão aplicada ao fototubo, que é de 1200 V para o espectro superior e de 1800 V para o inferior. Tensões muito baixas não permitem discriminar a presença dos dois picos; tensões muito elevadas podem causar danos e diminuição da vida útil do equipamento.
+                    GANHO NO AMPLIFICADOR
+4000
+2000
+0 100 200
+300 400 500
+Laboratório Especial 173
+canal
+300 400 500
+ canal
+ contagens
+contagens
+1500
+1000
+500
+0 100 200
+Os espectros foram gerados com os mesmos parâmetros, exceto pelo ganho do amplificador, que é de 1 para o espectro superior e de 4 para o inferior. Note que a escolha de um ganho muito pequeno não permite ver detalhes da estrutura do espectro.
+TEMPO DE CONTAGEM
+150
+100
+50
+0 10 20 30 40 50 60 canal
+174 Licenciatura em Física
+                             canal
+300 400 500
+                                            contagens
+contagens
+               4000
+         3000
+         2000
+         1000
+0 10 20 30 40 50 60 canal
+Os espectros foram gerados com os mesmos parâmetros, exceto pelo tempo de contagem, que é de 1 segundo para o espectro superior e de 30 segundos para o inferior. As áreas escuras representam as incertezas (1 desvio padrão) na contagem registrada em cada canal. Note que, quanto maior a contagem, menor a incerteza relativa.
+4.9.3. Análise de dados CALIBRAÇÃO
+A figura abaixo mostra um espectro obtido com uma fonte de 22Na. O espectro do 22Na tem três picos de energia bem definidos: 511keV,1275keV e 1786keV, centrados nos canais 370,668 e 816, respectivamente (note que o pico de 1786 keV é muito pequeno, possível de ser visto claramente somente ampliando-se a figura ou utilizando uma escala logarítmica para o eixo vertical). Esses valores podem ser utilizados para calcular a transformação que leva o valor de qualquer canal para um valor de energia.
+O problema é que em geral o sistema de aquisição não é linear. Note que entre o pico de 511 keV e o de 1275 keV , intervalo que corresponde a 764 keV , existem 298 canais, de modo que 1 canal = 3, 45 keV , em média. Já no intervalo entre 1275 keV e 1786 keV , 1 canal = 3, 45 keV , em média. Para uma adequada calibração de todo o espectro, neste caso, seria necessário o ajuste de um polinômio de segundo grau do tipo E = a+bC+cC2, ou, havendo mais picos de referência, de um polinômio de ordem ainda maior.
+Laboratório Especial 175
+                                                        contagens
+х10 3
+60
+40
+20
+0
+200 400
+600 800 1000
+                               canal
+Em certas situações, entretanto, é suficiente um ajuste linear do tipo E = a + b · C para cada região de interesse. No caso dos espectros acima, a calibração dos intervalos seria a descrita na tabela abaixo. Desse modo, quando se deseja alguma informação, em energia, sobre estruturas entre os picos de 511 keV e 1275 keV , utiliza-se uma calibração, e sobre estruturas entre os picos de 1275 keV e 1786 keV , utiliza-se a outra. A tabela abaixo mostra os parâmetros da calibração em energia dos espectros de 22Na para as duas regiões entre os picos.
+   511keV a1275keV 511 = a + b · 370 1275 = a + b · 668 a = −437keV
+b = 2, 56 keV/canal E = −437 + 2, 56 · C
+176 Licenciatura em Física
+1275keV a1786keV 1275 = a + b · 668 1786 = a + b · 816
+a = −1030keV
+b = 3, 45 keV/canal E = −1030 + 3, 45 · C
+      contagens
+ 10 5 10 4 10 3 10 2 10
+1
+Figura 4.16: Em cima: espectro de uma fonte de 22Na obtido com um espectrômetro de fótons. Em baixo: o mesmo espectro, com a escala vertical logarítmica. Note que a escala logarítmica permite a visualização simultânea de estruturas com intensidades muito distintas. Os picos, centrados nos canais 370, 668 e 1786keV, correspondem a energias de 511 keV, 1275 keV e 1786 keV .
+RESOLUÇÃO
+A determinação da resolução fracional é muito simples:
+a) Determina-se o canal central dos picos - isto pode ser feito com um programa que ajuste gaussianas aos dados, mas uma simples inspeção visual é frequentemente suficiente. No caso dos picos do espectro de 22Na acima, as centróides estão nos ca- nais370,668e816,quecorrespondemaenergiasde511keV,1275keV e1786keV.
+b) Determina-se o valor das contagens no centro dos picos e, a partir deles, o valor das contagens a meia altura. No caso do espectro de 22Na, as alturas são 70, 0 × 103, 9, 9 × 103 e 0, 56 × 103, que correspondem a meias-alturas de 35, 0 × 103, 4, 95 × 103 e 0, 28 × 103, respectivamente.
+c) Determina-se a largura, em canais, dos picos, à meia altura. No caso do espectro de 22Na, as larguras são 29, 33 e 25 canais, respectivamente.
+d) Divide-se o valor da largura pelo valor da posição do pico, o que corresponde a 29 = 0,078, ou cerca de 8% no primeiro caso, 33 = 0,049, ou cerca de 5% no
+Laboratório Especial 177
+                       0 200 400
+600 800 1000
+canal
+  370 668
+segundo, e 25 = 0, 031, ou 3% no terceiro. 816
+  contagens
+Duas observações importantes a respeito desta análise:
+1) É importante o domínio de uma ferramenta de visualização e manipulação de gráficos (OpenOffice SpreadSheet, Microsoft Excell, Microcal Origin, ROOT etc.), pois a extração desses valores pode ser muito difícil, ou no mínimo aborrecida, se feita somente a partir dos números do arquivo de dados.
+2) A utilização da resolução fracional ∆E contorna o problema da não-linearidade E
+da conversão da energia em número de canal. Que fator de calibração seria usado para o pico de 1275keV do espectro de 22Na? 2,56keV/canal? 3,45keV/canal? Nenhum dos dois: sabe-se que para o pico de 1275 keV , a resolução fracional é de 5%, ou cerca de 64 keV .
+4.10. Análise de dados
+A resposta de um espectrômetro composto de um cristal de NaI(Tl) e um fototubo depende crucialmente do potencial elétrico (tensão) aplicado entre os eletrodos (dinodos) do fototubo. Tensões baixas correspondem a baixos fatores de amplificação e menor resolução. Tensões demasiadamente elevadas podem danificar irremediavelmente o equipamento ou diminuir a sua vida útil.
+Para o funcionamento otimizado, é necessário que um elétron acelerado entre um dinodo e outro atinja uma velocidade tal que, no impacto com o dinodo-alvo, provoque a emissão do maior número possível de elétrons secundários. A resolução do sistema também melhora paulatinamente com o aumento da tensão aplicada: quanto maior a tensão, melhor a coleção de cargas e menor o ruído eletrônico, que é porporcional à raiz quadrada do número de elétrons coletados.
+A quantidade de elétrons emitidos é função crescente da tensão: quanto maior a tensão, maior a energia do elétron ao atingir o dinodo e maior o número de elétrons secundários emitidos. Entretanto, a partir de determinado valor de tensão ocorre a saturação do fototubo: a aplicação de uma tensão acima do valor de saturação não mais provoca um aumento na emissão de elétrons. Tensões muito elevadas podem provocar faíscas e danificar o equipamento.
+Assim, em aplicações que pedem maior precisão, é conveniente operar o equipa- mento em sua tensão de saturação, onde amplificação e resolução estão otimizadas; para aplicações menos exigentes, pode-se operar o equipamento a uma tensão mais baixa, aumentando a sua vida útil. A escolha do ponto ideal pode ser feita a partir da curva característica do detetor.
+178 Licenciatura em Física
+   
+Os gráficos a seguir ilustram tal questão. Os três gráficos foram obtidos com o programa MULTICAN exatamente nas mesmas condições (fonte com fótons de 835 keV , 1024 canais, ganho de 8× no amplificador e 60s de tempo de aquisição), exceto pela tensão no fototubo, que era de 800 V para o gráfico superior, 1200 V para o intermediário e 2000 V para o inferior.
+ 1500
+1000
+500
+0
+200 400
+600 800 1000
+                     canal
+        1000
+500
+0
+200 400
+600 800 1000
+Laboratório Especial 179
+                               canal
+ contagens contagens
+ 800
+600
+400
+200
+0
+200 400
+600 800 1000
+                              Figura 4.17: Simulação da aquisição de dados com um espectrômetro de NaI(Tl) utilizando uma fonte com emissões gama de 835 keV .
+O efeito da tensão na multiplicação é contundente: a posição do máximo varia enormemente com a tensão aplicada: em torno de 40 para 80 V , 360 para 1200 V e 720 para 2000 V . Ou seja: aumentando a tensão de 800 V para 1200 V , o número de elétrons coletados para cada fóton incidente quase decuplica, e aumentando a tensão de 1200 V para 2000 V , o número de elétrons coletados dobra.
+Além disso, a resolução é substancialmente melhorada: no primeiro caso, o pico de
+835 keV mistura-se com a radiação de fundo, mas é possível estimar a sua largura à meia
+altura em cerca de 50 canais, o que corresponde a uma resolução horrível: 50 = 1, 25, 40
+ou 125%! A partir do gráfico intermediário é possível estimar uma largura à meia altura
+de cerca de 90 canais, o que, para um pico próximo ao canal 300, corresponde a uma
+resolução de 90 = 0, 30, ou 30%. Já para o gráfico inferior, a largura à meia altura é 300
+de 60 canais, mas o pico da distribuição está próximo ao canal 600, o que corresponde a uma resolução de 0,10, ou cerca de 10%.
+A curva característica nada mais é do que o gráfico de algum parâmetro relevante - posição de um pico de referência, largura à meia altura, resolução fracional - em função da tensão aplicada ao fototubo, a partir da qual pode-se inferir a tensão de saturação.
+180 Licenciatura em Física
+canal
+   contagens
+4.10.1. Aquisição de dados
+1. Explore o espectrômetro e as fontes disponíveis para escolher valores convenientes para os parâmetros de operação do espectrômetro.
+2. Adquira dados para diferentes valores crescentes da tensão de operação do foto- tubo. Caso o pico de referência não apareça para valores muito baixos da tensão no fototubo, ou fique além do intervalo dinâmico do equipamento (“estoure” a escala dos canais) para os valores mais altos, ajuste o ganho do amplificador e refaça as medidas.
+3. Determine a posição, a largura à meia-altura e a resolução fracional para o pico de referência em todos os espectros adquidos. Faça gráficos destes parâmetros em função da tensão de operação do fototubo.
+4.10.2. Simulação
+Esta atividade pode ser simulada com o programa MULTICAN. Estude suas
+características e obtenha espectros com diferentes valores para a tensão aplicada ao fototubo. Produza gráficos da posição de um pico relevante em função da tensão aplicada. Faça também gráficos da largura à meia-altura e da resolução fracional do equipamento em função da tensão no fototubo.
+4.10.3. Análise de dados EXEMPLO
+5) As figuras abaixo mostram diferentes maneiras equivalentes de se visualizar a curva característica de espectrômetro de NaI(Tl): a amplificação, a largura à meia altura e a resolução em função da tensão no fototubo. Os gráficos foram gerados a partir dos dados (simulados) da tabela abaixo.
+A tabela mostra as posições dos picos e larguras à meia altura das distribuições em função da tensão aplicada no fototubo. Os dados foram simuladas com o programa MULTICAN para uma fonte de 835 keV , ganho de conversão de 1024 canais, ganho de 8 no amplificador e tempo de aquisição de 60 segundos. Os respectivos gráficos são apresentados nas figuras abaixo.
+Laboratório Especial 181
+ 
+       Tensão no foto- tubo (V)
+800
+  900
+  1000
+  1100
+  1200
+  1300
+  1400
+  1500
+Posição do pico (canal)
+Larg. à meia altura (canais)
+   49
+   63
+   78
+   87
+   92
+   85
+   78
+   71
+Tensão no foto- tubo (V)
+  1600
+  1700
+  1800
+  1900
+  2000
+  2250
+  2500
+  2750
+Posição Larg. à do meia
+pico altura (canal) (canais)
+686 66 707 63 717 61 724 61 726 61 728 61 728 61 728 61
+38
+ 76
+142
+240
+364
+486
+584
+649
+                         150
+100
+50
+0
+1000
+1500
+Tensão no fototubo (V)
+                                                           Posição do pico de 835 keV
+pico reflete o aumento fo fator de multiplicação do fototubo em função do aumento da tensão aplicada. Note a saturação em torno dos 1800 V .
+Licenciatura em Física
+2000
+2500 3000
+em função da tensão no fototubo. A posição do
+ 182
+Resolução (%)
+100 80 60 40 20
+0 1000 1500
+Tensão no fototubo (V)
+Largura a meia altura da distribuição em torno do pico de 835keV em função da tensão no fototubo. Note a estabilização em torno dos 1800 V , indicando a saturação.
+ 100 80 60 40 20
+0 1000
+1500 2000 2500 3000 Tensão no fototubo (V)
+2000 2500 3000
+ Resolução em função da tensão no fototubo para o pico de 835 keV . Note que a resolução cai paulatinamente com o aumento da tensão até atingir um valor de saturação, em torno dos 1800 V .
+Laboratório Especial 183
+ Posição do máximo (canal) Largura a meia altura (canais)
+RESUMO
+Neste experimento você viu que a emissão da radiação nuclear está relacionada às características de sua estrutura interna, viu alguns aspectos dos decaimentos alfa, beta e gama e entendeu o que é meia-vida, vida média e atividade. Você aprendeu também o que é e como funciona um detetor Geiger-Müller e um espectrômetro de fótons. Com o detetor Geiger-Müller, você determinou a atividade de uma fonte radioativa e os coeficientes de absorção de radiação para diferentes energias e materiais absorvedores. Além disso, você aprendeu a levantar a curva característica de um espectrômetro de fótons e a fazer a sua calibração a partir de dados sobre fontes de energias conhecidas.
