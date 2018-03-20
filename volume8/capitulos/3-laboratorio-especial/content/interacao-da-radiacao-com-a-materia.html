@@ -1043,310 +1043,468 @@ N_{0} = B\cdot \left(\dfrac{4 \pi}{\varepsilon S_{D}}  \right).
 
 <p>A linearização da função $I_{T}(x) = I_{0}exp(-\mu x) $ leva a $ln(I_{T}(x)) = ln(I_{0}) -\mu x $. Os coeficientes da reta obtidos pelo ajuste dos dados com o método dos mínimos quadrados são $A = ln(I_{0})=(8,226 \pm 0,008)$, que corresponde a $I_{0} = exp(8,226) = 3737$ fótons detetados na ausência de qualquer absorvedor, e $B = -\mu = -(0,171 \pm 0,003)\,cm^{-1}$.</p>
 
-EXERCÍCIO
-25) No programa ABSORÇÃO, escolha um material e uma energia e obtenha os valores da intensidade do feixe após a passagem por lâminas de diferentes espessuras do material. Escolha um tempo de aquisição tal que a incerteza estatística dos dados correspondentes à maior espessura do material absorvedor seja da ordem de 10%.
-4.8.4. Dependência da absorção com a energia EXEMPLO
-4) A tabela abaixo mostra as taxas de contagem (em contagens por segundo) obtidas para energias entre 10 keV e 10 M eV , utilizando o programa ABSORCAO, considerando 1 cm do material “A” inserido entre a fonte e o detetor. Os valores mostrados correspondem às médias de 5 medidas. O tempo de aquisição foi ajustado de modo a manter a incerteza estatística inferior a 1%, ou seja, um total de contagens da ordem de 10000. Note que isto corresponde a um tempo de cerca de 1 hora e meia para fótons de 10 keV e cerca de 30 segundos para fótons de 10 M eV .
-Laboratório Especial 167
-                                            0 5 10 15 20 Espessura (cm)
- Transmissão de (fótons)
-       Energia (keV )
-Taxa de Energia Taxa de contagem (keV ) contagem (s−1 ) (s−1 )
-Energia (keV )
-200
-  500
- 1000
- 5000
- 10000
-Taxa de contagem
-(s−1 ) 328
-   343
-   347
-   362
-   368
-10 20 30 40 50
-1,82 60 300 168 70 302 258 80 309 283 90 314 300 100 313
-             400 350
-300
-250
-200 150 100
-50 0
-                                          10 102
-Energia de fóton (keV)
-104
-Gráfico do número de contagens detetado em função da energia da radiação incidente para o material “A”.
-EXERCÍCIO
-26) Levante a curva de absorção em função da energia para os outros materiais. Compare as curvas entre elas e com as curvas do gráfico do coeficiente de absorção em função da energia (figura 4.3). É possível fazer uma correspondência entre os materiais na simulação e os materiais indicados no gráfico? Não se esqueça de converter as informações dos seus gráficos em coeficientes de absorção!
-168 Licenciatura em Física
-103
- Contagens por segundo
-4.9. Experimento 3: Calibração e resolução de um espectrômetro
-Os dados obtidos com um espectrômetro consistem em uma lista de números que correspondem às contagens em cada canal. A correspondência entre o número do canal e a energia da radiação é definida pela escolha do ganho do amplificador e do ganho de conversão. Para a interpretação dos dados em termos físicos, é preciso calibrar a escala de canais para a energia. Isto é feito utilizando-se valores de energia associados a estruturas conhecidas de um espectro de referência e ajustando a eles uma função apropriada.
-Processos estatísticos no sistema de detecção estão diretamente associados à largura dos picos do espectro. A conversão dos raios gama em luz e a coleta e conversão da luz em eletricidade envolvem processos que flutuam estatisticamente. Dois raios gama totalmente absorvidos no cristal podem não produzir exatamente o mesmo número de fótons detectados pelo fototubo. Quantidades e energias idênticas de fótons não produzirão o mesmo número de elétrons na saída. Estes pulsos têm diferentes alturas de pulso (amplitudes), mesmo que representem a mesma energia do gama. O resultado desses processos estatísticos é uma distribuição de alturas de pulso, que pode ser representada por uma distribuição normal ou gaussiana.
-A qualidade de um sistema de detecção está intimamente associada à largura deste pico relativamente à sua posição no espectro. A resolução fracional ∆E do sistema, uma
-E
-medida desta qualidade, é usualmente definida como a razão da largura à meia altura (FWHM, do inglês full width at half maximum) do pico dividida pelo valor da posição da centróide. A partir de argumentos puramente estatísticos, pode-se mostrar que, para uma distribuição gaussiana, a largura à meia altura corresponde a 2,35 vezes o desvio padrão da média (FWHM = 2,35σ), e que a resolução melhora com o inverso da raiz quadrada da energia:
-1
-A resolução fracional revela-nos essencialmente qual é a capacidade do sistema para “resolver”, ou separar, duas estruturas distintas. Por exemplo, para um pico centrado em 1000 keV , uma resolução fracional de 5% representa 50 keV . Isso significa que fica muito difícil dizer se o pico representa as contagens de apenas uma linha de emissão da fonte ou se esse pico é a soma de dois ou mais picos separados em energia por menos de 50 keV (na verdade, existem técnicas de análise da forma do pico que permitem ir um pouco mais longe neste aspecto).
-Laboratório Especial 169
- ∆E=αE2 = 1 . (4.25) 1
-    EEE2
+<h5>Exercício</h5>
+
+<div class="exercicio">
+	<h5>Questão 25</h5>
+	<p>No programa ABSORÇÃO, escolha um material e uma energia e obtenha os valores da intensidade do feixe após a passagem por lâminas de diferentes espessuras do material. Escolha um tempo de aquisição tal que a incerteza estatística dos dados correspondentes à maior espessura do material absorvedor seja da ordem de $10\%$.</p>
+
+</div>
+
+
+<h4>Dependência da absorção com a energia EXEMPLO</h4>
+
+<h5>Exemplo</h5>
+
+<div class="exercicio">
+	<h5>Exemplo 4</h5>
+	<p>A tabela abaixo mostra as taxas de contagem (em contagens por segundo) obtidas para energias entre $10\,keV$ e $10\,MeV$, utilizando o programa ABSORCAO, considerando $1\,cm$ do material ``$A$'' inserido entre a fonte e o detetor. Os valores mostrados correspondem às médias de 5 medidas. O tempo de aquisição foi ajustado de modo a manter a incerteza estatística inferior a $1\%$, ou seja, um total de contagens da ordem de 10000. Note que isto corresponde a um tempo de cerca de 1 hora e meia para fótons de $10\,keV$ e cerca de 30 segundos para fótons de $10\,MeV$.</p>
+
+</div>
+
+<table>
+<caption></caption>
+  <tr>
+    <th>Energia ($keV$)</th>
+    <th>Taxa de contagem ($s^{-1}$)</th>
+    <th>Energia ($keV$)</th>
+    <th>Taxa de contagem ($s^{-1}$)</th>
+    <th>Energia ($keV$)</th>
+    <th>Taxa de contagem ($s^{-1}$)</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>1,82</td>
+    <td>60</td>
+    <td>300</td>
+    <td>200</td>
+    <td>328</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>168</td>
+    <td>70</td>
+    <td>302</td>
+    <td>500</td>
+    <td>343</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>258</td>
+    <td>80</td>
+    <td>309</td>
+    <td>1000</td>
+    <td>347</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>283</td>
+    <td>90</td>
+    <td>314</td>
+    <td>5000</td>
+    <td>362</td>
+  </tr>
+  <tr>
+    <td>50</td>
+    <td>300</td>
+    <td>100</td>
+    <td>313</td>
+    <td>10000</td>
+    <td>368</td>
+  </tr>
+</table>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-3.svg">
+	<figcaption>Gráfico do número de contagens detetado em função da energia da radiação incidente para o material “A”.</figcaption>
+</figure>
+
+
+
+<h5>Exercício</h5>
+
+<div class="exercicio">
+	<h5>Questão 26</h5>
+	<p>Levante a curva de absorção em função da energia para os outros materiais. Compare as curvas entre elas e com as curvas do gráfico do coeficiente de absorção em função da energia (figura 4.3). É possível fazer uma correspondência entre os materiais na simulação e os materiais indicados no gráfico? Não se esqueça de converter as informações dos seus gráficos em coeficientes de absorção!</p>
+</div>
+
+
+<h3>Experimento 3: Calibração e resolução de um espectrômetro</h3>
+
+<p>Os dados obtidos com um espectrômetro consistem em uma lista de números que correspondem às contagens em cada canal. A correspondência entre o número do canal e a energia da radiação é definida pela escolha do ganho do amplificador e do ganho de conversão. Para a interpretação dos dados em termos físicos, é preciso <i>calibrar</i> a escala de canais para a energia. Isto é feito utilizando-se valores de energia associados a estruturas conhecidas de um espectro de referência e ajustando a eles uma função apropriada.</p>
+
+<p>Processos estatísticos no sistema de detecção estão diretamente associados à largura dos picos do espectro. A conversão dos raios gama em luz e a coleta e conversão da luz em eletricidade envolvem processos que flutuam estatisticamente. Dois raios gama totalmente absorvidos no cristal podem não produzir exatamente o mesmo número de fótons detectados pelo fototubo. Quantidades e energias idênticas de fótons não produzirão o mesmo número de elétrons na saída. Estes pulsos têm diferentes alturas de pulso (amplitudes), mesmo que representem a mesma energia do gama. O resultado desses processos estatísticos é uma distribuição de alturas de pulso, que pode ser representada por uma distribuição normal ou gaussiana.</p>
+
+<p>A qualidade de um sistema de detecção está intimamente associada à largura deste pico relativamente à sua posição no espectro. A <i>esolução fracional</i> $\frac{\Delta E}{E}$ do sistema, uma medida desta qualidade, é usualmente definida como a razão da largura à meia altura (FWHM, do inglês <i>full width at half maximum</i>)  do pico dividida pelo valor da posição da centróide. A partir de argumentos puramente estatísticos, pode-se mostrar que, para uma distribuição gaussiana, a largura à meia altura corresponde a 2,35 vezes o desvio padrão da média ($FWHM = 2,35\,\sigma$), e que a resolução melhora com o inverso da raiz quadrada da energia:</p>
+
+<p class="formula">
+\begin{equation}
+\dfrac{\Delta E}{E} = \alpha \dfrac{E^{\frac{1}{2}}}{E} = \dfrac{1}{E^{\frac{1}{2}}}\,\,.
+\end{equation}
+<span class="numero_formula">4.25</span></p>
+
+<p>A resolução fracional revela-nos essencialmente qual é a capacidade do sistema para ``resolver'', ou separar, duas estruturas distintas. Por exemplo, para um pico centrado em $1000\,keV$, uma resolução fracional de $5\%$ representa $50\,keV$. Isso significa que fica muito difícil dizer se o pico representa as contagens de apenas uma linha de emissão da fonte ou se esse pico é a soma de dois ou mais picos separados em energia por menos de $50\,keV$ (na verdade, existem técnicas de análise da forma do pico que permitem ir um pouco mais longe neste aspecto).</p>
   
-4.9.1. Aquisição de dados
-1. Explore algumas combinações de fontes radioativas, ganhos do amplificador e ganhos de conversão para a aquisição de espectros de energia. A finalidade desta etapa é adquirir sensibilidade com relação aos efeitos que cada parâmetro tem no espectro.
-2. Ajuste os ganhos do amplificador e de conversão de tal modo que o sistema possa adquirir o espectro completo de pelo menos três fontes radioativas sem alterações posteriores nos ganhos.
-3. Faça a calibração dos espectros e determine a resolução fracional em energia para cada pico encontrado. Utiliza uma ferramenta de geração e manipulação de gráficos (OpenOffice SpreadSheet, Microsoft Excel, Microcal Origin, ROOT etc.) para auxílio na análise.
-4.9.2. Simulação
- Simulador de espectrômetro de Nal(Tl)
-(c) 2005 Nelson Canzian da Silva - Depto de Física UFSC
-Fontes: [.1.]
-.2. .3. .4. .5.
-146 keV
-835 keV
-1170 keV 1330 keV 2167 keV Desconhecida
-Sistema de aquisição:
-A. Número de canais: .............................................. 512 B. Tensão no fototubo: ............................................ 1500 C. Ganho do amplificador: ...................................... 4 D. Tempo de aquisição: ........................................... 60 X. Gera espectro
-S. Superpõe espectro
-Q. Sair
-Comando:
-Arquivo ESPECTRO.DAT gerado com 78408 contagens. Pressione ENTER para continuar...
-Figura 4.15: Tela do programa MULTICAN.
-O MULTICAN simula o funcionamento de um espectrômetro de fótons associado a um analisador multicanal, ou seja, um sistema que permite discriminar em energia e contar os raios gama que atingem o detetor. Trata-se de uma ferramenta de simulação muito básica, que simula apenas os aspectos mais relevantes deste tipo de sistema, e não
-170 Licenciatura em Física
- 
-leva em conta vários detalhes das emissões de uma fonte radioativa nem do processo de deteção da radiação. Ao ser inicializado, o programa exibe a seguinte tela:
-O programa oferece as seguintes opções:
-1 | 2 | 3 | 4 | 5 - Escolha da fonte. São cinco fontes disponíveis, quatro delas com as principais linhas de emissão identificadas, e uma com energia desconhecida.
-A - Ganho de conversão, ou número de canais do espectro. Número de canais em que será divido o intervalo dinâmico de tensões geradas pelo amplificador (0 a 8 volts).
-B - Tensão de operação do fototubo. Define o fator de multiplicação do sistema.
-C - Ganho do amplificador. Pode ser regulado para adequar a altura do sinal de interesse ao intervalo dinâmico do espectrômetro.
-D - Tempo de aquisição. Define o tempo (simulado) de contagem.
-X - Gera espectro. Quando esta tecla é pressionada, o programa gera um arquivo, chamado ESPECTRO.DAT, com as contagens obtidas para cada energia. Caso já exista um arquivo com este nome, ele será apagado, e um novo arquivo será gerado.
-S - Superpõe espectro. Procura um arquivo chamado ESPECTRO.DAT na pasta atual e superpõe (soma) a ele o novo espectro solicitado. Mudanças no número de canais e no ganho do amplificador não são recomendadas, pois são de difícil interpretação.
-Q - Sair. Encerra o programa.
-A seguir estão algumas explicações adicionais sobre o significado dos parâmetros de aquisição.
-GANHO DE CONVERSÃO
-   6000
-4000
-2000
-0
-10 20 30 40 50 60 canal
-Laboratório Especial 171
-                                     contagens
-               800
-             600
-             400
-             200
-0 100 200
-Os espectros acima foram gerados com os mesmos parâmetros, exceto pelo ganho de conversão (número de canais). Em cima, o ganho de conversão é de 64; em baixo, é de 512. Note que um maior ganho de conversão é necessário quando se está interessado em detalhes da estrutura do espectro.
-                        TENSÃO NO FOTOTUBO
-canal
-300 400 500
-       1000
-500
-0
-100 200
-300 400 500
-                           canal
- 172 Licenciatura em Física
-contagens
-contagens
-       1000
-500
-0 100 200
-Os espectros foram gerados com os mesmos parâmetros, exceto pela tensão aplicada ao fototubo, que é de 1200 V para o espectro superior e de 1800 V para o inferior. Tensões muito baixas não permitem discriminar a presença dos dois picos; tensões muito elevadas podem causar danos e diminuição da vida útil do equipamento.
-                    GANHO NO AMPLIFICADOR
-4000
-2000
-0 100 200
-300 400 500
-Laboratório Especial 173
-canal
-300 400 500
- canal
- contagens
-contagens
-1500
-1000
-500
-0 100 200
-Os espectros foram gerados com os mesmos parâmetros, exceto pelo ganho do amplificador, que é de 1 para o espectro superior e de 4 para o inferior. Note que a escolha de um ganho muito pequeno não permite ver detalhes da estrutura do espectro.
-TEMPO DE CONTAGEM
-150
-100
-50
-0 10 20 30 40 50 60 canal
-174 Licenciatura em Física
-                             canal
-300 400 500
-                                            contagens
-contagens
-               4000
-         3000
-         2000
-         1000
-0 10 20 30 40 50 60 canal
-Os espectros foram gerados com os mesmos parâmetros, exceto pelo tempo de contagem, que é de 1 segundo para o espectro superior e de 30 segundos para o inferior. As áreas escuras representam as incertezas (1 desvio padrão) na contagem registrada em cada canal. Note que, quanto maior a contagem, menor a incerteza relativa.
-4.9.3. Análise de dados CALIBRAÇÃO
-A figura abaixo mostra um espectro obtido com uma fonte de 22Na. O espectro do 22Na tem três picos de energia bem definidos: 511keV,1275keV e 1786keV, centrados nos canais 370,668 e 816, respectivamente (note que o pico de 1786 keV é muito pequeno, possível de ser visto claramente somente ampliando-se a figura ou utilizando uma escala logarítmica para o eixo vertical). Esses valores podem ser utilizados para calcular a transformação que leva o valor de qualquer canal para um valor de energia.
-O problema é que em geral o sistema de aquisição não é linear. Note que entre o pico de 511 keV e o de 1275 keV , intervalo que corresponde a 764 keV , existem 298 canais, de modo que 1 canal = 3, 45 keV , em média. Já no intervalo entre 1275 keV e 1786 keV , 1 canal = 3, 45 keV , em média. Para uma adequada calibração de todo o espectro, neste caso, seria necessário o ajuste de um polinômio de segundo grau do tipo E = a+bC+cC2, ou, havendo mais picos de referência, de um polinômio de ordem ainda maior.
-Laboratório Especial 175
-                                                        contagens
-х10 3
-60
-40
-20
-0
-200 400
-600 800 1000
-                               canal
-Em certas situações, entretanto, é suficiente um ajuste linear do tipo E = a + b · C para cada região de interesse. No caso dos espectros acima, a calibração dos intervalos seria a descrita na tabela abaixo. Desse modo, quando se deseja alguma informação, em energia, sobre estruturas entre os picos de 511 keV e 1275 keV , utiliza-se uma calibração, e sobre estruturas entre os picos de 1275 keV e 1786 keV , utiliza-se a outra. A tabela abaixo mostra os parâmetros da calibração em energia dos espectros de 22Na para as duas regiões entre os picos.
-   511keV a1275keV 511 = a + b · 370 1275 = a + b · 668 a = −437keV
-b = 2, 56 keV/canal E = −437 + 2, 56 · C
-176 Licenciatura em Física
-1275keV a1786keV 1275 = a + b · 668 1786 = a + b · 816
-a = −1030keV
-b = 3, 45 keV/canal E = −1030 + 3, 45 · C
-      contagens
- 10 5 10 4 10 3 10 2 10
-1
-Figura 4.16: Em cima: espectro de uma fonte de 22Na obtido com um espectrômetro de fótons. Em baixo: o mesmo espectro, com a escala vertical logarítmica. Note que a escala logarítmica permite a visualização simultânea de estruturas com intensidades muito distintas. Os picos, centrados nos canais 370, 668 e 1786keV, correspondem a energias de 511 keV, 1275 keV e 1786 keV .
-RESOLUÇÃO
-A determinação da resolução fracional é muito simples:
-a) Determina-se o canal central dos picos - isto pode ser feito com um programa que ajuste gaussianas aos dados, mas uma simples inspeção visual é frequentemente suficiente. No caso dos picos do espectro de 22Na acima, as centróides estão nos ca- nais370,668e816,quecorrespondemaenergiasde511keV,1275keV e1786keV.
-b) Determina-se o valor das contagens no centro dos picos e, a partir deles, o valor das contagens a meia altura. No caso do espectro de 22Na, as alturas são 70, 0 × 103, 9, 9 × 103 e 0, 56 × 103, que correspondem a meias-alturas de 35, 0 × 103, 4, 95 × 103 e 0, 28 × 103, respectivamente.
-c) Determina-se a largura, em canais, dos picos, à meia altura. No caso do espectro de 22Na, as larguras são 29, 33 e 25 canais, respectivamente.
-d) Divide-se o valor da largura pelo valor da posição do pico, o que corresponde a 29 = 0,078, ou cerca de 8% no primeiro caso, 33 = 0,049, ou cerca de 5% no
-Laboratório Especial 177
-                       0 200 400
-600 800 1000
-canal
-  370 668
-segundo, e 25 = 0, 031, ou 3% no terceiro. 816
-  contagens
-Duas observações importantes a respeito desta análise:
-1) É importante o domínio de uma ferramenta de visualização e manipulação de gráficos (OpenOffice SpreadSheet, Microsoft Excell, Microcal Origin, ROOT etc.), pois a extração desses valores pode ser muito difícil, ou no mínimo aborrecida, se feita somente a partir dos números do arquivo de dados.
-2) A utilização da resolução fracional ∆E contorna o problema da não-linearidade E
-da conversão da energia em número de canal. Que fator de calibração seria usado para o pico de 1275keV do espectro de 22Na? 2,56keV/canal? 3,45keV/canal? Nenhum dos dois: sabe-se que para o pico de 1275 keV , a resolução fracional é de 5%, ou cerca de 64 keV .
-4.10. Análise de dados
-A resposta de um espectrômetro composto de um cristal de NaI(Tl) e um fototubo depende crucialmente do potencial elétrico (tensão) aplicado entre os eletrodos (dinodos) do fototubo. Tensões baixas correspondem a baixos fatores de amplificação e menor resolução. Tensões demasiadamente elevadas podem danificar irremediavelmente o equipamento ou diminuir a sua vida útil.
-Para o funcionamento otimizado, é necessário que um elétron acelerado entre um dinodo e outro atinja uma velocidade tal que, no impacto com o dinodo-alvo, provoque a emissão do maior número possível de elétrons secundários. A resolução do sistema também melhora paulatinamente com o aumento da tensão aplicada: quanto maior a tensão, melhor a coleção de cargas e menor o ruído eletrônico, que é porporcional à raiz quadrada do número de elétrons coletados.
-A quantidade de elétrons emitidos é função crescente da tensão: quanto maior a tensão, maior a energia do elétron ao atingir o dinodo e maior o número de elétrons secundários emitidos. Entretanto, a partir de determinado valor de tensão ocorre a saturação do fototubo: a aplicação de uma tensão acima do valor de saturação não mais provoca um aumento na emissão de elétrons. Tensões muito elevadas podem provocar faíscas e danificar o equipamento.
-Assim, em aplicações que pedem maior precisão, é conveniente operar o equipa- mento em sua tensão de saturação, onde amplificação e resolução estão otimizadas; para aplicações menos exigentes, pode-se operar o equipamento a uma tensão mais baixa, aumentando a sua vida útil. A escolha do ponto ideal pode ser feita a partir da curva característica do detetor.
-178 Licenciatura em Física
-   
-Os gráficos a seguir ilustram tal questão. Os três gráficos foram obtidos com o programa MULTICAN exatamente nas mesmas condições (fonte com fótons de 835 keV , 1024 canais, ganho de 8× no amplificador e 60s de tempo de aquisição), exceto pela tensão no fototubo, que era de 800 V para o gráfico superior, 1200 V para o intermediário e 2000 V para o inferior.
- 1500
-1000
-500
-0
-200 400
-600 800 1000
-                     canal
-        1000
-500
-0
-200 400
-600 800 1000
-Laboratório Especial 179
-                               canal
- contagens contagens
- 800
-600
-400
-200
-0
-200 400
-600 800 1000
-                              Figura 4.17: Simulação da aquisição de dados com um espectrômetro de NaI(Tl) utilizando uma fonte com emissões gama de 835 keV .
-O efeito da tensão na multiplicação é contundente: a posição do máximo varia enormemente com a tensão aplicada: em torno de 40 para 80 V , 360 para 1200 V e 720 para 2000 V . Ou seja: aumentando a tensão de 800 V para 1200 V , o número de elétrons coletados para cada fóton incidente quase decuplica, e aumentando a tensão de 1200 V para 2000 V , o número de elétrons coletados dobra.
-Além disso, a resolução é substancialmente melhorada: no primeiro caso, o pico de
-835 keV mistura-se com a radiação de fundo, mas é possível estimar a sua largura à meia
-altura em cerca de 50 canais, o que corresponde a uma resolução horrível: 50 = 1, 25, 40
-ou 125%! A partir do gráfico intermediário é possível estimar uma largura à meia altura
-de cerca de 90 canais, o que, para um pico próximo ao canal 300, corresponde a uma
-resolução de 90 = 0, 30, ou 30%. Já para o gráfico inferior, a largura à meia altura é 300
-de 60 canais, mas o pico da distribuição está próximo ao canal 600, o que corresponde a uma resolução de 0,10, ou cerca de 10%.
-A curva característica nada mais é do que o gráfico de algum parâmetro relevante - posição de um pico de referência, largura à meia altura, resolução fracional - em função da tensão aplicada ao fototubo, a partir da qual pode-se inferir a tensão de saturação.
-180 Licenciatura em Física
-canal
-   contagens
-4.10.1. Aquisição de dados
-1. Explore o espectrômetro e as fontes disponíveis para escolher valores convenientes para os parâmetros de operação do espectrômetro.
-2. Adquira dados para diferentes valores crescentes da tensão de operação do foto- tubo. Caso o pico de referência não apareça para valores muito baixos da tensão no fototubo, ou fique além do intervalo dinâmico do equipamento (“estoure” a escala dos canais) para os valores mais altos, ajuste o ganho do amplificador e refaça as medidas.
-3. Determine a posição, a largura à meia-altura e a resolução fracional para o pico de referência em todos os espectros adquidos. Faça gráficos destes parâmetros em função da tensão de operação do fototubo.
-4.10.2. Simulação
-Esta atividade pode ser simulada com o programa MULTICAN. Estude suas
-características e obtenha espectros com diferentes valores para a tensão aplicada ao fototubo. Produza gráficos da posição de um pico relevante em função da tensão aplicada. Faça também gráficos da largura à meia-altura e da resolução fracional do equipamento em função da tensão no fototubo.
-4.10.3. Análise de dados EXEMPLO
-5) As figuras abaixo mostram diferentes maneiras equivalentes de se visualizar a curva característica de espectrômetro de NaI(Tl): a amplificação, a largura à meia altura e a resolução em função da tensão no fototubo. Os gráficos foram gerados a partir dos dados (simulados) da tabela abaixo.
-A tabela mostra as posições dos picos e larguras à meia altura das distribuições em função da tensão aplicada no fototubo. Os dados foram simuladas com o programa MULTICAN para uma fonte de 835 keV , ganho de conversão de 1024 canais, ganho de 8 no amplificador e tempo de aquisição de 60 segundos. Os respectivos gráficos são apresentados nas figuras abaixo.
-Laboratório Especial 181
- 
-       Tensão no foto- tubo (V)
-800
-  900
-  1000
-  1100
-  1200
-  1300
-  1400
-  1500
-Posição do pico (canal)
-Larg. à meia altura (canais)
-   49
-   63
-   78
-   87
-   92
-   85
-   78
-   71
-Tensão no foto- tubo (V)
-  1600
-  1700
-  1800
-  1900
-  2000
-  2250
-  2500
-  2750
-Posição Larg. à do meia
-pico altura (canal) (canais)
-686 66 707 63 717 61 724 61 726 61 728 61 728 61 728 61
-38
- 76
-142
-240
-364
-486
-584
-649
-                         150
-100
-50
-0
-1000
-1500
-Tensão no fototubo (V)
-                                                           Posição do pico de 835 keV
-pico reflete o aumento fo fator de multiplicação do fototubo em função do aumento da tensão aplicada. Note a saturação em torno dos 1800 V .
-Licenciatura em Física
-2000
-2500 3000
-em função da tensão no fototubo. A posição do
- 182
-Resolução (%)
-100 80 60 40 20
-0 1000 1500
-Tensão no fototubo (V)
-Largura a meia altura da distribuição em torno do pico de 835keV em função da tensão no fototubo. Note a estabilização em torno dos 1800 V , indicando a saturação.
- 100 80 60 40 20
-0 1000
-1500 2000 2500 3000 Tensão no fototubo (V)
-2000 2500 3000
- Resolução em função da tensão no fototubo para o pico de 835 keV . Note que a resolução cai paulatinamente com o aumento da tensão até atingir um valor de saturação, em torno dos 1800 V .
-Laboratório Especial 183
- Posição do máximo (canal) Largura a meia altura (canais)
-RESUMO
-Neste experimento você viu que a emissão da radiação nuclear está relacionada às características de sua estrutura interna, viu alguns aspectos dos decaimentos alfa, beta e gama e entendeu o que é meia-vida, vida média e atividade. Você aprendeu também o que é e como funciona um detetor Geiger-Müller e um espectrômetro de fótons. Com o detetor Geiger-Müller, você determinou a atividade de uma fonte radioativa e os coeficientes de absorção de radiação para diferentes energias e materiais absorvedores. Além disso, você aprendeu a levantar a curva característica de um espectrômetro de fótons e a fazer a sua calibração a partir de dados sobre fontes de energias conhecidas.
+<h4>Aquisição de dados</h4>
+
+<ol>
+
+	<li>Explore algumas combinações de fontes radioativas, ganhos do amplificador e ganhos de conversão para a aquisição de espectros de energia. A finalidade desta etapa é adquirir sensibilidade com relação aos efeitos que cada parâmetro tem no espectro.</li>
+
+	<li>Ajuste os ganhos do amplificador e de conversão de tal modo que o sistema possa adquirir o espectro completo de pelo menos três fontes radioativas sem alterações posteriores  nos ganhos.</li>
+
+	<li>Faça a calibração dos espectros e determine a resolução fracional em energia para cada pico encontrado. Utiliza uma ferramenta de geração e manipulação de gráficos (OpenOffice SpreadSheet, Microsoft Excel, Microcal Origin, ROOT etc.) para auxílio na análise.</li>
+	</ol>
+
+<h4>Simulação</h4>
+
+<figure>
+	<img src="[[caminho]]/media/fig4-15.svg">
+	<figcaption>Figura 4.15: Tela do programa MULTICAN.</figcaption>
+</figure>
+
+<p>O MULTICAN simula o funcionamento de um espectrômetro de fótons associado a um analisador multicanal, ou seja, um sistema que permite discriminar em energia e contar os raios gama que atingem o detetor. Trata-se de uma ferramenta de simulação muito básica, que simula apenas os aspectos mais relevantes deste tipo de sistema, e não leva em conta vários detalhes das emissões de uma fonte radioativa nem do processo de deteção da radiação. Ao ser inicializado, o programa exibe a seguinte tela:</p>
+
+<p>O programa oferece as seguintes opções:</p>
+
+<ul>
+
+	<li><b>1 | 2 | 3 | 4 | 5 -</b> Escolha da fonte. São cinco fontes disponíveis, quatro delas com as principais linhas de emissão identificadas, e uma com energia desconhecida.</li>
+	<li><b>A -</b> Ganho de conversão, ou número de canais do espectro. Número de canais em que será divido o intervalo dinâmico de tensões geradas pelo amplificador (0 a 8 volts).</li>
+	<li><b>B -</b> Tensão de operação do fototubo. Define o fator de multiplicação do sistema.</li>
+	<li><b>C -</b> Ganho do amplificador. Pode ser regulado para adequar a altura do sinal de interesse ao intervalo dinâmico do espectrômetro.</li>
+	<li><b>D -</b> Tempo de aquisição. Define o tempo (simulado) de contagem.</li> 
+	<li><b>X -</b> Gera espectro. Quando esta tecla é pressionada, o programa gera um arquivo, chamado ESPECTRO.DAT, com as contagens obtidas para cada energia. Caso já exista um arquivo com este nome, ele será apagado, e um novo arquivo será gerado.</li>
+	<li><b>S -</b> Superpõe espectro. Procura um arquivo chamado ESPECTRO.DAT na pasta atual e superpõe (soma) a ele o novo espectro solicitado. Mudanças no número de canais e no ganho do amplificador não são recomendadas, pois são de difícil interpretação.</li> 
+	<li><b>Q -</b> Sair. Encerra o programa.</li> 
+
+	</ul>
+
+<p>A seguir estão algumas explicações adicionais sobre o significado dos parâmetros de aquisição.</p> 
+
+<h5>Ganho de conversão</h5>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-4a.svg">
+	<figcaption></figcaption>
+</figure>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-4b.svg">
+	<figcaption></figcaption>
+</figure>
+
+<p>Os espectros acima foram gerados com os mesmos parâmetros, exceto pelo ganho de conversão (número de canais). Em cima, o ganho de conversão é de 64; em baixo, é de 512. Note que um maior ganho de conversão é necessário quando se está interessado em detalhes da estrutura do espectro.</p>
+
+<h5>Tensão no fototubo</h5>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-5a.svg">
+	<figcaption></figcaption>
+</figure>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-5b.svg">
+	<figcaption></figcaption>
+</figure>
+
+<p>Os espectros foram gerados com os mesmos parâmetros, exceto pela tensão aplicada ao fototubo, que é de $1200\,V$ para o espectro superior e de $1800\,V$ para o inferior. Tensões muito baixas não permitem discriminar a presença dos dois picos; tensões muito elevadas podem causar danos e diminuição da vida útil do equipamento.</p>
+
+<h5>Ganho no amplificador</h5>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-6a.svg">
+	<figcaption></figcaption>
+</figure>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-6b.svg">
+	<figcaption></figcaption>
+</figure>
+
+
+<p>Os espectros foram gerados com os mesmos parâmetros, exceto pelo ganho do amplificador, que é de 1 para o espectro superior e de 4 para o inferior. Note que a escolha de um ganho muito pequeno não permite ver detalhes da estrutura do espectro.</p>
+
+
+<h5>Tempo de contagem</h5>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-7a.svg">
+	<figcaption></figcaption>
+</figure>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-7b.svg">
+	<figcaption></figcaption>
+</figure>
+
+<p>Os espectros foram gerados com os mesmos parâmetros, exceto pelo tempo de contagem, que é de 1 segundo para o espectro superior e de 30 segundos para o inferior. As áreas escuras representam as incertezas (1 desvio padrão) na contagem registrada em cada canal. Note que, quanto maior a contagem, menor a incerteza relativa.</p>
+
+<h4>Análise de dados</h4>
+
+<h5>Calibração</h5>
+
+<p>A figura abaixo mostra um espectro obtido com uma fonte de $^{22}Na$. O espectro do $^{22}Na$ tem três picos de energia bem definidos: $511\,keV,1275\,keV$ e $1786\,keV$, centrados nos canais 370,668 e 816, respectivamente (note que o pico de $1786\,keV$ é muito pequeno, possível de ser visto claramente somente ampliando-se a figura ou utilizando uma escala logarítmica para o eixo vertical). Esses valores podem ser utilizados para calcular a transformação que leva o valor de qualquer canal para um valor de energia.</p>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-8a.svg">
+	<figcaption></figcaption>
+</figure>
+
+<p>O problema é que em geral o sistema de aquisição não é linear. Note que entre o pico de $511\,keV$ e o de $1275\,keV$, intervalo que corresponde a $764\,keV$, existem 298 canais, de modo que 1 canal $=3,45\,keV$, em média. Já no intervalo entre $1275\,keV$ e $1786\,keV$, 1 canal $= 3,45\,keV$, em média. Para uma adequada calibração de todo o espectro, neste caso, seria necessário o ajuste de um polinômio de segundo grau do tipo $E = a +bC + cC^2$, ou, havendo mais picos de referência, de um polinômio de ordem ainda maior</p>
+
+<p>Em certas situações, entretanto, é suficiente um ajuste linear do tipo $E = a +b\cdot C$ para cada região de interesse. No caso dos espectros acima, a calibração dos intervalos seria a descrita na tabela abaixo. Desse modo, quando se deseja alguma informação, em energia, sobre estruturas entre os picos de $511\,keV$ e $1275\,keV$, utiliza-se uma calibração, e sobre estruturas entre os picos de $1275\,keV$ e $1786\,keV$, utiliza-se a outra. A tabela abaixo mostra os parâmetros da calibração em energia dos espectros de $^{22}Na$ para as duas regiões entre os picos.</p>
+
+<table>
+  <tr>
+    <th>$511\,keV$ a $1275\,keV$</th>
+    <th>$1275\,keV$ a $1786\,keV$</th>
+  </tr>
+  <tr>
+    <td>$511=a+b\cdot 370$</td>
+    <td>$1275=a+b\cdot 668$</td>
+  </tr>
+  <tr>
+    <td>$1275=a+b\cdot 668$</td>
+    <td>$1786=a+b\cdot 816$</td>
+  </tr>
+  <tr>
+    <td>$a=-437\,keV$</td>
+    <td>$a=-1030\,keV$</td>
+  </tr>
+  <tr>
+    <td>$b=2,56\,keV/canal$</td>
+    <td>$b=3,45\,keV/canal$</td>
+  </tr>
+  <tr>
+    <td>$E=-437+2,56\cdot C$</td>
+    <td>$E=-1030+3,45\cdot C$</td>
+  </tr>
+</table>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-8b.svg">
+	<figcaption>Em cima: espectro de uma fonte de $^{22}Na$ obtido com um espectrômetro de fótons. Em baixo: o mesmo espectro, com a escala vertical logarítmica. Note que a escala logarítmica permite a visualização simultânea de estruturas com intensidades muito distintas. Os picos, centrados nos canais 370, 668 e $1786\,keV$, correspondem a energias de $511\,keV, 1275\,keV$ e $1786\,keV$.</figcaption>
+</figure>
+
+
+
+<h5>Resolução</h5>
+
+<p>A determinação da resolução fracional é muito simples:</p>
+
+<ol class="letras">
+
+	<li>Determina-se o canal central dos picos - isto pode ser feito com um programa que ajuste gaussianas aos dados, mas uma simples inspeção visual é frequentemente suficiente. No caso dos picos do espectro de $^{22}Na$ acima, as centróides estão nos canais 370, 668 e 816, que correspondem a energias de $511\,keV$, $1275\,keV$ e $1786\,keV$.</li>
+	<li>Determina-se o valor das contagens no centro dos picos e, a partir deles, o valor das contagens a meia altura. No caso do espectro de $^{22}Na$, as alturas são $70,0\times 10^{3}$, $9,9\times 10^{3}$ e $0,56\times 10^{3}$, que correspondem a meias-alturas de $35,0\times 10^{3}$, $4,95\times 10^{3}$ e $0,28\times 10^{3}$, respectivamente.</li> 
+	<li>Determina-se a largura, em canais, dos picos, à meia altura. No caso do espectro de $^{22}Na$, as larguras são 29, 33 e 25 canais, respectivamente.</li> 
+	<li>Divide-se o valor da largura pelo valor da posição do pico, o que corresponde a $\frac{29}{370} = 0,078$, ou cerca de $8\%$ no primeiro caso, $\frac{33}{668} = 0,049$, ou cerca de $5\%$ no segundo, e $\frac{25}{816} = 0,031$, ou $3\%$ no terceiro.</li>
+
+	</ol>
+
+<p>Duas observações importantes a respeito desta análise:</p>
+
+
+<div class="caixa">
+	<p><ol><li>É importante o domínio de uma ferramenta de visualização e manipulação de gráficos (OpenOffice SpreadSheet, Microsoft Excell, Microcal Origin, ROOT etc.), pois a extração desses valores pode ser muito difícil, ou no mínimo aborrecida, se feita somente a partir dos números do arquivo de dados.</li>
+
+	<li>A utilização da resolução fracional $\frac{\Delta E}{E}$ contorna o problema da não-linearidade da conversão da energia em número de canal. Que fator de calibração seria usado para o pico de $1275\,keV$ do espectro de $^{22}Na$? $2,56\,keV/canal$? $3,45\,keV/canal$? Nenhum dos dois: sabe-se que para o pico de $1275\,keV$, a resolução fracional é de $5\%$, ou cerca de $64\,keV$.</li></ol></p>
+</div>
+
+
+<h3>Análise de dados</h3>
+
+<p>A resposta de um espectrômetro composto de um cristal de NaI(Tl) e um fototubo depende crucialmente do potencial elétrico (tensão) aplicado entre os eletrodos (dinodos) do fototubo. Tensões baixas correspondem a baixos fatores de amplificação e menor resolução. Tensões demasiadamente elevadas podem danificar irremediavelmente o equipamento ou diminuir a sua vida útil.</p>
+
+<p>Para o funcionamento otimizado, é necessário que um elétron acelerado entre um dinodo e outro atinja uma velocidade tal que, no impacto com o dinodo-alvo, provoque a emissão do maior número possível de elétrons secundários. A resolução do sistema também melhora paulatinamente com o aumento da tensão aplicada: quanto maior a tensão, melhor a coleção de cargas e menor o ruído eletrônico, que é porporcional à raiz quadrada do número de elétrons coletados.</p>
+
+<p>A quantidade de elétrons emitidos é função crescente da tensão: quanto maior a tensão, maior a energia do elétron ao atingir o dinodo e maior o número de elétrons secundários emitidos. Entretanto, a partir de determinado valor de tensão ocorre a <i>saturação</i> do fototubo: a aplicação de uma tensão acima do valor de saturação não mais provoca um aumento na emissão de elétrons. Tensões muito elevadas podem provocar faíscas e danificar o equipamento.</p>
+
+<p>Assim, em aplicações que pedem maior precisão, é conveniente operar o equipamento em sua tensão de saturação, onde amplificação e resolução estão otimizadas; para aplicações menos exigentes, pode-se operar o equipamento a uma tensão mais baixa, aumentando a sua vida útil. A escolha do ponto ideal pode ser feita a partir da <i>curva característica</i> do detetor.</p>
+
+<p>Os gráficos a seguir ilustram tal questão. Os três gráficos foram obtidos com o programa MULTICAN exatamente nas mesmas condições (fonte com fótons de $835\,keV$, 1024 canais, ganho de $8\times$ no amplificador e $60\,s$ de tempo de aquisição), exceto pela tensão no fototubo, que era de $800\,V$ para o gráfico superior, $1200\,V$ para o intermediário e $2000\,V$ para o inferior.</p>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-9a.svg">
+	<figcaption></figcaption>
+</figure>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-9b.svg">
+	<figcaption></figcaption>
+</figure>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-9c.svg">
+	<figcaption>
+Figura 4.17: Simulação da aquisição de dados com um espectrômetro de NaI(Tl) utilizando uma fonte com emissões gama de $835\,keV$.</figcaption>
+</figure>
+
+<p>O efeito da tensão na multiplicação é contundente: a posição do máximo varia enormemente com a tensão aplicada: em torno de 40 para $80\,V$, 360 para $1200\,V$ e 720 para $2000\,V$. Ou seja: aumentando a tensão de $800\,V$ para $1200\,V$, o número de elétrons coletados para cada fóton incidente quase decuplica, e aumentando a tensão de $1200\,V$ para $2000\,V$, o número de elétrons coletados dobra.</p>
+
+<p>Além disso, a resolução é substancialmente melhorada: no primeiro caso, o pico de $835\,keV$ mistura-se com a radiação de fundo, mas é possível estimar a sua largura à meia altura em cerca de 50 canais, o que corresponde a uma resolução horrível: $\frac{50}{40}=1,25$, ou $125\%$! A partir do gráfico intermediário é possível estimar uma largura à meia altura de cerca de 90 canais, o que, para um pico próximo ao canal 300, corresponde a uma resolução de $\frac{90}{300}=0,30$, ou $30\%$. Já para o gráfico inferior, a largura à meia altura é de 60 canais, mas o pico da distribuição está próximo ao canal 600, o que corresponde a uma resolução de 0,10, ou cerca de $10\%$.</p>
+
+<p>A curva característica nada mais é do que o gráfico de algum parâmetro relevante - posição de um pico de referência, largura à meia altura, resolução fracional - em função da tensão aplicada ao fototubo, a partir da qual pode-se inferir a tensão de saturação.</p>
+
+<h4>Aquisição de dados</h4>
+
+	<ol>
+	
+		<li>Explore o espectrômetro e as fontes disponíveis para escolher valores convenientes para os parâmetros de operação do espectrômetro.</li>
+
+		<li>Adquira dados para diferentes valores crescentes da tensão de operação do fototubo. Caso o pico de referência não apareça para valores muito baixos da tensão no fototubo, ou fique além do intervalo dinâmico do equipamento ("estoure" a escala dos canais) para os valores mais altos, ajuste o ganho do amplificador e refaça as medidas.</li>
+
+		<li>Determine a posição, a largura à meia-altura e a resolução fracional para o pico de referência em todos os espectros adquidos. Faça gráficos destes parâmetros em função da tensão de operação do fototubo.</li>	
+
+	</ol>
+
+<h4>Simulação</h4>
+
+<p>Esta atividade pode ser simulada com o programa MULTICAN. Estude suas características e obtenha espectros com diferentes valores para a tensão aplicada ao fototubo. Produza gráficos da posição de um pico relevante em função da tensão aplicada. Faça também gráficos da largura à meia-altura e da resolução fracional do equipamento em função da tensão no fototubo</p>.
+
+<h4>Análise de dados</h4>
+
+
+<h5>Exemplo</h5>
+
+<div class="exercicio">
+	<h5>Exemplo 5</h5>
+	<p>As figuras abaixo mostram diferentes maneiras equivalentes de se visualizar a curva característica de espectrômetro de NaI(Tl): a amplificação, a largura à meia altura e a resolução em função da tensão no fototubo. Os gráficos foram gerados a partir dos dados (simulados) da tabela abaixo.</p>
+
+</div>
+
+<p>A tabela mostra as posições dos picos e larguras à meia altura das distribuições em função da tensão aplicada no fototubo. Os dados foram simuladas com o programa MULTICAN para uma fonte de $835\,keV$, ganho de conversão de 1024 canais, ganho de 8 no amplificador e tempo de aquisição de 60 segundos. Os respectivos gráficos são apresentados nas figuras abaixo.</p>
+
+<table>
+  <tr>
+    <th>Tensão no fototubo (V)}</th>
+    <th>Posição do pico (canal)</th>
+    <th>Larg. à meia altura (canais)</th>
+    <th>Tensão no fototubo (V)</th>
+    <th>Posição do pico (canal)</th>
+    <th>Larg. à meia altura (canais)</th>
+  </tr>
+  <tr>
+    <td>800</td>
+    <td>38</td>
+    <td>49</td>
+    <td>1600</td>
+    <td>686</td>
+    <td>66</td>
+  </tr>
+  <tr>
+    <td>900</td>
+    <td>76</td>
+    <td>63</td>
+    <td>1700</td>
+    <td>707</td>
+    <td>63</td>
+  </tr>
+  <tr>
+    <td>1000</td>
+    <td>142</td>
+    <td>78</td>
+    <td>1800</td>
+    <td>717</td>
+    <td>61</td>
+  </tr>
+  <tr>
+    <td>1100</td>
+    <td>240</td>
+    <td>87</td>
+    <td>1900</td>
+    <td>724</td>
+    <td>61</td>
+  </tr>
+  <tr>
+    <td>1200</td>
+    <td>364</td>
+    <td>92</td>
+    <td>2000</td>
+    <td>726</td>
+    <td>61</td>
+  </tr>
+  <tr>
+    <td>1300</td>
+    <td>486</td>
+    <td>85</td>
+    <td>2250</td>
+    <td>728</td>
+    <td>61</td>
+  </tr>
+  <tr>
+    <td>1400</td>
+    <td>584</td>
+    <td>78</td>
+    <td>2500</td>
+    <td>728</td>
+    <td>61</td>
+  </tr>
+  <tr>
+    <td>1500</td>
+    <td>649</td>
+    <td>71</td>
+    <td>2750</td>
+    <td>728</td>
+    <td>61</td>
+  </tr>
+</table>
+
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-10.svg">
+	<figcaption>Posição do pico de $835\,keV$ em função da tensão no fototubo. A posição do pico reflete o aumento fo fator de multiplicação do fototubo em função do aumento da tensão aplicada. Note a saturação em torno dos $1800\,V$.></figcaption>
+</figure>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-11.svg">
+	<figcaption>Largura a meia altura da distribuição em torno do pico de $835\,keV$ em função da tensão no fototubo. Note a estabilização em torno dos $1800\,V$, indicando a saturação.></figcaption>
+</figure>
+
+<figure>
+	<img src="[[caminho]]/media/grafico4-12.svg">
+	<figcaption>Resolução em função da tensão no fototubo para o pico de $835\,keV$. Note que a resolução cai paulatinamente com o aumento da tensão até atingir um valor de saturação, em torno dos $1800\,V$.></figcaption>
+</figure>
+
+
+<h5>Resumo</h5>
+
+<p>Neste experimento você viu que a emissão da radiação nuclear está relacionada às características de sua estrutura interna, viu alguns aspectos dos decaimentos alfa, beta e gama e entendeu o que é meia-vida, vida média e atividade. Você aprendeu também o que é e como funciona um detetor Geiger-Müller e um espectrômetro de fótons. Com o detetor Geiger-Müller, você determinou a atividade de uma fonte radioativa e os coeficientes de absorção de radiação para diferentes energias e materiais absorvedores. Além disso, você aprendeu a levantar a curva característica de um espectrômetro de fótons e a fazer a sua calibração a partir de dados sobre fontes de energias conhecidas.</p>
+
+
+
+<h5>Apêndice</h5>
+
+
+<h6>Constantes Físicas</h6>
+
+<table><th></th><td>Velocidade da luz no vácuo</td><td>$c$</td><td>$2,99792458\times 10^{8}\,m/s$</td><tr><th></th><td>Massa de repouso do elétron</td><td>$m_{e}$</td><td>$9,1093897\times 10^{-31}\,kg$</td></tr><tr><th></th><td>Massa de repouso do próton</td><td>$m_{p}$</td><td>$1,6726231\times 10^{-27}\,kg$</td></tr><tr><th></th><td>Massa de repouso do nêutron</td><td>$m_{n}$</td><td>$1,6749286\times 10^{-27}\,kg$</td></tr><tr><th></th><td>Carga elementar</td><td>$e$</td><td>$1,6021773\times 10^{-19}\,C$</td></tr><tr><th></th><td>Permissividade elétrica do vácuo</td><td><div>$\varepsilon_{0}$</div></td><td>$8,85241878\times 10^{-12}\,F/m$</td></tr><tr><th></th><td>Permeabilidade magnética do vácuo</td><td>$\mu_{0}$</td><td>$1,2566371\times 10^{-6}\,H/m$</td></tr><tr><th></th><td>Constante de Planck</td><td>$h$</td><td><div>$6,6260755\times 10^{-34}\,J\cdot s$</div></td></tr><tr><th></th><td>Constante de Planck / $2\pi$</td><td><div>$\hbar = \dfrac{h}{2\pi}$</div></td><td><div>$1,0545727\times 10^{-34}\,J\cdot s$</div></td></tr><tr><th></th><td>Número de Avogadro</td><td>$N_{A}$</td><td><div>$6,6260755\times 10^{23}\,mol^{-1}$</div></td></tr><tr><th></th><td>Constante de Boltzmann</td><td>$k$</td><td>$1,3806513\times 10^{-23}$</td></tr><tr><th></th><td>Constante de estrutura fina</td><td><div>$\alpha = \dfrac{e^2}{4\varepsilon_{0}\hbar c}$</div></td><td>$\dfrac{1}{137,0359895}$</td></tr><tr><th></th><td>Raio de Bohr</td><td>$a_{0}$</td><td>$5,2917725\times 10^{-11}\,m$</td></tr><tr><th></th><td>Constante de Rydberg</td><td>$R_{y}$</td><td>$1,1097373\times 10^{7}\,m^{-1}$</td></tr></table>
+
+
+<h6>Fatores de conversão</h6>
+
+
+
+<table>
+  <tr>
+    <th>$1\,eV$</th>
+    <th>$1,6021\times 10^{-19}\,J$</th>
+  </tr>
+  <tr>
+    <td>$1$ Å</td>
+    <td>$10^{-10}\,m$</td>
+  </tr>
+  <tr>
+    <td>$1\,u$</td>
+    <td>$1,6605402\times 10^{-27}\,kg$</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
