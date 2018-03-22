@@ -638,54 +638,114 @@ t & = & \frac{\tau ln \left( 1 + N_{\text{Ar}}/N_{\text{K}} \right)}{ln~2} \\
 
 <div class="caixa">
   <h5>Exemplo 3</h5>
-  <p>O livro impresso original usa, muitas vezes, uma caixa cinza para dar destaques à certos trechos do texto. Essa é a caixa que será usada no ebook. Para usar essa caixa, é só envolver o texto na tag <code>&lt;div class=&quot;caixa&quot;&gt;&lt;/div&gt;</code>.</p>
+  <p>Calcule a energia de desintegração Q para a fissão nuclear descrita na equação (2.9), levando-se em consideração os decaimentos dos fragmentos primários do 236U como mostrado nas equações (2.10) e (2.11).</p>
+
+  <ul>
+    <li>Recordemos que $Q$ pode ser calculado a partir da eq. (2.2), temos que $Q~=~ \Delta m~c^{2}$.</li>
+    <li>As massas atômicas e de partículas que precisaremos são: $^{235}$U = 235,0439u; $^{140}$Ce = 139,9054u; $^{94}$Zr = 93,9063u; n = 1,00866u.</li>
+    <li>Combinando-se as eqs. (2.9) com (2.10) e (2.11) pode-se escrever
+<p class="formula">
+  \begin{eqnarray*}
+^{235}\text{U} ~~ \rightarrow ~~^{140}\text{Ce} ~~ + ~~ ^{94}\text{Zr} ~~ + ~~\text{n}  
+\end{eqnarray*}
+  </p>
+note que apenas um nêutron aparece na equação acima. O nêutron iniciador na eq. (2.9) é cancelado com um dos dois nêutrons no lado direito daquela equação.    </li>
+    <li>A diferença de massa da equação acima é:
+<p class="formula">      
+\begin{eqnarray*}
+\Delta m~ & = & ~(235,0439~u) - (139,9054~u + 93,9063~u + 1,00867~u) \\
+~ & = & 0,22353~u.
+  \end{eqnarray*}</p></li>
+    <li>A energia de desintegração é:
+<p class="formula">
+\begin{eqnarray*}
+Q ~ &=& ~\Delta m~ c^{2} ~ = ~ (0,22353~u) \times (931,5~\text{MeV}/u) \\
+~ & = & ~ 208~\text{MeV}.
+  \end{eqnarray*}</p></li>
+    <li>A maior parte dessa energia manifesta-se como aumento da energia interna do sistema que contém o $^{235}$U, revelando-se como aumento da temperatura do sistema. Aproximadamente 5% desse energia, contudo, é associada com os neutrinos emitidos nos vários decaimentos beta que ocorrem entre os nuclídeos envolvidos. Os neutrinos escapam do sistema e, por isso, a energia que eles carregam é perdida. </li>
+  </ul>
+
 </div> 
 
+<div class="caixa">
+  <h5>Diário de Bordo 6</h5>
+  <p>Para um evento de fissão nuclear genérico dado por</p>
+<p class="formula">
+\begin{eqnarray*}
+^{235}\text{U} ~~ + ~~~ \text{n} ~~\rightarrow ~~\text{X} ~~ + ~~ \text{Y} ~~ + ~~2\text{n}  
+  \end{eqnarray*}</p>
 
-Exemplo 3: Calcule a energia de desintegração Q para a fissão nuclear descrita na equação (2.9), levando-se em consideração os decaimentos dos fragmentos primários do 236U como mostrado nas equações (2.10) e (2.11).
-• Recordemos que Q pode ser calculado a partir da eq. (2.2), temos que Q = ∆mc2.
-• As massas atômicas e de partículas que precisaremos são: 235U = 235,0439u; 140Ce = 139,9054u; 94Zr = 93,9063u; n = 1,00866u.
-• Combinando-se as eqs. (2.9) com (2.10) e (2.11) pode-se escrever 235U → 140Ce + 94Zr + n
-note que apenas um nêutron aparece na equação acima. O nêutron iniciador na eq. (2.9) é cancelado com um dos dois nêutrons no lado direito daquela equação.
-• A diferença de massa da equação acima é:
-∆m = (235,0439 u)−(139,9054 u+93,9063 u+1,00867 u)
-= 0,22353u.
-• A energia de desintegração é:
-Q = ∆mc2 = (0,22353u)×(931,5MeV/u) = 208 MeV.
-• A maior parte dessa energia manifesta-se como aumento da energia interna do sistema que contém o 235U, revelando-se como aumento da temperatura do sistema. Aproximadamente 5% desse energia, contudo, é associada com os neutrinos emitidos nos vários decaimentos beta que ocorrem entre os nuclídeos envolvidos. Os neutrinos escapam do sistema e, por isso, a energia que eles carregam é perdida.
+<p>Quais combinações não poderiam representar X e Y? Justifique sua escolha.</p>
 
-  
- Diário de Bordo 6:
-Para um evento de fissão nuclear genérico dado por
-235U+ n→X+Y+2n
-Quais combinações não poderiam representar X e Y? Justifique sua escolha.
-• 141Xe e 93Sr;
-• 139Xe e 95Rb;
-• 156Nd e 79Ge;
-• 121In e 113Ru.
-Para saber mais:
-• O funcionamento de uma usina nuclear. Siga o link abaixo para aprender mais sobre o funcionamento de uma usina nuclear2. http://portaldoprofessor.mec.gov.br/storage/recursos/9572/atividade4/ati- vidade4.htm
-• Como funciona a bomba atômica? Siga o link abaixo para aprender mais sobre o funcionamento da bomba atômica2. http://www.youtube.com/watch?v=jWUuKQGei2k &feature=related
-2.7. Fusão Nuclear
-Fusão nuclear é o processo no qual dois ou mais núcleos atômicos se juntam e formam um outro núcleo de maior número atômico. Para que a fusão nuclear ocorra, é necessário que os núcleos iniciadores do processo superem a força de repulsão de Coulomb que existe entre as cargas positivas dos núcleos, e possam se aproximar suficientemente para que entrem no raio de ação da interação forte (força atrativa) e assim venham a se “fundir” formando um novo núcleo. A fusão nuclear requer portanto muita energia para acontecer, mas geralmente liberta muito mais energia que consome. O interior de estrelas, onde se encontram altíssimas temperaturas, proporciona condições ideais para a ocorrência de fusão nuclear.
-2. Portal do Professor. Ministério da Educação. Disponível em: <http://portaldoprofessor.mec.gov.br>.
-232 Licenciatura em Física
-      
-Conforme vimos na figura 2.1, a curva da energia nuclear de ligação atinge seu máximo para elementos químicos com número de massa próximos ao 56Fe. prática, processos de fusão nuclear liberam energia quando ocorrem com elementos mais leves que o ferro ou níquel - que possuem as maiores forças de coesão nuclear de todos os átomos, sendo portanto mais estáveis.
-Um dos exemplos mais importantes da ocorrência de fusão nuclear pode ser obser- vado no interior das estrelas como o Sol. O principal tipo de fusão que ocorre no interior de estrelas da magnitude e temperatura do Sol é o ciclo de fusões próton-próton, ou seja,
-1H+1H→2H+e+ +ν+0,42MeV 1H + 2H → 3He + γ + 5,49MeV
-que pode ser seguido por
-3He + 3He → 4He + 1H + 1H + 12,86MeV.
-Outras cadeias de fusão são possíveis e suas ocorrências dependem de fatores como a temperatura no interior das estrelas, por exemplo. A energia resultante liberada pelo ciclo descrito acima, é de 26,72 MeV. As etapas que contribuem para o ciclo de fusão próton-próton são detalhadas na fig. 2.6. Note que necessita-se duas reações iguais ocorrendo simultâneamente nas primeiras etapas do ciclo para se produzir os dois núcleos de 3He que se fundem na etapa final. O valor da energia resultante liberada pelo ciclo é obtido adicionando-se a energia liberada em cada estágio do processo, incluindo-se a energia contribuida pela aniquilação elétron-pósitron nas etapas iniciais do ciclo de fusão.
-A energia liberada nos processos de fusão nuclear corresponde ao fato de a massa do núcleo produzido pela fusão ser menor do que a soma das massas dos núcleos a serem fundidos.
-Até hoje, início do século XXI, o ser humano ainda não conseguiu encontrar uma forma de controlar a fusão nuclear como acontece com a fissão. No entanto, fusão nuclear é produzida em laboratório permitindo a fabricação de núcleos atômicos artificiais. Outra aplicação desses processos são as explosões de bombas “termonucleares”, as quais são projetadas para atingir temperaturas altas o suficiente para se iniciar reações de fusão nuclear, liberando assim extraordinárias quantidades de energia.
-Física Nuclear e de Partículas 233
+  <ul>
+    <li>$^{141}$Xe e $^{93}$Sr;</li>
+    <li>$^{139}$Xe e $^{95}$Rb;</li>
+    <li>$^{156}$Nd e $^{79}$Ge;</li>
+    <li>$^{121}$In e $^{113}$Ru.</li>
+  </ul>
+
+  </div> 
+
+<div class="caixa">
+  <h5>Para saber mais</h5>
+  <ul>
+    <li><b>O funcionamento de uma usina nuclear.</b> Siga o link abaixo para aprender mais sobre o funcionamento de uma usina nuclear <button class="botao-rodape" data-numero='2'></button>.<br> <a href="http://portaldoprofessor.mec.gov.br/storage/recursos/9572/atividade4/atividade4.htm" target="blank">http://portaldoprofessor.mec.gov.br/storage/recursos/9572/atividade4/atividade4.htm</a></li>
+    <li><b>Como funciona a bomba atômica?</b> Siga o link abaixo para aprender mais sobre o funcionamento da bomba atômica <button class="botao-rodape" data-numero='2'></button>.<br> <a href="http://www.youtube.com/watch?v=jWUuKQGei2k &feature=related" target="blank">http://www.youtube.com/watch?v=jWUuKQGei2k &feature=related</a></li>
+  </ul>
+</div>
+
+<div class="nota-rodape" data-numero='2'>
+  <p>Portal do Professor. Ministério da Educação. Disponível em: &lt;<a href="http://portaldoprofessor.mec.gov.br" target="blank">http://portaldoprofessor.mec.gov.br</a>&gt;.</p>
+</div>
  
- Figura 2.6: Ciclo de fusões próton-próton. Processos de fusão nuclear que ocorrem no interior do Sol. Fonte: adaptada de Halliday, Resnick e Walker (2007).
-Para saber mais:
-Vídeos explicativos sobre o processo de fusão nuclear e o funcionamento das estrelas3:
-• http://www.youtube.com/watch?v=dkIsX980e6c
-• http://www.youtube.com/watch?v=2jpni-wsAyM&feature=related Vídeos ilustrativos sobre o processo de fusão nuclear empregado em3:
-• Bomba de hidrogênio: http://www.youtube.com/watch?v=RQ2I7H2cQmY
-• Fusão artificial em laboratório: http://www.youtube.com/watch?v=2jpni-wsAyM&feature=related
-   3. Portal do Professor. Ministério da Educação. Disponível em: <http://portaldoprofessor.mec.gov.br>.
+<h3>Fusão Nuclear</h3>
+
+<p><b>Fusão nuclear </b>é o processo no qual dois ou mais núcleos atômicos se juntam e formam um outro núcleo de maior número atômico. Para que a fusão nuclear ocorra, é necessário que os núcleos iniciadores do processo superem a força de repulsão de Coulomb que existe entre as cargas positivas dos núcleos, e possam se aproximar suficientemente para que entrem no raio de ação da interação forte (força atrativa) e assim venham a se “fundir” formando um novo núcleo. A fusão nuclear requer portanto muita energia para acontecer, mas geralmente liberta muito mais energia que consome. O interior de estrelas, onde se encontram altíssimas temperaturas, proporciona condições ideais para a ocorrência de fusão nuclear.</p>
+
+      
+<p>Conforme vimos na figura 2.1, a curva da energia nuclear de ligação atinge seu máximo para elementos químicos com número de massa próximos ao $^{56}$Fe. prática, processos de fusão nuclear liberam energia quando ocorrem com elementos mais leves que o ferro ou níquel - que possuem as maiores forças de coesão nuclear de todos os átomos, sendo portanto mais estáveis.</p>
+
+<p>Um dos exemplos mais importantes da ocorrência de fusão nuclear pode ser obser- vado no interior das estrelas como o Sol. O principal tipo de fusão que ocorre no interior de estrelas da magnitude e temperatura do Sol é o ciclo de fusões próton-próton, ou seja,</p>
+
+<p class="formula">
+\begin{eqnarray*}
+^{1}\text{H} ~~ + ~~^{1}\text{H} ~~ \rightarrow ~~^{2}\text{H} ~~ + ~~ \text{e}^{+} ~~ + ~~ \nu ~~ + ~~ 0,42 ~\text{MeV}  \\
+^{1}\text{H} ~~ + ~~^{2}\text{H} ~~ \rightarrow ~~^{3}\text{He} ~~ + ~~ \gamma ~~ + ~~ 5,49 ~\text{MeV}
+\end{eqnarray*}
+  </p>
+
+<p>que pode ser seguido por</p>
+
+<p class="formula">
+\begin{eqnarray*}
+^{3}\text{He} ~~ + ~~^{3}\text{He} ~~ \rightarrow ~~^{4}\text{He} ~~ + ~~ ^{1}\text{H} ~~ + ~~ ^{1}\text{H} ~~ + ~~ 12,86 ~\text{MeV}.
+\end{eqnarray*}
+  </p>
+
+<p>Outras cadeias de fusão são possíveis e suas ocorrências dependem de fatores como a temperatura no interior das estrelas, por exemplo. A energia resultante liberada pelo ciclo descrito acima, é de 26,72 MeV. As etapas que contribuem para o ciclo de fusão próton-próton são detalhadas na fig. 2.6. Note que necessita-se duas reações iguais ocorrendo simultâneamente nas primeiras etapas do ciclo para se produzir os dois núcleos de $^{3}$He que se fundem na etapa final. O valor da energia resultante liberada pelo ciclo é obtido adicionando-se a energia liberada em cada estágio do processo, incluindo-se a energia contribuida pela aniquilação elétron-pósitron nas etapas iniciais do ciclo de fusão.</p>
+
+<p>A energia liberada nos processos de fusão nuclear corresponde ao fato de a massa do núcleo produzido pela fusão ser menor do que a soma das massas dos núcleos a serem fundidos.</p>
+
+<p>Até hoje, início do século XXI, o ser humano ainda não conseguiu encontrar uma forma de controlar a fusão nuclear como acontece com a fissão. No entanto, fusão nuclear é produzida em laboratório permitindo a fabricação de núcleos atômicos artificiais. Outra aplicação desses processos são as explosões de bombas “termonucleares”, as quais são projetadas para atingir temperaturas altas o suficiente para se iniciar reações de fusão nuclear, liberando assim extraordinárias quantidades de energia.</p>
+
+<figure>
+  <img src="[[caminho]]/media/fig2-9.jpg">
+  <figcaption>Figura 2.6: Ciclo de fusões próton-próton. Processos de fusão nuclear que ocorrem no interior do Sol. Fonte: adaptada de Halliday, Resnick e Walker (2007).</figcaption>
+</figure>
+
+<div class="caixa">
+  <h5>Para saber mais</h5>
+  <p>Vídeos explicativos sobre o processo de fusão nuclear e o funcionamento das estrelas <button class="botao-rodape" data-numero='3'></button>:</p>
+  <ul>
+    <li><a href="http://www.youtube.com/watch?v=dkIsX980e6c" target="blank">http://www.youtube.com/watch?v=dkIsX980e6c</a></li>
+    <li><a href="http://www.youtube.com/watch?v=2jpni-wsAyM&feature=related" target="blank">http://www.youtube.com/watch?v=2jpni-wsAyM&feature=related</a></li>
+  </ul>
+  <p>Vídeos ilustrativos sobre o processo de fusão nuclear empregado em <button class="botao-rodape" data-numero='3'></button>:</p>
+  <ul>
+    <li>Bomba de hidrogênio: <br><a href="http://www.youtube.com/watch?v=RQ2I7H2cQmY" target="blank">http://www.youtube.com/watch?v=RQ2I7H2cQmY</a></li>
+    <li>Fusão artificial em laboratório:<br><a href="http://www.youtube.com/watch?v=2jpni-wsAyM&feature=related" target="blank">http://www.youtube.com/watch?v=2jpni-wsAyM&feature=related</a></li>
+  </ul> </div>
+
+<div class="nota-rodape" data-numero='3'>
+  <p>Portal do Professor. Ministério da Educação. Disponível em: &lt;<a href="http://portaldoprofessor.mec.gov.br" target="blank">http://portaldoprofessor.mec.gov.br</a>&gt;.</p>
+  </div>
