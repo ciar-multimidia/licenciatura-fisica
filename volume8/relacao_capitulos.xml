@@ -302,6 +302,14 @@
             <subcap>
                 <title>Possibilidades para o Ensino de Física</title>
                 <uri>possibilidades-para-o-ensino-de-fisica</uri>
+                
+            </subcap>
+
+
+
+            <subcap>
+                <title>Alguns Experimentos Simples</title>
+                <uri>alguns-experimentos-simples</uri>
                 <subsubcaps>
                     <item>Haste Metálica com Rosca</item>
                     <item>Pêndulo Simples</item>
@@ -324,13 +332,6 @@
                     <item>Consumo de Energia Elétrica</item>
                     <item>Livros e Sites Relacionados à Experimentação</item>
                 </subsubcaps>
-            </subcap>
-
-
-
-            <subcap>
-                <title>Alguns Experimentos Simples</title>
-                <uri>alguns-experimentos-simples</uri>
             </subcap>
 
 
