@@ -49,51 +49,17 @@
 
 		<h5>Aos cursistas</h5>
 
-		<p>Este volume corresponde aos módulos I e II do sétimo semestre do curso de Licenciatura em Física na modalidade à distância. Os 
-		módulos que compõem o material didático impresso trazem assuntos relativos à Ciência, Tecnologia e Meio Ambiente.</p>
-
-		<p>O primeiro módulo tratará de três títulos: “Física Computacional <b>(parte 1)</b>”, “Física Moderna II”, e “Estágio Supervisionado III 
-		<b>(parte 1)</b>”. Hoje pode-se dizer que não é possível viver sem o uso da informática, pois a comodidade que ela  proporciona é cada 
-		vez maior e presente em todos os seguimentos da sociedade. Na área da educação, o uso das ferramentas que a informática oferece 
-		é enorme e o educador deve utilizá-las constantemente no seu trabalho. É nesse sentido que o autor de Física Computacional 
-		<b>(partes 1 e 2)</b> procura dar uma ideia de alguns conceitos sobre softwares e informática que poderão auxiliar o professor/educador 
-		na tarefa diária de transmitir conteúdos de Física e Ciências afins. No início do século XX, várias dúvidas pairavam no ar em 
-		relação aos átomos, a radiação térmica, a quantização da radiação eletromagnética, dentre outras. A autora de Física Moderna II, 
-		com o objetivo de fornecer subsídios para auxiliar no esclarecimento dessas e outras dúvidas, aborda as teorias associadas aos 
-		temas mencionados e também, a quantização da radiação eletromagnética, modelos atômicos, propriedades ondulatórias de partículas, 
-		princípio da incerteza etc., além do formalismo teórico e matemático necessário. Após conhecer os projetos da Escola Campo, 
-		observar e fazer um diagnóstico do ensino de Física é chegado o momento de elaborar o projeto de ação e/ou intervenção na Escola. 
-		E nesse sentido, a autora de Estágio Supervisionado III <b>(partes 1 e 2)</b> aborda assuntos que nortearão a escolha do tema do projeto, 
-		da turma etc., de tal forma que as ações propostas sejam exequíveis e visem melhorar a problemática observada na escola.</p>
-
-		<p>No segundo módulo tratar-se-á dos títulos: “Astrofísica e Cosmologia”, “Língua Brasileira de Sinais - LIBRAS”, Física Computacional
-		<b>(parte 2)</b> e “Estágio Supervisionado III <b>(parte 2)</b>”. Uma das perguntas mais comum nos dias de hoje é: como o mundo que vivemos 
-		surgiu? E os pontos brilhantes que vemos a noite no céu são estrelas e/ou planetas? Essas e muitas outras questões surgem em 
-		nossas mentes e os autores de Astrofísica e Cosmologia visando esclarecer nossas dúvidas e questionamentos abordarão temas sobre 
-		a estrutura e evolução do Universo e também, sobre as estrelas. E para isto eles nos convidam a realizarmos uma viagem pela 
-		trajetória do conhecimento que trata do entendimento interligado do micro e do macrocosmo: do átomo às estrelas, galáxias, cúmulos
-		galácticos, superaglomerados e vice-versa. A inclusão social a cada dia que passa vai tornando uma realidade em todos os 
-		seguimentos da sociedade e em especial nas escolas de tal forma que estudantes portadores de necessidades especiais compartilham 
-		a mesma sala de aula com os outros alunos. Portanto, o conhecimento mínimo sobre a Língua Brasileira de Sinais é indispensável
-		para o educador nos dias de hoje trabalhar com os estudantes surdos e nesse sentido, a autora abordará o tema visando dar subsídios 
-		para que os professores/educadores possam trabalhar com estes alunos quando surgirem.</p>
+		<p>Este volume corresponde aos módulos I e II do oitavo semestre do curso de Licenciatura em Física na modalidade à distância. Os módulos que compõem o material didático impresso trazem assuntos relativos à Ciência, Tecnologia e Meio Ambiente.</p>
+		<p>O primeiro módulo tratará dos títulos: “Física da Matéria Condensada”, “Laboratório Especial”, e “Estágio Supervisionado IV (<b>parte 1</b>)”. A Física da Matéria Condensada estuda os materiais sólidos e líquidos de alta viscosidade como os vidros. Nesse campo da Física se pesquisa Nanomateriais, o fenômeno da Supercondutividade dentre outros, nomes cada vez mais comuns no meio científico e tecnológico e também nos veículos de comunicação em massa como os jornais. E, para tentar entender um pouco mais sobre as propriedades da matéria é que os autores propuseram um roteiro de estudo onde pontuam, sem tratá-las com profundidade, os diversos temas abordados na disciplina e o aluno poderá aprofundar seus conhecimentos recorrendo às referências bibliográficas sugeridas. Em Física Moderna, radiações, modelos atômicos, partículas subatômicas são consideradas pelos estudantes como “entidades”, as quais foram conhecidas como abstrações, e agora em Laboratório Especial terão oportunidade de entrar em contato com elas. É nesse sentido que o autor aborda alguns experimentos relativos ao conteúdo de Física Moderna, que foi gentilmente cedido pela Universidade Federal de Santa Catarina (UFSC).</p>
+		<p>Após conhecer os projetos da Escola Campo, observar e fazer um diagnóstico do ensino de Física e elaborar o projeto de ação e/ou intervenção na Escola é chegado o momento de desenvolver o respectivo projeto e avaliar os pontos positivos e negativos da aplicação do mesmo e nesse sentido as autoras de Estágio Supervisionado IV (<b>partes 1 e 2</b>) sugerem ações para o melhor desenvolvimento do projeto de tal forma que, o estudante possa obter um melhor resultado bem como discutir e refletir a própria prática pedagógica.</p>
+		<p>No segundo módulo tratar-se-á de três títulos: “Física Nuclear e de Partículas”, “Estratégias de Ensino de Física e Produção de Materiais Didáticos”, e “Estágio Supervisionado IV (<b>parte 2</b>)”. Perguntas como: A matéria é constituída de quê? O átomo é a menor parte que constitui a matéria? O autor de Física Nuclear e de Partículas procurando responder essas e muitas outras questões convida-nos a volta na história e acompanhar desde o século IV a.C. até os dias atuais e as perspectivas futuras para o entendimento da constituição da matéria. Uma das grandes dificuldades do ensino e aprendizagem do conteúdo de física está associada à correlação que deveria ser realizada entre os conceitos da Física e o nosso dia-a-dia. Essa correlação na sua grande maioria não é realizada por falta de laboratório nas escolas e também ao alto custo dos mesmos. E, tentando contribuir para solucionar este problema o autor de Estratégias de Ensino de Física e Produção de Materiais Didáticos sugere vários experimentos de baixo custo que podem ser realizados. E como material complementar segue um CD com o conteúdo de dois livros os quais seguem a mesma linha sugerida pelo autor.</p>
+		<p>Neste volume, a oferta dos títulos tanto do primeiro quanto do segundo módulo tem como objetivo o fortalecimento da construção dos três eixos: Ciência, Tecnologia e Meio Ambiente. Espera-se que o conteúdo abordado nestes títulos tenha interação com os demais e contribua de maneira significativa para sua formação como professor(a) de Física. Com a construção deste volume, reforçamos mais uma vez o compromisso com a formação docente. Ao iniciar o sétimo semestre do curso temos certeza que os principais desafios foram vencidos e vários obstáculos superados.</p>
 
 		<span class="pagina">2</span>
 
-		<p>Neste volume, a oferta dos títulos tanto do primeiro quanto do segundo módulo tem como objetivo o fortalecimento da construção 
-		dos três eixos: Ciência, Tecnologia e Meio Ambiente. Espera-se que o conteúdo abordado nestes títulos tenha interação com os demais 
-		e contribua de maneira significativa para sua formação como professor (a) de Física.</p>
-
-		<p>Com a construção deste volume, reforçamos mais uma vez o compromisso com a formação docente. Ao iniciar o sétimo semestre do 
-		curso temos certeza que os principais desafios foram vencidos e vários obstáculos superados. Este curso foi pensado e elaborado
-		para você, fato que o torna único e motiva todos os profissionais envolvidos: coordenadores de curso, professores, autores e 
-		formadores, orientadores acadêmicos e tutores de polo.</p>
-
-		<p>Estaremos sempre ao seu lado nesta trajetória e temos certeza que no futuro tanto o Estado de Goiás bem como os goianos lhes 
-		serão gratos pela dedicação incessante em melhorar as condições de ensino e aprendizagem da área de Física. Desejamos-lhe sucesso! 
-		Avante, seja persistente.</p>
+		<p>Este curso foi pensado e elaborado para você, fato que o torna único e motiva todos os profissionais envolvidos: coordenadores de curso, professores, autores e formadores, orientadores acadêmicos e tutores de polo. Vocês estejam certos que durante sua caminhada e depois, como profissionais estaremos lado a lado. Todo esse esforço, que sabemos que todos têm tido, tem como objetivo não só sua formação profissional, mas também a melhoria do ensino de física no estado de Goiás. Vocês, com a EaD tem a oportunidade de não serem meros espectadores, mas também protagonista no processo de aprendizagem. Aproveitem e desejamos a todos sucesso!</p>
 	
-	<p align="right"><b>Prof. Dr. Carlito Lariucci</b></p>
+	<p align="right"><b>Prof. Dr. Osni Silva<br> Coordenador da Licenciatura em Física/UAB/UFG</b></p>
 	
 
 	<span id="pag-fixa"></span>		
