@@ -2,16 +2,7 @@
 
 <capitulos volume='8'>
 
-    <cap>
-        <nome>Aprendendo HTML</nome>
-        <uri>0-aprendendo-html</uri>
-        <subcapitulos>
-            <subcap>
-                <title>Conteúdo</title>
-                <uri>conteudo</uri>
-            </subcap>
-        </subcapitulos>
-    </cap>
+    
 
     <cap>
         <nome>O Estágio Supervisionado IV (Parte 1 e 2)</nome>
