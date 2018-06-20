@@ -52,12 +52,12 @@
         <h3>Licenciatura em Física - Volume 7</h3>
 
         <h5>Reitoria</h5>
-        <p>Orlando Afonso Valle do Amaral</p>
+        <p>Edward Madureira Brasil</p>
 
         
 
         <h5>Pró-reitoria de Graduação</h5>
-        <p>Gisele Araújo Prateado Gusmão </p>
+        <p>Flávia Aparecida de Oliveira</p>
 
         
 
@@ -79,21 +79,23 @@
         
 
         <h5>Autores</h5>
-        <p>UFG - Juan Bernadino Marques Barrio<br>
-        UFG - Geordane Lourence Rocha Silva<br>
-        UFG - Célia Maria Alves Dantas<br>
-        UFG - Salviano de Araújo Leão<br>
-        UFG - Vanda Domingues Vieira</p>
+        <p>UFG - Arthur Marques Moraes <br>
+        UFG - Renato Pessoa Vale <br>
+        PUC - Lilian Rodrigues Rios <br>
+        PUC - Luciano Ribeiro<br>
+        UFG - Rodrigo Ferreira Marinho <br>
+        UFG - Vanda Domingues Vieira <br>
+        UFSC - Nelson Canzian da Silva</p>
+
+
+        <h5>Revisão Pedagógica</h5>
+        <p>Dagmar Junqueira Guimarães Silva</p>
 
         
 
         <h5>Revisão de Conteúdo</h5>
-        <p>Luciano Ribeiro</p>
-
-        
-
-        <h5>Revisão Pedagógica</h5>
-        <p>Dagmar Junqueira Guimarães Silva</p>
+        <p>Luciano Ribeiro<br>
+        Wagner Wilson Furtado</p>
 
        
 
@@ -111,7 +113,6 @@
         <p>Andelaide Lima<br>
          Raquel Mourão</p>
 
-        
 
         <h5>Design Gráfico - Projeto Editorial</h5>
        <p> Equipe de Publicação CIAR</p>
@@ -122,14 +123,15 @@
 
 
         <h5>Editoração</h5>
-        <p>Guilherme Mendes<br>
-        Marina Giolo<br>
-        Victor Hugo César Godoi</p>
+        <p>Marina Giolo</p>
 
 
         <h5>Ilustração e Imagens</h5>
         <p>Leandro Abreu<br>
-        João Gabriel</p>
+        João Gabriel<br>
+        Vanessa Gomes<br>
+        Mateus Feitosa<br>
+        Laryssa Tavares</p>
 
         <div class="fichacatalografica">
         	<div class="topo">
@@ -137,11 +139,11 @@
         	</div>
 
         	<div class="dados">
-        		<p class="codigo">C977</p>
+        		<p class="codigo">B8231</p>
         		<div class="descricao">
-        			<p>Curso de licenciatura em Física / autores Juan Bernardino Marques Barrio... [et al]; coordenadores Osni Silva, Carlito Lariucci. - Goiânia : FUNAPE : UFG/IF/CIAR, 2013.<br>
-        			192p.</p>
-        			<p>Conteúdo: v. 7 Física Estágio Supervisionado III. Física Moderna II. Física Computacional I e II. Astrofísica e Cosmologia.</p>
+        			<p>Curso de Licenciatura em Física 8 volume / coordenadores Carlito Lariucci, Osni Silva; autores Arthur Marques Moraes ... [et al.]. – Goiânia : FUNAPE : UFG/CIAR, 2014.</p>
+                    <p>120 p.; 8 v. : il. - (Universidade Aberta ; 8 volume ).</p>
+        			<p>Conteúdo: O Estágio Supervisionado IV; Física da Matéria Condensada; Laboratório Especial; Física Nuclear e de Partículas; Estratégias de Ensino de Física e Produção de material didático.</p>
         			<p>ISBN:</p>
         			<p>1. Física - Educação a distância. I. Barrio, Juan Bernadino Marques. II. Silva, Osni. III. Lariucci, Carlito.</p>
         			<p class="cdu">CDU: 573:37.018.43</p>
