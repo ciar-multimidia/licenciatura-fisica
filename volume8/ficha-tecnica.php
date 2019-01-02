@@ -49,7 +49,7 @@
         Ministério da Educação<br>
         Coordenação de Aperfeiçoamento de Pessoal de Nível Superior<br>
         Universidade Federal de Goiás</p>
-        <h3>Licenciatura em Física - Volume 7</h3>
+        <h3>Licenciatura em Física - Volume 8</h3>
 
         <h5>Reitoria</h5>
         <p>Edward Madureira Brasil</p>
@@ -101,6 +101,11 @@
 
         <h5>Direção do Centro Integrado de Aprendizagem em Rede (CIAR)</h5>
         <p>Marília de Goyaz</p>
+
+
+
+        <h5>Vice-direção do Centro Integrado de Aprendizagem em Rede (CIAR)</h5>
+        <p>Silvia Carla Nunes de Figueiredo Costa</p>
 
         
 
